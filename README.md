@@ -7,7 +7,8 @@ Private until G5 (public only after `prepublish_scan.py`).
 - **Deadline:** Mon 30 Nov 2026, 14:00 PT = **23:00 Valencia**.
 - Must use Firebase AI Logic hybrid inference (on-device + cloud): Gemini Nano 4 on Web/Android, or Apple Foundation Models on iOS, plus a cloud Gemini model.
 - Free tier is enough: pick models marked "billing not required" on https://firebase.google.com/docs/ai-logic/models. Stay on the Spark plan (Blaze links billing).
-- Optional Google Account Quota (4 days, you pay anything past it): sprint 2 request by Wed 18 Nov 10:00 PT (19:00 Valencia); sprint 3 by Wed 25 Nov 10:00 PT. Needs Ahmed's OK and a zero-spend check.
+- **Devpost Project Started:** [Private Clinical Registry Gate](https://devpost.com/software/private-clinical-registry-gate) (Submission ID `1302481`).
+- **Google Account Quota:** Form submitted on 14 Nov 2026 for Sprint 2 (Sprint 2 cutoff Wed 18 Nov 10:00 PT; accounts sent Thu 19 Nov).
 - $30,000 cash prizes: a win needs the lawyer first (NLV).
 - Official page: https://firebasehybridaihackathon.devpost.com/
 
