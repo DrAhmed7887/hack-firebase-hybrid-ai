@@ -26,11 +26,11 @@
 - **Target User:** Clinical Research Coordinator (CRC) / Hospital Quality Improvement (QI) Nurse Auditor abstracting unstructured progress notes into disease registries (e.g. KDIGO Chronic Kidney Disease staging, AHA Get With The Guidelines).
 - **The Stake:**
   - *Time:* Manual chart abstraction consumes 12–20 minutes per patient (900s).
-  - *Risk:* Hospital CISOs strictly forbid pasting raw EHR progress notes into cloud LLM endpoints due to HIPAA Safe Harbor (45 CFR § 164.514) / GDPR privacy rules.
-  - *The Outcome:* **96.7% time reduction** (~15 min down to <30s) with **0 bytes of raw PHI leaving the local machine**.
+  - *Risk:* Hospital CISOs strictly forbid pasting raw EHR progress notes into cloud LLM endpoints due to institutional data-governance policies.
+  - *The Goal:* Cut manual abstraction time while the app sends only masked text to the cloud model. No time saving has been measured yet; to be measured on the demo notes. No compliance or de-identification claim is made.
 - **Touch-able Safety Guarantee (Cause 2):**
   - A deterministic programmatic leak guard blocks network egress if any direct identifier remains.
-  - An interactive `/judge` tab running 100 synthetic benchmark cases proving a **0.0% payload leak rate**.
+  - An interactive `/judge` tab running 20 seeded synthetic benchmark cases reporting the measured payload leak rate. No leak rate has been measured yet; to be measured on 20 seeded synthetic cases.
 
 ---
 
@@ -57,6 +57,7 @@
 ---
 
 ## 4. Hardware Adaptation for Development (8 GB RAM Constraint)
+- **What is real vs mock:** where Gemini Nano is unavailable, the on-device step is a mock (`MockDeviceModel`) or rules-only, and the app must say so on screen. A cloud fallback is only used on masked text. The demo video must show what actually runs.
 - Official Chrome Prompt API requires 16 GB RAM for local weight downloading.
 - On 8 GB development hardware (M1 Mac):
   - In development/CI: Provide an automatic deterministic mock adapter (`MockDeviceModel`) simulating Gemini Nano's latency (<200ms) and token spans when `LanguageModel.availability()` returns `unavailable`.
@@ -67,5 +68,5 @@
 ## 5. Judge Experience (30-Second Touch - Addressing LESSONS.md Cause 1)
 1. **Interactive Demo:** One-click hosted URL with 3 pre-loaded synthetic clinical notes (Cardiology, Nephrology, Oncology).
 2. **Visual Inspection:** Real-time color-coded span highlighting (Blue = Regex Rule, Purple = Gemini Nano On-Device).
-3. **"What Leaves Your Device" Inspector:** Live side-by-side payload preview proving zero raw text leaves the client.
-4. **Interactive `/judge` Benchmark Runner:** Live button that tests the 100-case synthetic suite in the browser, showing real-time pass/fail metrics, leak rates (0.0%), and latency.
+3. **"What Leaves Your Device" Inspector:** Live side-by-side payload preview showing exactly which masked text will be sent to the cloud call.
+4. **Interactive `/judge` Benchmark Runner:** Live button that tests the 20-case seeded synthetic suite in the browser, showing the measured pass/fail count, leak rate and latency (numbers are reported as measured, not targets).

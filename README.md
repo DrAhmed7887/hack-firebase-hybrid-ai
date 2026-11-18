@@ -9,7 +9,6 @@ Private until G5 (public only after `prepublish_scan.py`).
 - Free tier is enough: pick models marked "billing not required" on https://firebase.google.com/docs/ai-logic/models. Stay on the Spark plan (Blaze links billing).
 - **Devpost Project Started:** [Private Clinical Registry Gate](https://devpost.com/software/private-clinical-registry-gate) (Submission ID `1302481`).
 - **Google Account Quota:** Form submitted on 14 Nov 2026 for Sprint 2 (Sprint 2 cutoff Wed 18 Nov 10:00 PT; accounts sent Thu 19 Nov).
-- $30,000 cash prizes: a win needs the lawyer first (NLV).
 - Official page: https://firebasehybridaihackathon.devpost.com/
 
 ## Live rules (read via Kapture, 14 Nov 2026, firebasehybridaihackathon.devpost.com/rules)
@@ -37,4 +36,4 @@ Research and council notes: Drive `Zayed OS/Hackathons/2026-11-firebase-hybrid-a
 1. Check the live Devpost rules and the hybrid API docs (Web or Android).
 2. Make the falsifiable test for the local guard: a seeded identifier must never reach the cloud call.
 3. Synthetic data + data card.
-4. Firebase project setup and any cloud call: Ahmed's OK for that exact action.
+4. Firebase project setup and any cloud call: owner's OK for that exact action.
