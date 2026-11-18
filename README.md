@@ -36,4 +36,4 @@ Research and council notes: Drive `Zayed OS/Hackathons/2026-11-firebase-hybrid-a
 1. Check the live Devpost rules and the hybrid API docs (Web or Android).
 2. Make the falsifiable test for the local guard: a seeded identifier must never reach the cloud call.
 3. Synthetic data + data card.
-4. Firebase project setup and any cloud call: Ahmed's OK for that exact action.
+4. Firebase project setup and any cloud call: owner's OK for that exact action.
