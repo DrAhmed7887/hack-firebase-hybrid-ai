@@ -9,3 +9,11 @@ dist/
 build/
 .firebase/
 firebase-debug.log
+
+# Local-only: scraped rules page, personal research prompts, internal review (contain name, ids, IP, setup details)
+docs/RULES_DEVPOST.txt
+docs/EGM_REVIEW.md
+docs/GEMINI_CLEAN_SYNTHESIS.md
+docs/GEMINI_SYNTHESIS.md
+docs/PERPLEXITY_SYNTHESIS.md
+docs/RESEARCH_PERPLEXITY.md
