@@ -1,0 +1,20 @@
+{
+  "mode": "rules-only (no on-device model), mock cloud",
+  "seededByType": {
+    "name": 54,
+    "mrn": 20,
+    "date": 60,
+    "phone": 12,
+    "email": 8
+  },
+  "casesWithUnmaskedTypes": {
+    "name": 14
+  },
+  "cases": 20,
+  "seededIdentifiers": 154,
+  "identifiersMasked": 137,
+  "casesSent": 6,
+  "casesBlocked": 14,
+  "cloudCalls": 6,
+  "cloudPayloadsWithSeededIdentifier": 0
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Private Clinical Registry Gate</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header>
+    <h1>Private Clinical Registry Gate</h1>
+    <p class="lead">A registry abstractor pastes a kidney-clinic note. Identifiers are masked on this device first; only the masked text goes to a cloud Gemini model, and the call is aborted if any identifier is still in it. Synthetic notes only.</p>
+    <ul class="chips" id="chips" aria-label="Runtime status"></ul>
+  </header>
+
+  <main>
+    <section aria-labelledby="h-input">
+      <h2 id="h-input">1. Note (stays on this device)</h2>
+      <div class="row">
+        <label>Demo note <select id="case-select"></select></label>
+        <label class="grow">Extra terms to mask (comma separated) <input id="extra-terms" type="text" autocomplete="off" placeholder="e.g. a name the guard missed"></label>
+      </div>
+      <textarea id="note" rows="11" spellcheck="false" aria-label="Clinical note"></textarea>
+      <p class="row">
+        <button id="btn-nano" type="button" hidden></button>
+        <button id="btn-guard" type="button" class="primary">Run local guard</button>
+      </p>
+      <p id="nano-msg" class="muted" role="status"></p>
+    </section>
+
+    <section aria-labelledby="h-preview" id="preview" hidden>
+      <h2 id="h-preview">2. What will leave this device</h2>
+      <div class="cols">
+        <div>
+          <h3>Original, with what was found</h3>
+          <pre id="orig" class="note" aria-label="Original note with highlighted identifiers"></pre>
+          <p class="legend"><mark data-s="rule">rule</mark> <mark data-s="device">on-device model</mark> <mark data-s="manual">manual</mark></p>
+        </div>
+        <div>
+          <h3>Masked text (the only thing sent)</h3>
+          <pre id="masked" class="note" aria-label="Masked text that would be sent"></pre>
+        </div>
+      </div>
+      <p id="verdict" role="status" class="verdict"></p>
+      <p><button id="btn-send" type="button" class="primary" disabled>Send masked text to the cloud model</button></p>
+    </section>
+
+    <section aria-labelledby="h-result" id="result" hidden>
+      <h2 id="h-result">3. Registry fields (rehydrated locally)</h2>
+      <p id="backend-note" class="muted"></p>
+      <table id="result-table"><tbody></tbody></table>
+      <p class="row">
+        <button id="btn-json" type="button">Download JSON</button>
+        <button id="btn-csv" type="button">Download CSV</button>
+      </p>
+    </section>
+
+    <section aria-labelledby="h-bench">
+      <h2 id="h-bench">Benchmark: 20 seeded synthetic notes</h2>
+      <p class="muted">Runs every note through the same pipeline in the mode shown above and counts what happened. Numbers are computed live, not stored.</p>
+      <p><button id="btn-bench" type="button">Run 20 cases</button></p>
+      <div id="bench-out" role="status"></div>
+    </section>
+  </main>
+
+  <footer>Synthetic data only. Not a de-identification tool and not validated for clinical use. Apache-2.0.</footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
