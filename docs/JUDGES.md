@@ -16,4 +16,4 @@ Open the app, press **Run local guard**, then **Send masked text**. Press **Run 
 | Save the Nano benchmark as a file and repeat it 3 times to show variation | 1 |
 | Add a Content-Security-Policy on Hosting that limits `connect-src` (test after deploy) | 0.5 |
 | Held-out, hand-written notes to measure the masker without the seeded answer key | 2 |
-| Run the 20 cases against the real cloud model once the Firebase project exists | 0.5 |
+
