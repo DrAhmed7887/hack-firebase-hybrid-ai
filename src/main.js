@@ -56,8 +56,8 @@ async function setupNano() {
   }
   if (!nanoReady) {
     $('nano-msg').textContent =
-      'Rules-only mode: MRNs, dates, phones, emails and names after a title or label are masked. Names that appear only in free prose are not detected without the on-device model; ' +
-      'if one is left, the guard blocks the cloud call. You can add such terms above.';
+      'Rules-only mode: MRNs, dates, phones, emails and names after a title or label are masked. Names that appear only in free prose are not detected without the on-device model. ' +
+      'For the seeded demo notes the guard blocks the cloud call if one is left; for other text, read the masked text and add missing terms above.';
   }
   renderChips();
 }
@@ -116,13 +116,16 @@ async function runGuard() {
     $('btn-send').disabled = true;
   } else {
     v.dataset.k = 'ok';
-    v.textContent = `Guard passed: ${prepared.vault.size} identifier(s) masked, no leftovers found${seeded.length ? ' (checked against the note’s seeded identifiers and patterns)' : ' (pattern check only; this is not a seeded demo note)'}.`;
+    v.textContent = seeded.length
+      ? `Guard passed: ${prepared.vault.size} identifier(s) masked; none of this note’s seeded identifiers or identifier patterns remain.`
+      : `Pattern check passed: ${prepared.vault.size} identifier(s) masked. This is not a seeded demo note, so names that only appear in prose are NOT checked. Read the masked text yourself before sending.`;
     $('btn-send').disabled = false;
   }
 }
 
 async function send() {
   if (!current) return;
+  if (!current.seeded.length && !confirm('This note has no seeded identifier list, so only identifier patterns were checked. Have you read the masked text and found no names left? Send it to the cloud model?')) return;
   const btn = $('btn-send');
   btn.disabled = true;
   try {
@@ -159,12 +162,17 @@ function download(name, type, content) {
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
-const csvCell = (v) => `"${String(v ?? '').replaceAll('"', '""')}"`;
+const csvCell = (v) => {
+  let t = String(v ?? '');
+  if (/^[=+\-@\t\r]/.test(t)) t = `'${t}`; // block spreadsheet formula injection
+  return `"${t.replaceAll('"', '""')}"`;
+};
 
 async function benchmark() {
   const out = $('bench-out');
-  out.textContent = 'Running...';
-  const r = await runBench(cases, backend, nanoReady ? detectNames : undefined);
+  if (hasCloud() && !confirm('This sends the 20 synthetic masked notes to the cloud model (free tier quota). Continue?')) return;
+  out.textContent = nanoReady ? 'Running with the on-device model (about 10 seconds per note)...' : 'Running...';
+  const r = await runBench(cases, backend, nanoReady ? detectNames : undefined, (i, n) => { if (nanoReady) out.textContent = `Running with the on-device model: note ${i + 1} of ${n}...`; });
   const mode = nanoReady ? 'on-device model + rules' : 'rules-only';
   const summary = document.createElement('p');
   summary.className = 'hl';

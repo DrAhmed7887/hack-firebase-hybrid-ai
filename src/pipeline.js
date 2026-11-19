@@ -14,7 +14,7 @@ export function prepare(text, { deviceNames = [], manualTerms = [] } = {}) {
   spans.push(...propagateNames(text, spans));
   for (const n of deviceNames) {
     for (const s of findAll(text, n, 'name', 'device')) spans.push(s);
-    for (const p of n.split(/[\s-]+/)) if (p.length >= 3) spans.push(...findAll(text, p, 'name', 'device'));
+    for (const p of n.split(/[\s-]+/)) if (p.length >= 2) spans.push(...findAll(text, p, 'name', 'device'));
   }
   for (const t of manualTerms) spans.push(...findAll(text, t, 'name', 'manual'));
   return applyMask(text, spans);

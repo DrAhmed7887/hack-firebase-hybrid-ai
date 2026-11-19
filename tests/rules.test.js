@@ -44,3 +44,20 @@ describe('mock backend', () => {
     }
   });
 });
+
+describe('regressions from review (19 Nov)', () => {
+  it('masks accented names and propagates them', () => {
+    const m = prepare('Patient: José Núñez. Later José agreed.').masked;
+    expect(m).not.toMatch(/Jos|Núñez|Nu/);
+  });
+  it('masks two-letter name parts on later mentions', () => {
+    expect(prepare('Patient: Li Wei. Li reports fatigue.').masked).not.toMatch(/\bLi\b|Wei/);
+  });
+  it('masks more date, phone and MRN formats', () => {
+    const m = prepare('MRN 4821 on 12.03.2024 and 2024/03/12, 3rd March 2024, call +34 600 123 456 or 6005551234').masked;
+    expect(m).not.toMatch(/4821|12\.03|2024|600 123|6005551234/);
+  });
+  it('does not treat odd punctuation as a month separator', () => {
+    expect(prepare('12 March!!! 2024').masked).toContain('March!!!');
+  });
+});

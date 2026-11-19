@@ -33,7 +33,16 @@ export async function sendMaskedToCloud(maskedText, seeded, generate) {
   assertNoLeak(request, seeded); // throws LeakError: generate is never reached
   const raw = await generate(request);
   const parsed = JSON.parse(raw);
+  validateResult(parsed);
   // code cross-checks the model: stage must agree with eGFR under KDIGO cut-points
   parsed.stage_check = typeof parsed.egfr === 'number' && gfrCategory(parsed.egfr) === parsed.ckd_stage ? 'consistent' : 'inconsistent';
   return parsed;
+}
+
+const STAGES = ['G1', 'G2', 'G3a', 'G3b', 'G4', 'G5'];
+const ALB = ['A1', 'A2', 'A3', 'not_documented'];
+function validateResult(r) {
+  if (!r || !STAGES.includes(r.ckd_stage) || typeof r.egfr !== 'number' || !Number.isFinite(r.egfr) || !ALB.includes(r.albuminuria_category) || typeof r.evidence !== 'string') {
+    throw new Error('Cloud answer did not match the expected schema');
+  }
 }

@@ -13,6 +13,6 @@ export async function mockGenerate(request) {
     ckd_stage: gfrCategory(egfr),
     egfr,
     albuminuria_category: albuminuriaCategory(u ? Number(u[1]) : null),
-    evidence: (note.match(/[^.\n]*eGFR[^.\n]*/i) || [''])[0].trim().slice(0, 160),
+    evidence: m ? note.slice(Math.max(0, m.index - 10), m.index + m[0].length + 24).replace(/\s+/g, ' ').trim() : '',
   });
 }

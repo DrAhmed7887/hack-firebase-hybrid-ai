@@ -1,20 +1,22 @@
 # Private Clinical Registry Gate
 
-**A registry abstractor can use a cloud Gemini model on a kidney-clinic note without the raw note leaving the device.** Identifiers are masked locally first (rules plus an on-device model through Firebase AI Logic); the masked text is previewed; the cloud call is aborted if any identifier is still in it.
+**A registry abstractor can send a kidney-clinic note to a cloud Gemini model with identifiers masked on the device first, and see exactly what leaves.** Identifiers are masked locally first (rules plus an on-device model through Firebase AI Logic); the masked text is previewed; the cloud call is aborted if any identifier is still in it.
 
 Entry for **#BuildHybridAI 2026** (Firebase AI Logic hybrid inference, Devpost). Synthetic notes only. Not a de-identification tool, not validated for clinical use.
 
-**Measured in rules-only mode** (20 seeded synthetic notes, mock cloud, `npm run bench`): 137 of 154 seeded identifiers masked; 6 notes passed the guard and were sent, 14 were blocked because a name in free prose was left; 0 cloud payloads contained a seeded identifier. Gemini Nano was not run (8 GB laptops); the app says so on screen and runs rules-only. Details and non-claims: [docs/CLAIMS.md](docs/CLAIMS.md).
+**Measured, rules-only mode** (20 seeded synthetic notes, `npm run bench`, mock cloud): the masker alone hid 137 of 154 seeded identifiers; every miss was a name in free prose. The guard then blocked those 14 notes and let 6 through, and 0 outgoing payloads held a seeded identifier (that last count is a guard property, since the guard checks against the same seeded list; the 137/154 is the independent number).
+
+**Measured once with Gemini Nano** (in-app run, 19 Nov 2026, Chrome on the development Mac, where `LanguageModel.availability()` reported Nano ready): the masker with Nano hid 154 of 154 seeded identifiers. One run, not repeatable in CI, model output varies; Nano also masked some ordinary words as names (e.g. "Family"). Details and non-claims: [docs/CLAIMS.md](docs/CLAIMS.md).
 
 ```bash
 npm ci && npm run dev      # app at http://localhost:5173, runs with no keys
-npm test                   # leak test: no seeded identifier may reach the cloud call
+npm test                   # includes the leak test: the guard must stop every seeded identifier
 npm run bench              # the 20-case numbers above
 ```
 
 ## How it works
 1. **Local guard:** rules for MRN, dates, phone, email and names after a title or label; Firebase AI Logic `ONLY_ON_DEVICE` (Gemini Nano) for names in prose. If Nano is unavailable the app says so, runs rules-only, and never falls back to the cloud with raw text.
-2. **Preview and leak guard:** you see the masked text. `src/cloud/egress.js` scans the exact outgoing request and throws before the cloud call if a seeded identifier or an identifier pattern remains.
+2. **Preview and leak guard:** you see the masked text. `src/cloud/egress.js` scans the exact outgoing request and throws before the cloud call if one of the note's seeded identifiers or an identifier pattern remains. For a note you paste yourself there is no seeded list, so only patterns are checked, names in prose are not, and the app asks you to confirm after reading the masked text.
 3. **Cloud call:** `PREFER_IN_CLOUD` on a free Gemini model returns JSON: CKD stage, eGFR, albuminuria category, evidence quote. Code checks the stage against the eGFR.
 4. **Local rehydration and export:** tokens are restored from an in-memory vault; download JSON or CSV.
 

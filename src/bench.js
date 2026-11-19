@@ -5,7 +5,7 @@ import { findAll } from './guard/rules.js';
 const terms = (i) => (i.type === 'name' ? [i.value, ...i.value.split(/[\s-]+/).filter((p) => p.length >= 3)] : [i.value]);
 
 /** @param detectNames optional async (text) => string[] from the on-device model; omit for rules-only */
-export async function runBench(cases, generate, detectNames) {
+export async function runBench(cases, generate, detectNames, onProgress) {
   const rows = [];
   let calls = 0;
   let leakedPayloads = 0;
@@ -14,6 +14,7 @@ export async function runBench(cases, generate, detectNames) {
     return generate(req);
   };
   for (const c of cases) {
+    if (onProgress) onProgress(rows.length, cases.length);
     let deviceNames = [];
     if (detectNames) deviceNames = await detectNames(c.text);
     const seenRequests = [];
