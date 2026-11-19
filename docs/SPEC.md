@@ -43,5 +43,5 @@
 - **Cut:** FHIR, REDCap, Chrome extension, 100-case runner.
 
 ## 4. Real versus mocked
-- With no Firebase config (this repo's default) the cloud backend is a labelled MOCK regex stand-in, App Check is off, and Gemini Nano is used only if Chrome offers it. Both development laptops have 8 GB RAM, so Nano is not exercised in development.
+- With no Firebase config (this repo's default) the cloud backend is a labelled MOCK regex stand-in, App Check is off, and Gemini Nano is used only if Chrome offers it. Chrome on the development Mac reported Nano ready on 19 Nov 2026 (despite 8 GB RAM, contrary to the hardware note in CLAUDE.md), so the app ran with the on-device model there; CI never runs it.
 - Numbers come only from `npm run bench` (see `docs/CLAIMS.md`).

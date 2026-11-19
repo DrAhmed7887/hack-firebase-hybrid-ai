@@ -12,7 +12,7 @@ export class LeakError extends Error {
 export function scanForLeaks(payload, seeded = []) {
   const findings = [];
   for (const id of seeded) {
-    const terms = id.type === 'name' ? [id.value, ...id.value.split(/[\s-]+/).filter((p) => p.length >= 3)] : [id.value];
+    const terms = id.type === 'name' ? [id.value, ...id.value.split(/[\s-]+/).filter((p) => p.length >= 2)] : [id.value];
     if (terms.some((t) => findAll(payload, t, id.type, 'guard').length)) findings.push({ type: id.type, how: 'seeded' });
   }
   for (const [type, re] of Object.entries(PATTERNS)) {

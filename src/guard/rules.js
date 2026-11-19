@@ -1,28 +1,28 @@
 // Deterministic detectors. Each returns spans {start, end, type, source:'rule'}.
 const MONTH = '(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)';
-const NAME_WORD = "[A-Z][a-z'’]+(?:[A-Z][a-z]+)?(?:-[A-Z][a-z'’]+(?:[A-Z][a-z]+)?)*";
+const NAME_WORD = "\\p{Lu}[\\p{Ll}'’]+(?:\\p{Lu}\\p{Ll}+)?(?:-\\p{Lu}[\\p{Ll}'’]+(?:\\p{Lu}\\p{Ll}+)?)*";
 const TITLE = '(?:(?:Dr|Mr|Mrs|Ms|Prof)\\.?\\s+)?';
 
 export const PATTERNS = {
-  mrn: /\b(?:MRN|MR#|Medical Record(?: Number| No\.?)?)\s*[:#]?\s*([A-Z0-9][A-Z0-9-]{4,})/gi,
+  mrn: /\b(?:MRN|MR#|Medical Record(?: Number| No\.?)?)\s*[:#]?\s*([A-Z0-9][A-Z0-9-]{3,})/gi,
   date: new RegExp(
     [
-      '\\b\\d{4}-\\d{2}-\\d{2}\\b',
-      '\\b\\d{1,2}/\\d{1,2}/\\d{2,4}\\b',
-      `\\b\\d{1,2}[ -]${MONTH}[ -,]*\\d{2,4}\\b`,
+      '\\b\\d{4}[-/.]\\d{1,2}[-/.]\\d{1,2}\\b',
+      '\\b\\d{1,2}[/.]\\d{1,2}[/.]\\d{2,4}\\b',
+      `\\b\\d{1,2}(?:st|nd|rd|th)?[ -]${MONTH}[ ,-]*\\d{2,4}\\b`,
       `\\b${MONTH}\\.? \\d{1,2},? \\d{4}\\b`,
     ].join('|'),
     'g',
   ),
-  phone: /(?<![\d-])(?:\+\d{1,3}[\s.-]?)?(?:\(\d{3}\)\s?|\d{3}[\s.-])\d{3}[\s.-]\d{4}(?!\d)/g,
+  phone: /(?<![\d-])(?:\+\d{1,3}[\s.-]?)?(?:(?:\(\d{3}\)\s?|\d{3}[\s.-])\d{3}[\s.-]\d{4}|\d{3}[\s.-]\d{3}[\s.-]\d{3}|\d{10})(?!\d)/g,
   email: /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g,
   // Names after a label ("Patient:", "Name:", "Seen by:") or a title ("Dr.", "Mrs."). Names in free prose are not detectable by rules.
   name: new RegExp(
     `(?:\\b(?:Patient|Pt|Name|Seen by|Signed by|Referring|Nurse educator|nurse educator)\\s*:\\s*${TITLE}|\\b(?:Dr|Mr|Mrs|Ms|Prof)\\.?\\s+|\\b(?:Patient|nurse educator)\\s+)((?!(?:Dr|Mr|Mrs|Ms|Prof)\\b)${NAME_WORD}(?:\\s+${NAME_WORD}){0,2})`,
-    'g',
+    'gu',
   ),
   // "<Name>, MRN" / "Spoke with First Last (" style: a capitalised pair directly before "(MRN" or ", MRN"
-  nameBeforeMrn: new RegExp(`(${NAME_WORD}\\s+${NAME_WORD})(?=,?\\s*\\((?:[^)]*\\b)?MRN|,\\s*MRN)`, 'g'),
+  nameBeforeMrn: new RegExp(`(${NAME_WORD}\\s+${NAME_WORD})(?=,?\\s*\\((?:[^)]{0,40}\\b)?MRN|,\\s*MRN)`, 'gu'),
 };
 
 // words that can follow "Patient" or a label but are not names
@@ -73,7 +73,7 @@ export function propagateNames(text, spans) {
     if (s.type !== 'name') continue;
     const v = text.slice(s.start, s.end);
     terms.add(v);
-    for (const p of v.split(/[\s-]+/)) if (p.length >= 3) terms.add(p);
+    for (const p of v.split(/[\s-]+/)) if (p.length >= 2) terms.add(p);
   }
   for (const t of terms) extra.push(...findAll(text, t, 'name', 'rule'));
   return extra;

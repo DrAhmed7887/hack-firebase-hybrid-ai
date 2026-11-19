@@ -41,7 +41,8 @@ export const deviceModel = getGenerativeModel(ai, {
 });
 
 // Cloud: receives only text that passed the leak guard (see src/cloud/egress.js).
-const cloudModel = config
+// Cloud only with App Check on: the hackathon requires it, and an unprotected endpoint should not be reachable.
+const cloudModel = config && status.appCheck
   ? getGenerativeModel(ai, {
       mode: InferenceMode.PREFER_IN_CLOUD,
       inCloudParams: {
