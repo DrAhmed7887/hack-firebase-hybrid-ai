@@ -1,39 +1,36 @@
-# hack-firebase-hybrid-ai
+# Private Clinical Registry Gate
 
-Entry for **#BuildHybridAI 2026** (Firebase AI Logic, Google, on Devpost).
-Private until G5 (public only after `prepublish_scan.py`).
+**A registry abstractor can send a kidney-clinic note to a cloud Gemini model with identifiers masked on the device first, and see exactly what leaves.** Identifiers are masked locally first (rules plus an on-device model through Firebase AI Logic); the masked text is previewed; the cloud call is aborted if any identifier is still in it.
 
-## Facts (from Devpost emails, 9 and 11 Nov 2026)
-- **Deadline:** Mon 30 Nov 2026, 14:00 PT = **23:00 Valencia**.
-- Must use Firebase AI Logic hybrid inference (on-device + cloud): Gemini Nano 4 on Web/Android, or Apple Foundation Models on iOS, plus a cloud Gemini model.
-- Free tier is enough: pick models marked "billing not required" on https://firebase.google.com/docs/ai-logic/models. Stay on the Spark plan (Blaze links billing).
-- **Devpost Project Started:** [Private Clinical Registry Gate](https://devpost.com/software/private-clinical-registry-gate) (Submission ID `1302481`).
-- **Google Account Quota:** Form submitted on 14 Nov 2026 for Sprint 2 (Sprint 2 cutoff Wed 18 Nov 10:00 PT; accounts sent Thu 19 Nov).
-- Official page: https://firebasehybridaihackathon.devpost.com/
+Entry for **#BuildHybridAI 2026** (Firebase AI Logic hybrid inference, Devpost). Synthetic notes only. Not a de-identification tool, not validated for clinical use.
 
-## Live rules (read via Kapture, 14 Nov 2026, firebasehybridaihackathon.devpost.com/rules)
-- Spain eligible. Individuals or teams. 2,107 participants so far; gallery not published yet.
-- Platforms: Web/Chrome (Gemini Nano 4, web app or extension), Android, iOS (Apple Foundation Models). Multi-platform preferred and gets "strong consideration" for the Grand Prize.
-- **App Check required** (debug tokens OK). Firebase AI Logic must be imported and actually called.
-- Repo public at submission, open-source licence visible in About (Apache preferred). Video ≤3 min on YouTube, English. Test link encouraged. The app must support English.
-- Judging: four equal criteria, 1–5 each: Technological Implementation (hybrid use), Design (a whole product, not a proof of concept), Potential Impact (credible, specific), Quality of Idea (non-obvious). AI-assisted judging possible. Judging 10–16 Dec; winners ~21 Dec.
-- Prizes: $10k / $7k / $4k + Best iOS / Android / Web $3k each. No healthcare category.
-- Web on-device facts: Chrome desktop 139+, Firebase JS SDK 12.5.0+, flag `chrome://flags/#prompt-api-for-gemini-nano-multimodal-input`. Modes PREFER_ON_DEVICE / ONLY_ON_DEVICE / PREFER_IN_CLOUD / ONLY_IN_CLOUD. On-device does single-turn text, text+image and **structured JSON/enum output**, 9,216 tokens; no chat, tools, audio or PDFs. `initializeDeviceModel()` after a user click. Default cloud model `gemini-3.5-flash-lite`.
-- Free models: gemini-4-hydrogen, gemini-3.8-flash, gemini-3.5-flash-lite, the TTS and Live models. Billing required: gemini-4-argon, gemini-4-carbon, all image models.
-- **Hardware:** Chrome's model needs 22 GB free disk plus either >4 GB VRAM or 16 GB RAM with 4 cores. The 8 GB M1s fail the RAM path, and the Pro had 21 GB free on 14 Nov. Test first: `await LanguageModel.availability()` in Chrome DevTools.
+**Measured, rules-only mode** (20 seeded synthetic notes, `npm run bench`, mock cloud): the masker alone hid 137 of 154 seeded identifiers; every miss was a name in free prose. The guard then blocked those 14 notes and let 6 through, and 0 outgoing payloads held a seeded identifier (that last count is a guard property, since the guard checks against the same seeded list; the 137/154 is the independent number).
 
-## Idea chosen at G0 (10 Nov)
-Option A: a local identifier-redaction gate. On-device detection of identifiers plus deterministic rules; the user sees a preview; only abstracted fields go to the cloud model, raw text never does. No compliance, de-identification or clinical-performance claim.
+**Measured once with Gemini Nano** (in-app run, 19 Nov 2026, Chrome on the development Mac, where `LanguageModel.availability()` reported Nano ready): the masker with Nano hid 154 of 154 seeded identifiers. One run, not repeatable in CI, model output varies; Nano also masked some ordinary words as names (e.g. "Family"). Details and non-claims: [docs/CLAIMS.md](docs/CLAIMS.md).
 
-Research and council notes: Drive `Zayed OS/Hackathons/2026-11-firebase-hybrid-ai/` (SPEC.md, `g0_research_council_2026-11-10/CHAIRMAN.md`).
+```bash
+npm ci && npm run dev      # app at http://localhost:5173, runs with no keys
+npm test                   # includes the leak test: the guard must stop every seeded identifier
+npm run bench              # the 20-case numbers above
+```
+
+## How it works
+1. **Local guard:** rules for MRN, dates, phone, email and names after a title or label; Firebase AI Logic `ONLY_ON_DEVICE` (Gemini Nano) for names in prose. If Nano is unavailable the app says so, runs rules-only, and never falls back to the cloud with raw text.
+2. **Preview and leak guard:** you see the masked text. `src/cloud/egress.js` scans the exact outgoing request and throws before the cloud call if one of the note's seeded identifiers or an identifier pattern remains. For a note you paste yourself there is no seeded list, so only patterns are checked, names in prose are not, and the app asks you to confirm after reading the masked text.
+3. **Cloud call:** `PREFER_IN_CLOUD` on a free Gemini model returns JSON: CKD stage, eGFR, albuminuria category, evidence quote. Code checks the stage against the eGFR.
+4. **Local rehydration and export:** tokens are restored from an in-memory vault; download JSON or CSV.
+
+## What is real and what is mocked in this repo
+| Part | Without a Firebase config (default) | With config |
+|---|---|---|
+| On-device names | Real Firebase AI Logic call if Chrome offers Gemini Nano, otherwise rules-only | same |
+| Cloud extraction | **MOCK** regex stand-in, labelled in the UI | Firebase AI Logic, `gemini-3.5-flash-lite` |
+| App Check | off | reCAPTCHA v3 |
+
+## Configure Firebase (owner's step)
+Spark plan only. Copy `.env.example` to `.env.local`, fill the public web config and the reCAPTCHA site key, `npm run build`, `firebase deploy --only hosting`. No debug token is stored in the code; in dev the SDK prints one to register in the console.
 
 ## Layout
-- `src/` app code
-- `data/synthetic/` synthetic notes with fake, seeded identifiers only (no real patient data, ever)
-- `docs/` plan, data card, claims
+`src/guard/` rules, masking, leak guard, Nano · `src/cloud/` the only cloud egress and the mock · `src/pipeline.js` shared pipeline · `data/synthetic/` seeded notes · `docs/` [data card](docs/DATA_CARD.md), [claims](docs/CLAIMS.md), [judges](docs/JUDGES.md), [spec](docs/SPEC.md)
 
-## Next gates
-1. Check the live Devpost rules and the hybrid API docs (Web or Android).
-2. Make the falsifiable test for the local guard: a seeded identifier must never reach the cloud call.
-3. Synthetic data + data card.
-4. Firebase project setup and any cloud call: owner's OK for that exact action.
+Licence: Apache-2.0.
