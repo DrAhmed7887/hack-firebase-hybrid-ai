@@ -1,7 +1,7 @@
 // Firebase AI Logic hybrid setup. Config comes from VITE_* env vars (never committed). With no config the app runs LOCAL-ONLY:
 // the on-device model can still be used, the cloud backend is a labelled mock, App Check is off.
 import { initializeApp } from 'firebase/app';
-import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from 'firebase/app-check';
 import { getAI, GoogleAIBackend, getGenerativeModel, InferenceMode, Schema } from 'firebase/ai';
 
 const env = import.meta.env;
@@ -23,7 +23,7 @@ const app = initializeApp(config ?? { apiKey: 'local-only', projectId: 'local-on
 
 if (config && env.VITE_RECAPTCHA_SITE_KEY) {
   if (env.DEV) self.FIREBASE_APPCHECK_DEBUG_TOKEN = true; // dev only: the SDK prints a token to register in the console; none is stored here
-  initializeAppCheck(app, { provider: new ReCaptchaV3Provider(env.VITE_RECAPTCHA_SITE_KEY), isTokenAutoRefreshEnabled: true });
+  initializeAppCheck(app, { provider: new ReCaptchaEnterpriseProvider(env.VITE_RECAPTCHA_SITE_KEY), isTokenAutoRefreshEnabled: true });
   status.appCheck = true;
 }
 
