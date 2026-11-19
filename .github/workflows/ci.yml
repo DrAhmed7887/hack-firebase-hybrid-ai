@@ -1,0 +1,22 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Leak test (no seeded identifier may reach the cloud call)
+        run: npm test
+      - name: Bench (rules-only, mock cloud; fails if any payload holds a seeded identifier)
+        run: npm run bench
+      - name: Seeded data is reproducible
+        run: node scripts/gen-cases.mjs && git diff --exit-code data/synthetic/cases.json
+      - run: npm run build
