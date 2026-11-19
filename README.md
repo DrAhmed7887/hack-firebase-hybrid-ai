@@ -6,7 +6,10 @@ Entry for **#BuildHybridAI 2026** (Firebase AI Logic hybrid inference, Devpost).
 
 **Measured, rules-only mode** (20 seeded synthetic notes, `npm run bench`, mock cloud): the masker alone hid 137 of 154 seeded identifiers; every miss was a name in free prose. The guard then blocked those 14 notes and let 6 through, and 0 outgoing payloads held a seeded identifier (that last count is a guard property, since the guard checks against the same seeded list; the 137/154 is the independent number).
 
-**Measured once with Gemini Nano** (in-app run, 19 Nov 2026, Chrome on the development Mac, where `LanguageModel.availability()` reported Nano ready): the masker with Nano hid 154 of 154 seeded identifiers. One run, not repeatable in CI, model output varies; Nano also masked some ordinary words as names (e.g. "Family"). Details and non-claims: [docs/CLAIMS.md](docs/CLAIMS.md).
+**Measured once with Gemini Nano** (in-app run, 19 Nov 2026, Chrome on the development Mac, where `LanguageModel.availability()` reported Nano ready): the masker with Nano hid 154 of 154 seeded identifiers. One run, not repeatable in CI, model output varies; Nano also masked some ordinary words as names (e.g. "Family"). 
+**Real cloud model** (`gemini-3.5-flash-lite` through Firebase AI Logic, 20 seeded notes, names masked by an oracle so only extraction is tested, one run, 19 Nov 2026): eGFR 20/20 and albuminuria category 20/20 correct; the model's own CKD stage 17/20, so the app derives the stage from the eGFR with the KDIGO cut-points (20/20). Synthetic templated notes only.
+
+Details and non-claims: [docs/CLAIMS.md](docs/CLAIMS.md).
 
 ```bash
 npm ci && npm run dev      # app at http://localhost:5173, runs with no keys
@@ -24,11 +27,11 @@ npm run bench              # the 20-case numbers above
 | Part | Without a Firebase config (default) | With config |
 |---|---|---|
 | On-device names | Real Firebase AI Logic call if Chrome offers Gemini Nano, otherwise rules-only | same |
-| Cloud extraction | **MOCK** regex stand-in, labelled in the UI | Firebase AI Logic, `gemini-3.5-flash-lite` |
-| App Check | off | reCAPTCHA v3 |
+| Cloud extraction | **MOCK** regex stand-in, labelled in the UI | Firebase AI Logic, `gemini-3.5-flash-lite` (live build: https://registry-gate-hybrid26.web.app) |
+| App Check | off | reCAPTCHA Enterprise |
 
 ## Configure Firebase (owner's step)
-Spark plan only. Copy `.env.example` to `.env.local`, fill the public web config and the reCAPTCHA site key, `npm run build`, `firebase deploy --only hosting`. No debug token is stored in the code; in dev the SDK prints one to register in the console.
+Spark plan only. Copy `.env.example` to `.env.local`, fill the public web config and the reCAPTCHA Enterprise site key, `npm run build`, `firebase deploy --only hosting`. No debug token is stored in the code; in dev the SDK prints one to register in the console.
 
 ## Layout
 `src/guard/` rules, masking, leak guard, Nano · `src/cloud/` the only cloud egress and the mock · `src/pipeline.js` shared pipeline · `data/synthetic/` seeded notes · `docs/` [data card](docs/DATA_CARD.md), [claims](docs/CLAIMS.md), [judges](docs/JUDGES.md), [spec](docs/SPEC.md)

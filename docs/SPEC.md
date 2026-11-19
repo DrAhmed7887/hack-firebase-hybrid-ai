@@ -39,7 +39,7 @@
 - **Preview + leak guard:** the abstractor sees what will leave the device. `src/cloud/egress.js` scans the exact outgoing request (against the note's seeded identifiers and against residual patterns) and throws before the cloud call if anything is left.
 - **Cloud call:** `PREFER_IN_CLOUD` on a free Gemini model, masked text only, JSON schema (CKD stage, eGFR, albuminuria category, evidence quote). Code checks the stage against the eGFR (KDIGO cut-points).
 - **Rehydration:** tokens in the returned JSON are replaced from an in-memory vault; export is JSON or CSV.
-- **App Check:** reCAPTCHA v3 provider when a Firebase config is present; no debug token in code.
+- **App Check:** reCAPTCHA Enterprise provider when a Firebase config is present; no debug token in code.
 - **Cut:** FHIR, REDCap, Chrome extension, 100-case runner.
 
 ## 4. Real versus mocked

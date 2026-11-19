@@ -147,7 +147,7 @@ function renderResult(row) {
   $('backend-note').textContent = `Backend: ${backendLabel}`;
   const tb = $('result-table').tBodies[0];
   tb.replaceChildren();
-  const labels = { mrn: 'MRN (from local vault)', ckd_stage: 'CKD stage (KDIGO GFR category)', egfr: 'eGFR, mL/min/1.73 m²', albuminuria_category: 'Albuminuria category', evidence: 'Evidence quote', stage_check: 'Stage vs eGFR check (code)' };
+  const labels = { mrn: 'MRN (from local vault)', ckd_stage: 'CKD stage (KDIGO GFR category, derived by code from eGFR)', egfr: 'eGFR, mL/min/1.73 m²', albuminuria_category: 'Albuminuria category', evidence: 'Evidence quote', stage_check: 'Model stage vs KDIGO cut-point' };
   for (const [k, label] of Object.entries(labels)) {
     const tr = tb.insertRow();
     tr.insertCell().textContent = label;

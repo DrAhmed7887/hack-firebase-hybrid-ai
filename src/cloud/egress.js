@@ -34,8 +34,12 @@ export async function sendMaskedToCloud(maskedText, seeded, generate) {
   const raw = await generate(request);
   const parsed = JSON.parse(raw);
   validateResult(parsed);
-  // code cross-checks the model: stage must agree with eGFR under KDIGO cut-points
-  parsed.stage_check = typeof parsed.egfr === 'number' && gfrCategory(parsed.egfr) === parsed.ckd_stage ? 'consistent' : 'inconsistent';
+  // Code decides, the model explains: the stage shown is derived from the extracted eGFR with the KDIGO cut-points.
+  // The model's own stage is kept for comparison.
+  const byCode = gfrCategory(parsed.egfr);
+  parsed.stage_by_model = parsed.ckd_stage;
+  parsed.stage_check = parsed.ckd_stage === byCode ? 'model agreed with KDIGO cut-point' : `model said ${parsed.ckd_stage}; KDIGO cut-point gives ${byCode}`;
+  parsed.ckd_stage = byCode;
   return parsed;
 }
 

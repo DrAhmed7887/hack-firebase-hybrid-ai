@@ -1,0 +1,19 @@
+{
+  "when": "2026-11-19",
+  "model": "gemini-3.5-flash-lite",
+  "masking": "seeded-name oracle (isolates extraction accuracy)",
+  "cases": 20,
+  "sent": 20,
+  "errors": 0,
+  "correct": {
+    "ckd_stage_by_model": 17,
+    "ckd_stage_derived_by_code_from_egfr": 20,
+    "egfr": 20,
+    "albuminuria_category": 20
+  },
+  "disagreements": [
+    "case-00 model stage G3b vs G3a",
+    "case-12 model stage G2 vs G3a",
+    "case-14 model stage G2 vs G3a"
+  ]
+}
