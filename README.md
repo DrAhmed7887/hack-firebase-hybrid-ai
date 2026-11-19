@@ -25,10 +25,10 @@ npm run bench              # the 20-case numbers above
 |---|---|---|
 | On-device names | Real Firebase AI Logic call if Chrome offers Gemini Nano, otherwise rules-only | same |
 | Cloud extraction | **MOCK** regex stand-in, labelled in the UI | Firebase AI Logic, `gemini-3.5-flash-lite` |
-| App Check | off | reCAPTCHA v3 |
+| App Check | off | reCAPTCHA Enterprise |
 
 ## Configure Firebase (owner's step)
-Spark plan only. Copy `.env.example` to `.env.local`, fill the public web config and the reCAPTCHA site key, `npm run build`, `firebase deploy --only hosting`. No debug token is stored in the code; in dev the SDK prints one to register in the console.
+Spark plan only. Copy `.env.example` to `.env.local`, fill the public web config and the reCAPTCHA Enterprise site key, `npm run build`, `firebase deploy --only hosting`. No debug token is stored in the code; in dev the SDK prints one to register in the console.
 
 ## Layout
 `src/guard/` rules, masking, leak guard, Nano · `src/cloud/` the only cloud egress and the mock · `src/pipeline.js` shared pipeline · `data/synthetic/` seeded notes · `docs/` [data card](docs/DATA_CARD.md), [claims](docs/CLAIMS.md), [judges](docs/JUDGES.md), [spec](docs/SPEC.md)
