@@ -2,9 +2,10 @@
 
 | Claim | Evidence | Reproduce |
 |---|---|---|
-| Rules-only: the masker alone hid 137 of 154 seeded identifiers on 20 synthetic notes; all 17 misses are names in free prose (none are MRN, date, phone or email) | `docs/bench-rules-only.json` | `npm run bench` |
-| Rules-only: 6 of 20 notes passed the guard and were sent; 14 were blocked | same file | `npm run bench` |
-| The guard blocks the cloud call when one of a note's seeded identifiers, or an identifier pattern, remains in the outgoing request (0 of the 6 sent payloads held a seeded identifier). This is a guard property: it checks against the same seeded list the test uses. | `src/cloud/egress.js`; `tests/leak.test.js` | `npm test` |
+| Rules-only, 100 synthetic notes (headline): the masker alone hid 683 of 772 seeded identifiers; the 89 misses are all names in free prose (71 notes had an unmasked name; no MRN, date, phone or email type had a miss) | `docs/bench-100-rules-only.json` | `npm run bench:100` |
+| Rules-only, 100 notes: 71 notes were blocked by the guard and 29 were sent (29 mock cloud calls); 0 of 29 sent payloads held a seeded identifier, so 0 of 772 seeded identifiers reached the cloud | same file | `npm run bench:100` |
+| History, 20-note run: 137 of 154 masked, 6 sent, 14 blocked | `docs/bench-rules-only.json` | `npm run bench` |
+| The guard blocks the cloud call when one of a note's seeded identifiers, or an identifier pattern, remains in the outgoing request (0 of the 29 sent payloads in the 100-note run held a seeded identifier). This is a guard property: it checks against the same seeded list the test uses. | `src/cloud/egress.js`; `tests/leak.test.js` | `npm test` |
 | The cloud call is unreachable when the guard fires | test "guard aborts when masking is defeated" | `npm test` |
 | With Gemini Nano plus rules the masker hid 154 of 154 seeded identifiers (one in-app run, 19 Nov 2026, Chrome on the development Mac; also masked ordinary words such as "Family") | the "Run 20 cases" button in the app; no file saved | click it on a machine where the status chip says Nano ready; expect run-to-run variation |
 | Real cloud model (`gemini-3.5-flash-lite` via Firebase AI Logic, project on Spark, 19 Nov 2026), 20 seeded notes, names masked by the seeded-name oracle so only extraction is tested: eGFR 20/20 and albuminuria category 20/20 correct; the model's own CKD stage 17/20; stage derived by code from eGFR 20/20. Earlier runs the same day lost 2 to 5 calls to transient HTTP 403s before retries were added, so n sent varied (15, 18, 17, then 20). Synthetic, templated notes: this says nothing about real charts. | `docs/cloud-eval.json` | `node --env-file=.env.local scripts/cloud-eval.mjs` (needs the project's `.env.local`) |

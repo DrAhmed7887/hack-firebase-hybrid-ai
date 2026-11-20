@@ -9,7 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "bench": "node scripts/bench.mjs"
+    "bench": "node scripts/bench.mjs",
+    "bench:100": "node scripts/bench.mjs --100"
   },
   "dependencies": {
     "firebase": "^13.4.0"

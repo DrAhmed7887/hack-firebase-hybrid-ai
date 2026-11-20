@@ -4,7 +4,9 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { runBench } from '../src/bench.js';
 import { mockGenerate } from '../src/cloud/mockCloud.js';
 
-const cases = JSON.parse(readFileSync(new URL('../data/synthetic/cases.json', import.meta.url)));
+// --100 runs the 100-note set (data/synthetic/bench100.json) and writes docs/bench-100-rules-only.json with --write.
+const big = process.argv.includes('--100');
+const cases = JSON.parse(readFileSync(new URL(big ? '../data/synthetic/bench100.json' : '../data/synthetic/cases.json', import.meta.url)));
 const r = await runBench(cases, mockGenerate);
 const { rows, ...summary } = r;
 const byType = {};
@@ -17,4 +19,4 @@ if (out.cloudPayloadsWithSeededIdentifier !== 0) {
   console.error('FAIL: a cloud payload contained a seeded identifier');
   process.exit(1);
 }
-if (process.argv.includes('--write')) writeFileSync(new URL('../docs/bench-rules-only.json', import.meta.url), JSON.stringify(out, null, 2) + '\n');
+if (process.argv.includes('--write')) writeFileSync(new URL(big ? '../docs/bench-100-rules-only.json' : '../docs/bench-rules-only.json', import.meta.url), JSON.stringify(out, null, 2) + '\n');

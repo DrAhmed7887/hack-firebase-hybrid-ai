@@ -1,10 +1,14 @@
 # Private Clinical Registry Gate
 
+![Data flow: the note is masked on the device, previewed, checked by the leak guard, and only masked text reaches the cloud model](docs/flow.svg)
+
+**Try it:** https://registry-gate-hybrid26.web.app (no login, no keys) · **Run it:** `npm ci && npm run dev`
+
 **A registry abstractor can send a kidney-clinic note to a cloud Gemini model with identifiers masked on the device first, and see exactly what leaves.** Identifiers are masked locally first (rules plus an on-device model through Firebase AI Logic); the masked text is previewed; the cloud call is aborted if any identifier is still in it.
 
 Entry for **#BuildHybridAI 2026** (Firebase AI Logic hybrid inference, Devpost). Synthetic notes only. Not a de-identification tool, not validated for clinical use.
 
-**Measured, rules-only mode** (20 seeded synthetic notes, `npm run bench`, mock cloud): the masker alone hid 137 of 154 seeded identifiers; every miss was a name in free prose. The guard then blocked those 14 notes and let 6 through, and 0 outgoing payloads held a seeded identifier (that last count is a guard property, since the guard checks against the same seeded list; the 137/154 is the independent number).
+**Measured, rules-only mode** (100 seeded synthetic notes, 772 seeded identifiers, `npm run bench:100`, mock cloud): 0 of 772 seeded identifiers reached the cloud, and 71 of 100 notes were held back. The masker alone hid 683 of 772; the 89 it missed are all names in free prose (names are the weak type: 71 notes still had an unmasked name, so the guard blocked them), and the other 29 notes were sent. The 0 is a guard property, since the guard checks against the same seeded list; 683/772 is the independent masking number. Earlier 20-note run (history): 137 of 154 masked, 14 blocked, 6 sent.
 
 **Measured once with Gemini Nano** (in-app run, 19 Nov 2026, Chrome on the development Mac, where `LanguageModel.availability()` reported Nano ready): the masker with Nano hid 154 of 154 seeded identifiers. One run, not repeatable in CI, model output varies; Nano also masked some ordinary words as names (e.g. "Family"). 
 **Real cloud model** (`gemini-3.5-flash-lite` through Firebase AI Logic, 20 seeded notes, names masked by an oracle so only extraction is tested, one run, 19 Nov 2026): eGFR 20/20 and albuminuria category 20/20 correct; the model's own CKD stage 17/20, so the app derives the stage from the eGFR with the KDIGO cut-points (20/20). Synthetic templated notes only.
@@ -14,7 +18,7 @@ Details and non-claims: [docs/CLAIMS.md](docs/CLAIMS.md).
 ```bash
 npm ci && npm run dev      # app at http://localhost:5173, runs with no keys
 npm test                   # includes the leak test: the guard must stop every seeded identifier
-npm run bench              # the 20-case numbers above
+npm run bench:100          # the 100-case numbers above (npm run bench: the earlier 20-case run)
 ```
 
 ## How it works

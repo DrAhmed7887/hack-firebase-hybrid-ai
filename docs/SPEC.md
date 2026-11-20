@@ -30,7 +30,7 @@
   - *The Goal:* Cut manual abstraction time while the app sends only masked text to the cloud model. No time saving has been measured yet; to be measured on the demo notes. No compliance or de-identification claim is made.
 - **Touch-able Safety Guarantee (Cause 2):**
   - A deterministic programmatic leak guard blocks network egress if any direct identifier remains.
-  - An interactive `/judge` tab running 20 seeded synthetic benchmark cases reporting the measured payload leak rate. No leak rate has been measured yet; to be measured on 20 seeded synthetic cases.
+  - A "Run 20 cases" button in the app (and `npm run bench`) runs 20 seeded synthetic cases. Measured rules-only on 100 seeded notes (`npm run bench:100`): 0 of 772 seeded identifiers reached the cloud, 71 of 100 notes blocked (names are the weak type), 29 sent (a guard property, see `docs/CLAIMS.md`). Earlier 20-note run: 137 of 154 masked, 14 blocked. Not a leak rate on real notes.
 
 ---
 
@@ -44,4 +44,4 @@
 
 ## 4. Real versus mocked
 - With no Firebase config (this repo's default) the cloud backend is a labelled MOCK regex stand-in, App Check is off, and Gemini Nano is used only if Chrome offers it. Chrome on the development Mac reported Nano ready on 19 Nov 2026 (despite 8 GB RAM, contrary to the hardware note in CLAUDE.md), so the app ran with the on-device model there; CI never runs it.
-- Numbers come only from `npm run bench` (see `docs/CLAIMS.md`).
+- Numbers come only from the bench scripts (see `docs/CLAIMS.md`): the 20-note numbers from `npm run bench`, the 100-note headline from `npm run bench:100`.
