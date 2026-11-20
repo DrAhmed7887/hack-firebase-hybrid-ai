@@ -17,6 +17,8 @@ jobs:
         run: npm test
       - name: Bench (rules-only, mock cloud; fails if any payload holds a seeded identifier)
         run: npm run bench
+      - name: Bench on 100 seeded notes (rules-only, mock cloud; fails on a leaked payload or if the committed result changes)
+        run: npm run bench:100 -- --write && git diff --exit-code docs/bench-100-rules-only.json
       - name: Seeded data is reproducible
-        run: node scripts/gen-cases.mjs && git diff --exit-code data/synthetic/cases.json
+        run: node scripts/gen-cases.mjs && git diff --exit-code data/synthetic/cases.json data/synthetic/bench100.json
       - run: npm run build

@@ -1,0 +1,4390 @@
+[
+  {
+    "id": "b100-000",
+    "demo": true,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Bartholomew Vandermeer   MRN: ZX-6840868   DOB: 1941-11-12\nVisit date: 2026-08-19   Seen by: Dr. Anwen Kowalczyk\n\nHPI: 85-year-old with chronic kidney disease and type 2 diabetes, last seen 2025-10-18. Family support at home is adequate.\nLabs: creatinine 1.9 mg/dL, potassium 5.1 mmol/L. eGFR was 51 mL/min/1.73 m2 on 2025-10-18; today eGFR 48 mL/min/1.73 m2. Urine albumin/creatinine ratio 1450 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (415) 555-0158 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Vandermeer"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6840868"
+      },
+      {
+        "type": "date",
+        "value": "1941-11-12"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-19"
+      },
+      {
+        "type": "date",
+        "value": "2025-10-18"
+      },
+      {
+        "type": "name",
+        "value": "Anwen Kowalczyk"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0158"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 48,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-001",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Yasmin Vandermeer   MRN: ZX-7486688   DOB: 02/12/1955\nVisit date: 03/05/2026   Seen by: Dr. Tarek Villanueva\n\nHPI: 71-year-old with chronic kidney disease and type 2 diabetes, last seen 06/02/2025. Family support at home is adequate.\nLabs: creatinine 2.4 mg/dL, potassium 5.4 mmol/L. eGFR was 46 mL/min/1.73 m2 on 06/02/2025; today eGFR 36 mL/min/1.73 m2. Urine albumin/creatinine ratio 22 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (415) 555-0199 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Yasmin Vandermeer"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7486688"
+      },
+      {
+        "type": "date",
+        "value": "02/12/1955"
+      },
+      {
+        "type": "date",
+        "value": "03/05/2026"
+      },
+      {
+        "type": "date",
+        "value": "06/02/2025"
+      },
+      {
+        "type": "name",
+        "value": "Tarek Villanueva"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0199"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 36,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-002",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Delphine Grimaldi   MRN: ZX-4215201   DOB: Jun 24, 1945\nVisit date: Jun 4, 2026   Seen by: Dr. Soledad Thackeray\n\nHPI: 81-year-old with chronic kidney disease and type 2 diabetes, last seen Sep 11, 2025. Family support at home is adequate.\nLabs: creatinine 1.3 mg/dL, potassium 5.2 mmol/L. eGFR was 78 mL/min/1.73 m2 on Sep 11, 2025; today eGFR 76 mL/min/1.73 m2. Urine albumin/creatinine ratio 12 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (305) 555-0111 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Delphine Grimaldi"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4215201"
+      },
+      {
+        "type": "date",
+        "value": "Jun 24, 1945"
+      },
+      {
+        "type": "date",
+        "value": "Jun 4, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Sep 11, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Soledad Thackeray"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0111"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 76,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-003",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Delphine Vandermeer   MRN: ZX-2456205   DOB: 1940-09-14\nVisit date: 2026-08-25   Seen by: Dr. Teodor Rasmussen\n\nHPI: 86-year-old with chronic kidney disease and type 2 diabetes, last seen 2025-04-20. Odalys drives Delphine to every appointment and keeps the pill organiser.\nLabs: creatinine 3.0 mg/dL, potassium 5.0 mmol/L. eGFR was 37 mL/min/1.73 m2 on 2025-04-20; today eGFR 28 mL/min/1.73 m2. Urine albumin/creatinine ratio 1450 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (415) 555-0155 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Delphine Vandermeer"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2456205"
+      },
+      {
+        "type": "date",
+        "value": "1940-09-14"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-25"
+      },
+      {
+        "type": "date",
+        "value": "2025-04-20"
+      },
+      {
+        "type": "name",
+        "value": "Teodor Rasmussen"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0155"
+      },
+      {
+        "type": "name",
+        "value": "Odalys"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 28,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-004",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Imelda Grimaldi   MRN: ZX-9764757   DOB: Sep 25, 1950\nVisit date: Jun 21, 2026   Seen by: Dr. Teodor Delacroix-Hume\n\nHPI: 76-year-old with chronic kidney disease and type 2 diabetes, last seen Jun 14, 2025. Family support at home is adequate.\nLabs: creatinine 1.6 mg/dL, potassium 5.7 mmol/L. eGFR was 72 mL/min/1.73 m2 on Jun 14, 2025; today eGFR 60 mL/min/1.73 m2. Urine albumin/creatinine ratio 180 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (617) 555-0169 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Imelda Grimaldi"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9764757"
+      },
+      {
+        "type": "date",
+        "value": "Sep 25, 1950"
+      },
+      {
+        "type": "date",
+        "value": "Jun 21, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Jun 14, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Teodor Delacroix-Hume"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0169"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 60,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-005",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Cormac Rasmussen   MRN: ZX-5122937   DOB: Aug 1, 1963\nVisit date: May 9, 2026   Seen by: Dr. Yasmin Aldecott\n\nHPI: 63-year-old with chronic kidney disease and type 2 diabetes, last seen Nov 9, 2025. Ingrid drives Cormac to every appointment and keeps the pill organiser.\nLabs: creatinine 1.6 mg/dL, potassium 5.2 mmol/L. eGFR was 70 mL/min/1.73 m2 on Nov 9, 2025; today eGFR 61 mL/min/1.73 m2. Urine albumin/creatinine ratio 12 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (305) 555-0122 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Cormac Rasmussen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5122937"
+      },
+      {
+        "type": "date",
+        "value": "Aug 1, 1963"
+      },
+      {
+        "type": "date",
+        "value": "May 9, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Nov 9, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin Aldecott"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0122"
+      },
+      {
+        "type": "name",
+        "value": "Ingrid"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 61,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-006",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Soledad Vandermeer   MRN: ZX-9288337   DOB: Jan 2, 1951\nVisit date: May 22, 2026   Seen by: Dr. Ingrid Mbeki\n\nHPI: 75-year-old with chronic kidney disease and type 2 diabetes, last seen Aug 14, 2025. Family support at home is adequate.\nLabs: creatinine 2.4 mg/dL, potassium 5.9 mmol/L. eGFR was 40 mL/min/1.73 m2 on Aug 14, 2025; today eGFR 36 mL/min/1.73 m2. Urine albumin/creatinine ratio 2300 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (305) 555-0121 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Vandermeer"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9288337"
+      },
+      {
+        "type": "date",
+        "value": "Jan 2, 1951"
+      },
+      {
+        "type": "date",
+        "value": "May 22, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Aug 14, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Ingrid Mbeki"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0121"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 36,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-007",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Marisol Aldecott   MRN: ZX-3159326   DOB: 10/15/1943\nVisit date: 02/11/2026   Seen by: Dr. Cormac Mbeki\n\nHPI: 83-year-old with chronic kidney disease and type 2 diabetes, last seen 04/15/2025. Family support at home is adequate.\nLabs: creatinine 2.9 mg/dL, potassium 5.1 mmol/L. eGFR was 41 mL/min/1.73 m2 on 04/15/2025; today eGFR 29 mL/min/1.73 m2. Urine albumin/creatinine ratio 1450 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (617) 555-0172 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Marisol Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3159326"
+      },
+      {
+        "type": "date",
+        "value": "10/15/1943"
+      },
+      {
+        "type": "date",
+        "value": "02/11/2026"
+      },
+      {
+        "type": "date",
+        "value": "04/15/2025"
+      },
+      {
+        "type": "name",
+        "value": "Cormac Mbeki"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0172"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 29,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-008",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Khalil Ostrowski   MRN: ZX-3149331   DOB: 7 July 1940\nVisit date: 27 February 2026   Seen by: Dr. Cormac Nakashima\n\nHPI: 86-year-old with chronic kidney disease and type 2 diabetes, last seen 3 September 2025. Zainab drives Khalil to every appointment and keeps the pill organiser.\nLabs: creatinine 4.6 mg/dL, potassium 5.7 mmol/L. eGFR was 19 mL/min/1.73 m2 on 3 September 2025; today eGFR 17 mL/min/1.73 m2. Urine albumin/creatinine ratio 180 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (617) 555-0106 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Khalil Ostrowski"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3149331"
+      },
+      {
+        "type": "date",
+        "value": "7 July 1940"
+      },
+      {
+        "type": "date",
+        "value": "27 February 2026"
+      },
+      {
+        "type": "date",
+        "value": "3 September 2025"
+      },
+      {
+        "type": "name",
+        "value": "Cormac Nakashima"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0106"
+      },
+      {
+        "type": "name",
+        "value": "Zainab"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 17,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-009",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Khalil Thackeray   MRN: ZX-9275088   DOB: 27 April 1958\nVisit date: 21 March 2026   Seen by: Dr. Ottilie Quillfeather\n\nHPI: 68-year-old with chronic kidney disease and type 2 diabetes, last seen 11 August 2025. Anwen drives Khalil to every appointment and keeps the pill organiser.\nLabs: creatinine 2.0 mg/dL, potassium 5.2 mmol/L. eGFR was 57 mL/min/1.73 m2 on 11 August 2025; today eGFR 46 mL/min/1.73 m2. Urine albumin/creatinine ratio 180 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (212) 555-0163 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Khalil Thackeray"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9275088"
+      },
+      {
+        "type": "date",
+        "value": "27 April 1958"
+      },
+      {
+        "type": "date",
+        "value": "21 March 2026"
+      },
+      {
+        "type": "date",
+        "value": "11 August 2025"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie Quillfeather"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0163"
+      },
+      {
+        "type": "name",
+        "value": "Anwen"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 46,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-010",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Soledad Umarov   MRN: ZX-1752051   DOB: May 11, 1942\nVisit date: May 26, 2026   Seen by: Dr. Ottilie Kowalczyk\n\nHPI: 84-year-old with chronic kidney disease and type 2 diabetes, last seen Apr 23, 2025. Delphine drives Soledad to every appointment and keeps the pill organiser.\nLabs: creatinine 1.4 mg/dL, potassium 5.4 mmol/L. eGFR was 77 mL/min/1.73 m2 on Apr 23, 2025; today eGFR 74 mL/min/1.73 m2. Urine albumin/creatinine ratio 410 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (212) 555-0199 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Umarov"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1752051"
+      },
+      {
+        "type": "date",
+        "value": "May 11, 1942"
+      },
+      {
+        "type": "date",
+        "value": "May 26, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Apr 23, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie Kowalczyk"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0199"
+      },
+      {
+        "type": "name",
+        "value": "Delphine"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 74,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-011",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Soledad Mbeki   MRN: ZX-5774549   DOB: 06/19/1967\nVisit date: 07/05/2026   Seen by: Dr. Henrik Thackeray\n\nHPI: 59-year-old with chronic kidney disease and type 2 diabetes, last seen 03/08/2025. Yasmin drives Soledad to every appointment and keeps the pill organiser.\nLabs: creatinine 2.4 mg/dL, potassium 5.5 mmol/L. eGFR was 42 mL/min/1.73 m2 on 03/08/2025; today eGFR 36 mL/min/1.73 m2. Urine albumin/creatinine ratio 22 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (617) 555-0145 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Mbeki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5774549"
+      },
+      {
+        "type": "date",
+        "value": "06/19/1967"
+      },
+      {
+        "type": "date",
+        "value": "07/05/2026"
+      },
+      {
+        "type": "date",
+        "value": "03/08/2025"
+      },
+      {
+        "type": "name",
+        "value": "Henrik Thackeray"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0145"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 36,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-012",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Bartholomew Aldecott   MRN: ZX-6761172   DOB: 1970-04-15\nVisit date: 2026-08-19   Seen by: Dr. Imelda Castellanos\n\nHPI: 56-year-old with chronic kidney disease and type 2 diabetes, last seen 2025-07-23. Yasmin drives Bartholomew to every appointment and keeps the pill organiser.\nLabs: creatinine 1.3 mg/dL, potassium 5.4 mmol/L. eGFR was 82 mL/min/1.73 m2 on 2025-07-23; today eGFR 78 mL/min/1.73 m2. Urine albumin/creatinine ratio 1450 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (617) 555-0173 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6761172"
+      },
+      {
+        "type": "date",
+        "value": "1970-04-15"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-19"
+      },
+      {
+        "type": "date",
+        "value": "2025-07-23"
+      },
+      {
+        "type": "name",
+        "value": "Imelda Castellanos"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0173"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 78,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-013",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Henrik Halvorsen   MRN: ZX-4187564   DOB: 5 April 1964\nVisit date: 11 June 2026   Seen by: Dr. Marisol Vandermeer\n\nHPI: 62-year-old with chronic kidney disease and type 2 diabetes, last seen 18 July 2025. Family support at home is adequate.\nLabs: creatinine 4.9 mg/dL, potassium 5.1 mmol/L. eGFR was 25 mL/min/1.73 m2 on 18 July 2025; today eGFR 16 mL/min/1.73 m2. Urine albumin/creatinine ratio 410 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (617) 555-0187 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Henrik Halvorsen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4187564"
+      },
+      {
+        "type": "date",
+        "value": "5 April 1964"
+      },
+      {
+        "type": "date",
+        "value": "11 June 2026"
+      },
+      {
+        "type": "date",
+        "value": "18 July 2025"
+      },
+      {
+        "type": "name",
+        "value": "Marisol Vandermeer"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0187"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 16,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-014",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Odalys Iwasaki   MRN: ZX-1096360   DOB: 10/01/1940\nVisit date: 02/10/2026   Seen by: Dr. Lucan Castellanos\n\nHPI: 86-year-old with chronic kidney disease and type 2 diabetes, last seen 06/27/2025. Soledad drives Odalys to every appointment and keeps the pill organiser.\nLabs: creatinine 6.4 mg/dL, potassium 5.9 mmol/L. eGFR was 21 mL/min/1.73 m2 on 06/27/2025; today eGFR 12 mL/min/1.73 m2. Urine albumin/creatinine ratio 780 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (305) 555-0187 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Odalys Iwasaki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1096360"
+      },
+      {
+        "type": "date",
+        "value": "10/01/1940"
+      },
+      {
+        "type": "date",
+        "value": "02/10/2026"
+      },
+      {
+        "type": "date",
+        "value": "06/27/2025"
+      },
+      {
+        "type": "name",
+        "value": "Lucan Castellanos"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0187"
+      },
+      {
+        "type": "name",
+        "value": "Soledad"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G5",
+      "egfr": 12,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-015",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Ingrid Iwasaki   MRN: ZX-3749783   DOB: 01/21/1948\nVisit date: 03/08/2026   Seen by: Dr. Odalys Delacroix-Hume\n\nHPI: 78-year-old with chronic kidney disease and type 2 diabetes, last seen 02/27/2025. Odalys drives Ingrid to every appointment and keeps the pill organiser.\nLabs: creatinine 1.3 mg/dL, potassium 5.0 mmol/L. eGFR was 87 mL/min/1.73 m2 on 02/27/2025; today eGFR 76 mL/min/1.73 m2. Urine albumin/creatinine ratio 12 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (212) 555-0137 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Iwasaki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3749783"
+      },
+      {
+        "type": "date",
+        "value": "01/21/1948"
+      },
+      {
+        "type": "date",
+        "value": "03/08/2026"
+      },
+      {
+        "type": "date",
+        "value": "02/27/2025"
+      },
+      {
+        "type": "name",
+        "value": "Odalys Delacroix-Hume"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0137"
+      },
+      {
+        "type": "name",
+        "value": "Odalys"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 76,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-016",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Yasmin Brannigan   MRN: ZX-5620276   DOB: 04/12/1938\nVisit date: 06/24/2026   Seen by: Dr. Lucan Grimaldi\n\nHPI: 88-year-old with chronic kidney disease and type 2 diabetes, last seen 05/12/2025. Rashad drives Yasmin to every appointment and keeps the pill organiser.\nLabs: creatinine 1.5 mg/dL, potassium 5.7 mmol/L. eGFR was 71 mL/min/1.73 m2 on 05/12/2025; today eGFR 68 mL/min/1.73 m2. Urine albumin/creatinine ratio 95 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (212) 555-0193 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Yasmin Brannigan"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5620276"
+      },
+      {
+        "type": "date",
+        "value": "04/12/1938"
+      },
+      {
+        "type": "date",
+        "value": "06/24/2026"
+      },
+      {
+        "type": "date",
+        "value": "05/12/2025"
+      },
+      {
+        "type": "name",
+        "value": "Lucan Grimaldi"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0193"
+      },
+      {
+        "type": "name",
+        "value": "Rashad"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 68,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-017",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Cormac Castellanos   MRN: ZX-5918058   DOB: Mar 6, 1948\nVisit date: Jul 21, 2026   Seen by: Dr. Khalil Aldecott\n\nHPI: 78-year-old with chronic kidney disease and type 2 diabetes, last seen Apr 14, 2025. Soledad drives Cormac to every appointment and keeps the pill organiser.\nLabs: creatinine 1.7 mg/dL, potassium 5.4 mmol/L. eGFR was 66 mL/min/1.73 m2 on Apr 14, 2025; today eGFR 57 mL/min/1.73 m2. Urine albumin/creatinine ratio 410 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (415) 555-0168 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Cormac Castellanos"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5918058"
+      },
+      {
+        "type": "date",
+        "value": "Mar 6, 1948"
+      },
+      {
+        "type": "date",
+        "value": "Jul 21, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Apr 14, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Khalil Aldecott"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0168"
+      },
+      {
+        "type": "name",
+        "value": "Soledad"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 57,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-018",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Lucan Ostrowski   MRN: ZX-2883885   DOB: 03/14/1955\nVisit date: 07/03/2026   Seen by: Dr. Khalil Soriano-Webb\n\nHPI: 71-year-old with chronic kidney disease and type 2 diabetes, last seen 12/20/2025. Soledad drives Lucan to every appointment and keeps the pill organiser.\nLabs: creatinine 1.4 mg/dL, potassium 5.2 mmol/L. eGFR was 77 mL/min/1.73 m2 on 12/20/2025; today eGFR 70 mL/min/1.73 m2. Urine albumin was not repeated this visit.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (212) 555-0154 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Lucan Ostrowski"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2883885"
+      },
+      {
+        "type": "date",
+        "value": "03/14/1955"
+      },
+      {
+        "type": "date",
+        "value": "07/03/2026"
+      },
+      {
+        "type": "date",
+        "value": "12/20/2025"
+      },
+      {
+        "type": "name",
+        "value": "Khalil Soriano-Webb"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0154"
+      },
+      {
+        "type": "name",
+        "value": "Soledad"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 70,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-019",
+    "demo": false,
+    "template": 0,
+    "text": "NEPHROLOGY CLINIC FOLLOW-UP\nPatient: Teodor Grimaldi   MRN: ZX-5781493   DOB: 1955-07-12\nVisit date: 2026-06-03   Seen by: Dr. Rashad Villanueva\n\nHPI: 71-year-old with chronic kidney disease and type 2 diabetes, last seen 2025-02-15. Family support at home is adequate.\nLabs: creatinine 1.6 mg/dL, potassium 5.1 mmol/L. eGFR was 69 mL/min/1.73 m2 on 2025-02-15; today eGFR 58 mL/min/1.73 m2. Urine albumin/creatinine ratio 22 mg/g.\nPlan: continue ACE inhibitor, repeat labs in 3 months. Call the clinic on (617) 555-0182 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Teodor Grimaldi"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5781493"
+      },
+      {
+        "type": "date",
+        "value": "1955-07-12"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-03"
+      },
+      {
+        "type": "date",
+        "value": "2025-02-15"
+      },
+      {
+        "type": "name",
+        "value": "Rashad Villanueva"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0182"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 58,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-020",
+    "demo": true,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 2 June 2026\nSpoke with Rashad Soriano-Webb (MRN ZX-1996127, date of birth 15 November 1944) at (305) 555-0170 about results.\nMost recent eGFR 48 (previous 58 on 10 March 2025). Urine albumin/creatinine ratio 95 mg/g. Potassium 5.3.\nCormac drives Rashad to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Vandermeer. Message routed to Basil Vandermeer.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Soriano-Webb"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1996127"
+      },
+      {
+        "type": "date",
+        "value": "15 November 1944"
+      },
+      {
+        "type": "date",
+        "value": "2 June 2026"
+      },
+      {
+        "type": "date",
+        "value": "10 March 2025"
+      },
+      {
+        "type": "name",
+        "value": "Basil Vandermeer"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0170"
+      },
+      {
+        "type": "name",
+        "value": "Cormac"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 48,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-021",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 2026-09-20\nSpoke with Anwen Faraday (MRN ZX-8677145, date of birth 1941-08-15) at (617) 555-0135 about results.\nMost recent eGFR 63 (previous 75 on 2025-07-13). Urine albumin/creatinine ratio 260 mg/g. Potassium 5.6.\nFamily support at home is adequate.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Pellegrino. Message routed to Zainab Pellegrino.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Anwen Faraday"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8677145"
+      },
+      {
+        "type": "date",
+        "value": "1941-08-15"
+      },
+      {
+        "type": "date",
+        "value": "2026-09-20"
+      },
+      {
+        "type": "date",
+        "value": "2025-07-13"
+      },
+      {
+        "type": "name",
+        "value": "Zainab Pellegrino"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0135"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 63,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-022",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER Apr 10, 2026\nSpoke with Odalys Mbeki (MRN ZX-2683414, date of birth Jan 24, 1952) at (305) 555-0108 about results.\nMost recent eGFR 35 (previous 37 on Mar 1, 2025). Urine albumin/creatinine ratio 1450 mg/g. Potassium 5.5.\nLucan drives Odalys to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Kowalczyk. Message routed to Lucan Kowalczyk.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Odalys Mbeki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2683414"
+      },
+      {
+        "type": "date",
+        "value": "Jan 24, 1952"
+      },
+      {
+        "type": "date",
+        "value": "Apr 10, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Mar 1, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Lucan Kowalczyk"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0108"
+      },
+      {
+        "type": "name",
+        "value": "Lucan"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 35,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-023",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 10/28/2026\nSpoke with Zainab Delacroix-Hume (MRN ZX-9878153, date of birth 05/05/1971) at (305) 555-0113 about results.\nMost recent eGFR 19 (previous 24 on 02/12/2025). Urine albumin/creatinine ratio 1450 mg/g. Potassium 5.7.\nImelda drives Zainab to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Mbeki. Message routed to Imelda Mbeki.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Zainab Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9878153"
+      },
+      {
+        "type": "date",
+        "value": "05/05/1971"
+      },
+      {
+        "type": "date",
+        "value": "10/28/2026"
+      },
+      {
+        "type": "date",
+        "value": "02/12/2025"
+      },
+      {
+        "type": "name",
+        "value": "Imelda Mbeki"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0113"
+      },
+      {
+        "type": "name",
+        "value": "Imelda"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 19,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-024",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 07/03/2026\nSpoke with Khalil Faraday (MRN ZX-6730501, date of birth 01/10/1969) at (415) 555-0181 about results.\nMost recent eGFR 37 (previous 41 on 03/15/2025). Urine albumin/creatinine ratio 95 mg/g. Potassium 5.1.\nPiotr drives Khalil to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Nakashima. Message routed to Yasmin Nakashima.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Khalil Faraday"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6730501"
+      },
+      {
+        "type": "date",
+        "value": "01/10/1969"
+      },
+      {
+        "type": "date",
+        "value": "07/03/2026"
+      },
+      {
+        "type": "date",
+        "value": "03/15/2025"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin Nakashima"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0181"
+      },
+      {
+        "type": "name",
+        "value": "Piotr"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 37,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-025",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER Oct 4, 2026\nSpoke with Odalys Pellegrino (MRN ZX-2060081, date of birth Dec 10, 1943) at (305) 555-0126 about results.\nMost recent eGFR 36 (previous 44 on Mar 15, 2025). Urine albumin/creatinine ratio 48 mg/g. Potassium 5.1.\nFamily support at home is adequate.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Pellegrino. Message routed to Henrik Pellegrino.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Odalys Pellegrino"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2060081"
+      },
+      {
+        "type": "date",
+        "value": "Dec 10, 1943"
+      },
+      {
+        "type": "date",
+        "value": "Oct 4, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Mar 15, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Henrik Pellegrino"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0126"
+      },
+      {
+        "type": "name",
+        "value": "Henrik"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 36,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-026",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 10/17/2026\nSpoke with Lucan Delacroix-Hume (MRN ZX-4551402, date of birth 02/21/1968) at (415) 555-0126 about results.\nMost recent eGFR 19 (previous 31 on 02/17/2025). Urine albumin/creatinine ratio 780 mg/g. Potassium 5.6.\nImelda drives Lucan to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Thackeray. Message routed to Tarek Thackeray.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Lucan Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4551402"
+      },
+      {
+        "type": "date",
+        "value": "02/21/1968"
+      },
+      {
+        "type": "date",
+        "value": "10/17/2026"
+      },
+      {
+        "type": "date",
+        "value": "02/17/2025"
+      },
+      {
+        "type": "name",
+        "value": "Tarek Thackeray"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0126"
+      },
+      {
+        "type": "name",
+        "value": "Imelda"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 19,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-027",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 2026-06-25\nSpoke with Basil Delacroix-Hume (MRN ZX-6261879, date of birth 1943-12-23) at (212) 555-0178 about results.\nMost recent eGFR 44 (previous 55 on 2025-11-16). Urine albumin was not repeated this visit. Potassium 5.9.\nTeodor drives Basil to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Castellanos. Message routed to Odalys Castellanos.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Basil Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6261879"
+      },
+      {
+        "type": "date",
+        "value": "1943-12-23"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-25"
+      },
+      {
+        "type": "date",
+        "value": "2025-11-16"
+      },
+      {
+        "type": "name",
+        "value": "Odalys Castellanos"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0178"
+      },
+      {
+        "type": "name",
+        "value": "Teodor"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 44,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-028",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 26 August 2026\nSpoke with Rashad Quillfeather (MRN ZX-4418942, date of birth 2 March 1966) at (305) 555-0136 about results.\nMost recent eGFR 48 (previous 56 on 10 August 2025). Urine albumin was not repeated this visit. Potassium 5.3.\nPiotr drives Rashad to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Kowalczyk. Message routed to Basil Kowalczyk.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Quillfeather"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4418942"
+      },
+      {
+        "type": "date",
+        "value": "2 March 1966"
+      },
+      {
+        "type": "date",
+        "value": "26 August 2026"
+      },
+      {
+        "type": "date",
+        "value": "10 August 2025"
+      },
+      {
+        "type": "name",
+        "value": "Basil Kowalczyk"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0136"
+      },
+      {
+        "type": "name",
+        "value": "Piotr"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 48,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-029",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER Feb 21, 2026\nSpoke with Cormac Ostrowski (MRN ZX-4277892, date of birth Sep 10, 1945) at (212) 555-0130 about results.\nMost recent eGFR 67 (previous 77 on Aug 6, 2025). Urine albumin/creatinine ratio 410 mg/g. Potassium 5.3.\nLucan drives Cormac to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Quillfeather. Message routed to Odalys Quillfeather.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Cormac Ostrowski"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4277892"
+      },
+      {
+        "type": "date",
+        "value": "Sep 10, 1945"
+      },
+      {
+        "type": "date",
+        "value": "Feb 21, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Aug 6, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Odalys Quillfeather"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0130"
+      },
+      {
+        "type": "name",
+        "value": "Lucan"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 67,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-030",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 07/24/2026\nSpoke with Odalys Soriano-Webb (MRN ZX-9463886, date of birth 01/18/1954) at (617) 555-0161 about results.\nMost recent eGFR 23 (previous 26 on 03/09/2025). Urine albumin/creatinine ratio 260 mg/g. Potassium 5.2.\nBasil drives Odalys to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Delacroix-Hume. Message routed to Zainab Delacroix-Hume.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Odalys Soriano-Webb"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9463886"
+      },
+      {
+        "type": "date",
+        "value": "01/18/1954"
+      },
+      {
+        "type": "date",
+        "value": "07/24/2026"
+      },
+      {
+        "type": "date",
+        "value": "03/09/2025"
+      },
+      {
+        "type": "name",
+        "value": "Zainab Delacroix-Hume"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0161"
+      },
+      {
+        "type": "name",
+        "value": "Basil"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 23,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-031",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 08/10/2026\nSpoke with Tarek Pellegrino (MRN ZX-1120006, date of birth 09/06/1953) at (212) 555-0185 about results.\nMost recent eGFR 49 (previous 59 on 12/28/2025). Urine albumin was not repeated this visit. Potassium 5.5.\nBasil drives Tarek to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Faraday. Message routed to Ottilie Faraday.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Pellegrino"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1120006"
+      },
+      {
+        "type": "date",
+        "value": "09/06/1953"
+      },
+      {
+        "type": "date",
+        "value": "08/10/2026"
+      },
+      {
+        "type": "date",
+        "value": "12/28/2025"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie Faraday"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0185"
+      },
+      {
+        "type": "name",
+        "value": "Basil"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 49,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-032",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 28 January 2026\nSpoke with Bartholomew Mbeki (MRN ZX-2324118, date of birth 1 June 1964) at (305) 555-0123 about results.\nMost recent eGFR 36 (previous 45 on 20 February 2025). Urine albumin/creatinine ratio 22 mg/g. Potassium 5.9.\nSoledad drives Bartholomew to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Thackeray. Message routed to Cormac Thackeray.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Mbeki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2324118"
+      },
+      {
+        "type": "date",
+        "value": "1 June 1964"
+      },
+      {
+        "type": "date",
+        "value": "28 January 2026"
+      },
+      {
+        "type": "date",
+        "value": "20 February 2025"
+      },
+      {
+        "type": "name",
+        "value": "Cormac Thackeray"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0123"
+      },
+      {
+        "type": "name",
+        "value": "Soledad"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 36,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-033",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 4 August 2026\nSpoke with Marisol Castellanos (MRN ZX-6228762, date of birth 19 April 1962) at (617) 555-0167 about results.\nMost recent eGFR 30 (previous 36 on 5 March 2025). Urine albumin/creatinine ratio 410 mg/g. Potassium 5.9.\nDelphine drives Marisol to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Brannigan. Message routed to Rashad Brannigan.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Marisol Castellanos"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6228762"
+      },
+      {
+        "type": "date",
+        "value": "19 April 1962"
+      },
+      {
+        "type": "date",
+        "value": "4 August 2026"
+      },
+      {
+        "type": "date",
+        "value": "5 March 2025"
+      },
+      {
+        "type": "name",
+        "value": "Rashad Brannigan"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0167"
+      },
+      {
+        "type": "name",
+        "value": "Delphine"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 30,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-034",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 2026-06-14\nSpoke with Khalil Soriano-Webb (MRN ZX-5932486, date of birth 1950-10-27) at (617) 555-0164 about results.\nMost recent eGFR 16 (previous 28 on 2025-09-03). Urine albumin/creatinine ratio 95 mg/g. Potassium 5.6.\nFamily support at home is adequate.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Ostrowski. Message routed to Imelda Ostrowski.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Khalil Soriano-Webb"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5932486"
+      },
+      {
+        "type": "date",
+        "value": "1950-10-27"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-14"
+      },
+      {
+        "type": "date",
+        "value": "2025-09-03"
+      },
+      {
+        "type": "name",
+        "value": "Imelda Ostrowski"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0164"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 16,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-035",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 2026-08-28\nSpoke with Bartholomew Umarov (MRN ZX-3345546, date of birth 1941-02-18) at (305) 555-0116 about results.\nMost recent eGFR 44 (previous 48 on 2025-07-04). Urine albumin/creatinine ratio 260 mg/g. Potassium 5.7.\nOdalys drives Bartholomew to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Faraday. Message routed to Rashad Faraday.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Umarov"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3345546"
+      },
+      {
+        "type": "date",
+        "value": "1941-02-18"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-28"
+      },
+      {
+        "type": "date",
+        "value": "2025-07-04"
+      },
+      {
+        "type": "name",
+        "value": "Rashad Faraday"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0116"
+      },
+      {
+        "type": "name",
+        "value": "Odalys"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 44,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-036",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 20 June 2026\nSpoke with Tarek Villanueva (MRN ZX-9390598, date of birth 6 June 1946) at (617) 555-0112 about results.\nMost recent eGFR 57 (previous 63 on 27 April 2025). Urine albumin/creatinine ratio 1450 mg/g. Potassium 5.4.\nFamily support at home is adequate.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Faraday. Message routed to Bartholomew Faraday.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Villanueva"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9390598"
+      },
+      {
+        "type": "date",
+        "value": "6 June 1946"
+      },
+      {
+        "type": "date",
+        "value": "20 June 2026"
+      },
+      {
+        "type": "date",
+        "value": "27 April 2025"
+      },
+      {
+        "type": "name",
+        "value": "Bartholomew Faraday"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0112"
+      },
+      {
+        "type": "name",
+        "value": "Bartholomew"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 57,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-037",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 2026-06-02\nSpoke with Ingrid Castellanos (MRN ZX-9177493, date of birth 1961-08-10) at (415) 555-0188 about results.\nMost recent eGFR 36 (previous 44 on 2025-01-23). Urine albumin was not repeated this visit. Potassium 5.4.\nMarisol drives Ingrid to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Iwasaki. Message routed to Imelda Iwasaki.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Castellanos"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9177493"
+      },
+      {
+        "type": "date",
+        "value": "1961-08-10"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-02"
+      },
+      {
+        "type": "date",
+        "value": "2025-01-23"
+      },
+      {
+        "type": "name",
+        "value": "Imelda Iwasaki"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0188"
+      },
+      {
+        "type": "name",
+        "value": "Marisol"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 36,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-038",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 08/20/2026\nSpoke with Delphine Thackeray (MRN ZX-6147231, date of birth 04/28/1956) at (415) 555-0164 about results.\nMost recent eGFR 65 (previous 76 on 11/17/2025). Urine albumin/creatinine ratio 1450 mg/g. Potassium 5.7.\nLucan drives Delphine to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Soriano-Webb. Message routed to Henrik Soriano-Webb.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Delphine Thackeray"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6147231"
+      },
+      {
+        "type": "date",
+        "value": "04/28/1956"
+      },
+      {
+        "type": "date",
+        "value": "08/20/2026"
+      },
+      {
+        "type": "date",
+        "value": "11/17/2025"
+      },
+      {
+        "type": "name",
+        "value": "Henrik Soriano-Webb"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0164"
+      },
+      {
+        "type": "name",
+        "value": "Lucan"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 65,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-039",
+    "demo": false,
+    "template": 1,
+    "text": "TELEPHONE ENCOUNTER 23 January 2026\nSpoke with Teodor Villanueva (MRN ZX-6422983, date of birth 3 January 1952) at (617) 555-0171 about results.\nMost recent eGFR 76 (previous 79 on 3 February 2025). Urine albumin/creatinine ratio 12 mg/g. Potassium 5.5.\nRashad drives Teodor to every appointment and keeps the pill organiser.\nAdvised to avoid NSAIDs and keep the nephrology follow-up with Dr. Brannigan. Message routed to Bartholomew Brannigan.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Teodor Villanueva"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6422983"
+      },
+      {
+        "type": "date",
+        "value": "3 January 1952"
+      },
+      {
+        "type": "date",
+        "value": "23 January 2026"
+      },
+      {
+        "type": "date",
+        "value": "3 February 2025"
+      },
+      {
+        "type": "name",
+        "value": "Bartholomew Brannigan"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0171"
+      },
+      {
+        "type": "name",
+        "value": "Rashad"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 76,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-040",
+    "demo": true,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Tarek Delacroix-Hume\nMedical Record Number: ZX-5091197\nAdmitted for volume overload on 2025-03-08; discharged 2026-05-11. Date of birth 1953-08-18.\nKidney function at discharge: eGFR 11 mL/min/1.73 m2 (admission 19). Urine albumin/creatinine ratio 1450 mg/g.\nSoledad drives Tarek to every appointment and keeps the pill organiser.\nDischarge instructions emailed to tarek.delacroixhume@example.org. Follow up with Dr. Delacroix-Hume; primary care Dr. Piotr Pellegrino.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5091197"
+      },
+      {
+        "type": "date",
+        "value": "1953-08-18"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-11"
+      },
+      {
+        "type": "date",
+        "value": "2025-03-08"
+      },
+      {
+        "type": "email",
+        "value": "tarek.delacroixhume@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Soledad"
+      },
+      {
+        "type": "name",
+        "value": "Piotr Pellegrino"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G5",
+      "egfr": 11,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-041",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Anwen Kowalczyk\nMedical Record Number: ZX-4743903\nAdmitted for volume overload on 2025-08-10; discharged 2026-04-13. Date of birth 1951-09-23.\nKidney function at discharge: eGFR 32 mL/min/1.73 m2 (admission 41). Urine albumin/creatinine ratio 1450 mg/g.\nFamily support at home is adequate.\nDischarge instructions emailed to anwen.kowalczyk@example.org. Follow up with Dr. Aldecott; primary care Dr. Zainab Castellanos.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Anwen Kowalczyk"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4743903"
+      },
+      {
+        "type": "date",
+        "value": "1951-09-23"
+      },
+      {
+        "type": "date",
+        "value": "2026-04-13"
+      },
+      {
+        "type": "date",
+        "value": "2025-08-10"
+      },
+      {
+        "type": "email",
+        "value": "anwen.kowalczyk@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Zainab Castellanos"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 32,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-042",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Bartholomew Villanueva\nMedical Record Number: ZX-7327936\nAdmitted for volume overload on Sep 5, 2025; discharged Feb 11, 2026. Date of birth Jul 28, 1955.\nKidney function at discharge: eGFR 62 mL/min/1.73 m2 (admission 71). Urine albumin/creatinine ratio 48 mg/g.\nFamily support at home is adequate.\nDischarge instructions emailed to bartholomew.villanueva@example.org. Follow up with Dr. Umarov; primary care Dr. Basil Vandermeer.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Villanueva"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7327936"
+      },
+      {
+        "type": "date",
+        "value": "Jul 28, 1955"
+      },
+      {
+        "type": "date",
+        "value": "Feb 11, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Sep 5, 2025"
+      },
+      {
+        "type": "email",
+        "value": "bartholomew.villanueva@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Basil"
+      },
+      {
+        "type": "name",
+        "value": "Basil Vandermeer"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 62,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-043",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Lucan Villanueva\nMedical Record Number: ZX-5781277\nAdmitted for volume overload on 2025-12-03; discharged 2026-04-09. Date of birth 1939-01-17.\nKidney function at discharge: eGFR 11 mL/min/1.73 m2 (admission 20). Urine albumin/creatinine ratio 48 mg/g.\nTeodor drives Lucan to every appointment and keeps the pill organiser.\nDischarge instructions emailed to lucan.villanueva@example.org. Follow up with Dr. Vandermeer; primary care Dr. Piotr Pellegrino.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Lucan Villanueva"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5781277"
+      },
+      {
+        "type": "date",
+        "value": "1939-01-17"
+      },
+      {
+        "type": "date",
+        "value": "2026-04-09"
+      },
+      {
+        "type": "date",
+        "value": "2025-12-03"
+      },
+      {
+        "type": "email",
+        "value": "lucan.villanueva@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Teodor"
+      },
+      {
+        "type": "name",
+        "value": "Piotr Pellegrino"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G5",
+      "egfr": 11,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-044",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Lucan Quillfeather\nMedical Record Number: ZX-2640533\nAdmitted for volume overload on 2025-08-11; discharged 2026-01-15. Date of birth 1961-12-20.\nKidney function at discharge: eGFR 32 mL/min/1.73 m2 (admission 42). Urine albumin/creatinine ratio 1450 mg/g.\nImelda drives Lucan to every appointment and keeps the pill organiser.\nDischarge instructions emailed to lucan.quillfeather@example.org. Follow up with Dr. Rasmussen; primary care Dr. Marisol Pellegrino.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Lucan Quillfeather"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2640533"
+      },
+      {
+        "type": "date",
+        "value": "1961-12-20"
+      },
+      {
+        "type": "date",
+        "value": "2026-01-15"
+      },
+      {
+        "type": "date",
+        "value": "2025-08-11"
+      },
+      {
+        "type": "email",
+        "value": "lucan.quillfeather@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Imelda"
+      },
+      {
+        "type": "name",
+        "value": "Marisol Pellegrino"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 32,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-045",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Soledad Delacroix-Hume\nMedical Record Number: ZX-6400107\nAdmitted for volume overload on 12/01/2025; discharged 07/04/2026. Date of birth 07/13/1960.\nKidney function at discharge: eGFR 21 mL/min/1.73 m2 (admission 25). Urine albumin/creatinine ratio 95 mg/g.\nTarek drives Soledad to every appointment and keeps the pill organiser.\nDischarge instructions emailed to soledad.delacroixhume@example.org. Follow up with Dr. Ostrowski; primary care Dr. Zainab Aldecott.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6400107"
+      },
+      {
+        "type": "date",
+        "value": "07/13/1960"
+      },
+      {
+        "type": "date",
+        "value": "07/04/2026"
+      },
+      {
+        "type": "date",
+        "value": "12/01/2025"
+      },
+      {
+        "type": "email",
+        "value": "soledad.delacroixhume@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Tarek"
+      },
+      {
+        "type": "name",
+        "value": "Zainab Aldecott"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 21,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-046",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Teodor Pellegrino\nMedical Record Number: ZX-5615112\nAdmitted for volume overload on 1 July 2025; discharged 22 July 2026. Date of birth 26 February 1964.\nKidney function at discharge: eGFR 78 mL/min/1.73 m2 (admission 86). Urine albumin/creatinine ratio 2300 mg/g.\nFamily support at home is adequate.\nDischarge instructions emailed to teodor.pellegrino@example.org. Follow up with Dr. Umarov; primary care Dr. Tarek Umarov.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Teodor Pellegrino"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5615112"
+      },
+      {
+        "type": "date",
+        "value": "26 February 1964"
+      },
+      {
+        "type": "date",
+        "value": "22 July 2026"
+      },
+      {
+        "type": "date",
+        "value": "1 July 2025"
+      },
+      {
+        "type": "email",
+        "value": "teodor.pellegrino@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Tarek Umarov"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 78,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-047",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Teodor Mbeki\nMedical Record Number: ZX-9702511\nAdmitted for volume overload on 2025-09-21; discharged 2026-08-04. Date of birth 1952-09-26.\nKidney function at discharge: eGFR 39 mL/min/1.73 m2 (admission 44). Urine albumin was not repeated this visit.\nLucan drives Teodor to every appointment and keeps the pill organiser.\nDischarge instructions emailed to teodor.mbeki@example.org. Follow up with Dr. Delacroix-Hume; primary care Dr. Odalys Umarov.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Teodor Mbeki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9702511"
+      },
+      {
+        "type": "date",
+        "value": "1952-09-26"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-04"
+      },
+      {
+        "type": "date",
+        "value": "2025-09-21"
+      },
+      {
+        "type": "email",
+        "value": "teodor.mbeki@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Lucan"
+      },
+      {
+        "type": "name",
+        "value": "Odalys Umarov"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 39,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-048",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Bartholomew Rasmussen\nMedical Record Number: ZX-6313522\nAdmitted for volume overload on May 21, 2025; discharged Aug 21, 2026. Date of birth Nov 17, 1968.\nKidney function at discharge: eGFR 56 mL/min/1.73 m2 (admission 67). Urine albumin/creatinine ratio 410 mg/g.\nZainab drives Bartholomew to every appointment and keeps the pill organiser.\nDischarge instructions emailed to bartholomew.rasmussen@example.org. Follow up with Dr. Delacroix-Hume; primary care Dr. Soledad Quillfeather.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Rasmussen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6313522"
+      },
+      {
+        "type": "date",
+        "value": "Nov 17, 1968"
+      },
+      {
+        "type": "date",
+        "value": "Aug 21, 2026"
+      },
+      {
+        "type": "date",
+        "value": "May 21, 2025"
+      },
+      {
+        "type": "email",
+        "value": "bartholomew.rasmussen@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Zainab"
+      },
+      {
+        "type": "name",
+        "value": "Soledad Quillfeather"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 56,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-049",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Khalil Brannigan\nMedical Record Number: ZX-4967369\nAdmitted for volume overload on 03/20/2025; discharged 08/04/2026. Date of birth 04/18/1944.\nKidney function at discharge: eGFR 17 mL/min/1.73 m2 (admission 24). Urine albumin/creatinine ratio 95 mg/g.\nFamily support at home is adequate.\nDischarge instructions emailed to khalil.brannigan@example.org. Follow up with Dr. Kowalczyk; primary care Dr. Henrik Faraday.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Khalil Brannigan"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4967369"
+      },
+      {
+        "type": "date",
+        "value": "04/18/1944"
+      },
+      {
+        "type": "date",
+        "value": "08/04/2026"
+      },
+      {
+        "type": "date",
+        "value": "03/20/2025"
+      },
+      {
+        "type": "email",
+        "value": "khalil.brannigan@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Henrik Faraday"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 17,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-050",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Anwen Delacroix-Hume\nMedical Record Number: ZX-5178384\nAdmitted for volume overload on Jun 7, 2025; discharged Sep 20, 2026. Date of birth Jun 20, 1950.\nKidney function at discharge: eGFR 53 mL/min/1.73 m2 (admission 62). Urine albumin was not repeated this visit.\nOdalys drives Anwen to every appointment and keeps the pill organiser.\nDischarge instructions emailed to anwen.delacroixhume@example.org. Follow up with Dr. Soriano-Webb; primary care Dr. Basil Grimaldi.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Anwen Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5178384"
+      },
+      {
+        "type": "date",
+        "value": "Jun 20, 1950"
+      },
+      {
+        "type": "date",
+        "value": "Sep 20, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Jun 7, 2025"
+      },
+      {
+        "type": "email",
+        "value": "anwen.delacroixhume@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Odalys"
+      },
+      {
+        "type": "name",
+        "value": "Basil Grimaldi"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 53,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-051",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Zainab Aldecott\nMedical Record Number: ZX-7342185\nAdmitted for volume overload on May 28, 2025; discharged Jan 6, 2026. Date of birth Jan 1, 1947.\nKidney function at discharge: eGFR 41 mL/min/1.73 m2 (admission 46). Urine albumin/creatinine ratio 22 mg/g.\nHenrik drives Zainab to every appointment and keeps the pill organiser.\nDischarge instructions emailed to zainab.aldecott@example.org. Follow up with Dr. Iwasaki; primary care Dr. Yasmin Soriano-Webb.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Zainab Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7342185"
+      },
+      {
+        "type": "date",
+        "value": "Jan 1, 1947"
+      },
+      {
+        "type": "date",
+        "value": "Jan 6, 2026"
+      },
+      {
+        "type": "date",
+        "value": "May 28, 2025"
+      },
+      {
+        "type": "email",
+        "value": "zainab.aldecott@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Henrik"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin Soriano-Webb"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 41,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-052",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Lucan Kowalczyk\nMedical Record Number: ZX-7035781\nAdmitted for volume overload on 2025-04-12; discharged 2026-06-15. Date of birth 1965-05-16.\nKidney function at discharge: eGFR 16 mL/min/1.73 m2 (admission 27). Urine albumin was not repeated this visit.\nKhalil drives Lucan to every appointment and keeps the pill organiser.\nDischarge instructions emailed to lucan.kowalczyk@example.org. Follow up with Dr. Pellegrino; primary care Dr. Delphine Rasmussen.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Lucan Kowalczyk"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7035781"
+      },
+      {
+        "type": "date",
+        "value": "1965-05-16"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-15"
+      },
+      {
+        "type": "date",
+        "value": "2025-04-12"
+      },
+      {
+        "type": "email",
+        "value": "lucan.kowalczyk@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Khalil"
+      },
+      {
+        "type": "name",
+        "value": "Delphine Rasmussen"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 16,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-053",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Piotr Aldecott\nMedical Record Number: ZX-4417472\nAdmitted for volume overload on 10 July 2025; discharged 9 February 2026. Date of birth 18 June 1963.\nKidney function at discharge: eGFR 24 mL/min/1.73 m2 (admission 32). Urine albumin/creatinine ratio 48 mg/g.\nMarisol drives Piotr to every appointment and keeps the pill organiser.\nDischarge instructions emailed to piotr.aldecott@example.org. Follow up with Dr. Castellanos; primary care Dr. Imelda Quillfeather.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Piotr Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4417472"
+      },
+      {
+        "type": "date",
+        "value": "18 June 1963"
+      },
+      {
+        "type": "date",
+        "value": "9 February 2026"
+      },
+      {
+        "type": "date",
+        "value": "10 July 2025"
+      },
+      {
+        "type": "email",
+        "value": "piotr.aldecott@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Marisol"
+      },
+      {
+        "type": "name",
+        "value": "Imelda Quillfeather"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 24,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-054",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Cormac Soriano-Webb\nMedical Record Number: ZX-5280368\nAdmitted for volume overload on 11/13/2025; discharged 07/17/2026. Date of birth 04/14/1971.\nKidney function at discharge: eGFR 49 mL/min/1.73 m2 (admission 51). Urine albumin/creatinine ratio 95 mg/g.\nFamily support at home is adequate.\nDischarge instructions emailed to cormac.sorianowebb@example.org. Follow up with Dr. Umarov; primary care Dr. Soledad Castellanos.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Cormac Soriano-Webb"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5280368"
+      },
+      {
+        "type": "date",
+        "value": "04/14/1971"
+      },
+      {
+        "type": "date",
+        "value": "07/17/2026"
+      },
+      {
+        "type": "date",
+        "value": "11/13/2025"
+      },
+      {
+        "type": "email",
+        "value": "cormac.sorianowebb@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Soledad Castellanos"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 49,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-055",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Khalil Ostrowski\nMedical Record Number: ZX-5370771\nAdmitted for volume overload on 2025-02-07; discharged 2026-05-15. Date of birth 1942-03-05.\nKidney function at discharge: eGFR 34 mL/min/1.73 m2 (admission 38). Urine albumin/creatinine ratio 260 mg/g.\nYasmin drives Khalil to every appointment and keeps the pill organiser.\nDischarge instructions emailed to khalil.ostrowski@example.org. Follow up with Dr. Grimaldi; primary care Dr. Imelda Pellegrino.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Khalil Ostrowski"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5370771"
+      },
+      {
+        "type": "date",
+        "value": "1942-03-05"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-15"
+      },
+      {
+        "type": "date",
+        "value": "2025-02-07"
+      },
+      {
+        "type": "email",
+        "value": "khalil.ostrowski@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin"
+      },
+      {
+        "type": "name",
+        "value": "Imelda Pellegrino"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 34,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-056",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Khalil Brannigan\nMedical Record Number: ZX-4665120\nAdmitted for volume overload on Jul 23, 2025; discharged Jan 27, 2026. Date of birth Apr 28, 1958.\nKidney function at discharge: eGFR 59 mL/min/1.73 m2 (admission 71). Urine albumin/creatinine ratio 95 mg/g.\nZainab drives Khalil to every appointment and keeps the pill organiser.\nDischarge instructions emailed to khalil.brannigan@example.org. Follow up with Dr. Umarov; primary care Dr. Lucan Nakashima.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Khalil Brannigan"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4665120"
+      },
+      {
+        "type": "date",
+        "value": "Apr 28, 1958"
+      },
+      {
+        "type": "date",
+        "value": "Jan 27, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Jul 23, 2025"
+      },
+      {
+        "type": "email",
+        "value": "khalil.brannigan@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Zainab"
+      },
+      {
+        "type": "name",
+        "value": "Lucan Nakashima"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 59,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-057",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Rashad Vandermeer\nMedical Record Number: ZX-5855839\nAdmitted for volume overload on 2025-10-23; discharged 2026-03-14. Date of birth 1968-12-16.\nKidney function at discharge: eGFR 17 mL/min/1.73 m2 (admission 26). Urine albumin/creatinine ratio 2300 mg/g.\nFamily support at home is adequate.\nDischarge instructions emailed to rashad.vandermeer@example.org. Follow up with Dr. Delacroix-Hume; primary care Dr. Yasmin Rasmussen.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Vandermeer"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5855839"
+      },
+      {
+        "type": "date",
+        "value": "1968-12-16"
+      },
+      {
+        "type": "date",
+        "value": "2026-03-14"
+      },
+      {
+        "type": "date",
+        "value": "2025-10-23"
+      },
+      {
+        "type": "email",
+        "value": "rashad.vandermeer@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin Rasmussen"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 17,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-058",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Zainab Vandermeer\nMedical Record Number: ZX-4795669\nAdmitted for volume overload on 12 December 2025; discharged 9 September 2026. Date of birth 25 April 1949.\nKidney function at discharge: eGFR 70 mL/min/1.73 m2 (admission 82). Urine albumin was not repeated this visit.\nFamily support at home is adequate.\nDischarge instructions emailed to zainab.vandermeer@example.org. Follow up with Dr. Umarov; primary care Dr. Tarek Vandermeer.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Zainab Vandermeer"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4795669"
+      },
+      {
+        "type": "date",
+        "value": "25 April 1949"
+      },
+      {
+        "type": "date",
+        "value": "9 September 2026"
+      },
+      {
+        "type": "date",
+        "value": "12 December 2025"
+      },
+      {
+        "type": "email",
+        "value": "zainab.vandermeer@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Tarek Vandermeer"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 70,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-059",
+    "demo": false,
+    "template": 2,
+    "text": "DISCHARGE SUMMARY (extract)\nName: Yasmin Villanueva\nMedical Record Number: ZX-4299321\nAdmitted for volume overload on 2025-03-12; discharged 2026-06-04. Date of birth 1946-03-26.\nKidney function at discharge: eGFR 56 mL/min/1.73 m2 (admission 67). Urine albumin was not repeated this visit.\nImelda drives Yasmin to every appointment and keeps the pill organiser.\nDischarge instructions emailed to yasmin.villanueva@example.org. Follow up with Dr. Castellanos; primary care Dr. Henrik Halvorsen.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Yasmin Villanueva"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4299321"
+      },
+      {
+        "type": "date",
+        "value": "1946-03-26"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-04"
+      },
+      {
+        "type": "date",
+        "value": "2025-03-12"
+      },
+      {
+        "type": "email",
+        "value": "yasmin.villanueva@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Imelda"
+      },
+      {
+        "type": "name",
+        "value": "Henrik Halvorsen"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 56,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-060",
+    "demo": true,
+    "template": 3,
+    "text": "Dear Dr. Quillfeather,\n\nThank you for seeing Mrs. Halvorsen (Delphine Halvorsen, MRN: ZX-5073112), born 01/21/1942, referred on 01/11/2026 for progressive CKD.\nHer eGFR has fallen from 69 (03/17/2025) to 57 mL/min/1.73 m2. Urine albumin was not repeated this visit. Blood pressure is controlled.\nKhalil drives Delphine to every appointment and keeps the pill organiser. She can be reached at delphine.halvorsen@example.org.\n\nSincerely,\nDr. Delphine Kowalczyk",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Delphine Halvorsen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5073112"
+      },
+      {
+        "type": "date",
+        "value": "01/21/1942"
+      },
+      {
+        "type": "date",
+        "value": "01/11/2026"
+      },
+      {
+        "type": "date",
+        "value": "03/17/2025"
+      },
+      {
+        "type": "email",
+        "value": "delphine.halvorsen@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Khalil"
+      },
+      {
+        "type": "name",
+        "value": "Delphine Kowalczyk"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 57,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-061",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Vandermeer,\n\nThank you for seeing Mrs. Nakashima (Delphine Nakashima, MRN: ZX-2230931), born 1 May 1960, referred on 5 March 2026 for progressive CKD.\nHer eGFR has fallen from 31 (21 June 2025) to 22 mL/min/1.73 m2. Urine albumin/creatinine ratio 410 mg/g. Blood pressure is controlled.\nFamily support at home is adequate. She can be reached at delphine.nakashima@example.org.\n\nSincerely,\nDr. Anwen Pellegrino",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Delphine Nakashima"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2230931"
+      },
+      {
+        "type": "date",
+        "value": "1 May 1960"
+      },
+      {
+        "type": "date",
+        "value": "5 March 2026"
+      },
+      {
+        "type": "date",
+        "value": "21 June 2025"
+      },
+      {
+        "type": "email",
+        "value": "delphine.nakashima@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Anwen Pellegrino"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 22,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-062",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Halvorsen,\n\nThank you for seeing Mrs. Villanueva (Piotr Villanueva, MRN: ZX-4777161), born Aug 14, 1938, referred on Jun 6, 2026 for progressive CKD.\nHer eGFR has fallen from 60 (Sep 26, 2025) to 56 mL/min/1.73 m2. Urine albumin/creatinine ratio 260 mg/g. Blood pressure is controlled.\nTarek drives Piotr to every appointment and keeps the pill organiser. She can be reached at piotr.villanueva@example.org.\n\nSincerely,\nDr. Lucan Kowalczyk",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Piotr Villanueva"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4777161"
+      },
+      {
+        "type": "date",
+        "value": "Aug 14, 1938"
+      },
+      {
+        "type": "date",
+        "value": "Jun 6, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Sep 26, 2025"
+      },
+      {
+        "type": "email",
+        "value": "piotr.villanueva@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Tarek"
+      },
+      {
+        "type": "name",
+        "value": "Lucan Kowalczyk"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 56,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-063",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Brannigan,\n\nThank you for seeing Mrs. Castellanos (Odalys Castellanos, MRN: ZX-1326603), born Jan 23, 1960, referred on Jun 3, 2026 for progressive CKD.\nHer eGFR has fallen from 57 (Mar 1, 2025) to 54 mL/min/1.73 m2. Urine albumin/creatinine ratio 780 mg/g. Blood pressure is controlled.\nTarek drives Odalys to every appointment and keeps the pill organiser. She can be reached at odalys.castellanos@example.org.\n\nSincerely,\nDr. Cormac Quillfeather",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Odalys Castellanos"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1326603"
+      },
+      {
+        "type": "date",
+        "value": "Jan 23, 1960"
+      },
+      {
+        "type": "date",
+        "value": "Jun 3, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Mar 1, 2025"
+      },
+      {
+        "type": "email",
+        "value": "odalys.castellanos@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Tarek"
+      },
+      {
+        "type": "name",
+        "value": "Cormac Quillfeather"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 54,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-064",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Nakashima,\n\nThank you for seeing Mrs. Nakashima (Rashad Nakashima, MRN: ZX-4541926), born 6 December 1961, referred on 9 January 2026 for progressive CKD.\nHer eGFR has fallen from 58 (8 February 2025) to 47 mL/min/1.73 m2. Urine albumin/creatinine ratio 180 mg/g. Blood pressure is controlled.\nFamily support at home is adequate. She can be reached at rashad.nakashima@example.org.\n\nSincerely,\nDr. Rashad Villanueva",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Nakashima"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4541926"
+      },
+      {
+        "type": "date",
+        "value": "6 December 1961"
+      },
+      {
+        "type": "date",
+        "value": "9 January 2026"
+      },
+      {
+        "type": "date",
+        "value": "8 February 2025"
+      },
+      {
+        "type": "email",
+        "value": "rashad.nakashima@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Rashad Villanueva"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 47,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-065",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Castellanos,\n\nThank you for seeing Mrs. Villanueva (Soledad Villanueva, MRN: ZX-2732098), born Nov 27, 1965, referred on Feb 10, 2026 for progressive CKD.\nHer eGFR has fallen from 86 (May 6, 2025) to 77 mL/min/1.73 m2. Urine albumin/creatinine ratio 410 mg/g. Blood pressure is controlled.\nTarek drives Soledad to every appointment and keeps the pill organiser. She can be reached at soledad.villanueva@example.org.\n\nSincerely,\nDr. Cormac Brannigan",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Villanueva"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2732098"
+      },
+      {
+        "type": "date",
+        "value": "Nov 27, 1965"
+      },
+      {
+        "type": "date",
+        "value": "Feb 10, 2026"
+      },
+      {
+        "type": "date",
+        "value": "May 6, 2025"
+      },
+      {
+        "type": "email",
+        "value": "soledad.villanueva@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Tarek"
+      },
+      {
+        "type": "name",
+        "value": "Cormac Brannigan"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 77,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-066",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Soriano-Webb,\n\nThank you for seeing Mrs. Thackeray (Yasmin Thackeray, MRN: ZX-8398272), born 28 July 1960, referred on 27 July 2026 for progressive CKD.\nHer eGFR has fallen from 53 (7 February 2025) to 41 mL/min/1.73 m2. Urine albumin/creatinine ratio 48 mg/g. Blood pressure is controlled.\nLucan drives Yasmin to every appointment and keeps the pill organiser. She can be reached at yasmin.thackeray@example.org.\n\nSincerely,\nDr. Imelda Ostrowski",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Yasmin Thackeray"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8398272"
+      },
+      {
+        "type": "date",
+        "value": "28 July 1960"
+      },
+      {
+        "type": "date",
+        "value": "27 July 2026"
+      },
+      {
+        "type": "date",
+        "value": "7 February 2025"
+      },
+      {
+        "type": "email",
+        "value": "yasmin.thackeray@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Lucan"
+      },
+      {
+        "type": "name",
+        "value": "Imelda Ostrowski"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 41,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-067",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Iwasaki,\n\nThank you for seeing Mrs. Brannigan (Soledad Brannigan, MRN: ZX-1658149), born 1941-08-16, referred on 2026-07-12 for progressive CKD.\nHer eGFR has fallen from 58 (2025-09-13) to 50 mL/min/1.73 m2. Urine albumin was not repeated this visit. Blood pressure is controlled.\nFamily support at home is adequate. She can be reached at soledad.brannigan@example.org.\n\nSincerely,\nDr. Teodor Halvorsen",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Brannigan"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1658149"
+      },
+      {
+        "type": "date",
+        "value": "1941-08-16"
+      },
+      {
+        "type": "date",
+        "value": "2026-07-12"
+      },
+      {
+        "type": "date",
+        "value": "2025-09-13"
+      },
+      {
+        "type": "email",
+        "value": "soledad.brannigan@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Teodor"
+      },
+      {
+        "type": "name",
+        "value": "Teodor Halvorsen"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 50,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-068",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Brannigan,\n\nThank you for seeing Mrs. Kowalczyk (Zainab Kowalczyk, MRN: ZX-2094510), born Jun 9, 1938, referred on Oct 7, 2026 for progressive CKD.\nHer eGFR has fallen from 76 (Jul 18, 2025) to 72 mL/min/1.73 m2. Urine albumin was not repeated this visit. Blood pressure is controlled.\nFamily support at home is adequate. She can be reached at zainab.kowalczyk@example.org.\n\nSincerely,\nDr. Delphine Faraday",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Zainab Kowalczyk"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2094510"
+      },
+      {
+        "type": "date",
+        "value": "Jun 9, 1938"
+      },
+      {
+        "type": "date",
+        "value": "Oct 7, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Jul 18, 2025"
+      },
+      {
+        "type": "email",
+        "value": "zainab.kowalczyk@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Delphine Faraday"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 72,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-069",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Pellegrino,\n\nThank you for seeing Mrs. Faraday (Yasmin Faraday, MRN: ZX-8455409), born Mar 28, 1956, referred on Aug 13, 2026 for progressive CKD.\nHer eGFR has fallen from 62 (Apr 22, 2025) to 55 mL/min/1.73 m2. Urine albumin/creatinine ratio 22 mg/g. Blood pressure is controlled.\nFamily support at home is adequate. She can be reached at yasmin.faraday@example.org.\n\nSincerely,\nDr. Tarek Thackeray",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Yasmin Faraday"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8455409"
+      },
+      {
+        "type": "date",
+        "value": "Mar 28, 1956"
+      },
+      {
+        "type": "date",
+        "value": "Aug 13, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Apr 22, 2025"
+      },
+      {
+        "type": "email",
+        "value": "yasmin.faraday@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Tarek Thackeray"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 55,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-070",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Brannigan,\n\nThank you for seeing Mrs. Soriano-Webb (Tarek Soriano-Webb, MRN: ZX-6022892), born May 22, 1942, referred on Sep 16, 2026 for progressive CKD.\nHer eGFR has fallen from 78 (Jun 9, 2025) to 67 mL/min/1.73 m2. Urine albumin/creatinine ratio 410 mg/g. Blood pressure is controlled.\nOttilie drives Tarek to every appointment and keeps the pill organiser. She can be reached at tarek.sorianowebb@example.org.\n\nSincerely,\nDr. Zainab Grimaldi",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Soriano-Webb"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6022892"
+      },
+      {
+        "type": "date",
+        "value": "May 22, 1942"
+      },
+      {
+        "type": "date",
+        "value": "Sep 16, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Jun 9, 2025"
+      },
+      {
+        "type": "email",
+        "value": "tarek.sorianowebb@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie"
+      },
+      {
+        "type": "name",
+        "value": "Zainab Grimaldi"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 67,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-071",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Soriano-Webb,\n\nThank you for seeing Mrs. Nakashima (Tarek Nakashima, MRN: ZX-5254357), born 07/06/1972, referred on 09/28/2026 for progressive CKD.\nHer eGFR has fallen from 62 (04/17/2025) to 57 mL/min/1.73 m2. Urine albumin/creatinine ratio 180 mg/g. Blood pressure is controlled.\nIngrid drives Tarek to every appointment and keeps the pill organiser. She can be reached at tarek.nakashima@example.org.\n\nSincerely,\nDr. Rashad Villanueva",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Nakashima"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5254357"
+      },
+      {
+        "type": "date",
+        "value": "07/06/1972"
+      },
+      {
+        "type": "date",
+        "value": "09/28/2026"
+      },
+      {
+        "type": "date",
+        "value": "04/17/2025"
+      },
+      {
+        "type": "email",
+        "value": "tarek.nakashima@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Ingrid"
+      },
+      {
+        "type": "name",
+        "value": "Rashad Villanueva"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 57,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-072",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Ostrowski,\n\nThank you for seeing Mrs. Vandermeer (Ingrid Vandermeer, MRN: ZX-2671234), born 06/06/1957, referred on 03/17/2026 for progressive CKD.\nHer eGFR has fallen from 43 (04/18/2025) to 39 mL/min/1.73 m2. Urine albumin/creatinine ratio 180 mg/g. Blood pressure is controlled.\nCormac drives Ingrid to every appointment and keeps the pill organiser. She can be reached at ingrid.vandermeer@example.org.\n\nSincerely,\nDr. Bartholomew Quillfeather",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Vandermeer"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2671234"
+      },
+      {
+        "type": "date",
+        "value": "06/06/1957"
+      },
+      {
+        "type": "date",
+        "value": "03/17/2026"
+      },
+      {
+        "type": "date",
+        "value": "04/18/2025"
+      },
+      {
+        "type": "email",
+        "value": "ingrid.vandermeer@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Cormac"
+      },
+      {
+        "type": "name",
+        "value": "Bartholomew Quillfeather"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 39,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-073",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Soriano-Webb,\n\nThank you for seeing Mrs. Nakashima (Bartholomew Nakashima, MRN: ZX-5844853), born 11 August 1958, referred on 17 October 2026 for progressive CKD.\nHer eGFR has fallen from 76 (14 March 2025) to 67 mL/min/1.73 m2. Urine albumin/creatinine ratio 22 mg/g. Blood pressure is controlled.\nFamily support at home is adequate. She can be reached at bartholomew.nakashima@example.org.\n\nSincerely,\nDr. Ottilie Vandermeer",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Nakashima"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5844853"
+      },
+      {
+        "type": "date",
+        "value": "11 August 1958"
+      },
+      {
+        "type": "date",
+        "value": "17 October 2026"
+      },
+      {
+        "type": "date",
+        "value": "14 March 2025"
+      },
+      {
+        "type": "email",
+        "value": "bartholomew.nakashima@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie Vandermeer"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 67,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-074",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Vandermeer,\n\nThank you for seeing Mrs. Ostrowski (Cormac Ostrowski, MRN: ZX-3925812), born 1957-09-24, referred on 2026-01-14 for progressive CKD.\nHer eGFR has fallen from 19 (2025-06-20) to 13 mL/min/1.73 m2. Urine albumin/creatinine ratio 48 mg/g. Blood pressure is controlled.\nBasil drives Cormac to every appointment and keeps the pill organiser. She can be reached at cormac.ostrowski@example.org.\n\nSincerely,\nDr. Lucan Rasmussen",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Cormac Ostrowski"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3925812"
+      },
+      {
+        "type": "date",
+        "value": "1957-09-24"
+      },
+      {
+        "type": "date",
+        "value": "2026-01-14"
+      },
+      {
+        "type": "date",
+        "value": "2025-06-20"
+      },
+      {
+        "type": "email",
+        "value": "cormac.ostrowski@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Basil"
+      },
+      {
+        "type": "name",
+        "value": "Lucan Rasmussen"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G5",
+      "egfr": 13,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-075",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Rasmussen,\n\nThank you for seeing Mrs. Grimaldi (Tarek Grimaldi, MRN: ZX-2225232), born Jul 16, 1952, referred on Sep 11, 2026 for progressive CKD.\nHer eGFR has fallen from 48 (Jan 8, 2025) to 40 mL/min/1.73 m2. Urine albumin/creatinine ratio 2300 mg/g. Blood pressure is controlled.\nRashad drives Tarek to every appointment and keeps the pill organiser. She can be reached at tarek.grimaldi@example.org.\n\nSincerely,\nDr. Piotr Mbeki",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Grimaldi"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2225232"
+      },
+      {
+        "type": "date",
+        "value": "Jul 16, 1952"
+      },
+      {
+        "type": "date",
+        "value": "Sep 11, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Jan 8, 2025"
+      },
+      {
+        "type": "email",
+        "value": "tarek.grimaldi@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Rashad"
+      },
+      {
+        "type": "name",
+        "value": "Piotr Mbeki"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 40,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-076",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Pellegrino,\n\nThank you for seeing Mrs. Faraday (Soledad Faraday, MRN: ZX-7380969), born 03/11/1954, referred on 10/02/2026 for progressive CKD.\nHer eGFR has fallen from 12 (03/01/2025) to 8 mL/min/1.73 m2. Urine albumin was not repeated this visit. Blood pressure is controlled.\nFamily support at home is adequate. She can be reached at soledad.faraday@example.org.\n\nSincerely,\nDr. Soledad Quillfeather",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Faraday"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7380969"
+      },
+      {
+        "type": "date",
+        "value": "03/11/1954"
+      },
+      {
+        "type": "date",
+        "value": "10/02/2026"
+      },
+      {
+        "type": "date",
+        "value": "03/01/2025"
+      },
+      {
+        "type": "email",
+        "value": "soledad.faraday@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Soledad Quillfeather"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G5",
+      "egfr": 8,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-077",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Rasmussen,\n\nThank you for seeing Mrs. Quillfeather (Imelda Quillfeather, MRN: ZX-8483860), born 1958-05-21, referred on 2026-03-23 for progressive CKD.\nHer eGFR has fallen from 52 (2025-02-07) to 48 mL/min/1.73 m2. Urine albumin/creatinine ratio 48 mg/g. Blood pressure is controlled.\nFamily support at home is adequate. She can be reached at imelda.quillfeather@example.org.\n\nSincerely,\nDr. Teodor Castellanos",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Imelda Quillfeather"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8483860"
+      },
+      {
+        "type": "date",
+        "value": "1958-05-21"
+      },
+      {
+        "type": "date",
+        "value": "2026-03-23"
+      },
+      {
+        "type": "date",
+        "value": "2025-02-07"
+      },
+      {
+        "type": "email",
+        "value": "imelda.quillfeather@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Teodor Castellanos"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 48,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-078",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Brannigan,\n\nThank you for seeing Mrs. Brannigan (Rashad Brannigan, MRN: ZX-2191435), born Sep 8, 1947, referred on Aug 5, 2026 for progressive CKD.\nHer eGFR has fallen from 17 (Feb 7, 2025) to 10 mL/min/1.73 m2. Urine albumin/creatinine ratio 180 mg/g. Blood pressure is controlled.\nOdalys drives Rashad to every appointment and keeps the pill organiser. She can be reached at rashad.brannigan@example.org.\n\nSincerely,\nDr. Yasmin Umarov",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Brannigan"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2191435"
+      },
+      {
+        "type": "date",
+        "value": "Sep 8, 1947"
+      },
+      {
+        "type": "date",
+        "value": "Aug 5, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Feb 7, 2025"
+      },
+      {
+        "type": "email",
+        "value": "rashad.brannigan@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Odalys"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin Umarov"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G5",
+      "egfr": 10,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-079",
+    "demo": false,
+    "template": 3,
+    "text": "Dear Dr. Soriano-Webb,\n\nThank you for seeing Mrs. Kowalczyk (Lucan Kowalczyk, MRN: ZX-9061187), born 10/02/1952, referred on 01/12/2026 for progressive CKD.\nHer eGFR has fallen from 62 (04/02/2025) to 54 mL/min/1.73 m2. Urine albumin/creatinine ratio 780 mg/g. Blood pressure is controlled.\nYasmin drives Lucan to every appointment and keeps the pill organiser. She can be reached at lucan.kowalczyk@example.org.\n\nSincerely,\nDr. Delphine Pellegrino",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Lucan Kowalczyk"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9061187"
+      },
+      {
+        "type": "date",
+        "value": "10/02/1952"
+      },
+      {
+        "type": "date",
+        "value": "01/12/2026"
+      },
+      {
+        "type": "date",
+        "value": "04/02/2025"
+      },
+      {
+        "type": "email",
+        "value": "lucan.kowalczyk@example.org"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin"
+      },
+      {
+        "type": "name",
+        "value": "Delphine Pellegrino"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 54,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-080",
+    "demo": true,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 7 June 2026\nAnwen Soriano-Webb, MRN ZX-5426771, DOB 6 May 1939. Contact (212) 555-0185.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 78 mL/min/1.73 m2, earlier 87 (24 September 2025). Urine albumin/creatinine ratio 180 mg/g.\nBasil drives Anwen to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Henrik Ostrowski.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Anwen Soriano-Webb"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5426771"
+      },
+      {
+        "type": "date",
+        "value": "6 May 1939"
+      },
+      {
+        "type": "date",
+        "value": "7 June 2026"
+      },
+      {
+        "type": "date",
+        "value": "24 September 2025"
+      },
+      {
+        "type": "name",
+        "value": "Henrik Ostrowski"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0185"
+      },
+      {
+        "type": "name",
+        "value": "Basil"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 78,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-081",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 16 April 2026\nTarek Delacroix-Hume, MRN ZX-1112048, DOB 16 June 1964. Contact (415) 555-0114.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 56 mL/min/1.73 m2, earlier 61 (17 June 2025). Urine albumin/creatinine ratio 22 mg/g.\nHenrik drives Tarek to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Tarek Ostrowski.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1112048"
+      },
+      {
+        "type": "date",
+        "value": "16 June 1964"
+      },
+      {
+        "type": "date",
+        "value": "16 April 2026"
+      },
+      {
+        "type": "date",
+        "value": "17 June 2025"
+      },
+      {
+        "type": "name",
+        "value": "Tarek Ostrowski"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0114"
+      },
+      {
+        "type": "name",
+        "value": "Henrik"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 56,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-082",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 2026-08-12\nIngrid Brannigan, MRN ZX-3659032, DOB 1944-05-09. Contact (415) 555-0101.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 66 mL/min/1.73 m2, earlier 72 (2025-07-08). Urine albumin/creatinine ratio 1450 mg/g.\nBartholomew drives Ingrid to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Yasmin Vandermeer.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Brannigan"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3659032"
+      },
+      {
+        "type": "date",
+        "value": "1944-05-09"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-12"
+      },
+      {
+        "type": "date",
+        "value": "2025-07-08"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin Vandermeer"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0101"
+      },
+      {
+        "type": "name",
+        "value": "Bartholomew"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 66,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-083",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE Jul 25, 2026\nImelda Mbeki, MRN ZX-7994401, DOB Jun 17, 1958. Contact (617) 555-0106.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 66 mL/min/1.73 m2, earlier 70 (Nov 8, 2025). Urine albumin/creatinine ratio 180 mg/g.\nKhalil drives Imelda to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Zainab Umarov.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Imelda Mbeki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7994401"
+      },
+      {
+        "type": "date",
+        "value": "Jun 17, 1958"
+      },
+      {
+        "type": "date",
+        "value": "Jul 25, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Nov 8, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Zainab Umarov"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0106"
+      },
+      {
+        "type": "name",
+        "value": "Khalil"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 66,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-084",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 9 February 2026\nBasil Nakashima, MRN ZX-8978533, DOB 1 October 1959. Contact (415) 555-0109.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 24 mL/min/1.73 m2, earlier 32 (16 December 2025). Urine albumin was not repeated this visit.\nAnwen drives Basil to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Teodor Iwasaki.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Basil Nakashima"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8978533"
+      },
+      {
+        "type": "date",
+        "value": "1 October 1959"
+      },
+      {
+        "type": "date",
+        "value": "9 February 2026"
+      },
+      {
+        "type": "date",
+        "value": "16 December 2025"
+      },
+      {
+        "type": "name",
+        "value": "Teodor Iwasaki"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0109"
+      },
+      {
+        "type": "name",
+        "value": "Anwen"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 24,
+      "albuminuria_category": "not_documented"
+    }
+  },
+  {
+    "id": "b100-085",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 04/06/2026\nDelphine Aldecott, MRN ZX-4848636, DOB 03/20/1961. Contact (305) 555-0143.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 75 mL/min/1.73 m2, earlier 86 (02/04/2025). Urine albumin/creatinine ratio 2300 mg/g.\nFamily support at home is adequate.\nEducation provided by nurse educator Cormac Villanueva.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Delphine Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4848636"
+      },
+      {
+        "type": "date",
+        "value": "03/20/1961"
+      },
+      {
+        "type": "date",
+        "value": "04/06/2026"
+      },
+      {
+        "type": "date",
+        "value": "02/04/2025"
+      },
+      {
+        "type": "name",
+        "value": "Cormac Villanueva"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0143"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 75,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-086",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 16 July 2026\nAnwen Ostrowski, MRN ZX-4904685, DOB 21 August 1950. Contact (617) 555-0197.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 47 mL/min/1.73 m2, earlier 53 (1 March 2025). Urine albumin/creatinine ratio 1450 mg/g.\nLucan drives Anwen to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Henrik Villanueva.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Anwen Ostrowski"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4904685"
+      },
+      {
+        "type": "date",
+        "value": "21 August 1950"
+      },
+      {
+        "type": "date",
+        "value": "16 July 2026"
+      },
+      {
+        "type": "date",
+        "value": "1 March 2025"
+      },
+      {
+        "type": "name",
+        "value": "Henrik Villanueva"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0197"
+      },
+      {
+        "type": "name",
+        "value": "Lucan"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 47,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-087",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 04/18/2026\nRashad Vandermeer, MRN ZX-8852668, DOB 04/19/1960. Contact (212) 555-0105.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 12 mL/min/1.73 m2, earlier 17 (06/02/2025). Urine albumin/creatinine ratio 260 mg/g.\nDelphine drives Rashad to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Anwen Aldecott.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Vandermeer"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8852668"
+      },
+      {
+        "type": "date",
+        "value": "04/19/1960"
+      },
+      {
+        "type": "date",
+        "value": "04/18/2026"
+      },
+      {
+        "type": "date",
+        "value": "06/02/2025"
+      },
+      {
+        "type": "name",
+        "value": "Anwen Aldecott"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0105"
+      },
+      {
+        "type": "name",
+        "value": "Delphine"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G5",
+      "egfr": 12,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-088",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 14 May 2026\nTarek Grimaldi, MRN ZX-9316959, DOB 6 November 1952. Contact (617) 555-0164.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 22 mL/min/1.73 m2, earlier 26 (28 April 2025). Urine albumin/creatinine ratio 780 mg/g.\nKhalil drives Tarek to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Ottilie Castellanos.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Grimaldi"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9316959"
+      },
+      {
+        "type": "date",
+        "value": "6 November 1952"
+      },
+      {
+        "type": "date",
+        "value": "14 May 2026"
+      },
+      {
+        "type": "date",
+        "value": "28 April 2025"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie Castellanos"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0164"
+      },
+      {
+        "type": "name",
+        "value": "Khalil"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 22,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-089",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 02/13/2026\nBartholomew Grimaldi, MRN ZX-8669048, DOB 11/24/1952. Contact (415) 555-0151.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 18 mL/min/1.73 m2, earlier 22 (12/14/2025). Urine albumin/creatinine ratio 12 mg/g.\nMarisol drives Bartholomew to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Odalys Kowalczyk.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Grimaldi"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8669048"
+      },
+      {
+        "type": "date",
+        "value": "11/24/1952"
+      },
+      {
+        "type": "date",
+        "value": "02/13/2026"
+      },
+      {
+        "type": "date",
+        "value": "12/14/2025"
+      },
+      {
+        "type": "name",
+        "value": "Odalys Kowalczyk"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0151"
+      },
+      {
+        "type": "name",
+        "value": "Marisol"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 18,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-090",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 2026-02-18\nImelda Faraday, MRN ZX-8462161, DOB 1945-05-18. Contact (212) 555-0179.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 25 mL/min/1.73 m2, earlier 31 (2025-02-03). Urine albumin/creatinine ratio 95 mg/g.\nDelphine drives Imelda to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Anwen Mbeki.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Imelda Faraday"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8462161"
+      },
+      {
+        "type": "date",
+        "value": "1945-05-18"
+      },
+      {
+        "type": "date",
+        "value": "2026-02-18"
+      },
+      {
+        "type": "date",
+        "value": "2025-02-03"
+      },
+      {
+        "type": "name",
+        "value": "Anwen Mbeki"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0179"
+      },
+      {
+        "type": "name",
+        "value": "Delphine"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 25,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-091",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 15 August 2026\nBartholomew Rasmussen, MRN ZX-9005161, DOB 27 June 1938. Contact (305) 555-0117.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 75 mL/min/1.73 m2, earlier 84 (16 January 2025). Urine albumin/creatinine ratio 410 mg/g.\nTeodor drives Bartholomew to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Lucan Iwasaki.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Rasmussen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9005161"
+      },
+      {
+        "type": "date",
+        "value": "27 June 1938"
+      },
+      {
+        "type": "date",
+        "value": "15 August 2026"
+      },
+      {
+        "type": "date",
+        "value": "16 January 2025"
+      },
+      {
+        "type": "name",
+        "value": "Lucan Iwasaki"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0117"
+      },
+      {
+        "type": "name",
+        "value": "Teodor"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 75,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-092",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 09/09/2026\nDelphine Iwasaki, MRN ZX-7919761, DOB 05/20/1967. Contact (415) 555-0175.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 51 mL/min/1.73 m2, earlier 61 (04/10/2025). Urine albumin/creatinine ratio 22 mg/g.\nYasmin drives Delphine to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Soledad Iwasaki.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Delphine Iwasaki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7919761"
+      },
+      {
+        "type": "date",
+        "value": "05/20/1967"
+      },
+      {
+        "type": "date",
+        "value": "09/09/2026"
+      },
+      {
+        "type": "date",
+        "value": "04/10/2025"
+      },
+      {
+        "type": "name",
+        "value": "Soledad Iwasaki"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0175"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 51,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-093",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 2026-05-28\nZainab Ostrowski, MRN ZX-4069680, DOB 1953-01-11. Contact (617) 555-0189.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 57 mL/min/1.73 m2, earlier 60 (2025-09-16). Urine albumin/creatinine ratio 1450 mg/g.\nFamily support at home is adequate.\nEducation provided by nurse educator Teodor Iwasaki.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Zainab Ostrowski"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4069680"
+      },
+      {
+        "type": "date",
+        "value": "1953-01-11"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-28"
+      },
+      {
+        "type": "date",
+        "value": "2025-09-16"
+      },
+      {
+        "type": "name",
+        "value": "Teodor Iwasaki"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0189"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 57,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-094",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 10/26/2026\nBartholomew Villanueva, MRN ZX-7940118, DOB 02/28/1944. Contact (212) 555-0171.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 69 mL/min/1.73 m2, earlier 81 (01/05/2025). Urine albumin/creatinine ratio 260 mg/g.\nHenrik drives Bartholomew to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Ottilie Halvorsen.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Villanueva"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7940118"
+      },
+      {
+        "type": "date",
+        "value": "02/28/1944"
+      },
+      {
+        "type": "date",
+        "value": "10/26/2026"
+      },
+      {
+        "type": "date",
+        "value": "01/05/2025"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie Halvorsen"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0171"
+      },
+      {
+        "type": "name",
+        "value": "Henrik"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 69,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-095",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 28 June 2026\nBasil Rasmussen, MRN ZX-1412885, DOB 9 July 1951. Contact (212) 555-0155.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 42 mL/min/1.73 m2, earlier 49 (1 April 2025). Urine albumin/creatinine ratio 180 mg/g.\nKhalil drives Basil to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Basil Rasmussen.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Basil Rasmussen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1412885"
+      },
+      {
+        "type": "date",
+        "value": "9 July 1951"
+      },
+      {
+        "type": "date",
+        "value": "28 June 2026"
+      },
+      {
+        "type": "date",
+        "value": "1 April 2025"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0155"
+      },
+      {
+        "type": "name",
+        "value": "Khalil"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 42,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-096",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE Jul 25, 2026\nPiotr Quillfeather, MRN ZX-4633244, DOB Apr 19, 1959. Contact (415) 555-0133.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 20 mL/min/1.73 m2, earlier 30 (Sep 12, 2025). Urine albumin/creatinine ratio 22 mg/g.\nCormac drives Piotr to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Cormac Rasmussen.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Piotr Quillfeather"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4633244"
+      },
+      {
+        "type": "date",
+        "value": "Apr 19, 1959"
+      },
+      {
+        "type": "date",
+        "value": "Jul 25, 2026"
+      },
+      {
+        "type": "date",
+        "value": "Sep 12, 2025"
+      },
+      {
+        "type": "name",
+        "value": "Cormac Rasmussen"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0133"
+      },
+      {
+        "type": "name",
+        "value": "Cormac"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G4",
+      "egfr": 20,
+      "albuminuria_category": "A1"
+    }
+  },
+  {
+    "id": "b100-097",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 2026-05-18\nSoledad Kowalczyk, MRN ZX-7030829, DOB 1942-12-09. Contact (212) 555-0117.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 69 mL/min/1.73 m2, earlier 81 (2025-05-03). Urine albumin/creatinine ratio 48 mg/g.\nFamily support at home is adequate.\nEducation provided by nurse educator Tarek Aldecott.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Kowalczyk"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7030829"
+      },
+      {
+        "type": "date",
+        "value": "1942-12-09"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-18"
+      },
+      {
+        "type": "date",
+        "value": "2025-05-03"
+      },
+      {
+        "type": "name",
+        "value": "Tarek Aldecott"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0117"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G2",
+      "egfr": 69,
+      "albuminuria_category": "A2"
+    }
+  },
+  {
+    "id": "b100-098",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 2026-05-28\nPiotr Mbeki, MRN ZX-6573470, DOB 1962-05-18. Contact (617) 555-0185.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 46 mL/min/1.73 m2, earlier 57 (2025-09-28). Urine albumin/creatinine ratio 780 mg/g.\nKhalil drives Piotr to every appointment and keeps the pill organiser.\nEducation provided by nurse educator Soledad Iwasaki.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Piotr Mbeki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6573470"
+      },
+      {
+        "type": "date",
+        "value": "1962-05-18"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-28"
+      },
+      {
+        "type": "date",
+        "value": "2025-09-28"
+      },
+      {
+        "type": "name",
+        "value": "Soledad Iwasaki"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0185"
+      },
+      {
+        "type": "name",
+        "value": "Khalil"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3a",
+      "egfr": 46,
+      "albuminuria_category": "A3"
+    }
+  },
+  {
+    "id": "b100-099",
+    "demo": false,
+    "template": 4,
+    "text": "PRE-DIALYSIS EDUCATION NOTE 10/11/2026\nZainab Nakashima, MRN ZX-6250268, DOB 04/14/1938. Contact (305) 555-0119.\nReviewed options: conservative care, home dialysis, transplant evaluation. Latest eGFR 33 mL/min/1.73 m2, earlier 42 (05/17/2025). Urine albumin was not repeated this visit.\nFamily support at home is adequate.\nEducation provided by nurse educator Marisol Halvorsen.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Zainab Nakashima"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6250268"
+      },
+      {
+        "type": "date",
+        "value": "04/14/1938"
+      },
+      {
+        "type": "date",
+        "value": "10/11/2026"
+      },
+      {
+        "type": "date",
+        "value": "05/17/2025"
+      },
+      {
+        "type": "name",
+        "value": "Marisol Halvorsen"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0119"
+      }
+    ],
+    "truth": {
+      "ckd_stage": "G3b",
+      "egfr": 33,
+      "albuminuria_category": "not_documented"
+    }
+  }
+]

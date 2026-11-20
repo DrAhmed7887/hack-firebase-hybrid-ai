@@ -142,3 +142,9 @@ for (let t = 0; t < 5; t++) for (let s = 0; s < 4; s++) cases.push(build(t, s));
 mkdirSync(new URL('../data/synthetic/', import.meta.url), { recursive: true });
 writeFileSync(new URL('../data/synthetic/cases.json', import.meta.url), JSON.stringify(cases, null, 2) + '\n');
 console.log(`wrote ${cases.length} cases`);
+
+// Larger set for the benchmark only: same templates, 20 seeds each = 100 notes (seeds 0-3 equal the 20 above).
+const big = [];
+for (let t = 0; t < 5; t++) for (let s = 0; s < 20; s++) big.push({ ...build(t, s), id: `b100-${String(t * 20 + s).padStart(3, '0')}` });
+writeFileSync(new URL('../data/synthetic/bench100.json', import.meta.url), JSON.stringify(big, null, 2) + '\n');
+console.log(`wrote ${big.length} bench cases`);
