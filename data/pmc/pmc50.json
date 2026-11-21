@@ -1,0 +1,2152 @@
+[
+  {
+    "id": "pmc-01",
+    "pmcid": "PMC13705740",
+    "pmid": "42941662",
+    "doi": "10.3390/jcm15208149",
+    "journal": "Journal of clinical medicine",
+    "year": "2026",
+    "egfr_ref": 28,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13705740)\nPatient: Teodor Delacroix-Hume   MRN: ZX-8497004   DOB: 1957-09-08\nVisit date: 2026-06-04   Seen by: Dr. Odalys Faraday.\n\nBackground : A recently proposed estimated glomerular filtration rate (eGFR) slope-based criterion for clinical remission of chronic kidney disease (CKD) represents an emerging therapeutic paradigm. However, clinical courses meeting this criterion after sequential combination therapy with kidney-protective agents have rarely been reported in patients with type 2 diabetes mellitus (T2DM) and CKD. Case Presentation : A 70-year-old man with long-standing T2DM, nonproliferative diabetic retinopathy, and progressive albuminuric CKD presented in May 2023 with a urine albumin-to-creatinine ratio (UACR) of 121.60 mg/g creatinine (Cr), an eGFR of 28.00 mL/min/1.73 m 2 , hemoglobin A1c (HbA1c) of 7.5%, and serum potassium of 4.4 mmol/L. Kidney function had continued to decline despite treatment with a renin-angiotensin system inhibitor (RASi), a sodium-glucose cotransporter 2 inhibitor (SGLT2i), and insulin. Therapy was sequentially intensified with a glucagon-like peptide-1 receptor agonist (GLP-1RA) and finerenone, with close monitoring of kidney function and serum potassium. By January 2026, UACR had decreased to 26.53 mg/g Cr and eGFR had increased to 42.48 mL/min/1.73 m 2 . No adverse event required treatment discontinuation. Results : Ordinary least-squares regression of all 10 eGFR measurements yielded a positive slope that met the recently proposed eGFR slope-based criterion for clinical remission of CKD. Conclusions : In this patient with T2DM and CKD, the eGFR slope over the full follow-up met the proposed criterion for clinical remission of CKD during sequential multidrug kidney-protective therapy with safety monitoring. These observations require confirmation in prospective controlled studies.\n\nSocial note: Zainab lives nearby and checks in on Teodor most evenings. Call the clinic on (415) 555-0164 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Teodor Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8497004"
+      },
+      {
+        "type": "date",
+        "value": "1957-09-08"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-04"
+      },
+      {
+        "type": "name",
+        "value": "Odalys Faraday"
+      },
+      {
+        "type": "name",
+        "value": "Zainab"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0164"
+      }
+    ],
+    "truth": {
+      "egfr": 28
+    }
+  },
+  {
+    "id": "pmc-02",
+    "pmcid": "PMC13589848",
+    "pmid": "42764878",
+    "doi": "10.1093/jscr/rjag808",
+    "journal": "Journal of surgical case reports",
+    "year": "2026",
+    "egfr_ref": 9,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13589848)\nPatient: Cormac Aldecott   MRN: ZX-1770882   DOB: 1960-09-14\nVisit date: 2026-07-12   Seen by: Dr. Marisol Aldecott.\n\nNecrotizing fasciitis is a surgical emergency in which delayed source control increases mortality, and concurrent severe renal impairment both disrupts antibiotic dosing and risks misclassification as irreversible failure. A 72-year-old woman presented to a remote Indonesian district hospital with 5 days of right lower-leg pain, swelling, bullae and purulent discharge after a clinic incision. Admission creatinine was 4.6 mg/dl, rising to 5.0 mg/dl (estimated glomerular filtration rate ~9), with leukocytosis; ultrasonography showed small echogenic kidneys indicating chronic kidney disease. Initially treated as bullous cellulitis, the lesion progressed; a pre-operative wound culture grew Streptococcus pyogenes . Creatinine recovered to 1.17 mg/dl by postoperative Day 4, identifying severe but reversible acute-on-chronic injury. Antibiotics dosed to the acute nadir risked relative under-dosing as function recovered. An acutely elevated creatinine during sepsis can overstate the true baseline; serial measurement is essential before labelling end-stage disease or anchoring antibiotic dosing to the nadir.\n\nSocial note: Anwen sits in on each visit and helps Cormac track the medication list. Call the clinic on (305) 555-0114 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Cormac Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1770882"
+      },
+      {
+        "type": "date",
+        "value": "1960-09-14"
+      },
+      {
+        "type": "date",
+        "value": "2026-07-12"
+      },
+      {
+        "type": "name",
+        "value": "Marisol Aldecott"
+      },
+      {
+        "type": "name",
+        "value": "Anwen"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0114"
+      }
+    ],
+    "truth": {
+      "egfr": 9
+    }
+  },
+  {
+    "id": "pmc-03",
+    "pmcid": "PMC13635927",
+    "pmid": "42831253",
+    "doi": "10.1002/jcla.70376",
+    "journal": "Journal of clinical laboratory analysis",
+    "year": "2026",
+    "egfr_ref": 46.3,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13635927)\nPatient: Teodor Umarov   MRN: ZX-9168687   DOB: 1956-03-26\nVisit date: 2026-04-15   Seen by: Dr. Henrik Brannigan.\n\nBackground Routine urinalysis is a foundational screening tool; however, increased hyaline casts accompanied by a negative dipstick protein result may complicate laboratory interpretation. In patients at high risk of acute kidney injury (AKI), this discordant pattern may warrant confirmatory protein testing and correlation with renal-function trends. Case presentation A 31-year-old female with hemophagocytic lymphohistiocytosis (HLH) underwent routine urinalysis after allogeneic hematopoietic stem cell transplantation (allo-HSCT). Automated sediment analysis detected elevated hyaline casts (5.8/μL), whereas the concurrent dipstick protein result was negative. Protocol-based sulfosalicylic acid (SSA) verification yielded a visually graded positive (++) reaction. Serial renal-function monitoring showed that serum creatinine (SCr) increased from 53 μmol/L on December 10 to 62 μmol/L on December 12, followed by progressive deterioration and a peak SCr of 132 μmol/L with an estimated glomerular filtration rate (eGFR) nadir of 46.3 mL/min/1.73 m 2 on December 24. Follow-up urinalysis on December 26 showed normalization of this urinary phenotype, with negative dipstick protein, negative SSA testing, and a decrease in hyaline casts to 0.5/μL. These findings were consistent with a transient urinary abnormality occurring during evolving AKI rather than persistent kidney disease. Conclusion In this high-risk post-transplant patient, increased hyaline casts with negative dipstick protein and positive SSA testing occurred during evolving AKI and resolved as renal function improved. The finding may indicate acid-precipitable non-albumin urinary material, but its molecular basis and relationship to tubular injury remain uncertain.\n\nSocial note: Soledad lives nearby and checks in on Teodor most evenings. Call the clinic on (415) 555-0112 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Teodor Umarov"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9168687"
+      },
+      {
+        "type": "date",
+        "value": "1956-03-26"
+      },
+      {
+        "type": "date",
+        "value": "2026-04-15"
+      },
+      {
+        "type": "name",
+        "value": "Henrik Brannigan"
+      },
+      {
+        "type": "name",
+        "value": "Soledad"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0112"
+      }
+    ],
+    "truth": {
+      "egfr": 46.3
+    }
+  },
+  {
+    "id": "pmc-04",
+    "pmcid": "PMC13584142",
+    "pmid": "42757111",
+    "doi": "10.1016/j.idcr.2026.e02758",
+    "journal": "IDCases",
+    "year": "2026",
+    "egfr_ref": 73.2,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13584142)\nPatient: Rashad Grimaldi   MRN: ZX-8093826   DOB: 1952-11-09\nVisit date: 2026-10-25   Seen by: Dr. Cormac Grimaldi.\n\nBackground Renal impairment during treatment for rifampicin-resistant tuberculosis (RR-TB) is uncommon but clinically significant, especially in elderly patients with limited physiological reserve. Determining whether renal dysfunction is attributable to anti-tuberculosis drugs or patient-related factors remains a major clinical challenge, particularly following sequential regimen changes. Case presentation A 74-year-old man with a low body mass index (17.5 kg/m²) was treated for presumed RR-TB based on a single Xpert MTB/RIF assay showing rifampicin resistance despite persistently negative smear microscopy and mycobacterial culture. Baseline renal function was normal (serum creatinine 89 µmol/L; estimated glomerular filtration rate [eGFR] 73.2 mL/min/1.73 m²). Eighteen days after initiation of a long oral regimen (D2: levofloxacin, clofazimine, linezolid, pyrazinamide, and cycloserine), acute kidney injury developed, with serum creatinine increasing to 140 µmol/L and eGFR declining to 42.34 mL/min/1.73 m². The regimen was switched to BPaLM, during which renal function worsened with marked fluctuations (eGFR 24.65-57.3 mL/min/1.73 m²) , requiring supportive care . Renal function partially improved after treatment interruption. Rechallenge with the D2 regimen was associated with relatively less fluctuation in renal function. WHO-UMC causality assessment classified the relationship between anti-tuberculosis treatment and renal dysfunction as \"possible.\" Conclusion This case highlights the complexity of evaluating renal dysfunction during sequential treatment for RR-TB. Advanced age, low BMI, frailty, and fluctuating hydration status should be considered when interpreting changes in renal function. Careful interpretation requires integration of the clinical course and available diagnostic information rather than reliance on temporal associations alone.\n\nSocial note: Zainab lives nearby and checks in on Rashad most evenings. Call the clinic on (305) 555-0108 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Grimaldi"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8093826"
+      },
+      {
+        "type": "date",
+        "value": "1952-11-09"
+      },
+      {
+        "type": "date",
+        "value": "2026-10-25"
+      },
+      {
+        "type": "name",
+        "value": "Cormac Grimaldi"
+      },
+      {
+        "type": "name",
+        "value": "Zainab"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0108"
+      }
+    ],
+    "truth": {
+      "egfr": 73.2
+    }
+  },
+  {
+    "id": "pmc-05",
+    "pmcid": "PMC13093231",
+    "pmid": "42017099",
+    "doi": "10.7759/cureus.105580",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 19,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13093231)\nPatient: Henrik Castellanos   MRN: ZX-4689952   DOB: 1962-12-08\nVisit date: 2026-05-13   Seen by: Dr. Yasmin Umarov.\n\nHypoparathyroidism, sensorineural deafness, and renal dysplasia (HDR) syndrome is a rare autosomal dominant disorder caused by pathogenic variants in the GATA3 gene. Because the components of the clinical triad may emerge at different stages of life, isolated evaluation of findings by different specialties may lead to delayed syndromic diagnosis. In this report, we present the case of a 39-year-old female patient who was diagnosed with hypoparathyroidism following a hypocalcemia-related tetanic convulsion at the age of five years and was found to have sensorineural hearing loss during childhood. Although chronic kidney disease developed in adulthood, the multisystemic findings were not evaluated collectively, and a syndromic diagnosis was not established. The patient presented to the emergency department with altered consciousness, dehydration, and oliguria. Evaluation revealed severe hypercalcemia (20.7 mg/dL) and acute kidney injury on the background of chronic kidney disease (creatinine: 2.98 mg/dL; estimated glomerular filtration rate: 19 mL/minute/1.73 m²). Following urgent hemodialysis and intensive intravenous hydration, serum calcium levels normalized. However, complete recovery of renal function was not achieved. Genetic analysis identified a heterozygous pathogenic GATA3 frameshift variant (c.431dup), which confirmed the diagnosis of HDR syndrome. This case emphasizes the importance of a syndromic approach and early genetic evaluation in patients presenting with hypoparathyroidism, hearing loss, and renal anomalies. In addition, careful individualization of calcium and active vitamin D replacement in individuals with reduced renal reserve appears critical to prevent life-threatening hypercalcemic complications.\n\nSocial note: Piotr drives Henrik to every appointment and keeps the pill organiser. Call the clinic on (212) 555-0141 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Henrik Castellanos"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4689952"
+      },
+      {
+        "type": "date",
+        "value": "1962-12-08"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-13"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin Umarov"
+      },
+      {
+        "type": "name",
+        "value": "Piotr"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0141"
+      }
+    ],
+    "truth": {
+      "egfr": 19
+    }
+  },
+  {
+    "id": "pmc-06",
+    "pmcid": "PMC13744195",
+    "pmid": "42999609",
+    "doi": "10.2147/vhrm.s647284",
+    "journal": "Vascular health and risk management",
+    "year": "2026",
+    "egfr_ref": 79.7,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13744195)\nPatient: Henrik Quillfeather   MRN: ZX-8858079   DOB: 1954-05-22\nVisit date: 2026-08-14   Seen by: Dr. Marisol Ostrowski.\n\nBackground Reduced renal function is linked to coronary calcification, which can limit stent expansion, and to contrast-associated acute kidney injury (CI-AKI). We examined renal function, optical coherence tomography (OCT)-defined calcification and OCT measures of stent optimization in a Vietnamese provincial hospital. Methods This prospective, single-center, cross-sectional study included consecutive patients undergoing OCT-guided percutaneous coronary intervention (December 2023 to January 2026). eGFR was calculated with the CKD-EPI 2021 equation and CI-AKI defined by KDIGO creatinine criteria. Lesion-level associations were estimated by logistic or linear regression with patient-clustered robust standard errors, before and after adjustment for age, sex, diabetes, hypertension, smoking and acute coronary syndrome. Results The cohort comprised 300 patients, 309 procedures and 356 lesions. Mean eGFR was 79.7 ± 20.7 mL/min/1.73 m 2 and 60 procedures (19.4%) had eGFR 2 lower eGFR was associated with calcification in unadjusted analysis (OR 1.19; 95% CI 1.03-1.38), but not after adjustment including age (OR 1.04; 0.88-1.22), whereas age remained associated (OR 1.46 per 10 years; 1.09-1.95). Mean minimum stent area was 5.75 ± 2.26 mm 2 and was not correlated with eGFR ( ρ =0.05; P=0.36); stent expansion ≥80% (87.4%) and procedural success (88.7%) were not associated with eGFR in crude or adjusted models. CI-AKI occurred in 8 of 206 procedures with paired creatinine (3.9%). Subgroups with eGFR Conclusion In this single-center cross-sectional study, the crude association between lower eGFR and OCT-defined calcification was largely explained by age. Under OCT guidance, renal function was not associated with stent optimization, and CI-AKI was infrequent. Prospective studies with larger advanced-CKD populations and a comparator arm are needed to establish whether OCT guidance offsets renal-related procedural disadvantage.\n\nSocial note: Rashad lives nearby and checks in on Henrik most evenings. Call the clinic on (212) 555-0122 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Henrik Quillfeather"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8858079"
+      },
+      {
+        "type": "date",
+        "value": "1954-05-22"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-14"
+      },
+      {
+        "type": "name",
+        "value": "Marisol Ostrowski"
+      },
+      {
+        "type": "name",
+        "value": "Rashad"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0122"
+      }
+    ],
+    "truth": {
+      "egfr": 79.7
+    }
+  },
+  {
+    "id": "pmc-07",
+    "pmcid": "PMC13787790",
+    "pmid": "43063208",
+    "doi": "10.1371/journal.pone.0356034",
+    "journal": "PloS one",
+    "year": "2026",
+    "egfr_ref": 30,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13787790)\nPatient: Ingrid Pellegrino   MRN: ZX-5042517   DOB: 1958-02-20\nVisit date: 2026-05-26   Seen by: Dr. Zainab Pellegrino.\n\nThis multicenter cohort study assessed the impact of COVID-19 on kidney function in kidney transplant recipients (KTRs) at 12 months after SARS-CoV-2 infection. The final analytic cohort comprised 1,145 KTRs diagnosed with COVID-19 between March-2020 and December-2021, after exclusion of patients who died or experienced graft loss within 90 days of diagnosis. Kidney function at one year was evaluated, as were variables associated with graft loss or a decline in estimated glomerular filtration rate (eGFR) ≥30% from baseline. eGFR trajectories were analyzed using a multi-step missing-data approach. At the time of COVID-19 diagnosis, the median time from transplantation was 5.9 years (IQR 2.5-10.4), and the median eGFR was 52 mL/min/1.73m² (IQR 38-68). The cumulative incidence of acute rejection at 12 months was 1.0%; 3.1% of patients died and 3.3% experienced graft loss. Mean eGFR declined by 3.77 mL/min/1.73m² (95%CI, -4.70 to -2.83) in the imputed dataset. In multivariable analysis, diabetes (OR 1.56; 95%CI 1.05-2.33;p = 0.029), hospitalization during COVID-19 (OR 1.79; 95%CI 1.19-2.69;p = 0.005), and acute rejection (OR 16.67; 95%CI 4.59-60.57;p < 0.001) were independently associated with the composite outcome of graft loss or ≥30% decline in eGFR, whereas higher baseline eGFR was protective (OR 0.89 per 10 mL/min/1.73m² increase; 95%CI 0.82-0.97;p = 0.007). In conclusion, although acute rejection and graft loss were uncommon, COVID-19 was associated with a statistically significant reduction in eGFR over 12 months that exceeded the trajectory previously reported for stable KT cohorts, raising concerns about long-term graft outcomes.\n\nSocial note: Ottilie lives nearby and checks in on Ingrid most evenings. Call the clinic on (415) 555-0145 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Pellegrino"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5042517"
+      },
+      {
+        "type": "date",
+        "value": "1958-02-20"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-26"
+      },
+      {
+        "type": "name",
+        "value": "Zainab Pellegrino"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0145"
+      }
+    ],
+    "truth": {
+      "egfr": 30
+    }
+  },
+  {
+    "id": "pmc-08",
+    "pmcid": "PMC13741057",
+    "pmid": "42997173",
+    "doi": "10.21037/tau-2026-0663",
+    "journal": "Translational andrology and urology",
+    "year": "2026",
+    "egfr_ref": 113.3,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13741057)\nPatient: Piotr Faraday   MRN: ZX-7975637   DOB: 1965-04-12\nVisit date: 2026-07-24   Seen by: Dr. Imelda Rasmussen.\n\nBackground Imaging-pathology discordance is well recognised in individual renal tumours, particularly when fat-poor angiomyolipoma (fp-AML) resembles renal cell carcinoma (RCC). However, the consequences of such discordance across lesions receive less attention. In bilateral or multifocal disease, the presumed diagnostic identity of one mass may be transferred to another, potentially compromising nephron preservation. Case description An asymptomatic 37-year-old man with no family history of tumours was found to have small bilateral renal masses during a routine health examination at an outside hospital. The lesions were monitored, and follow-up imaging one year later showed marked progression of the left lesion, prompting referral to our institution. The patient presented with three renal tumours: a dominant left renal mass, a smaller left renal nodule, and a right renal mass. On computed tomography (CT) and magnetic resonance imaging (MRI), the dominant left mass and the right mass lacked visible fat, were heterogeneously hypointense on T2-weighted images and iso- to hypointense on in-phase T1-weighted images, showed no opposed-phase signal loss, and demonstrated marked diffusion restriction, low apparent diffusion coefficient values, and progressive enhancement; both lesions were considered RCC preoperatively. The smaller left nodule contained visible fat and was considered a classic angiomyolipoma. Staged treatment began with right partial nephrectomy, which unexpectedly revealed fp-AML. This benign diagnosis prompted lesion-specific reassessment rather than an assumption that the contralateral mass had identical pathology. CT-guided biopsy of the dominant left mass demonstrated chromophobe renal cell carcinoma (chRCC). Subsequent left radical nephrectomy confirmed chRCC and a separate angiomyolipoma. After left nephrectomy, estimated glomerular filtration rate (eGFR) declined from 113.28 to 63.58 mL/min/1.73 m 2 . At the last documented follow-up, eGFR was 62.6 mL/min/1.73 m 2 . Conclusions This unusual three-lesion pattern shows that radiological similarity does not establish pathological identity. In bilateral or multifocal renal tumours, each mass should therefore remain a separate diagnostic problem. Renal mass biopsy should be considered selectively when lesion-specific histology is likely to change management, particularly when a benign mimic is plausible and future renal reserve is at stake.\n\nSocial note: Delphine lives nearby and checks in on Piotr most evenings. Call the clinic on (305) 555-0129 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Piotr Faraday"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7975637"
+      },
+      {
+        "type": "date",
+        "value": "1965-04-12"
+      },
+      {
+        "type": "date",
+        "value": "2026-07-24"
+      },
+      {
+        "type": "name",
+        "value": "Imelda Rasmussen"
+      },
+      {
+        "type": "name",
+        "value": "Delphine"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0129"
+      }
+    ],
+    "truth": {
+      "egfr": 113.3
+    }
+  },
+  {
+    "id": "pmc-09",
+    "pmcid": "PMC13445952",
+    "pmid": "42565005",
+    "doi": "10.7759/cureus.112201",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 30,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13445952)\nPatient: Ingrid Halvorsen   MRN: ZX-6950611   DOB: 1960-06-11\nVisit date: 2026-02-23   Seen by: Dr. Teodor Pellegrino.\n\nFibrillary glomerulonephritis (FGN) is a rare immune-mediated glomerular disease characterized by progressive kidney dysfunction, proteinuria, and a high risk of progression to end-stage kidney disease (ESKD). No standardized treatment exists, although rituximab has emerged as a promising therapeutic option in selected patients. We report the case of a 75-year-old woman who presented with progressive kidney dysfunction and worsening proteinuria. Kidney biopsy demonstrated FGN with substantial chronic histologic injury. She was treated with two doses of rituximab 1 g administered intravenously two weeks apart, in conjunction with renin-angiotensin-aldosterone system (RAAS) blockade. Despite a baseline estimated glomerular filtration rate (eGFR) below 30 mL/min/1.73 m² and significant chronicity on biopsy, she experienced improvement and subsequent stabilization of kidney function, with a reduction in proteinuria. This case adds to the growing evidence supporting rituximab as a therapeutic option for selected patients with FGN, even in the presence of advanced chronic kidney disease.\n\nSocial note: Henrik sits in on each visit and helps Ingrid track the medication list. Call the clinic on (617) 555-0170 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Halvorsen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6950611"
+      },
+      {
+        "type": "date",
+        "value": "1960-06-11"
+      },
+      {
+        "type": "date",
+        "value": "2026-02-23"
+      },
+      {
+        "type": "name",
+        "value": "Teodor Pellegrino"
+      },
+      {
+        "type": "name",
+        "value": "Henrik"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0170"
+      }
+    ],
+    "truth": {
+      "egfr": 30
+    }
+  },
+  {
+    "id": "pmc-10",
+    "pmcid": "PMC13179121",
+    "pmid": "42147637",
+    "doi": "10.7759/cureus.107121",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 65,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13179121)\nPatient: Soledad Delacroix-Hume   MRN: ZX-9358876   DOB: 1956-05-27\nVisit date: 2026-05-28   Seen by: Dr. Khalil Pellegrino.\n\nIgA nephropathy (IgAN) is the most common primary glomerulonephritis worldwide and a major cause of progressive chronic kidney disease. Systemic corticosteroids are commonly used in high-risk patients but are frequently limited by inadequate response and significant adverse effects. We present the case of a 46-year-old woman with biopsy-confirmed IgAN who developed persistent microscopic hematuria and nephritic-range proteinuria. After six months of treatment with high-dose systemic prednisone, renin-angiotensin-aldosterone system blockade, and a sodium-glucose cotransporter-2 inhibitor, there was no clinical improvement, and she experienced marked cushingoid toxicity. Due to treatment failure and intolerance to systemic glucocorticoids, targeted-release budesonide was initiated. Over six months, proteinuria decreased from 2,536 mg/day to 66 mg/day, hematuria completely resolved, and estimated glomerular filtration rate improved from 65 to 80 mL/min/1.73 m². The treatment was well tolerated without recurrence of systemic steroid-related adverse effects. This case highlights targeted-release budesonide as an effective therapeutic option for selected patients with IgAN who fail or cannot tolerate systemic corticosteroid therapy.\n\nSocial note: Tarek sits in on each visit and helps Soledad track the medication list. Call the clinic on (212) 555-0179 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9358876"
+      },
+      {
+        "type": "date",
+        "value": "1956-05-27"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-28"
+      },
+      {
+        "type": "name",
+        "value": "Khalil Pellegrino"
+      },
+      {
+        "type": "name",
+        "value": "Tarek"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0179"
+      }
+    ],
+    "truth": {
+      "egfr": 65
+    }
+  },
+  {
+    "id": "pmc-11",
+    "pmcid": "PMC13754287",
+    "pmid": "43017293",
+    "doi": "10.1097/ms9.0000000000005771",
+    "journal": "Annals of medicine and surgery (2012)",
+    "year": "2026",
+    "egfr_ref": 9,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13754287)\nPatient: Piotr Halvorsen   MRN: ZX-3774550   DOB: 1938-05-15\nVisit date: 2026-04-10   Seen by: Dr. Soledad Iwasaki.\n\nBackground Cardiorenal syndrome (CRS) refers to acute kidney injury due to cardiac dysfunction. In diabetic patients with end-stage renal disease (ESRD), distinguishing irreversible structural damage from reversible hemodynamic injury remains challenging. This case highlights partial percutaneous coronary intervention (PCI)-associated renal recovery in a dialysis-dependent diabetic patient with triple-vessel disease (TVD). Case description A 55-year-old man with diabetes and dialysis-dependent ESRD estimated glomerular filtration rate [(eGFR 9 mL/min/1.73 m 2 )] presented with altered consciousness, profound hyponatremia (Na 105 mmol/L), hypokalemia (K 2.3 mmol/L), and fluid overload. Initial management with hemodialysis yielded minimal improvement. Further evaluation revealed non-ST-elevation myocardial infarction, recurrent ischemia, and severe TVD. Despite the high risk of contrast-induced injury, PCI with stenting was performed using minimal contrast and peri-procedural dialysis. Conclusion Within days post-PCI, renal function showed partial recovery eGFR increased from 9 to 15 mL/min/1.73 m 2 , with creatinine 6.11 mg/dL, permitting dialysis discontinuation, although values remained in the range of severe chronic kidney disease. The patient, however, resumed hemodialysis at 3-month follow-up. This case demonstrates that severe coronary artery disease can precipitate reversible renal hypoperfusion mediated through low cardiac output and renal venous congestion. Coronary revascularization, even in dialysis patients, may contribute to partial renal recovery in selected patients with CRS.\n\nSocial note: Rashad lives nearby and checks in on Piotr most evenings. Call the clinic on (415) 555-0167 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Piotr Halvorsen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3774550"
+      },
+      {
+        "type": "date",
+        "value": "1938-05-15"
+      },
+      {
+        "type": "date",
+        "value": "2026-04-10"
+      },
+      {
+        "type": "name",
+        "value": "Soledad Iwasaki"
+      },
+      {
+        "type": "name",
+        "value": "Rashad"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0167"
+      }
+    ],
+    "truth": {
+      "egfr": 9
+    }
+  },
+  {
+    "id": "pmc-12",
+    "pmcid": "PMC13431561",
+    "pmid": "42545833",
+    "doi": "10.1111/jdi.70410",
+    "journal": "Journal of diabetes investigation",
+    "year": "2026",
+    "egfr_ref": 21,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13431561)\nPatient: Bartholomew Castellanos   MRN: ZX-9651563   DOB: 1958-11-25\nVisit date: 2026-07-09   Seen by: Dr. Delphine Nakashima.\n\nAim To assess the prevalence, risk factors, estimated glomerular filtration rate trajectory, and clinical implications of the early estimated glomerular filtration rate dip after sodium-glucose cotransporter 2 inhibitors in a real-world population. Materials and methods We retrospectively analyzed 1,550 patients who received sodium-glucose cotransporter 2 inhibitor treatment at a single teaching hospital between 2014 and 2024. Patients were stratified into three groups based on early estimated glomerular filtration rate decline within the first 3 months of treatment: non-, moderate, and severe dippers ( Results An early estimated glomerular filtration rate dip occurred in 21% of the patients; 17.6% were moderate dippers, and 3.5% were severe dippers. The risk factors for dipper classification included older age, atrial fibrillation, loop diuretic use, and high estimated glomerular filtration rate variability. Although the estimated glomerular filtration rate slopes declined progressively across dipper groups, the mean annual decline did not exceed age-expected changes even in the severe dipper group. Patients who discontinued sodium-glucose cotransporter 2 inhibitor therapy experienced a steeper decline than those who continued therapy. Three patients in the severe dipper group on concomitant loop diuretics experienced extreme estimated glomerular filtration rate reductions, which persisted during follow-up. Conclusions Early dips and continued sodium-glucose cotransporter 2 inhibitor use are not generally associated with unfavorable outcomes. However, caution is warranted in frail or volume-sensitive patients, particularly with concomitant diuretics.\n\nSocial note: Lucan drives Bartholomew to every appointment and keeps the pill organiser. Call the clinic on (415) 555-0112 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Castellanos"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9651563"
+      },
+      {
+        "type": "date",
+        "value": "1958-11-25"
+      },
+      {
+        "type": "date",
+        "value": "2026-07-09"
+      },
+      {
+        "type": "name",
+        "value": "Delphine Nakashima"
+      },
+      {
+        "type": "name",
+        "value": "Lucan"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0112"
+      }
+    ],
+    "truth": {
+      "egfr": 21
+    }
+  },
+  {
+    "id": "pmc-13",
+    "pmcid": "PMC13408032",
+    "pmid": "42523835",
+    "doi": "10.3389/fimmu.2026.1753920",
+    "journal": "Frontiers in immunology",
+    "year": "2026",
+    "egfr_ref": 30,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13408032)\nPatient: Ingrid Brannigan   MRN: ZX-8430091   DOB: 1968-01-27\nVisit date: 2026-02-08   Seen by: Dr. Lucan Vandermeer.\n\nImmunoglobulin A nephropathy (IgAN) is one of the most common forms of primary glomerulonephritis and can lead to renal failure requiring renal replacement therapy via dialysis. Current research indicates that telitacicept, an APRIL and BAFF inhibitor, has shown promise as a therapeutic option for IgAN patients with an estimated glomerular filtration rate (eGFR) over 30 mL/min/1.73 m². However, the efficacy of telitacicept in slowing the deterioration of kidney function, especially in individuals with stage 4 chronic kidney disease (CKD) and advancing IgAN, has yet to be documented. We present a 47-year-old male with stage 4 CKD, complicated by acute kidney injury and diagnosed with IgAN via biopsy, who was initially treated with 240 mg of telitacicept for 6 months, then transitioned to a gradual reduction and maintenance therapy for 12 months. After treatment, the proteinuria decreased from 2.82g/day to 0.60g/day. The eGFR gradually increased, improving from 26.95 to 35.69 mL/min/1.73 m² over 18 months. Serum albumin levels increased steadily, while hematuria gradually declined. Immunoglobulins and lymphocytes exhibited a decreasing pattern during treatment, with no notable rise in inflammatory markers. Furthermore, no infections or other adverse events were observed. This case shows the potential for telitacicept to be applied beyond its approved indications. This emphasizes the importance of conducting more research on individuals with advanced chronic kidney disease.\n\nSocial note: Odalys lives nearby and checks in on Ingrid most evenings. Call the clinic on (617) 555-0127 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Brannigan"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8430091"
+      },
+      {
+        "type": "date",
+        "value": "1968-01-27"
+      },
+      {
+        "type": "date",
+        "value": "2026-02-08"
+      },
+      {
+        "type": "name",
+        "value": "Lucan Vandermeer"
+      },
+      {
+        "type": "name",
+        "value": "Odalys"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0127"
+      }
+    ],
+    "truth": {
+      "egfr": 30
+    }
+  },
+  {
+    "id": "pmc-14",
+    "pmcid": "PMC13621273",
+    "pmid": "42596753",
+    "doi": "10.5414/cn112036",
+    "journal": "Clinical nephrology",
+    "year": "2026",
+    "egfr_ref": 26,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13621273)\nPatient: Tarek Vandermeer   MRN: ZX-6840048   DOB: 1954-06-10\nVisit date: 2026-07-15   Seen by: Dr. Lucan Mbeki.\n\nIntroduction IgA nephropathy (IgAN) is a leading cause of glomerulonephritis worldwide with variability by race and ethnicity. This study aimed to provide insights on the treatment journey and clinical outcomes in Asian-American patients with IgAN treated with delayed-release budesonide (Nefecon) in a real-world setting. Materials and methods In this observational cohort study, a total of 45 consecutive patients with IgAN treated with Nefecon at Chinatown Kidney Care (CKC) (New York, NY, USA) were included. Study outcomes included treatment patterns and clinical outcomes (time to kidney failure, estimated glomerular filtration rate (eGFR), and urine protein-to-creatinine ratio (UPCR)). All variables were summarized descriptively. Subgroup analyses were performed among patients who were treated for ≥ 9 months vs. those treated for Results Overall, after 9 months of treatment, eGFR remained stable and UPCR decreased by an average of 19%. Improved clinical outcomes were reported among those who were treated for ≥ 9 months (preservation of eGFR and 26% reduction in UPCR) compared with those treated for Conclusion Real-world IgA nephropathy treatment-associated outcomes with Nefecon in Asian-American patients for proteinuria and kidney function were consistent with those observed in the NefIgArd clinical trial. The reduction in proteinuria and improvement in kidney function was greater in patients who completed the 9-month course of therapy. These findings reveal an opportunity for further education among nephrologists regarding the recommended duration of treatment with Nefecon.\n\nSocial note: Teodor sits in on each visit and helps Tarek track the medication list. Call the clinic on (415) 555-0116 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Vandermeer"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6840048"
+      },
+      {
+        "type": "date",
+        "value": "1954-06-10"
+      },
+      {
+        "type": "date",
+        "value": "2026-07-15"
+      },
+      {
+        "type": "name",
+        "value": "Lucan Mbeki"
+      },
+      {
+        "type": "name",
+        "value": "Teodor"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0116"
+      }
+    ],
+    "truth": {
+      "egfr": 26
+    }
+  },
+  {
+    "id": "pmc-15",
+    "pmcid": "PMC13355260",
+    "pmid": "42436784",
+    "doi": "10.21037/tau-2026-0406",
+    "journal": "Translational andrology and urology",
+    "year": "2026",
+    "egfr_ref": 36.4,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13355260)\nPatient: Rashad Grimaldi   MRN: ZX-7091523   DOB: 1969-07-20\nVisit date: 2026-04-27   Seen by: Dr. Yasmin Faraday.\n\nBackground The management of acute gout flares in elderly patients with multiple comorbidities remains a significant clinical challenge. Although interleukin-1β (IL-1β) inhibitors are recommended for refractory gout when conventional therapies are unsuitable, evidence remains limited regarding their use in patients with active malignancy and moderate-to-severe renal impairment. This case addresses the knowledge gap in balancing potent anti-inflammatory therapy with complex oncological and renal risks. Case description We report a case of a 73-year-old male patient with refractory gout, a disease duration exceeding 20 years, and extensive tophus formation. The patient was concomitantly diagnosed with acinar adenocarcinoma of the prostate, stage 3 chronic kidney disease (CKD), coronary artery disease, and grade 3 hypertension. Due to recurrent acute gout flares, impaired renal function, and a high risk of bleeding, standard anti-inflammatory therapeutic options were contraindicated. After a comprehensive assessment of the potential risks and benefits, treatment was initiated with firsekibart, a novel fully human monoclonal antibody targeting IL-1β, administered as a single 200 mg subcutaneous injection, in combination with a short course of low-dose glucocorticoids. Urate-lowering therapy with febuxostat was subsequently introduced. Marked relief of joint pain and swelling was observed within 24 hours of treatment. During the 3-month follow-up period, inflammatory markers improved substantially, with high-sensitivity C-reactive protein decreasing from 62.36 to 0.9 mg/L. Target serum urate levels were achieved (444.9 µmol/L), and renal function showed improvement, as evidenced by an increase in the estimated glomerular filtration rate from 36.4 to 44.9 mL/min/1.73 m 2 . No evidence of tumor progression, serious infections, or major cardiovascular adverse events was observed in the follow-up period. Conclusions This case suggests that firsekibart may provide rapid and effective inflammation control in high-risk gout populations where standard treatments are limited. These findings highlight the potential of IL-1β targeted therapy as a precision medicine approach for complex patients; however, larger prospective studies are required to validate the long-term oncological and renal safety profile of firsekibart in this population.\n\nSocial note: Marisol drives Rashad to every appointment and keeps the pill organiser. Call the clinic on (212) 555-0189 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Grimaldi"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7091523"
+      },
+      {
+        "type": "date",
+        "value": "1969-07-20"
+      },
+      {
+        "type": "date",
+        "value": "2026-04-27"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin Faraday"
+      },
+      {
+        "type": "name",
+        "value": "Marisol"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0189"
+      }
+    ],
+    "truth": {
+      "egfr": 36.4
+    }
+  },
+  {
+    "id": "pmc-16",
+    "pmcid": "PMC13245633",
+    "pmid": "42266296",
+    "doi": "10.7759/cureus.108553",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 49,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13245633)\nPatient: Ingrid Thackeray   MRN: ZX-5324589   DOB: 1939-07-28\nVisit date: 2026-05-22   Seen by: Dr. Rashad Castellanos.\n\nPeripheral arterial occlusive disease is a manifestation of systemic atherosclerosis associated with increased risks of cardiovascular events, limb complications, and mortality. Guideline-directed medical therapy, including antiplatelet agents and statins, is recommended for secondary prevention, whereas cilostazol and exercise therapy are primarily intended for symptomatic relief of claudication. We report the case of a 68-year-old man with previously diagnosed peripheral arterial occlusive disease who presented to a primary care clinic with worsening intermittent claudication while receiving cilostazol without documented antiplatelet or statin therapy. His comorbidities included hypertension, type 2 diabetes mellitus with complications, chronic kidney disease, prior ischemic stroke, and former tobacco use. Physical examination revealed diminished pulses in the affected limb and a relatively cool foot without ulceration or acute infection. Laboratory evaluation showed serum creatinine 1.44 mg/dL (reference range: 0.70-1.30 mg/dL), estimated glomerular filtration rate 49 mL/min/1.73 m² (reference range: ≥60 mL/min/1.73 m²), and glycated hemoglobin 5.7% (reference range: 4.0%-5.6%). Aspirin 100 mg daily and rosuvastatin 10 mg daily were initiated for cardiovascular risk reduction. Cilostazol was later resumed for symptomatic management, and aspirin was changed to clopidogrel because of gastrointestinal intolerance. At the fourth week follow-up, the patient reported a modest increase in walking distance, although causality could not be established. This case highlights the importance of periodic medication reconciliation, reassessment of long-term vascular risk management, and recognition that symptomatic therapy should not substitute for guideline-directed secondary prevention in patients with established peripheral arterial occlusive disease.\n\nSocial note: Odalys lives nearby and checks in on Ingrid most evenings. Call the clinic on (212) 555-0166 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Thackeray"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5324589"
+      },
+      {
+        "type": "date",
+        "value": "1939-07-28"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-22"
+      },
+      {
+        "type": "name",
+        "value": "Rashad Castellanos"
+      },
+      {
+        "type": "name",
+        "value": "Odalys"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0166"
+      }
+    ],
+    "truth": {
+      "egfr": 49
+    }
+  },
+  {
+    "id": "pmc-17",
+    "pmcid": "PMC13625155",
+    "pmid": "42819871",
+    "doi": "10.7759/cureus.115490",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 60,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13625155)\nPatient: Imelda Soriano-Webb   MRN: ZX-4554907   DOB: 1971-04-05\nVisit date: 2026-10-26   Seen by: Dr. Lucan Soriano-Webb.\n\nBackground Living donor kidney transplantation remains a cornerstone of therapy for end-stage renal disease (ESRD), yet accurately characterizing the functional capacity of donors with suboptimal glomerular filtration rate (GFR) is difficult. Conventional renal function indices are static and do not capture the kidney's adaptive capacity. Renal functional reserve (RFR), a dynamic parameter derived from stress renography, may provide additional information for donor evaluation and prediction of transplant outcomes. Methodology In this prospective observational study, 120 living donor-recipient pairs were evaluated. Donors with a pre-donation estimated GFR (eGFR) of 60-89 mL/min/1.73 m² underwent conventional renal assessment and stress renography to determine RFR. Recipient renal function and transplant outcomes were followed for 12 months. Multivariable linear regression, receiver operating characteristic (ROC) curve analysis, and Kaplan-Meier survival analysis were used to evaluate associations between RFR and transplant outcomes. Results Stress renography demonstrated an increase in GFR from 74.6 ± 8.1 to 89.8 ± 10.4 mL/min/1.73 m², yielding a mean RFR of 15.2 ± 4.3 mL/min/1.73 m². Higher donor RFR was associated with lower recipient serum creatinine during the early postoperative period and higher recipient eGFR during follow-up. In multivariable linear regression, RFR was independently associated with recipient eGFR at 12 months (standardized β = 0.487, p Conclusions Stress renography-derived RFR was independently associated with recipient renal function beyond conventional renal function assessment in living kidney donors with suboptimal baseline eGFR. Higher RFR was associated with better recipient eGFR at 12 months and demonstrated greater discrimination of delayed graft function than baseline eGFR. Larger multicenter studies with longer follow-up are required to validate these findings before routine clinical implementation.\n\nSocial note: Anwen sits in on each visit and helps Imelda track the medication list. Call the clinic on (212) 555-0167 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Imelda Soriano-Webb"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4554907"
+      },
+      {
+        "type": "date",
+        "value": "1971-04-05"
+      },
+      {
+        "type": "date",
+        "value": "2026-10-26"
+      },
+      {
+        "type": "name",
+        "value": "Lucan Soriano-Webb"
+      },
+      {
+        "type": "name",
+        "value": "Anwen"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0167"
+      }
+    ],
+    "truth": {
+      "egfr": 60
+    }
+  },
+  {
+    "id": "pmc-18",
+    "pmcid": "PMC13501854",
+    "pmid": "42639453",
+    "doi": "10.7759/cureus.112641",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 19,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13501854)\nPatient: Yasmin Aldecott   MRN: ZX-8548742   DOB: 1965-03-24\nVisit date: 2026-06-25   Seen by: Dr. Zainab Soriano-Webb.\n\nCollagenofibrotic glomerulopathy (CG) is an exceptionally rare idiopathic glomerular disease defined by pathological intraglomerular accumulation of type III collagen fibrils within the mesangial matrix and subendothelial space. We report the case of a 35-year-old woman presenting with generalized anasarca, frothy urine, and exertional dyspnea. Laboratory investigations revealed nephrotic syndrome with a 24-hour urinary protein of 3,658 mg/day, serum albumin of 2 g/dL, and progressive renal dysfunction with serum creatinine rising from 3.13 to 5.25 mg/dL. Echocardiography incidentally demonstrated an ostium secundum atrial septal defect with mild pulmonary arterial hypertension, while serology showed a strongly positive anti-Ku antibody (3+). Renal biopsy also showed diffuse mesangial expansion by Congo red-negative eosinophilic material with marked narrowing and focal obliteration of capillary lumina. Immunofluorescence studies demonstrated weak mesangial staining for both kappa and lambda light chains. Immunohistochemistry confirmed faint positive staining for type III collagen in mesangial regions, confirming the diagnosis of CG. Treatment consisted of diuretics, antihypertensive therapy, corticosteroids, and supportive measures. Despite these interventions, renal function continued to deteriorate, with estimated glomerular filtration rate decreasing from 19 to 10 mL/minute/1.73 m² at discharge. The present case highlights the utility of immunohistochemistry in establishing the diagnosis of CG when electron microscopy is unavailable.\n\nSocial note: Imelda drives Yasmin to every appointment and keeps the pill organiser. Call the clinic on (617) 555-0120 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Yasmin Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8548742"
+      },
+      {
+        "type": "date",
+        "value": "1965-03-24"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-25"
+      },
+      {
+        "type": "name",
+        "value": "Zainab Soriano-Webb"
+      },
+      {
+        "type": "name",
+        "value": "Imelda"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0120"
+      }
+    ],
+    "truth": {
+      "egfr": 19
+    }
+  },
+  {
+    "id": "pmc-19",
+    "pmcid": "PMC13142148",
+    "pmid": "42093865",
+    "doi": "10.1210/jcemcr/luag125",
+    "journal": "JCEM case reports",
+    "year": "2026",
+    "egfr_ref": 68,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13142148)\nPatient: Henrik Aldecott   MRN: ZX-8661963   DOB: 1970-07-18\nVisit date: 2026-06-18   Seen by: Dr. Odalys Vandermeer.\n\nWe report a case of interstitial nephritis, likely secondary to tirzepatide. A 66-year-old man with type 2 diabetes, stage 3b chronic kidney disease, and other metabolic comorbidities experienced a progressive decline in renal function. Serum creatinine rose from 1.1 mg/dL (SI: 97.2 µmol/L) to 2.11 mg/dL (SI: 186.5 µmol/L) (reference range, 0.6-1.2 mg/dL [SI: 53-106 µmol/L]); estimated glomerular filtration rate (eGFR) fell from 68 to 34 mL/min/1.73 m 2 over 8 months while receiving escalating doses of tirzepatide. Despite cessation of other medications and supportive care, renal dysfunction persisted. Kidney biopsy revealed chronic active tubulointerstitial nephritis with eosinophilic infiltrates and fibrosis implicating tirzepatide as the likely cause. Discontinuation of tirzepatide and initiation of prednisone resulted in significant improvement (serum creatinine measured 1.68 mg/dL (SI: 148.5 µmol/L) at 1 month and stabilized at 1.78 mg/dL (SI: 157.3 µmol/L); eGFR improved from 34 mL/min/1.73 m 2 to 42 mL/min/1.73 m 2 by 3 months). This case highlights a rare, biopsy-proven adverse renal effect of tirzepatide and underscores the importance of considering interstitial nephritis in patients with unexplained kidney injury on incretin mimetic therapy. Although glucagon-like peptide-1 receptor agonists benefits outweigh rare risks of nephrotoxicity, regular monitoring of creatinine monitoring is advised.\n\nSocial note: Basil drives Henrik to every appointment and keeps the pill organiser. Call the clinic on (415) 555-0113 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Henrik Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8661963"
+      },
+      {
+        "type": "date",
+        "value": "1970-07-18"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-18"
+      },
+      {
+        "type": "name",
+        "value": "Odalys Vandermeer"
+      },
+      {
+        "type": "name",
+        "value": "Basil"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0113"
+      }
+    ],
+    "truth": {
+      "egfr": 68
+    }
+  },
+  {
+    "id": "pmc-20",
+    "pmcid": "PMC13700542",
+    "pmid": "42902549",
+    "doi": "10.12659/msm.953198",
+    "journal": "Medical science monitor : international medical journal of experimental and clinical research",
+    "year": "2026",
+    "egfr_ref": 50,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13700542)\nPatient: Odalys Aldecott   MRN: ZX-9218306   DOB: 1969-05-05\nVisit date: 2026-06-09   Seen by: Dr. Ingrid Villanueva.\n\nBACKGROUND Contrast-associated acute kidney injury (CA-AKI) is a recognized complication in oncology patients undergoing contrast-enhanced computed tomography (CECT) during chemotherapy. Limited data exist on CA-AKI incidence in patients with preserved baseline renal function, particularly in Middle Eastern populations. MATERIAL AND METHODS We conducted a retrospective analysis of 146 adult oncology patients with baseline estimated glomerular filtration rate (eGFR) greater than 50 mL/min/1.73 m² who underwent CECT within 45 days of chemotherapy at a tertiary cancer center in Saudi Arabia (January 2017-December 2018). CA-AKI was defined as an absolute serum creatinine increase of 0.3 mg/dL or more, or as a relative increase of more than 50% within 48 to 72 hours of contrast administration. Given the small number of events (n=2), descriptive statistics and exploratory univariate analyses were performed. RESULTS CA-AKI occurred in 2 of 146 patients (1.4%; 95% CI: 0.2%-5.0%). Mean age was 51.5±16.2 years; 58% were women. Cancer types included solid tumors (81.5%) and hematological malignancies (17.8%). The chemotherapy-to-CECT interval was shorter in patients with CA-AKI (mean: 2 days) than in patients without CA-AKI (mean: 23.3±12.8 days; P=0.02). This association is exploratory and hypothesis-generating given the extremely limited number of events. CONCLUSIONS CA-AKI incidence was relatively low (1.4%) in oncology patients with preserved baseline renal function undergoing CECT during active chemotherapy. The observed association between shorter chemotherapy-to-imaging intervals and CA-AKI requires prospective validation and should not be interpreted as a definitive causal relationship. These findings provide preliminary regional data from Saudi Arabia and underscore the need for larger, well-designed prospective studies to better characterize CA-AKI risk in this population.\n\nSocial note: Marisol sits in on each visit and helps Odalys track the medication list. Call the clinic on (305) 555-0135 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Odalys Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9218306"
+      },
+      {
+        "type": "date",
+        "value": "1969-05-05"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-09"
+      },
+      {
+        "type": "name",
+        "value": "Ingrid Villanueva"
+      },
+      {
+        "type": "name",
+        "value": "Marisol"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0135"
+      }
+    ],
+    "truth": {
+      "egfr": 50
+    }
+  },
+  {
+    "id": "pmc-21",
+    "pmcid": "PMC13500293",
+    "pmid": "42638881",
+    "doi": "10.3389/fmed.2026.1807135",
+    "journal": "Frontiers in medicine",
+    "year": "2026",
+    "egfr_ref": 58.9,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13500293)\nPatient: Lucan Pellegrino   MRN: ZX-2577284   DOB: 1964-02-10\nVisit date: 2026-01-03   Seen by: Dr. Basil Ostrowski.\n\nBackground Hepatoprotective agents are often added during prolonged anti-tuberculosis (anti-TB) therapy, and medication-associated nephrotic syndrome may be under-recognized. Case A 31-year-old man with pulmonary tuberculosis received long-term anti-TB therapy (rifapentine, isoniazid, and ethambutol) and continuous tiopronin (0.2 g three times daily). He developed edema, foamy urine, and oliguria. Pre-admission tests showed proteinuria (3+), serum albumin 19.6 g/L, and serum creatinine 161 μmol/L. On admission, urine protein was 4+, serum albumin 20.6 g/L, serum creatinine 142.9 μmol/L, and estimated glomerular filtration rate (eGFR) 58.86 mL/min, with hyperlipidemia. Kidney biopsy confirmed minimal change disease (MCD). Interventions and outcome All anti-TB drugs and tiopronin were discontinued, and tacrolimus was initiated after biopsy. Anti-TB therapy was reintroduced as isoniazid monotherapy. Renal function improved rapidly (serum creatinine 55 μmol/L; eGFR 128.1 mL/min at discharge), and dipstick proteinuria became negative on short-term follow-up. The tacrolimus trough concentration was 3.6 ng/mL. Conclusion The improvement after withdrawal of multiple suspected agents and continued recovery after reintroduction of isoniazid alone support a drug-associated etiology, but do not allow definitive attribution to a single causative drug. Routine renal monitoring should accompany hepatoprotective add-on therapy during anti-TB treatment.\n\nSocial note: Delphine lives nearby and checks in on Lucan most evenings. Call the clinic on (212) 555-0123 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Lucan Pellegrino"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2577284"
+      },
+      {
+        "type": "date",
+        "value": "1964-02-10"
+      },
+      {
+        "type": "date",
+        "value": "2026-01-03"
+      },
+      {
+        "type": "name",
+        "value": "Basil Ostrowski"
+      },
+      {
+        "type": "name",
+        "value": "Delphine"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0123"
+      }
+    ],
+    "truth": {
+      "egfr": 58.9
+    }
+  },
+  {
+    "id": "pmc-22",
+    "pmcid": "PMC13746620",
+    "pmid": "43000404",
+    "doi": "10.1186/s13256-026-06506-w",
+    "journal": "Journal of medical case reports",
+    "year": "2026",
+    "egfr_ref": 79.2,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13746620)\nPatient: Marisol Rasmussen   MRN: ZX-6094468   DOB: 1957-04-09\nVisit date: 2026-04-18   Seen by: Dr. Basil Iwasaki.\n\nBackground High-dose methotrexate (HD-MTX) is the backbone of induction therapy for primary central nervous system lymphoma (PCNSL) but may be limited by delayed elimination and renal toxicity. We report a clinically instructive case in which intermittent reduced-dose methotrexate allowed continuation of induction therapy after severe delayed elimination and acute kidney injury. Case presentation A 59-year-old Japanese woman presented with headache and rapidly progressive impaired consciousness. Brain magnetic resonance imaging revealed a 5-cm enhancing mass in the right frontal lobe with significant perifocal edema. Emergent open biopsy confirmed PCNSL, diffuse large B-cell lymphoma, non-germinal center B-cell type, without systemic involvement. Induction chemotherapy with rituximab, methotrexate, procarbazine, and vincristine was initiated. After the first HD-MTX dose (3.5 g/m 2 ), methotrexate elimination was markedly delayed (72-h level 0.85 µmol/L; persistent elevation around day 7), accompanied by a > 60% reduction in estimated glomerular filtration rate from 79.2 to 29.4 mL/min/1.73 m 2 . Because of renal dysfunction, subsequent courses employed an intermittent reduced-dose methotrexate strategy (1.2 g/m 2 on selected cycles). With this approach, serum methotrexate concentrations remained within an acceptable therapeutic range without recurrent delayed elimination, and renal function gradually improved. Complete remission was achieved after induction, followed by consolidation with reduced-dose whole-brain radiotherapy and two courses of high-dose cytarabine. Complete remission has been maintained for 30 months after completion of the entire treatment sequence. Conclusions When severe delayed methotrexate elimination and renal dysfunction occur early during HD-MTX-based induction for PCNSL, an intermittent reduced-dose strategy may allow continuation of methotrexate-based therapy and subsequent standard consolidation in selected settings. This case also highlights the practical importance of supportive care and individualized decision-making when glucarpidase is not readily available.\n\nSocial note: Cormac lives nearby and checks in on Marisol most evenings. Call the clinic on (415) 555-0140 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Marisol Rasmussen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6094468"
+      },
+      {
+        "type": "date",
+        "value": "1957-04-09"
+      },
+      {
+        "type": "date",
+        "value": "2026-04-18"
+      },
+      {
+        "type": "name",
+        "value": "Basil Iwasaki"
+      },
+      {
+        "type": "name",
+        "value": "Cormac"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0140"
+      }
+    ],
+    "truth": {
+      "egfr": 79.2
+    }
+  },
+  {
+    "id": "pmc-23",
+    "pmcid": "PMC13221106",
+    "pmid": "42220692",
+    "doi": "10.7759/cureus.107982",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 107,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13221106)\nPatient: Soledad Villanueva   MRN: ZX-3209604   DOB: 1952-04-27\nVisit date: 2026-10-05   Seen by: Dr. Khalil Halvorsen.\n\nDistinguishing autoimmune glomerulonephritis from hereditary nephropathy is critical to avoid unnecessary immunosuppression and ensure appropriate long-term renal monitoring. A 31-year-old Hispanic female patient with a complex medical history, including proteinase 3 (PR3)-positive granulomatosis with polyangiitis (GPA), rheumatoid arthritis, Raynaud phenomenon, seizure disorder, autism spectrum disorder, bipolar disorder with psychotic features, and cochlear implantation in childhood, was found to have genetically confirmed Alport syndrome through Natera testing (Natera, Inc., Austin, Texas, United States). Despite preserved renal function (estimated glomerular filtration rate (eGFR) 107 mL/minute/1.73m²), urinalysis demonstrated persistent proteinuria. Her history of early-onset hearing loss requiring cochlear implantation raised suspicion for hereditary nephropathy. Elevated anti-PR3 antibodies were present without clinical evidence of active vasculitis. The coexistence of autoimmune disease and hereditary collagen IV nephropathy complicated the attribution of urinary abnormalities. This case highlights the importance of genetic evaluation in patients with multisystem disease and urinary abnormalities, particularly when clinical features such as early-onset sensorineural hearing loss are present. Recognition of Alport syndrome in patients with coexisting autoimmune vasculitis has significant implications for renal surveillance, immunosuppressive stewardship, and multidisciplinary management.\n\nSocial note: Cormac lives nearby and checks in on Soledad most evenings. Call the clinic on (305) 555-0174 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Villanueva"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3209604"
+      },
+      {
+        "type": "date",
+        "value": "1952-04-27"
+      },
+      {
+        "type": "date",
+        "value": "2026-10-05"
+      },
+      {
+        "type": "name",
+        "value": "Khalil Halvorsen"
+      },
+      {
+        "type": "name",
+        "value": "Cormac"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0174"
+      }
+    ],
+    "truth": {
+      "egfr": 107
+    }
+  },
+  {
+    "id": "pmc-24",
+    "pmcid": "PMC13371877",
+    "pmid": "42460205",
+    "doi": "10.7759/cureus.110896",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 60,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13371877)\nPatient: Lucan Halvorsen   MRN: ZX-3839124   DOB: 1970-02-28\nVisit date: 2026-07-22   Seen by: Dr. Henrik Pellegrino.\n\nIntroduction Kidney transplantation remains the treatment of choice for end-stage kidney disease (ESKD) because of its excellent outcomes in terms of both graft and recipient survival. However, preserving the long-term health of living kidney donors represents a major challenge in nephrology. Rigorous post-donation follow-up is essential for the early detection of potential renal and cardiovascular complications and for ensuring donor safety. Methods We conducted a retrospective, descriptive, and analytical study over a 26-year period (1998-2024) at the Ibn Sina University Hospital Center in Rabat, Morocco. The study included all living-related kidney donors (LRKD) who underwent nephrectomy for kidney donation according to the Kidney Disease: Improving Global Outcomes (KDIGO) eligibility criteria. The primary objective was to evaluate the incidence of chronic kidney disease (CKD) after donation. Secondary objectives included the assessment of cardiovascular complications, particularly hypertension, and the identification of associated risk factors. Estimated glomerular filtration rate (eGFR) was used to monitor renal function over time. Quantitative variables were expressed as mean±standard deviation, while qualitative variables were presented as frequencies and percentages. Univariate and multivariate analyses were performed, with statistical significance set at p<0.05. Results A total of 154 LRKD were included, with a mean age of 43±12 years and a predominance of female donors (male-to-female ratio: 0.45). During follow-up, infectious complications were the most frequently observed adverse events, affecting 38 donors (24.6%), with recurrent urinary tract infections being the predominant manifestation, reported in 17 donors (11%). In addition, hypertension was diagnosed in 17 donors (11%), while CKD developed in eight donors (5.2%) A decline in eGFR below 60 mL/min/1.73 m² was observed in eight donors (5.2%), with no progression to ESKD. The mean serum creatinine at 20 years of follow-up was 82.3±18.56 µmol/L. Multivariate analysis identified advanced age, male sex, and baseline eGFR as significant predictors of post-donation CKD (p<0.001), whereas no factor was significantly associated with the occurrence of hypertension. In addition, six full-term pregnancies were reported among female donors, without maternal or fetal complications. Conclusion Our findings highlight the importance of rigorous and long-term medical follow-up in LRKD in order to anticipate late complications. Particular attention should be paid to male donors, who appear to be at higher risk of developing renal impairment. Post-donation follow-up should be individualized to ensure optimal management and preserve donor health over time.\n\nSocial note: Imelda lives nearby and checks in on Lucan most evenings. Call the clinic on (212) 555-0125 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Lucan Halvorsen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3839124"
+      },
+      {
+        "type": "date",
+        "value": "1970-02-28"
+      },
+      {
+        "type": "date",
+        "value": "2026-07-22"
+      },
+      {
+        "type": "name",
+        "value": "Henrik Pellegrino"
+      },
+      {
+        "type": "name",
+        "value": "Imelda"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0125"
+      }
+    ],
+    "truth": {
+      "egfr": 60
+    }
+  },
+  {
+    "id": "pmc-25",
+    "pmcid": "PMC13643174",
+    "pmid": "42846172",
+    "doi": "10.1093/ehjopen/oeag145",
+    "journal": "European heart journal open",
+    "year": "2026",
+    "egfr_ref": 10,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13643174)\nPatient: Anwen Delacroix-Hume   MRN: ZX-7851610   DOB: 1954-10-26\nVisit date: 2026-01-17   Seen by: Dr. Odalys Faraday.\n\nAims Differences between cystatin C-based and creatinine-based glomerular filtration rate estimations (eGFRdiff) have been associated with adverse outcomes. We aimed to investigate the prevalence of eGFRdiff and its association with clinical outcomes and brain lesions in patients with atrial fibrillation (AF). Methods and results We analysed 3804 patients with AF enrolled in two prospective, multicentre cohort studies. The eGFRdiff was calculated by 'cystatin C-based eGFR-creatinine-based eGFR'. Patients were stratified into three groups: eGFRdiff >10, -10 to 10, and 10, -10 to 10, and 2 was present in 17.7%, 71.7%, and 10.6% of the patients, respectively. Incidence rates per 100 patient-years increased across these groups for major CV events (MACEs: 1.7, 3.9, 6.8) and HF hospitalization (1.2, 3.5, 6.1). Similarly, the prevalence of MRI-detected brain infarcts (28%, 39%, 42%) and moderate-to-severe white matter hyperintensities (38%, 55%, 63%) increased with greater eGFRdiff. The levels of hs-TnT and NT-proBNP were inversely correlated with eGFRdiff. In multivariable-adjusted linear models, lower eGFRdiff was associated with MACE ( P = 0.006) and HF hospitalization ( P = 0.015). Conclusion A substantial proportion of patients with AF exhibit clinically relevant eGFRdiff. More negative eGFR difference was associated with elevated cardiac biomarkers, greater burden of ischaemic brain lesions, and increased risk of CV events and HF hospitalization. Clinicaltrialsgov identifier NCT02105844.\n\nSocial note: Zainab lives nearby and checks in on Anwen most evenings. Call the clinic on (415) 555-0101 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Anwen Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-7851610"
+      },
+      {
+        "type": "date",
+        "value": "1954-10-26"
+      },
+      {
+        "type": "date",
+        "value": "2026-01-17"
+      },
+      {
+        "type": "name",
+        "value": "Odalys Faraday"
+      },
+      {
+        "type": "name",
+        "value": "Zainab"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0101"
+      }
+    ],
+    "truth": {
+      "egfr": 10
+    }
+  },
+  {
+    "id": "pmc-26",
+    "pmcid": "PMC13593464",
+    "pmid": "42774116",
+    "doi": "10.3389/fneph.2026.1932773",
+    "journal": "Frontiers in nephrology",
+    "year": "2026",
+    "egfr_ref": 12.1,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13593464)\nPatient: Ingrid Aldecott   MRN: ZX-3636230   DOB: 1961-09-08\nVisit date: 2026-10-24   Seen by: Dr. Piotr Castellanos.\n\nPsoriasis and IgA nephropathy are immune-mediated disorders that may coexist, but the clinical meaning of this association remains uncertain. We report a 45-year-old man with psoriasis and progressive kidney dysfunction whose biopsy-proven IgA nephropathy presented with severe impairment of kidney function, heavy proteinuria, and mixed active and chronic histologic injury. At reassessment, serum creatinine was 463 μmol/L, estimated glomerular filtration rate was 12.1 mL/min/1.73 m², and pretreatment 24-hour urinary protein excretion ranged from 2.90 to 4.70 g. Kidney biopsy showed proliferative sclerosing IgA nephropathy, Oxford classification M1E1S1T2C0, with ischemic glomerular injury, microangiopathy, tubular atrophy, and interstitial fibrosis. Targeted-release budesonide and deucravacitinib were started together. Proteinuria fell to 0.62 g, serum creatinine decreased to 323 μmol/L, and a modest improvement in cutaneous disease activity was observed, with PASI decreasing from 2.4 to 1.6. After patient-initiated discontinuation of deucravacitinib, proteinuria increased and later declined after reintroduction. Following completion of the planned budesonide course, proteinuria continued to fall during deucravacitinib monotherapy, while kidney function deteriorated. This case is best interpreted as a clinicopathologic observation rather than proof of drug efficacy. Biopsy-defined activity and chronicity helped explain the discordant changes in proteinuria and kidney function, while the longitudinal course generated a testable but unproven hypothesis of a possible inflammatory connection between psoriasis and IgA nephropathy.\n\nSocial note: Ottilie sits in on each visit and helps Ingrid track the medication list. Call the clinic on (415) 555-0136 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3636230"
+      },
+      {
+        "type": "date",
+        "value": "1961-09-08"
+      },
+      {
+        "type": "date",
+        "value": "2026-10-24"
+      },
+      {
+        "type": "name",
+        "value": "Piotr Castellanos"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0136"
+      }
+    ],
+    "truth": {
+      "egfr": 12.1
+    }
+  },
+  {
+    "id": "pmc-27",
+    "pmcid": "PMC13677084",
+    "pmid": "42893532",
+    "doi": "10.1111/ctr.70719",
+    "journal": "Clinical transplantation",
+    "year": "2026",
+    "egfr_ref": 45.4,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13677084)\nPatient: Ingrid Ostrowski   MRN: ZX-8390154   DOB: 1940-03-27\nVisit date: 2026-05-17   Seen by: Dr. Piotr Brannigan.\n\nBackground Calcineurin inhibitor (CNI) nephrotoxicity drives long-term kidney-function decline after simultaneous pancreas-kidney (SPK) and liver-kidney (LK) transplantation, but belatacept conversion, as an alternative strategy, is poorly studied in these recipients, whose non-kidney allograft rejection risk differs. Methods We retrospectively studied six SPK and six LK recipients converted from CNI- to belatacept-based immunosuppression and analyzed the cohorts separately alongside a narrative review of published SPK/LK conversion experiences. Outcomes were estimated glomerular filtration rate (eGFR) trajectories and slopes, donor-specific antibodies (DSA) and rejection, pancreatic, hepatic and metabolic parameters, infections, and survival, reported descriptively with exploratory estimates and 95% confidence intervals (CI). Results Conversion occurred a median of 64 (SPK) and 89 (LK) months after transplantation, always with a transient low-dose CNI overlap (target trough 3-4 ng/ml). In SPK recipients, median eGFR rose from 45.4 to 55.5 mL/min/1.73m 2 and the median eGFR slope changed from -3.9 to +5.6 mL/min/year (mixed-model slope change +12.6, 95% CI 2.9 to 22.3); in LK recipients, from 38.8 to 46.3 and from -3.1 to +4.1 (estimate +6.3, 95% CI -4.2 to 16.7). No new DSA developed; pre-existing DSA declined or remained stable. Pancreatic and liver function stayed stable. Two infections in LK recipients (Pneumocystis pneumonia, adenovirus) were possibly belatacept-aggravated. Over a median 25 months, 8/12 (67%) remained on belatacept. Conclusions Late belatacept conversion with a transient low-dose CNI overlap was feasible in selected SPK and LK recipients and was associated with stable-to-improved kidney function without a pancreatic or hepatic safety signal. The uncontrolled design supports feasibility, not efficacy.\n\nSocial note: Ottilie drives Ingrid to every appointment and keeps the pill organiser. Call the clinic on (212) 555-0104 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Ostrowski"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8390154"
+      },
+      {
+        "type": "date",
+        "value": "1940-03-27"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-17"
+      },
+      {
+        "type": "name",
+        "value": "Piotr Brannigan"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0104"
+      }
+    ],
+    "truth": {
+      "egfr": 45.4
+    }
+  },
+  {
+    "id": "pmc-28",
+    "pmcid": "PMC13780386",
+    "pmid": "43054875",
+    "doi": "10.7759/cureus.118159",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 57,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13780386)\nPatient: Odalys Faraday   MRN: ZX-9653554   DOB: 1950-05-28\nVisit date: 2026-08-12   Seen by: Dr. Rashad Iwasaki.\n\nFibrillary glomerulopathy is an uncommon cause of progressive kidney disease, and the development of superimposed crescentic glomerulonephritis creates a particularly difficult therapeutic challenge. We report an 84-year-old woman with progressive kidney dysfunction, persistent hematuria, and proteinuria. Over 12 months, serum creatinine increased from 0.99 mg/dL to 2.52 mg/dL, with estimated glomerular filtration rate declining from 57 mL/min/1.73 m² to approximately 18 mL/min/1.73 m². Serologic evaluation, including antinuclear antibody, antineutrophil cytoplasmic antibody, and complement levels, was unrevealing, and evaluation for monoclonal gammopathy was negative. Kidney biopsy demonstrated DNAJB9-negative fibrillary glomerulopathy with superimposed focal crescentic glomerulonephritis. The patient was initially treated with prednisone 80 mg daily, and avacopan was started at a dose of 30 mg twice a day two weeks after initiation of prednisone therapy. The prednisone dose was rapidly tapered, and avacopan was subsequently used as a glucocorticoid-sparing strategy. At 12 months, kidney function remained stable, with serum creatinine of 1.97 mg/dL without progression to dialysis-dependent kidney failure. Early biopsy and individualized immunosuppressive therapy are critical, and emerging agents such as avacopan may offer glucocorticoid-sparing benefits in selected cases.\n\nSocial note: Teodor lives nearby and checks in on Odalys most evenings. Call the clinic on (305) 555-0182 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Odalys Faraday"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9653554"
+      },
+      {
+        "type": "date",
+        "value": "1950-05-28"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-12"
+      },
+      {
+        "type": "name",
+        "value": "Rashad Iwasaki"
+      },
+      {
+        "type": "name",
+        "value": "Teodor"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0182"
+      }
+    ],
+    "truth": {
+      "egfr": 57
+    }
+  },
+  {
+    "id": "pmc-29",
+    "pmcid": "PMC13441277",
+    "pmid": "42559519",
+    "doi": "10.1159/000553107",
+    "journal": "Glomerular diseases",
+    "year": "2026",
+    "egfr_ref": 28,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13441277)\nPatient: Rashad Umarov   MRN: ZX-5601620   DOB: 1946-02-22\nVisit date: 2026-01-08   Seen by: Dr. Ingrid Iwasaki.\n\nIntroduction IgA nephropathy (IgAN) is a common cause of chronic kidney disease (CKD) worldwide. However, patients with advanced CKD and significant fibrosis on biopsy have limited treatment options, and clinical trials studying targeted-release budesonide have excluded individuals with low estimated glomerular filtration rate (eGFR). Case presentation We report a case of a 36-year-old male with biopsy-proven crescentic IgAN, initially diagnosed 3 years prior, who presented with progressive renal dysfunction and persistent proteinuria despite prior treatment with immunosuppression, including corticosteroids and rituximab. At evaluation, serum creatinine was 2.86 mg/dL with an eGFR of 28 mL/min/1.73 m 2 , urine protein-to-creatinine ratio was 1.64 grams/day, and microscopic hematuria was present. Repeat kidney biopsy demonstrated significant chronic changes with severe interstitial fibrosis and tubular atrophy. The Oxford classification score was M1, E1, S1, T2, C1. Targeted-release budesonide was initiated, after which hematuria resolved within 1 month, proteinuria decreased significantly reaching 0.29 g/day, and kidney function improved with a serum creatinine of 2.24 mg/dL and eGFR of 38 mL/min/1.73 m 2 at 8 months into treatment. The patient tolerated therapy without major adverse events. Conclusion This case demonstrates clinically meaningful improvement in both proteinuria and renal function following treatment with targeted-release budesonide, despite advanced chronicity but with disease activity and low eGFR, a population that remains underrepresented in clinical trials and prospective studies. Our findings highlight the importance of repeat biopsy and future studies addressing the potential benefit of targeted-release budesonide in select patients with advanced IgAN, who may retain a therapeutically targetable inflammatory component.\n\nSocial note: Basil lives nearby and checks in on Rashad most evenings. Call the clinic on (212) 555-0115 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Umarov"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5601620"
+      },
+      {
+        "type": "date",
+        "value": "1946-02-22"
+      },
+      {
+        "type": "date",
+        "value": "2026-01-08"
+      },
+      {
+        "type": "name",
+        "value": "Ingrid Iwasaki"
+      },
+      {
+        "type": "name",
+        "value": "Basil"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0115"
+      }
+    ],
+    "truth": {
+      "egfr": 28
+    }
+  },
+  {
+    "id": "pmc-30",
+    "pmcid": "PMC13521650",
+    "pmid": "42660125",
+    "doi": "10.1111/nep.70271",
+    "journal": "Nephrology (Carlton, Vic.)",
+    "year": "2026",
+    "egfr_ref": 60,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13521650)\nPatient: Ingrid Mbeki   MRN: ZX-8071582   DOB: 1948-07-17\nVisit date: 2026-06-16   Seen by: Dr. Odalys Pellegrino.\n\nTubulointerstitial nephritis with uveitis (TINU) syndrome is a rare disorder characterised by the simultaneous or sequential occurrence of acute tubulointerstitial nephritis and uveitis, in the absence of systemic disease. Its true prevalence is likely underestimated, as renal and ocular manifestations may not appear concurrently. We conducted a retrospective case series of patients diagnosed with TINU at a single tertiary centre between 2016 and 2025. Clinical, biochemical, histopathological and ophthalmological data were reviewed. Long-term renal and ocular outcomes were assessed. Ten patients (female:male 6:4) were identified, with a median age at diagnosis of 41 years (range 15-67). Renal disease preceded uveitis in 60% of cases, with a mean interval of 5.6 months. At presentation, 70% had serum creatinine > 200 μmol/L and one patient required transient dialysis. All renal biopsies demonstrated tubulointerstitial nephritis with preserved glomeruli. All patients were treated with systemic corticosteroids, with topical therapy for uveitis. Renal relapse occurred in 60% of patients, often during steroid tapering, and required prolonged corticosteroid therapy or mycophenolate mofetil. At final follow-up (median 44 months), 50% had chronic kidney disease (eGFR < 60 mL/min). Relapsing disease was more frequent in females and patients under 18 years. At last follow-up, mean serum creatinine was 89 μmol/L, with 50% of patients having CKD G3a. Ophthalmologic data (n = 6) showed bilateral anterior uveitis in all cases, with intermediate involvement in three. Two developed steroid-induced intraocular hypertension. Ocular relapse occurred in six patients and frequently paralleled renal disease activity. We herein report one of the longest median follow-up durations (44 months) among biopsy-proven cohorts of interstitial nephritis. Our cohort spans a broader age range (15-67 years) than traditionally described with an adult predominance. Despite a 60% relapse rate, response to steroids and immunosuppression was good. Proteinuria at presentation was noted in individuals who developed subsequent CKD supporting the need for follow up and proteinuria management where relevant.\n\nSocial note: Piotr lives nearby and checks in on Ingrid most evenings. Call the clinic on (212) 555-0146 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Mbeki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8071582"
+      },
+      {
+        "type": "date",
+        "value": "1948-07-17"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-16"
+      },
+      {
+        "type": "name",
+        "value": "Odalys Pellegrino"
+      },
+      {
+        "type": "name",
+        "value": "Piotr"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0146"
+      }
+    ],
+    "truth": {
+      "egfr": 60
+    }
+  },
+  {
+    "id": "pmc-31",
+    "pmcid": "PMC13614428",
+    "pmid": "42789323",
+    "doi": "10.1096/fj.202601835rrr",
+    "journal": "FASEB journal : official publication of the Federation of American Societies for Experimental Biology",
+    "year": "2026",
+    "egfr_ref": 15,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13614428)\nPatient: Ingrid Mbeki   MRN: ZX-3630628   DOB: 1948-02-20\nVisit date: 2026-07-28   Seen by: Dr. Cormac Pellegrino.\n\nGrowing evidence highlights the central role of inflammation in the onset and progression of DKD. In this study, we investigate the association between the neutrophil percentage-to-albumin ratio (NPAR) and clinicopathological features, as well as long-term renal outcomes, in patients with diabetic kidney disease (DKD). Three hundred five biopsy-confirmed DKD patients with baseline eGFR ≥ 15 mL/min/1.73 m 2 were retrospectively enrolled in this study. Baseline clinical and pathological characteristics were compared across NPAR quartiles. The primary outcome was 2-year DKD progression, defined as a > 40% increase in serum creatinine, end-stage renal disease, or all-cause mortality. Multivariable logistic regression, restricted cubic spline (RCS) analysis, and subgroup analyses were conducted to examine the association between the NPAR and kidney outcomes. Subsequently, a prognostic nomogram was constructed for DKD patients incorporating NPAR to stratify individual risk. Higher baseline NPAR quartiles were significantly associated with renal dysfunction and advanced renal pathological lesions. In a subset of renal biopsy specimens, MPO immunostaining demonstrated increased renal neutrophil infiltration in patients with higher NPAR quartiles. Renal MPO expression was positively correlated with mesangial expansion, interstitial fibrosis, and tubular atrophy. Among patients with complete follow-up, 65.3% developed the composite kidney outcome. Compared with the lowest NPAR quartile, multivariable-adjusted odds ratios (95% CIs) for kidney outcomes were 1.68 (0.36-8.15), 6.21 (1.35-33.55), and 6.88 (1.27-46.86) for Q2, Q3, and Q4, respectively. RCS analysis indicated a nonlinear association between NPAR and kidney outcomes, with risk increasing sharply above an NPAR value of 1.38. Subgroup analyses identified significant interactions between NPAR and Kimmelstiel-Wilson nodules as well as SGLT2 inhibitor use on kidney outcomes. A prognostic model incorporating NPAR quartiles, age, total cholesterol, eGFR, and interstitial fibrosis demonstrated good discrimination (AUROC 0.863). In conclusion, elevated NPAR is associated with increased renal neutrophil infiltration, more severe histopathological injury, and adverse renal outcomes in patients with DKD, and independently predicts long-term renal progression.\n\nSocial note: Imelda sits in on each visit and helps Ingrid track the medication list. Call the clinic on (305) 555-0108 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Mbeki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3630628"
+      },
+      {
+        "type": "date",
+        "value": "1948-02-20"
+      },
+      {
+        "type": "date",
+        "value": "2026-07-28"
+      },
+      {
+        "type": "name",
+        "value": "Cormac Pellegrino"
+      },
+      {
+        "type": "name",
+        "value": "Imelda"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0108"
+      }
+    ],
+    "truth": {
+      "egfr": 15
+    }
+  },
+  {
+    "id": "pmc-32",
+    "pmcid": "PMC13599880",
+    "pmid": "42754276",
+    "doi": "10.1136/bmjopen-2026-122192",
+    "journal": "BMJ open",
+    "year": "2026",
+    "egfr_ref": 40,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13599880)\nPatient: Lucan Soriano-Webb   MRN: ZX-6916498   DOB: 1938-10-15\nVisit date: 2026-10-27   Seen by: Dr. Basil Kowalczyk.\n\nIntroduction Hypertension is the primary modifiable risk factor for cardiorenal complications of chronic kidney disease (CKD). It is well established that lowering blood pressure (BP) in patients with CKD reduces renal and cardiovascular complications. The guidelines advise starting the BP-lowering drug with ACE inhibitors (ACEi) or angiotensin receptor blockers (ARB), but then there is no strong evidence to support the preferential use of any particular agent in controlling BP. Our hypothesis is that patients with CKD and uncontrolled hypertension are fluid overloaded and that the second line of treatment after an ACEi or an ARB should be a diuretic. Methods and analysis This is a two-parallel group cluster randomised superiority phase 3 trial comparing a specific algorithm to lower BP in patients with moderate to severe CKD based on diuretics to standard of care. The primary endpoint is a composite time-to-event endpoint of (1) kidney failure with replacement therapy (KFRT), (2) estimated glomerular filtration rate decline ≥40%, (3) cardiovascular events (myocardial infarction, heart failure hospitalisation, stroke) and (4) all-cause mortality. Secondary endpoints include each component of the primary endpoint, systolic and diastolic BP at 3 months and 6 months post baseline then every 6 months, proportion of patients with controlled BP at 2 years, change from baseline in glomerular filtration rate and in proteinuria (g/day) or proteinuria/creatininuria (g/g) at 3 months and 6 months post baseline then every 6 months, proportion of patients who used at least one diuretic, quality of life and safety. It is planned to include 720 patients in 40 centres. Ethics and dissemination This study was approved by the Ethics Committee CPP Ile-de-France VII on 23 January 2023 (ref: 2022-5 01 494-39-00). Study findings will be published in a peer-reviewed journal and presented at scientific conferences. Trial registration number NCT05732727.\n\nSocial note: Khalil lives nearby and checks in on Lucan most evenings. Call the clinic on (415) 555-0124 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Lucan Soriano-Webb"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6916498"
+      },
+      {
+        "type": "date",
+        "value": "1938-10-15"
+      },
+      {
+        "type": "date",
+        "value": "2026-10-27"
+      },
+      {
+        "type": "name",
+        "value": "Basil Kowalczyk"
+      },
+      {
+        "type": "name",
+        "value": "Khalil"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0124"
+      }
+    ],
+    "truth": {
+      "egfr": 40
+    }
+  },
+  {
+    "id": "pmc-33",
+    "pmcid": "PMC13552291",
+    "pmid": "42696435",
+    "doi": "10.1080/07853890.2026.2719256",
+    "journal": "Annals of medicine",
+    "year": "2026",
+    "egfr_ref": 66,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13552291)\nPatient: Imelda Kowalczyk   MRN: ZX-2834771   DOB: 1969-06-23\nVisit date: 2026-08-28   Seen by: Dr. Soledad Grimaldi.\n\nBackground The role of preoperative β-blocker therapy in patients with ventricular dysfunction undergoing coronary artery bypass grafting (CABG) remains unclear. Objective We aim to evaluate heterogeneous treatment effects of preoperative β-blocker therapy in patients with ventricular dysfunction undergoing CABG and to identify subgroups that may derive greater benefit from preoperative β-blocker therapy than untreated controls. Methods To investigate the heterogeneous treatment effects of preoperative β-blocker therapy on 30-day mortality in patients with ventricular dysfunction undergoing CABG, we analyzed data on 6,492 patients in the Chinese Cardiac Surgery Registry database between 2017 and 2020. After propensity score matching, we applied a machine-learning iterative causal forest (iCF) algorithm to estimate individualized treatment effects (ITEs) of β-blockers on 30-day all-cause mortality after CABG. Results The iCF models showed heterogeneity in the effects of preoperative β-blockers on 30-day mortality. Estimated glomerular filtration rate (eGFR), left ventricular end-diastolic diameter (LVEDD) and body mass index (BMI) were identified by the algorithm to distinguish patients with heterogeneous treatment effects. Among patients with eGFR 66 mL/min/1.73 m 2 or less, preoperative β-blocker therapy was associated with a significantly lower risk of death from any cause (adjusted odds ratio [aOR], 0.39; 95% CI, 0.22 to 0.67; p = 0.001). No significant benefits were found for other subgroups. Conclusion Machine learning analysis revealed treatment effect heterogeneity, with preoperative β-blockers demonstrating superior outcomes specifically in CABG patients with ventricular dysfunction and concomitant renal dysfunction (eGFR ≤ 66 mL/min/1.73 m 2 ).\n\nSocial note: Tarek drives Imelda to every appointment and keeps the pill organiser. Call the clinic on (305) 555-0192 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Imelda Kowalczyk"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2834771"
+      },
+      {
+        "type": "date",
+        "value": "1969-06-23"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-28"
+      },
+      {
+        "type": "name",
+        "value": "Soledad Grimaldi"
+      },
+      {
+        "type": "name",
+        "value": "Tarek"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0192"
+      }
+    ],
+    "truth": {
+      "egfr": 66
+    }
+  },
+  {
+    "id": "pmc-34",
+    "pmcid": "PMC13546226",
+    "pmid": "42518068",
+    "doi": "10.1007/s13300-026-01898-w",
+    "journal": "Diabetes therapy : research, treatment and education of diabetes and related disorders",
+    "year": "2026",
+    "egfr_ref": 82,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13546226)\nPatient: Rashad Rasmussen   MRN: ZX-4258158   DOB: 1958-06-28\nVisit date: 2026-06-23   Seen by: Dr. Ottilie Soriano-Webb.\n\nIntroduction This study aimed to evaluate the long-term effects of lobeglitazone on renal function, glycemic control, metabolic parameters, and safety in Korean patients with type 2 diabetes mellitus (T2DM) treated for over 1 year. Methods This retrospective, non-interventional, multicenter observational study was conducted at 30 institutions in South Korea. Patients with T2DM who had received lobeglitazone for at least 1 year and had available estimated glomerular filtration rate (eGFR) data were included. Primary outcomes were changes in eGFR and urinary albumin-creatinine ratio (UACR). Secondary outcomes included changes in HbA1c, body weight, lipid profiles, insulin resistance, β-cell function, and adverse events (AEs). Results Of the 2743 enrolled patients, 2648 and 2500 were analyzed for safety and efficacy, respectively. Of 2648 patients analyzed for safety, 1655 (62.5%) were male and 993 (37.5%) were female. Baseline eGFR (82.0 ± 22.0 ml/min/1.73 m 2 ) remained stable over 6 years across all chronic kidney disease (CKD) stages. UACR was unchanged in 77-83% of patients throughout follow-up. HbA1c significantly decreased from baseline (- 0.99% at year 1 to - 0.93% at year 6; all p Conclusions Long-term lobeglitazone treatment was not associated with deterioration of renal function or worsening of albuminuria status across all CKD stages, while demonstrating sustained glycemic efficacy and a favorable safety profile in real-world clinical practice. These findings support lobeglitazone as a clinically relevant long-term treatment option for patients with T2DM, including those with pre-existing CKD.\n\nSocial note: Ingrid sits in on each visit and helps Rashad track the medication list. Call the clinic on (305) 555-0103 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Rasmussen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4258158"
+      },
+      {
+        "type": "date",
+        "value": "1958-06-28"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-23"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie Soriano-Webb"
+      },
+      {
+        "type": "name",
+        "value": "Ingrid"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0103"
+      }
+    ],
+    "truth": {
+      "egfr": 82
+    }
+  },
+  {
+    "id": "pmc-35",
+    "pmcid": "PMC13081031",
+    "pmid": "41994676",
+    "doi": "10.7759/cureus.105104",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 114,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13081031)\nPatient: Delphine Aldecott   MRN: ZX-2711771   DOB: 1951-05-25\nVisit date: 2026-08-17   Seen by: Dr. Soledad Vandermeer.\n\nA 40-year-old female with a family history of polycystic kidney disease presented for evaluation. She was originally diagnosed with liver cysts in 2015 following an emergency department visit for suspected cyst rupture. Laboratory studies demonstrated preserved renal and hepatic function, with a creatinine level of 0.65 mg/dL and an estimated glomerular filtration rate (eGFR) of 114 mL/min/1.73 m². Abdominal MRI revealed numerous hepatic cysts, the largest measuring 12.9 × 10.8 cm, along with multiple bilateral renal cysts. The largest renal cyst measured 5.2 cm and was haemorrhagic and exophytic. Genetic testing identified heterozygous pathogenic variants in both SEC63 and IFT140. The patient is currently managed with serial imaging surveillance for hepatic cyst burden, portal hypertension, and total kidney volume. This case illustrates a rare double-hit genetic entity. While SEC63 mutations rarely involve the kidneys, the co-existence of an IFT140 variant likely contributed to the development of bilateral renal cysts. This report emphasizes the role of comprehensive genetic testing in atypical polycystic presentations and highlights the importance of multidisciplinary monitoring in complex ciliopathies. Informed consent was obtained for publication of this case report.\n\nSocial note: Tarek drives Delphine to every appointment and keeps the pill organiser. Call the clinic on (212) 555-0198 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Delphine Aldecott"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2711771"
+      },
+      {
+        "type": "date",
+        "value": "1951-05-25"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-17"
+      },
+      {
+        "type": "name",
+        "value": "Soledad Vandermeer"
+      },
+      {
+        "type": "name",
+        "value": "Tarek"
+      },
+      {
+        "type": "phone",
+        "value": "(212) 555-0198"
+      }
+    ],
+    "truth": {
+      "egfr": 114
+    }
+  },
+  {
+    "id": "pmc-36",
+    "pmcid": "PMC12948375",
+    "pmid": "41553940",
+    "doi": "10.1159/000549747",
+    "journal": "Nephron",
+    "year": "2026",
+    "egfr_ref": 10,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC12948375)\nPatient: Zainab Faraday   MRN: ZX-4962856   DOB: 1969-09-21\nVisit date: 2026-06-17   Seen by: Dr. Khalil Vandermeer.\n\nIntroduction Acadian variant Fanconi syndrome (AVFS) is an autosomal recessive disease caused by a mutation in the NDUFAF6 gene which results in mitochondrial dysfunction and oxidative damage to the kidneys. It presents as a slowly progressive chronic kidney disease and proximal tubular dysfunction that, in contrast to typical Fanconi syndrome, leads to end-stage renal disease. It is diagnosed clinically and is present only in Acadian people. The objective of this study was to evaluate the effect of n-acetyl-l-cysteine (NAC), an antioxidant, on the progression of loss of renal function in patients with AVFS. Case presentation Chart reviews were conducted on 4 active cases of AVFS not on kidney replacement therapy. Data on age, estimated glomerular filtration rate (eGFR), creatinine, medications, and blood pressure were collected. Progression of eGFR was evaluated in each patient before and after NAC prescription, and the projected time to kidney replacement therapy (eGFR = 10 mL/min/1.73 m2) with and without the use of NAC was calculated for each case. NAC had a positive effect on slowing the rate of eGFR loss in each patient. The projected need for kidney replacement therapy was delayed by an average of 14 years in the treated patients who otherwise would have required it by an estimated mean age of 28 years. Conclusion This study suggests that NAC has a beneficial effect on slowing the progression of kidney disease in patients with AVFS. This may be due to the modulation of oxidative stress by NAC. Further studies are needed to evaluate the potential benefits of NAC in other chronic kidney conditions.\n\nSocial note: Basil lives nearby and checks in on Zainab most evenings. Call the clinic on (415) 555-0147 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Zainab Faraday"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4962856"
+      },
+      {
+        "type": "date",
+        "value": "1969-09-21"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-17"
+      },
+      {
+        "type": "name",
+        "value": "Khalil Vandermeer"
+      },
+      {
+        "type": "name",
+        "value": "Basil"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0147"
+      }
+    ],
+    "truth": {
+      "egfr": 10
+    }
+  },
+  {
+    "id": "pmc-37",
+    "pmcid": "PMC13323845",
+    "pmid": "42396376",
+    "doi": "10.1155/crin/3900923",
+    "journal": "Case reports in nephrology",
+    "year": "2026",
+    "egfr_ref": 79,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13323845)\nPatient: Ingrid Pellegrino   MRN: ZX-4189226   DOB: 1938-06-25\nVisit date: 2026-04-13   Seen by: Dr. Teodor Mbeki.\n\nBackground Exercise-induced rhabdomyolysis results from skeletal muscle injury after strenuous or unaccustomed exertion. Acute kidney injury is a feared complication, but creatine kinase magnitude alone is an imperfect predictor of kidney injury. Case presentation A 24-year-old previously healthy male presented with dark urine after one week of high-intensity resistance and eccentric exercise as a novice participant in structured high-intensity training. He reported daily oral hydration of more than 2.5 L and denied creatine monohydrate use. Initial tests showed creatine kinase of 79,038 U/L, creatinine of 1.3 mg/dL, estimated glomerular filtration rate of approximately 79 mL/min/1.73 m 2 by the 2021 CKD-EPI creatinine equation, aspartate aminotransferase (AST) of 507 U/L, and urine dipstick blood of 3+ with few red blood cells. Urea, potassium, calcium, magnesium, and phosphorus were within reference ranges, and urinalysis showed only trace protein without leukocytes or nitrites. He received isotonic intravenous fluids without bicarbonate, diuretics, or renal replacement therapy. Creatinine decreased to 0.6 mg/dL within 24 h and remained stable; urine dipstick blood became negative by Day 2; creatine kinase declined to 722 U/L by Day 10 and 287 U/L by Day 16, while creatinine remained normal at 0.7 mg/dL and aminotransferases improved to AST of 25 U/L and ALT of 42 U/L. Conclusion This case is best interpreted as severe exertional rhabdomyolysis with pigmenturia and preserved renal function, rather than confirmed intrinsic acute kidney injury. The report highlights the need to avoid creatine kinase-centric risk assessment and to interpret a mildly elevated admission creatinine in context, especially when rapid normalization follows fluid resuscitation.\n\nSocial note: Cormac drives Ingrid to every appointment and keeps the pill organiser. Call the clinic on (305) 555-0147 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Ingrid Pellegrino"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-4189226"
+      },
+      {
+        "type": "date",
+        "value": "1938-06-25"
+      },
+      {
+        "type": "date",
+        "value": "2026-04-13"
+      },
+      {
+        "type": "name",
+        "value": "Teodor Mbeki"
+      },
+      {
+        "type": "name",
+        "value": "Cormac"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0147"
+      }
+    ],
+    "truth": {
+      "egfr": 79
+    }
+  },
+  {
+    "id": "pmc-38",
+    "pmcid": "PMC13214396",
+    "pmid": "41987274",
+    "doi": "10.1186/s13019-026-04028-6",
+    "journal": "Journal of cardiothoracic surgery",
+    "year": "2026",
+    "egfr_ref": 40,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13214396)\nPatient: Rashad Quillfeather   MRN: ZX-9733974   DOB: 1938-02-26\nVisit date: 2026-07-17   Seen by: Dr. Anwen Vandermeer.\n\nBACKGROUND: This study aims to evaluate renal outcomes and identify key factors influencing estimated glomerular filtration rate (eGFR) in patients with chronic kidney disease(CKD) undergoing coronary artery bypass grafting (CABG). METHODS: In a prospective cohort of 100 patients with CKD (mean age 65.5 years; 77% male; most in CKD stage 2 or 3), eGFR was measured at baseline, three months, and six months postoperatively. Generalized Estimating Equations (GEE) were applied to assess longitudinal changes in eGFR and associated predictors. Statistical analyses were performed using Stata 17. RESULTS: Approximately 19% of patients experienced a > 30% decline in eGFR, while over 40% demonstrated improvement at six months. Advanced CKD stage, higher preoperative heart ejection fraction (EF), and longer anesthesia time were associated with greater eGFR decline. Conversely, higher preoperative hemoglobin (Hb) levels, elective surgery, and a history of cerebrovascular accident were associated with improved estimated eGFR trends. CONCLUSION: Several clinical and procedural factors influence postoperative renal function in CKD patients undergoing CABG. These findings support the development of targeted perioperative strategies to mitigate renal decline. CLINICAL TRIAL REGISTRATION: This study does not meet the criteria of a clinical trial and, therefore, was not registered in a clinical trial registry.\n\nSocial note: Odalys sits in on each visit and helps Rashad track the medication list. Call the clinic on (305) 555-0155 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Rashad Quillfeather"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-9733974"
+      },
+      {
+        "type": "date",
+        "value": "1938-02-26"
+      },
+      {
+        "type": "date",
+        "value": "2026-07-17"
+      },
+      {
+        "type": "name",
+        "value": "Anwen Vandermeer"
+      },
+      {
+        "type": "name",
+        "value": "Odalys"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0155"
+      }
+    ],
+    "truth": {
+      "egfr": 40
+    }
+  },
+  {
+    "id": "pmc-39",
+    "pmcid": "PMC13769104",
+    "pmid": "43034557",
+    "doi": "10.7759/cureus.117963",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 4,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13769104)\nPatient: Soledad Pellegrino   MRN: ZX-1644490   DOB: 1967-10-03\nVisit date: 2026-05-27   Seen by: Dr. Yasmin Mbeki.\n\nMicroscopic polyangiitis (MPA) is a systemic necrotising small vessel vasculitis that predominantly affects the kidneys and lungs. Gastrointestinal (GI) manifestations are less common and may mimic primary enteric disease, delaying recognition of the underlying systemic condition. A 72-year-old woman presented with a one-week history of bloody diarrhoea, abdominal pain, vomiting, lower limb oedema, and purpura following recent ibuprofen use. Initial investigations demonstrated severe metabolic acidosis, stage 3 acute kidney injury (AKI), with an estimated glomerular filtration rate (eGFR) of 4 mL/min/1.73 m², active urinary sediment, and computed tomography (CT) evidence of extensive colitis with small bowel enteritis. Faecal testing for multiple enteric pathogens, including Shiga toxin-producing Escherichia coli (STEC), and testing for Clostridioides difficile were negative. Strongly positive myeloperoxidase anti-neutrophil cytoplasmic antibodies (MPO-ANCA; >221.9 IU/mL) supported a diagnosis of ANCA-associated vasculitis (AAV), while anti-glomerular basement membrane (anti-GBM) antibodies were negative. Despite prompt treatment with intravenous (IV) methylprednisolone, cyclophosphamide, therapeutic plasma exchange (PLEX), and intermittent haemodialysis, the patient developed fulminant diffuse alveolar haemorrhage (DAH), refractory hypoxaemia, consumptive coagulopathy, and severe acidaemia. She died on day 8 of admission. Renal biopsy histopathology, reported after death, demonstrated necrotising crescentic pauci-immune glomerulonephritis. This case highlights the diagnostic challenges of MPO-ANCA-associated vasculitis presenting with severe gastrointestinal inflammation and bleeding alongside rapidly progressive renal disease. Although the renal findings confirmed ANCA-associated vasculitis, the underlying cause of the gastrointestinal abnormalities remained uncertain, with intestinal vasculitis and ischaemic injury secondary to hypoperfusion among the possible explanations. Recognition of systemic features in patients presenting with gastrointestinal illness and unexplained renal dysfunction is essential to facilitate timely investigation and treatment.\n\nSocial note: Ingrid lives nearby and checks in on Soledad most evenings. Call the clinic on (305) 555-0144 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Soledad Pellegrino"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1644490"
+      },
+      {
+        "type": "date",
+        "value": "1967-10-03"
+      },
+      {
+        "type": "date",
+        "value": "2026-05-27"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin Mbeki"
+      },
+      {
+        "type": "name",
+        "value": "Ingrid"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0144"
+      }
+    ],
+    "truth": {
+      "egfr": 4
+    }
+  },
+  {
+    "id": "pmc-40",
+    "pmcid": "PMC13745685",
+    "pmid": "43005430",
+    "doi": "10.3389/fcvm.2026.1947199",
+    "journal": "Frontiers in cardiovascular medicine",
+    "year": "2026",
+    "egfr_ref": 41,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13745685)\nPatient: Bartholomew Mbeki   MRN: ZX-6298041   DOB: 1963-12-08\nVisit date: 2026-10-11   Seen by: Dr. Rashad Delacroix-Hume.\n\nBackground We present the first reported case of simultaneous HeartMate 3 (HM3) and Impella 5.5 support as a bridge to heart transplantation. Case presentation A 35-year-old male with a history of non-ischemic cardiomyopathy presented to our facility for the evaluation of low-flow alarms 2 years post-HM3 implantation. The HM3 device was set to 5,200 RPM (2.9 L/min); the patient was asymptomatic and had no edema or orthopnea. He was actively listed for heart transplantation at the time of presentation. A chest CT scan revealed evidence of hypoattenuation next to the bend relief portion of the outflow cannula, and therefore, the patient was admitted for monitoring and transplant evaluation. Bivalirudin (0.12 mg/kg/h) was initiated. Over the next 18 days, the patient remained clinically stable with a pulsatility index ranging between 3 and 4. An echocardiogram performed on day 18 to assess clot burden revealed eccentric left ventricular hypertrophy with septum deviation to the right and a left ventricular internal diameter in diastole (LVIDd) of 70 mm, and hence, milrinone (0.25 µg/kg/min) was initiated. Right heart catheterization revealed a right atrial (RA) pressure of 18 mmHg, a right ventricle (RV) pressure of 54/2 mmHg, a pulmonary artery (PA) pressure of 55/28 (37) mmHg, a pulmonary capillary wedge pressure of 32, a pulmonary artery pulsatility index of 1.5, a Fick cardiac output of 7.7 L/min, and a Fick cardiac input of 3.4 L/min/m 2 . On day 40, the patient complained of cough, fever (38.1°C), and shortness of breath, following which he was intubated and started on meropenem (2 mg) intravenously (IV) three times a day (TID). His left ventricular assist device (LVAD) flow rate decreased to 1.2 L/min, with increasing alarm frequency and worsening hemodynamics. CT angiography revealed extensive near-occlusive hypodense filling defects in the proximal outflow cannula consistent with thrombosis, leaving only a 1-2 mm residual lumen.The team chose to support the patient's worsening hemodynamics and cardiogenic shock with an Impella 5.5 device rather than take him for emergent surgical exploration for his outflow graft obstruction. The Impella 5.5 device was placed in a standard fashion via the left axillary artery, and it delivered flow rates of 2.6-3.1 L/min. Concurrently, HM3 was maintained at flow rates of 1.5-2.0 L/min. Despite persistent low-flow alarms on HM3, the patient's hemodynamics improved after the Impella 5.5 device was implanted [heart rate, 101 beats per minute; BP, 104/77 (88) mmHg; RA, 2 mmHg; PA, 35/19 (24) mmHg; venous oxygen saturation (SvO 2 )], 69%), and he became ambulatory. His United Network for Organ Sharing (UNOS) status was upgraded to status 1e because of the risk of stroke. Over the next 6 days, the patient was maintained under close observation, and he remained clinically stable in the ICU. The estimated glomerular filtration rate remained between 41 and 50 mL/min/1.73 m 2 .Six days after Impella 5.5 placement, the patient underwent a prolonged and complex heart transplant. One week post-transplant, the patient had normal biventricular graft function and stable renal function, was extubated, and was ambulatory on dobutamine medication (4 µg/kg/min). Two weeks later, the patient was discharged, with stable cardiac function and standard immunosuppression. Two months post-transplant, he showed grade 2R rejection, which was adequately treated. Currently, 6 months post-transplant, he remains stable while being maintained on the standard post-transplant immunosuppression and cardiac rehabilitation. Conclusion This is the first reported case highlighting the feasibility of Impella 5.5 support after HM3 failure as a bridge to transplantation for short-term hemodynamic stabilization in the setting of LVAD outflow obstruction and cardiogenic shock without the need for extracorporeal membrane oxygenation or emergent chest exploration, which may complicate or delay transplantation.\n\nSocial note: Ingrid sits in on each visit and helps Bartholomew track the medication list. Call the clinic on (305) 555-0153 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Mbeki"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6298041"
+      },
+      {
+        "type": "date",
+        "value": "1963-12-08"
+      },
+      {
+        "type": "date",
+        "value": "2026-10-11"
+      },
+      {
+        "type": "name",
+        "value": "Rashad Delacroix-Hume"
+      },
+      {
+        "type": "name",
+        "value": "Ingrid"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0153"
+      }
+    ],
+    "truth": {
+      "egfr": 41
+    }
+  },
+  {
+    "id": "pmc-41",
+    "pmcid": "PMC13127172",
+    "pmid": "42064712",
+    "doi": "10.1016/j.idcr.2026.e02583",
+    "journal": "IDCases",
+    "year": "2026",
+    "egfr_ref": 32.5,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13127172)\nPatient: Tarek Ostrowski   MRN: ZX-6384734   DOB: 1939-05-24\nVisit date: 2026-04-12   Seen by: Dr. Delphine Pellegrino.\n\nCoronavirus Disease 2019 (COVID-19) primarily affects the respiratory system but can also cause acute kidney injury (AKI). Infection-related circulatory disturbances driven by systemic inflammation, cytokine release, and reduced effective blood volume play a central role in prerenal AKI. The diagnostic challenge in infection-associated AKI is distinguishing functional hypoperfusion from intrinsic renal injury, particularly when relying solely on serum creatinine. Laboratory investigations showed elevated blood urea nitrogen (BUN) (51 mg/dL) and serum creatinine (2.7 mg/dL), with reduced estimated glomerular filtration rate (eGFR) of 32.5 mL/min. Targeted urinary indices (low urine sodium, high osmolality, and FeNa <1%) were instrumental in identifying a reversible perfusion-related etiology, minimizing the risk of diagnostic misclassification. Renal ultrasonography showed normal kidney size and architecture. Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2) infection was confirmed by reverse transcription polymerase chain reaction (RT-PCR). The patient received oxygen therapy, IV Ringer's lactate, furosemide for diuresis, low-molecular-weight heparin for thromboprophylaxis, and ceftriaxone for secondary infection prevention. Potassium imbalance was corrected with intravenous and oral supplementation of potassium chloride. Urine output improved within 48 h, and renal function recovered (eGFR 61 mL/min/1.73 m²) without renal replacement therapy. Two consecutive negative RT-PCR tests confirmed viral clearance. The patient was discharged in stable condition with outpatient follow-up.\n\nSocial note: Cormac sits in on each visit and helps Tarek track the medication list. Call the clinic on (617) 555-0121 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Ostrowski"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6384734"
+      },
+      {
+        "type": "date",
+        "value": "1939-05-24"
+      },
+      {
+        "type": "date",
+        "value": "2026-04-12"
+      },
+      {
+        "type": "name",
+        "value": "Delphine Pellegrino"
+      },
+      {
+        "type": "name",
+        "value": "Cormac"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0121"
+      }
+    ],
+    "truth": {
+      "egfr": 32.5
+    }
+  },
+  {
+    "id": "pmc-42",
+    "pmcid": "PMC12826156",
+    "pmid": "41560025",
+    "doi": "10.1097/md.0000000000047060",
+    "journal": "Medicine",
+    "year": "2026",
+    "egfr_ref": 35,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC12826156)\nPatient: Imelda Pellegrino   MRN: ZX-6438055   DOB: 1968-05-08\nVisit date: 2026-06-07   Seen by: Dr. Piotr Kowalczyk.\n\nRationale Delayed-release budesonide, as a novel oral agent, may be an effective treatment for IgA nephropathy. Its efficacy and safety in adult IgA nephropathy patients with estimated glomerular filtration rate (eGFR) > 35 mL/min/1.73 m² has been previously confirmed in the phase III clinical study (NeflgArd). For patients at high risk of progression to end-stage renal disease, it is uncertain whether delayed-release budesonide combined with cyclophosphamide on the basis of supportive therapy could improve the prognosis of adult IgA nephropathy patients. Patient concerns A 37-year-old male presented with fever (max 38.2°C) and sore throat, urinalysis revealed abnormalities. Diagnoses Laboratory tests showed urinary protein of 2.98 g/d, serum creatinine of 321 μmol/L, eGFR of 20.27 mL/min/1.73 m2, plasma albumin 34.6 g/L. Renal biopsy pathology showed sclerosing IgA nephropathy (Lee grade Ⅳ, Oxford classification M0E0S1T1C0). Interventions The patient was treated with delayed-release budesonide (16 mg/d) for 36 weeks, in combination with intravenous cyclophosphamide (0.8 g monthly for 6 months). Outcomes After 36 weeks of therapy, the eGFR increased from 20.27 to 48.12 mL/min/1.73 m2, serum creatinine decreased from 321 to 157 μmol/L, urinary protein decreased from 2.98 to 0.378 g/d, and plasma albumin increased from 34.6 to 45.6 g/L. During the course of treatment, no significant drug-related adverse reactions were observed, except for a mild cold. Lessons This case suggests that delayed-release budesonide in combination with cyclophosphamide on the basis of supportive therapy is effective in treating adult IgA nephropathy patient with eGFR < 30 mL/min/1.73 m2. This approach warrants further investigation in larger prospective studies.\n\nSocial note: Khalil lives nearby and checks in on Imelda most evenings. Call the clinic on (305) 555-0193 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Imelda Pellegrino"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6438055"
+      },
+      {
+        "type": "date",
+        "value": "1968-05-08"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-07"
+      },
+      {
+        "type": "name",
+        "value": "Piotr Kowalczyk"
+      },
+      {
+        "type": "name",
+        "value": "Khalil"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0193"
+      }
+    ],
+    "truth": {
+      "egfr": 35
+    }
+  },
+  {
+    "id": "pmc-43",
+    "pmcid": "PMC13607092",
+    "pmid": "42796017",
+    "doi": "10.3390/jcm15187244",
+    "journal": "Journal of clinical medicine",
+    "year": "2026",
+    "egfr_ref": 15,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13607092)\nPatient: Khalil Rasmussen   MRN: ZX-1828338   DOB: 1940-07-01\nVisit date: 2026-10-05   Seen by: Dr. Marisol Pellegrino.\n\nBackground/Objectives : Chronic kidney disease (CKD) is a major cause of morbidity and mortality. Evidence on routine management and patient-reported outcomes in Greece is limited. The SPIRIT study assessed real-world treatment patterns, disease management, and quality of life (QoL) among CKD patients in Greece. Methods : This was a prospective, multicenter, observational study in Outpatient Nephrology Clinics of fifteen National Health System (NHS) Hospitals in Greece enrolling adults with estimated glomerular filtration rate (eGFR) calculated using the chronic kidney disease epidemiology collaboration (CKD-EPI) equation (CKD-EPI eGFR) between 15 and 2 , with a 12-month follow-up. Results : A total of 305 CKD patients participated in the study (40.0% classified as stage G3a, 39.0% G3b, and 21.0% G4), with a mean age of 69.3 years. Antihypertensives were administered to 84.3%, 84.1%, and 85.1% of patients at baseline, 6, and 12 months, respectively, mostly calcium channel blockers, while lipid-lowering agents were administered to 63.3%, 64%, and 63.2% at baseline, 6, and 12 months, respectively, predominantly statins (95.3%, 95.9%, and 96.5% of lipid-lowering users). Interestingly, renin-angiotensin-aldosterone system (RAAS) inhibitors were administered to a total of 160 patients, 91.9% of whom had hypertension, while sodium-glucose cotransporter 2 (SGLT2) inhibitors were administered to 45 patients, with 66.7% of them suffering from CKD and type 2 diabetes. SGLT2i use increased from 15.3% at baseline to 35.4% at 12 months. Mean CKD-EPI eGFR remained stable (mean 40.1, 41.3, and 40.7 mL/min/1.73 m 2 ), while median urine albumin-to-creatinine ratio (UACR) increased from 145.2 mg/g at baseline to 253.4 mg/g at 6 months and 246.6 mg/g at 12 months. Statistically significant improvements ( p Conclusions : The study provides real-world evidence on stage-related treatment patterns, routine management, and QoL in CKD outpatients in Greece.\n\nSocial note: Anwen drives Khalil to every appointment and keeps the pill organiser. Call the clinic on (617) 555-0115 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Khalil Rasmussen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-1828338"
+      },
+      {
+        "type": "date",
+        "value": "1940-07-01"
+      },
+      {
+        "type": "date",
+        "value": "2026-10-05"
+      },
+      {
+        "type": "name",
+        "value": "Marisol Pellegrino"
+      },
+      {
+        "type": "name",
+        "value": "Anwen"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0115"
+      }
+    ],
+    "truth": {
+      "egfr": 15
+    }
+  },
+  {
+    "id": "pmc-44",
+    "pmcid": "PMC13679997",
+    "pmid": "42899052",
+    "doi": "10.7759/cureus.116513",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 60,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13679997)\nPatient: Basil Delacroix-Hume   MRN: ZX-5147060   DOB: 1945-01-01\nVisit date: 2026-09-23   Seen by: Dr. Khalil Umarov.\n\nLeft ventricular (LV) thrombus is a serious complication of cardiomyopathy with severely reduced ejection fraction, carrying significant risk of systemic embolization. While direct oral anticoagulants (DOACs) have emerged as a reasonable alternative to warfarin for LV thrombus treatment in the general population, no guideline-directed evidence exists for their use in patients with concomitant acute kidney injury (AKI) or significant renal impairment in this specific clinical context. We present the case of a 47-year-old male with newly diagnosed nonischemic cardiomyopathy (ejection fraction 25%), LV apical thrombus, and Kidney Disease: Improving Global Outcomes (KDIGO)-defined AKI attributed to type 1 cardiorenal syndrome, who was managed with heparin bridging to warfarin due to the absence of evidence supporting DOAC use for LV thrombus in the setting of renal dysfunction. The requirement for heparin-to-warfarin bridging prolonged the patient's hospitalization by five days, illustrating the tangible clinical and resource burden imposed by the current guideline gap. Chronic kidney disease (CKD) is present in approximately 45% of patients with heart failure with reduced ejection fraction; roughly two-thirds of heart failure hospitalizations are associated with a discharge estimated glomerular filtration rate below 60 mL/min/1.73 m², and AKI complicates approximately one-third of heart failure admissions, so this clinical scenario is far from rare. We additionally provide a literature review of the current evidence comparing DOACs and vitamin K antagonists (VKAs) for LV thrombus, DOAC pharmacokinetics in renal impairment, and the guideline landscape at this clinical intersection. Notably, every randomized trial comparing DOACs with warfarin for LV thrombus to date has explicitly excluded patients with moderate-to-severe renal impairment. This case and review underscore the need for prospective studies evaluating DOAC safety and efficacy for LV thrombus in patients with impaired renal function, which could reduce unnecessary hospital days and healthcare costs while maintaining safe anticoagulation.\n\nSocial note: Ottilie drives Basil to every appointment and keeps the pill organiser. Call the clinic on (415) 555-0115 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Basil Delacroix-Hume"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-5147060"
+      },
+      {
+        "type": "date",
+        "value": "1945-01-01"
+      },
+      {
+        "type": "date",
+        "value": "2026-09-23"
+      },
+      {
+        "type": "name",
+        "value": "Khalil Umarov"
+      },
+      {
+        "type": "name",
+        "value": "Ottilie"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0115"
+      }
+    ],
+    "truth": {
+      "egfr": 60
+    }
+  },
+  {
+    "id": "pmc-45",
+    "pmcid": "PMC13306552",
+    "pmid": "42347094",
+    "doi": "10.3390/reports9020181",
+    "journal": "Reports (MDPI)",
+    "year": "2026",
+    "egfr_ref": 16,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13306552)\nPatient: Bartholomew Kowalczyk   MRN: ZX-8650208   DOB: 1972-12-08\nVisit date: 2026-01-05   Seen by: Dr. Zainab Brannigan.\n\nBackground and Clinical Significance: IgG4-related disease (IgG4-RD) is a chronic fibroinflammatory, immune-mediated multisystem disorder that can mimic neoplastic, infectious, or autoimmune conditions. Among its head-and-neck manifestations, IgG4-related dacryoadenitis and sialadenitis, historically referred to as Mikulicz disease, should be distinguished from the classical Mikulicz syndrome , which describes secondary lacrimal and salivary gland enlargement due to other systemic disorders. Renal involvement, most commonly in the form of IgG4-related tubulointerstitial nephritis (IgG4-TIN), is less frequent but carries major prognostic implications because delayed diagnosis may lead to irreversible kidney damage. Case Presentation: A 49-year-old man with no relevant past medical history presented with a 2-year history of intermittent polyuria and foamy urine. Laboratory testing revealed advanced kidney dysfunction, with serum creatinine of 4.2 mg/dL, estimated glomerular filtration rate of 16 mL/min/1.73 m 2 , and proteinuria of 2874 mg/day. Physical examination showed bilateral parotid enlargement, upper eyelid edema, lacrimal gland enlargement, and sicca symptoms, raising suspicion for IgG4-related dacryoadenitis and sialadenitis ( Mikulicz disease ). Further work-up demonstrated marked eosinophilia, polyclonal hypergammaglobulinemia, and significantly elevated serum IgG4 levels (3180 mg/dL), while infectious serologies and autoimmune studies were negative. Kidney biopsy revealed plasma cell-rich tubulointerstitial nephritis with lymphoplasmacytic and eosinophilic infiltrates, interstitial fibrosis, tubular atrophy, and more than 40 IgG4-positive plasma cells per high-power field, supporting the diagnosis of IgG4-related tubulointerstitial nephritis in the setting of systemic IgG4-RD. Treatment with prednisone followed by mycophenolate mofetil led to improvement in glandular manifestations and a partial reduction in proteinuria, but renal recovery remained incomplete. The patient subsequently developed a severe pulmonary infection complicated by sepsis and oligoanuric acute kidney injury superimposed on chronic kidney disease, and ultimately progressed to end-stage kidney disease requiring chronic maintenance hemodialysis. Conclusions: This case highlights that a Mikulicz disease phenotype may represent the initial manifestation of systemic IgG4-RD and should prompt evaluation for extraglandular involvement, particularly renal disease. In patients with glandular enlargement, eosinophilia, hypergammaglobulinemia, and unexplained renal dysfunction, IgG4-RD should be actively considered. Kidney biopsy remains essential for diagnostic confirmation and prognostic assessment, as delayed recognition may result in irreversible renal damage and progression to end-stage kidney disease.\n\nSocial note: Soledad drives Bartholomew to every appointment and keeps the pill organiser. Call the clinic on (305) 555-0153 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Bartholomew Kowalczyk"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-8650208"
+      },
+      {
+        "type": "date",
+        "value": "1972-12-08"
+      },
+      {
+        "type": "date",
+        "value": "2026-01-05"
+      },
+      {
+        "type": "name",
+        "value": "Zainab Brannigan"
+      },
+      {
+        "type": "name",
+        "value": "Soledad"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0153"
+      }
+    ],
+    "truth": {
+      "egfr": 16
+    }
+  },
+  {
+    "id": "pmc-46",
+    "pmcid": "PMC13058630",
+    "pmid": "41960008",
+    "doi": "10.7759/cureus.104884",
+    "journal": "Cureus",
+    "year": "2026",
+    "egfr_ref": 80,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13058630)\nPatient: Anwen Nakashima   MRN: ZX-6608719   DOB: 1969-07-10\nVisit date: 2026-01-19   Seen by: Dr. Ingrid Faraday.\n\nPregnancy after renal transplantation is now more feasible, with documented rates of successful live births. However, pregnancy after renal transplantation is associated with an increased risk of maternal complications, including preeclampsia, graft dysfunction, hypertension, and diabetes, as well as adverse perinatal outcomes such as preterm birth and intrauterine growth restriction. Effective care requires a multidisciplinary approach. This report discusses a case of a primigravida patient who successfully delivered at term three years after kidney transplantation, with an emphasis on the clinical decision-making process, challenges, and strategies used to achieve the best possible outcome. We present a 27-year-old female, gravida 1 para 0 (G1P0), with a history of end-stage renal disease secondary to glomerulonephritis, who underwent a renal transplant at age 24. She was maintained on tacrolimus, azathioprine, and prednisolone and had stable graft function throughout follow-up. She also had type 2 diabetes diagnosed after transplantation, which was managed with insulin. After spontaneous conception, she was followed in a high-risk antenatal clinic with joint nephrology and obstetrics oversight. Antenatal care included biweekly monitoring of renal function, including serum creatinine, estimated glomerular filtration rate (eGFR), and electrolytes, therapeutic drug monitoring of tacrolimus trough levels, frequent blood pressure assessments, and fetal surveillance using serial ultrasounds and non-stress testing. Preeclampsia prophylaxis with low-dose aspirin (150 mg) was initiated at the initial antenatal visit. Blood pressure was managed with labetalol, and insulin therapy was continued with input from endocrinology. Immunosuppressive drug doses were carefully adjusted to maintain therapeutic levels. Renal function at 20 weeks was within normal range (creatinine: 0.88 mg/dL, eGFR: >80 mL/min/1.73 m²) with no evidence of graft dysfunction or proteinuria. The remainder of the pregnancy was uneventful until 36+6 weeks, when there was a mild but sustained rise in serum creatinine (1.1 mg/dL) and urea, suggesting early renal stress. After consultation with nephrology, labor was induced at 37 weeks. Stress-dose intravenous hydrocortisone was administered, and a vacuum-assisted vaginal delivery was performed. The neonate weighed 3.39 kg and did not require NICU admission. Postpartum, she experienced an atonic postpartum hemorrhage of approximately 800 mL, which was managed with uterotonic agents and close observation. Renal function stabilized within one week. Immunosuppressants were resumed at their pre-pregnancy doses, and insulin therapy was converted to metformin following endocrinology reassessment. This report highlights the importance of individualized and multidisciplinary care in managing pregnancies among kidney transplant patients. Given the high risk of complications, including preeclampsia (up to 30%) and preterm delivery (50-60%), personalized management strategies are essential. Critical elements include maintaining stable graft function before conception, optimizing immunosuppressive therapy, effectively managing diabetes and hypertension, and detecting changes in renal function early to allow timely delivery.\n\nSocial note: Henrik sits in on each visit and helps Anwen track the medication list. Call the clinic on (305) 555-0156 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Anwen Nakashima"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-6608719"
+      },
+      {
+        "type": "date",
+        "value": "1969-07-10"
+      },
+      {
+        "type": "date",
+        "value": "2026-01-19"
+      },
+      {
+        "type": "name",
+        "value": "Ingrid Faraday"
+      },
+      {
+        "type": "name",
+        "value": "Henrik"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0156"
+      }
+    ],
+    "truth": {
+      "egfr": 80
+    }
+  },
+  {
+    "id": "pmc-47",
+    "pmcid": "PMC12522168",
+    "pmid": "41103863",
+    "doi": "10.7759/cureus.92350",
+    "journal": "Cureus",
+    "year": "2025",
+    "egfr_ref": 9,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC12522168)\nPatient: Tarek Thackeray   MRN: ZX-3630299   DOB: 1945-12-16\nVisit date: 2026-09-22   Seen by: Dr. Zainab Ostrowski.\n\nLong-acting injectable antipsychotics (LAIs) are among the treatment options available for patients with schizophrenia. This case report discusses a case of a 50-year-old patient with a complex medical background, including chronic kidney disease (CKD), who presented clinically unwell with autonomic instability requiring cardio-respiratory support. The patient was on three-monthly doses of long-acting injectable antipsychotics; the last dose was administered two months ago before the presentation. The patient's creatinine clearance (CrCl) at the time of admission was 12 ml/min, and the estimated glomerular filtration rate (eGFR) was 9 ml/min/1.73 m 2 . This case highlights the autonomic side effects of long-acting injectable antipsychotics (LAIs) in a patient with chronic kidney disease (CKD), underscoring the need for close therapeutic drug monitoring and consideration of alternative treatment approaches in patients with moderate to severe renal dysfunction due to the risk of drug accumulation and toxicity.\n\nSocial note: Yasmin drives Tarek to every appointment and keeps the pill organiser. Call the clinic on (617) 555-0124 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Thackeray"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3630299"
+      },
+      {
+        "type": "date",
+        "value": "1945-12-16"
+      },
+      {
+        "type": "date",
+        "value": "2026-09-22"
+      },
+      {
+        "type": "name",
+        "value": "Zainab Ostrowski"
+      },
+      {
+        "type": "name",
+        "value": "Yasmin"
+      },
+      {
+        "type": "phone",
+        "value": "(617) 555-0124"
+      }
+    ],
+    "truth": {
+      "egfr": 9
+    }
+  },
+  {
+    "id": "pmc-48",
+    "pmcid": "PMC13607079",
+    "pmid": "42795713",
+    "doi": "10.3390/jcm15186940",
+    "journal": "Journal of clinical medicine",
+    "year": "2026",
+    "egfr_ref": 25,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13607079)\nPatient: Basil Rasmussen   MRN: ZX-2189494   DOB: 1970-04-22\nVisit date: 2026-08-14   Seen by: Dr. Rashad Thackeray.\n\nBackground/Objectives : Obesity after kidney transplantation impairs graft function, but the time course of lean tissue loss after sleeve gastrectomy in this population is poorly described. Methods : A 46-year-old woman underwent sleeve gastrectomy five years after kidney transplantation and was followed for 33 months with bioelectrical impedance analysis (BIA) and three 24-h dietary recalls per visit. Results: Weight fell from 103.4 to 69.4 kg by month 6, with mild regain to 71.9 kg at month 33. BIA-derived fat-free mass, BIA-predicted total muscle mass and BIA-derived skeletal muscle mass reached their lowest recorded values at month 3, each 21.3% below baseline, and were essentially unchanged at month 6; fat-free mass loss corresponded to 34.1% of the weight lost by month 6, above the thresholds proposed for excessive loss in a bariatric cohort which are research rather than clinical definitions. This early loss coincided with three concurrent exposures: energy restriction (521 and 466 kcal/day at months 1 and 3), protein intake below target during a period of aversion to protein-rich foods (33.2 g/day against a 60 g/day target), and absence of structured physical activity; anaemia was present throughout and may have contributed to both. Graft function was clinically stable but not unchanged, with estimated glomerular filtration rate 25% below baseline at month 33 and persistent proteinuria; biopsy was not performed. Conclusions : Early postoperative nutritional vulnerability was temporally associated with substantial lean tissue loss. The estimates are BIA-derived and hydration-dependent, muscle function was not assessed, and the concurrent exposures cannot be separated in a single case, so no causal relationship can be inferred.\n\nSocial note: Marisol drives Basil to every appointment and keeps the pill organiser. Call the clinic on (415) 555-0106 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Basil Rasmussen"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2189494"
+      },
+      {
+        "type": "date",
+        "value": "1970-04-22"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-14"
+      },
+      {
+        "type": "name",
+        "value": "Rashad Thackeray"
+      },
+      {
+        "type": "name",
+        "value": "Marisol"
+      },
+      {
+        "type": "phone",
+        "value": "(415) 555-0106"
+      }
+    ],
+    "truth": {
+      "egfr": 25
+    }
+  },
+  {
+    "id": "pmc-49",
+    "pmcid": "PMC13141099",
+    "pmid": "41991273",
+    "doi": "10.1136/bmjopen-2025-108119",
+    "journal": "BMJ open",
+    "year": "2026",
+    "egfr_ref": 25,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC13141099)\nPatient: Basil Vandermeer   MRN: ZX-3183573   DOB: 1943-04-05\nVisit date: 2026-06-26   Seen by: Dr. Imelda Umarov.\n\nIntroduction Patients discharged from intensive care units (ICUs) are at high risk of adverse long-term outcomes including cardiovascular and/or renal events and a 1-year mortality of approximately 22%. Plasma biomarkers measured at ICU discharge have demonstrated strong prognostic value, with elevated cardiac or renal biomarkers identifying patients at particularly high risk of poor outcomes. Sodium-glucose cotransporter 2 inhibitors are now widely recognised for their cardioprotective and nephroprotective effects in chronic conditions such as type 2 diabetes, heart failure or chronic kidney disease. These agents improve both morbidity and mortality across a range of high-risk populations. We hypothesise that a therapeutic strategy aimed at preventing the progression of cardiovascular and/or renal injury following ICU discharge may improve long-term outcomes in ICU survivors. Method and analysis This is a multicentre, double-blind, randomised, placebo-controlled clinical trial conducted across 16 teaching and non-teaching ICUs in France. We will enrol 600 adult patients (18 years of age or older) who have received mechanical ventilation and/or vasopressors for at least 24 hours during their ICU stay, and who meet at least one of the following criteria at ICU discharge: N-terminal pro-B-type natriuretic peptide (NT-proBNP) >800 pg/mL or BNP >90 ng/L, an estimated glomerular filtration rate between 25 and 90 mL/min/m². Eligible patients will be randomised in a 1:1 ratio to receive either dapagliflozin (10 mg once daily) or a matching placebo for a duration of 1 year. The primary outcome is a composite endpoint assessed at 1 year after randomisation, comprising: all-cause mortality, unscheduled hospitalisation for acute heart failure and decrease in renal function. Feasibility will be assessed based on patient and clinical acceptability and recruitment performance, including enrolment rates across participating centres. Ethics and dissemination This study has been approved by the Institutional Review Board (CPP Ile-de-France 5). Written informed consent will be obtained from all participants prior to enrolment and the initiation of any study-related procedures. Dapagliflozin is a widely available medication with an established safety profile. If proven effective, it would represent a readily deployable strategy to improve long-term outcomes in ICU survivors. The study is described in accordance with the Standard Protocol Items: Recommendations for Interventional Trials framework, and key design features and methodological decisions are outlined accordingly. DAPA-ICU aims to evaluate the efficacy of dapagliflozin in cardiorenal protection among critically ill patients following ICU discharge. The main trial results will be submitted for publication in a peer-reviewed journal as soon as they become available after final analysis. Trial registration number NCT07025629.\n\nSocial note: Khalil drives Basil to every appointment and keeps the pill organiser. Call the clinic on (305) 555-0102 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Basil Vandermeer"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-3183573"
+      },
+      {
+        "type": "date",
+        "value": "1943-04-05"
+      },
+      {
+        "type": "date",
+        "value": "2026-06-26"
+      },
+      {
+        "type": "name",
+        "value": "Imelda Umarov"
+      },
+      {
+        "type": "name",
+        "value": "Khalil"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0102"
+      }
+    ],
+    "truth": {
+      "egfr": 25
+    }
+  },
+  {
+    "id": "pmc-50",
+    "pmcid": "PMC12570721",
+    "pmid": "41170278",
+    "doi": "10.7759/cureus.93484",
+    "journal": "Cureus",
+    "year": "2025",
+    "egfr_ref": 55,
+    "text": "NEPHROLOGY CLINIC REFERRAL (open-access case text, PMC PMC12570721)\nPatient: Tarek Pellegrino   MRN: ZX-2101521   DOB: 1964-09-21\nVisit date: 2026-08-09   Seen by: Dr. Anwen Mbeki.\n\nDiabetic kidney disease (DKD) is typically accompanied by hypertension, which enables guideline-directed renoprotective therapy. We describe a 61-year-old woman with type 2 diabetes mellitus (T2DM) and persistent hypotension (≈92/55-98/65 mmHg) without albuminuria, in whom angiotensin-converting enzyme (ACE) inhibitors/angiotensin receptor blockers (ARBs) and sodium-glucose cotransporter-2 (SGLT2) inhibitors were deemed unsafe due to baseline low blood pressure. Management, therefore, emphasized non-pharmacologic measures, tight glycemic control, weight reduction (~10 lb), hydration, and avoidance of nephrotoxins in a resource-limited setting. Renal function improved from an eGFR of 55 mL/min/1.73 m² (2023) to 69 (2024) and stabilized at 67.2 (2025) with HbA1c 6.3-6.6% and continued lack of albuminuria; neurologic and ophthalmic diabetic manifestations remained stable. This case illustrates a guideline gap: when persistent hypotension and absent albuminuria preclude standard agents, individualized metabolic and lifestyle strategies may achieve renal stabilization. Although causality cannot be inferred, the temporal association between improved weight/glycemia and estimated glomerular filtration rate (eGFR) recovery suggests a pragmatic pathway for hypotensive T2DM patients outside conventional algorithms.\n\nSocial note: Bartholomew sits in on each visit and helps Tarek track the medication list. Call the clinic on (305) 555-0138 with questions.",
+    "seeded": [
+      {
+        "type": "name",
+        "value": "Tarek Pellegrino"
+      },
+      {
+        "type": "mrn",
+        "value": "ZX-2101521"
+      },
+      {
+        "type": "date",
+        "value": "1964-09-21"
+      },
+      {
+        "type": "date",
+        "value": "2026-08-09"
+      },
+      {
+        "type": "name",
+        "value": "Anwen Mbeki"
+      },
+      {
+        "type": "name",
+        "value": "Bartholomew"
+      },
+      {
+        "type": "phone",
+        "value": "(305) 555-0138"
+      }
+    ],
+    "truth": {
+      "egfr": 55
+    }
+  }
+]
