@@ -1,0 +1,62 @@
+{
+  "when": "2026-11-22",
+  "model": "gemini-3.5-flash-lite",
+  "data": "data/pmc/pmc50.json",
+  "masking": "seeded-name oracle (isolates extraction accuracy)",
+  "cases": 50,
+  "sent": 50,
+  "errors": 0,
+  "correct": {
+    "egfr": 20
+  },
+  "disagreements": [
+    "pmc-01 egfr 42.48 vs 28",
+    "pmc-04 egfr 42.34 vs 73.2",
+    "pmc-07 egfr 52 vs 30",
+    "pmc-08 egfr 62.6 vs 113.3",
+    "pmc-09 egfr 25 vs 30",
+    "pmc-10 egfr 80 vs 65",
+    "pmc-11 egfr 15 vs 9",
+    "pmc-12 egfr 90 vs 21",
+    "pmc-13 egfr 35.69 vs 30",
+    "pmc-14 egfr 55 vs 26",
+    "pmc-15 egfr 44.9 vs 36.4",
+    "pmc-17 egfr 74.6 vs 60",
+    "pmc-18 egfr 10 vs 19",
+    "pmc-19 egfr 42 vs 68",
+    "pmc-21 egfr 128.1 vs 58.9",
+    "pmc-22 egfr 29.4 vs 79.2",
+    "pmc-25 egfr 55 vs 10",
+    "pmc-28 egfr 18 vs 57",
+    "pmc-29 egfr 38 vs 28",
+    "pmc-30 egfr 59 vs 60",
+    "pmc-31 egfr 45 vs 15",
+    "pmc-32 egfr 50 vs 40",
+    "pmc-38 egfr 60 vs 40",
+    "pmc-40 egfr 45 vs 41",
+    "pmc-41 egfr 61 vs 32.5",
+    "pmc-42 egfr 48.12 vs 35",
+    "pmc-43 egfr 40.7 vs 15",
+    "pmc-44 egfr 50 vs 60",
+    "pmc-49 egfr 60 vs 25",
+    "pmc-50 egfr 67.2 vs 55"
+  ],
+  "analysis": {
+    "note": "Added after the run by a script that checks whether each wrong value occurs as a number in the source text. The answer key is each paper's reference eGFR (egfr_ref); the prompt asks for the most recent eGFR, and 25 of 50 texts mention eGFR more than once. Several texts are cohort or trial abstracts that give only thresholds or ranges (for example 'below 30', 'between 25 and 90'), not one patient's value; the output schema requires a number, so the model cannot answer 'not documented'.",
+    "exact_match": 20,
+    "wrong_value_present_in_text": 20,
+    "wrong_value_not_in_text": 10,
+    "not_in_text_ids": [
+      "pmc-09",
+      "pmc-12",
+      "pmc-14",
+      "pmc-30",
+      "pmc-31",
+      "pmc-32",
+      "pmc-38",
+      "pmc-40",
+      "pmc-44",
+      "pmc-49"
+    ]
+  }
+}
