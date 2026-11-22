@@ -1,11 +1,23 @@
 // Real cloud run (needs .env.local, free-tier Gemini via Firebase AI Logic). Masking uses the seeded names as an oracle so this
-// isolates the CLOUD MODEL's extraction accuracy; it says nothing about the masker. Usage: node --env-file=.env.local scripts/cloud-eval.mjs [--write]
+// isolates the CLOUD MODEL's extraction accuracy; it says nothing about the masker. Usage: node --env-file=.env.local scripts/cloud-eval.mjs [--100] [--write | --out=FILE]
 import { readFileSync, writeFileSync } from 'node:fs';
 import { initializeApp } from 'firebase/app';
 import { getAI, GoogleAIBackend, getGenerativeModel, InferenceMode, Schema } from 'firebase/ai';
 import { processNote } from '../src/pipeline.js';
 
 const e = process.env;
+// Optional: when the project enforces App Check, a registered debug token (APPCHECK_DEBUG_TOKEN, local env file only, never committed)
+// is exchanged for an App Check token, which is attached to the AI Logic requests. The browser app uses reCAPTCHA Enterprise instead.
+if (e.APPCHECK_DEBUG_TOKEN) {
+  const r = await fetch(`https://firebaseappcheck.googleapis.com/v1/projects/${e.VITE_FIREBASE_PROJECT_ID}/apps/${e.VITE_FIREBASE_APP_ID}:exchangeDebugToken?key=${e.VITE_FIREBASE_API_KEY}`,
+    { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ debugToken: e.APPCHECK_DEBUG_TOKEN }) });
+  const { token } = await r.json();
+  if (!token) throw new Error(`App Check debug token exchange failed (HTTP ${r.status})`);
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = (url, init = {}) => String(url).includes('firebasevertexai.googleapis.com')
+    ? realFetch(url, { ...init, headers: { ...Object.fromEntries(new Headers(init.headers)), 'X-Firebase-AppCheck': token } })
+    : realFetch(url, init);
+}
 const app = initializeApp({ apiKey: e.VITE_FIREBASE_API_KEY, projectId: e.VITE_FIREBASE_PROJECT_ID, appId: e.VITE_FIREBASE_APP_ID });
 const model = e.VITE_CLOUD_MODEL || 'gemini-3.5-flash-lite';
 const m = getGenerativeModel(getAI(app, { backend: new GoogleAIBackend() }), {
@@ -51,4 +63,6 @@ for (const c of cases) {
 }
 const res = { when: new Date().toISOString().slice(0, 10), model, masking: 'seeded-name oracle (isolates extraction accuracy)', cases: cases.length, sent, errors, correct: { ckd_stage_by_model: stageModel, ckd_stage_derived_by_code_from_egfr: stage, egfr, albuminuria_category: alb }, disagreements: wrong };
 console.log(JSON.stringify(res, null, 2));
-if (process.argv.includes('--write')) writeFileSync(new URL(bench100 ? '../docs/cloud-eval-100.json' : '../docs/cloud-eval.json', import.meta.url), JSON.stringify(res, null, 2) + '\n');
+const outArg = process.argv.find((a) => a.startsWith('--out='));
+if (outArg) writeFileSync(outArg.slice(6), JSON.stringify(res, null, 2) + '\n');
+else if (process.argv.includes('--write')) writeFileSync(new URL(bench100 ? '../docs/cloud-eval-100.json' : '../docs/cloud-eval.json', import.meta.url), JSON.stringify(res, null, 2) + '\n');
