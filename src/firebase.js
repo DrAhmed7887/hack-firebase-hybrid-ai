@@ -55,8 +55,8 @@ const cloudModel = config && status.appCheck
 function responseSchema() {
   return Schema.object({
     properties: {
-      ckd_stage: Schema.enumString({ enum: ['G1', 'G2', 'G3a', 'G3b', 'G4', 'G5'] }),
-      egfr: Schema.number(),
+      ckd_stage: Schema.enumString({ enum: ['G1', 'G2', 'G3a', 'G3b', 'G4', 'G5', 'not_documented'] }),
+      egfr: Schema.number({ nullable: true }), // null = no single measured value in the note
       albuminuria_category: Schema.enumString({ enum: ['A1', 'A2', 'A3', 'not_documented'] }),
       evidence: Schema.string(),
     },

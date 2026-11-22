@@ -5,14 +5,15 @@ import { gfrCategory } from '../kdigo.js';
 export const INSTRUCTION =
   'You are helping a kidney registry abstractor. From the de-identified clinical note below, extract the most recent values. ' +
   'Bracketed tokens such as [NAME_1] or [DATE_2] are placeholders: never guess what they stand for. ' +
-  'Return JSON with: ckd_stage (KDIGO G1, G2, G3a, G3b, G4 or G5 from the most recent eGFR), egfr (number, mL/min/1.73 m2, most recent), ' +
+  'Return JSON with: ckd_stage (KDIGO G1, G2, G3a, G3b, G4 or G5 from the most recent eGFR, or not_documented), ' +
+  'egfr (number, mL/min/1.73 m2, the most recent value measured in this patient; null if the note gives no such value, for example only a range, a threshold or a study inclusion criterion; never estimate), ' +
   'albuminuria_category (A1 <30, A2 30-300, A3 >300 mg/g urine albumin/creatinine, or not_documented), evidence (one short quote from the note).';
 
 export const RESPONSE_SCHEMA_JSON = {
   type: 'object',
   properties: {
-    ckd_stage: { type: 'string', enum: ['G1', 'G2', 'G3a', 'G3b', 'G4', 'G5'] },
-    egfr: { type: 'number' },
+    ckd_stage: { type: 'string', enum: ['G1', 'G2', 'G3a', 'G3b', 'G4', 'G5', 'not_documented'] },
+    egfr: { type: 'number', nullable: true },
     albuminuria_category: { type: 'string', enum: ['A1', 'A2', 'A3', 'not_documented'] },
     evidence: { type: 'string' },
   },
@@ -43,10 +44,10 @@ export async function sendMaskedToCloud(maskedText, seeded, generate) {
   return parsed;
 }
 
-const STAGES = ['G1', 'G2', 'G3a', 'G3b', 'G4', 'G5'];
+const STAGES = ['G1', 'G2', 'G3a', 'G3b', 'G4', 'G5', 'not_documented'];
 const ALB = ['A1', 'A2', 'A3', 'not_documented'];
 function validateResult(r) {
-  if (!r || !STAGES.includes(r.ckd_stage) || typeof r.egfr !== 'number' || !Number.isFinite(r.egfr) || !ALB.includes(r.albuminuria_category) || typeof r.evidence !== 'string') {
+  if (!r || !STAGES.includes(r.ckd_stage) || !(r.egfr === null || (typeof r.egfr === 'number' && Number.isFinite(r.egfr))) || !ALB.includes(r.albuminuria_category) || typeof r.evidence !== 'string') {
     throw new Error('Cloud answer did not match the expected schema');
   }
 }

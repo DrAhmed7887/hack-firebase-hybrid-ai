@@ -1,0 +1,101 @@
+{
+  "when": "2026-11-22",
+  "model": "gemini-3.5-flash-lite",
+  "data": "data/pmc/pmc50.json",
+  "masking": "seeded-name oracle (isolates extraction accuracy)",
+  "cases": 50,
+  "sent": 50,
+  "errors": 0,
+  "correct": {
+    "egfr": 9,
+    "egfr_answered_not_documented": 25
+  },
+  "disagreements": [
+    "pmc-01 egfr 42.48 vs 28",
+    "pmc-02 egfr not_documented vs 9",
+    "pmc-04 egfr not_documented vs 73.2",
+    "pmc-06 egfr not_documented vs 79.7",
+    "pmc-07 egfr 52 vs 30",
+    "pmc-08 egfr 62.6 vs 113.3",
+    "pmc-09 egfr not_documented vs 30",
+    "pmc-10 egfr 80 vs 65",
+    "pmc-11 egfr 15 vs 9",
+    "pmc-12 egfr not_documented vs 21",
+    "pmc-13 egfr 35.69 vs 30",
+    "pmc-14 egfr not_documented vs 26",
+    "pmc-15 egfr 44.9 vs 36.4",
+    "pmc-17 egfr not_documented vs 60",
+    "pmc-18 egfr 10 vs 19",
+    "pmc-19 egfr 42 vs 68",
+    "pmc-20 egfr not_documented vs 50",
+    "pmc-21 egfr 128.1 vs 58.9",
+    "pmc-22 egfr 29.4 vs 79.2",
+    "pmc-24 egfr not_documented vs 60",
+    "pmc-25 egfr not_documented vs 10",
+    "pmc-27 egfr not_documented vs 45.4",
+    "pmc-28 egfr 18 vs 57",
+    "pmc-29 egfr 38 vs 28",
+    "pmc-30 egfr not_documented vs 60",
+    "pmc-31 egfr not_documented vs 15",
+    "pmc-32 egfr not_documented vs 40",
+    "pmc-33 egfr not_documented vs 66",
+    "pmc-34 egfr not_documented vs 82",
+    "pmc-36 egfr not_documented vs 10",
+    "pmc-37 egfr not_documented vs 79",
+    "pmc-38 egfr not_documented vs 40",
+    "pmc-40 egfr not_documented vs 41",
+    "pmc-41 egfr 61 vs 32.5",
+    "pmc-42 egfr 48.12 vs 35",
+    "pmc-43 egfr not_documented vs 15",
+    "pmc-44 egfr not_documented vs 60",
+    "pmc-46 egfr not_documented vs 80",
+    "pmc-48 egfr not_documented vs 25",
+    "pmc-49 egfr not_documented vs 25",
+    "pmc-50 egfr 67.2 vs 55"
+  ],
+  "analysis": {
+    "schema_change": "eGFR may now be null ('not documented'); stage is then not_documented. Previous run (forced number): docs/cloud-eval-pmc.json.",
+    "vs_previous_run": {
+      "numbers_not_in_text": {
+        "before": 10,
+        "after": 0
+      },
+      "exact_match_with_key": {
+        "before": 20,
+        "after": 9
+      },
+      "answered_not_documented": {
+        "before": 0,
+        "after": 25
+      },
+      "previously_correct_now_not_documented": 11,
+      "previously_wrong_now_correct": 0
+    },
+    "by_text_type": {
+      "rule": "case report = text matches '<n>-year-old', 'case report/presentation', or 'we report/present/describe a'",
+      "case_reports_32": {
+        "before": {
+          "correct": 14,
+          "other_number": 18
+        },
+        "after": {
+          "correct": 9,
+          "other_number": 14,
+          "not_documented": 9
+        }
+      },
+      "study_abstracts_18": {
+        "before": {
+          "correct": 6,
+          "other_number": 12
+        },
+        "after": {
+          "not_documented": 16,
+          "other_number": 2
+        }
+      }
+    },
+    "manual_read_of_the_9_case_reports_answered_not_documented": "3 give only a threshold or range (pmc-09, pmc-40, pmc-44): not documented is right; 1 key is a percentage, not an eGFR (pmc-48: '25% below baseline'); 2 show no eGFR number near the mention (pmc-36, pmc-46); 3 give a patient value the model should have returned (pmc-04 73.2; pmc-02 '~9' and pmc-37 'approximately 79', both written as approximate).",
+    "answer_key_caveat": "The key (egfr_ref) was built automatically from each abstract. For study abstracts it holds cohort means or inclusion thresholds, and at least one entry is a percentage, so exact-match against it overstates the earlier 20/50 and understates this run."
+  }
+}

@@ -195,7 +195,7 @@ function renderResult(row) {
   for (const [k, label] of Object.entries(labels)) {
     const tr = tb.insertRow();
     tr.insertCell().textContent = label;
-    tr.insertCell().textContent = String(row[k] ?? '');
+    tr.insertCell().textContent = k === 'egfr' && row.egfr === null ? 'not documented (no single measured value in the note)' : String(row[k] ?? '');
   }
   renderMatrix(row);
   lastBundle = buildFhirBundle(row, row.mrn);

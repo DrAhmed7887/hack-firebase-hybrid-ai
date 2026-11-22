@@ -10,7 +10,7 @@ export async function mockGenerate(request) {
     note.match(/to (\d{1,3}(?:\.\d+)?) mL\/min/i) ||
     note.match(/eGFR (\d{1,3}(?:\.\d+)?) mL\/min/i) ||
     note.match(/(?:eGFR|estimated glomerular filtration rate|GFR)[^0-9]{0,45}(\d{1,3}(?:\.\d+)?)/i);
-  const egfr = m ? Number(m[1]) : NaN;
+  const egfr = m ? Number(m[1]) : null;
   const u = note.match(/ratio (\d+) mg\/g/i);
   return JSON.stringify({
     ckd_stage: gfrCategory(egfr),

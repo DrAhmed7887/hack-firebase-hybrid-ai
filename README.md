@@ -17,7 +17,7 @@ Entry for **#BuildHybridAI 2026** (Firebase AI Logic hybrid inference, Devpost).
 
 **What Google's own logs saw** (Firebase AI monitoring on, one live request from the deployed app, 22 Nov 2026): the request Firebase AI Logic logged in Cloud Logging held only placeholders (`[NAME_1]`, `[MRN_1]`, `[DATE_1]`...); none of the 143 seeded identifiers of the 20 synthetic cases appeared in the logs. This check reads Google's side, not our guard. One request. Evidence: `docs/ai-monitoring-log-check.json`.
 
-**Real published prose** (50 open-access PMC nephrology texts with synthetic identifiers, one run): eGFR matched the paper's reference value in 20 of 50; see CLAIMS.md for why (several eGFR values per text; study abstracts with only thresholds).
+**Real published prose** (50 open-access PMC nephrology texts with synthetic identifiers): with a forced-number schema the model returned 10 eGFR values that are not in the text (20 of 50 matched the automatic answer key). After allowing 'not documented', invented values fell to 0: 16 of 18 study abstracts and 9 of 32 case reports were answered 'not documented', 9 of 50 matched the key, and 3 case reports with a stated value were missed. The synthetic results did not change (100/100). The answer key needs a manual audit; see CLAIMS.md.
 
 Details and non-claims: [docs/CLAIMS.md](docs/CLAIMS.md).
 

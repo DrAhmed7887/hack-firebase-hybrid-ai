@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { kdigoRiskTier, findNephrotoxicMeds } from '../src/kdigo.js';
+import { kdigoRiskTier, findNephrotoxicMeds, gfrCategory } from '../src/kdigo.js';
+import { sendMaskedToCloud } from '../src/cloud/egress.js';
 import { buildFhirBundle } from '../src/fhir.js';
 import { mockGenerate } from '../src/cloud/mockCloud.js';
 
@@ -64,5 +65,26 @@ describe('mockGenerate', () => {
   it('does not read the year when separated by punctuation', async () => {
     const out = JSON.parse(await mockGenerate('NOTE:\nGFR (CKD-EPI 2021): 38'));
     expect(out.egfr).toBe(38);
+  });
+});
+
+describe('eGFR not documented', () => {
+  it('gives no stage without a measured value', () => {
+    expect([null, undefined, NaN].map(gfrCategory)).toEqual(['not_documented', 'not_documented', 'not_documented']);
+  });
+  it('accepts a null eGFR from the model and derives not_documented by code', async () => {
+    const out = await sendMaskedToCloud('Cohort with eGFR below 30.', [], async () => JSON.stringify({ ckd_stage: 'G4', egfr: null, albuminuria_category: 'not_documented', evidence: 'eGFR below 30' }));
+    expect(out.egfr).toBeNull();
+    expect(out.ckd_stage).toBe('not_documented');
+  });
+  it('FHIR uses dataAbsentReason and no CKD Condition when eGFR is missing', () => {
+    const b = buildFhirBundle({ ckd_stage: 'not_documented', egfr: null, albuminuria_category: 'not_documented', evidence: '' }, 'MRN1');
+    const obs = b.entry.map((e) => e.resource).find((r) => r.id === 'egfr-1');
+    expect(obs.valueQuantity).toBeUndefined();
+    expect(obs.dataAbsentReason.coding[0].code).toBe('unknown');
+    expect(b.entry.some((e) => e.resource.resourceType === 'Condition')).toBe(false);
+  });
+  it('mock backend returns null, not NaN, when no eGFR is written', async () => {
+    expect(JSON.parse(await mockGenerate('NOTE:\nNo kidney labs today.')).egfr).toBeNull();
   });
 });

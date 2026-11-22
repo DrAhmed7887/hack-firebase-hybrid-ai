@@ -19,8 +19,9 @@ export function buildFhirBundle(result, mrn) {
     resourceType: 'Observation', id: 'egfr-1', status: 'final', category: OBS_CAT,
     code: { coding: [{ system: LOINC, code: '98979-8', display: 'Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)' }], text: 'eGFR' },
     subject,
-    valueQuantity: { value: Number(result.egfr), unit: 'mL/min/1.73m2', system: 'http://unitsofmeasure.org', code: 'mL/min/{1.73_m2}' },
   };
+  if (typeof result.egfr === 'number') egfr.valueQuantity = { value: result.egfr, unit: 'mL/min/1.73m2', system: 'http://unitsofmeasure.org', code: 'mL/min/{1.73_m2}' };
+  else egfr.dataAbsentReason = { coding: [{ system: 'http://terminology.hl7.org/CodeSystem/data-absent-reason', code: 'unknown' }] };
   if (result.evidence) egfr.note = [{ text: String(result.evidence) }];
 
   const uacr = {

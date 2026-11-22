@@ -1,0 +1,34 @@
+{
+  "when": "2026-11-22",
+  "model": "gemini-3.5-flash-lite",
+  "data": "data/synthetic/bench100.json",
+  "masking": "seeded-name oracle (isolates extraction accuracy)",
+  "cases": 100,
+  "sent": 100,
+  "errors": 0,
+  "correct": {
+    "ckd_stage_by_model": 83,
+    "ckd_stage_derived_by_code_from_egfr": 100,
+    "egfr": 100,
+    "albuminuria_category": 100
+  },
+  "disagreements": [
+    "b100-000 model stage G3b vs G3a",
+    "b100-008 model stage G5 vs G4",
+    "b100-009 model stage G3b vs G3a",
+    "b100-019 model stage G2 vs G3a",
+    "b100-028 model stage G3b vs G3a",
+    "b100-031 model stage G3b vs G3a",
+    "b100-033 model stage G4 vs G3b",
+    "b100-034 model stage G5 vs G4",
+    "b100-049 model stage G5 vs G4",
+    "b100-052 model stage G5 vs G4",
+    "b100-057 model stage G5 vs G4",
+    "b100-060 model stage G2 vs G3a",
+    "b100-062 model stage G2 vs G3a",
+    "b100-069 model stage G2 vs G3a",
+    "b100-071 model stage G2 vs G3a",
+    "b100-086 model stage G3b vs G3a",
+    "b100-098 model stage G3b vs G3a"
+  ]
+}

@@ -27,8 +27,8 @@ const m = getGenerativeModel(getAI(app, { backend: new GoogleAIBackend() }), {
     generationConfig: {
       responseMimeType: 'application/json',
       responseSchema: Schema.object({ properties: {
-        ckd_stage: Schema.enumString({ enum: ['G1', 'G2', 'G3a', 'G3b', 'G4', 'G5'] }),
-        egfr: Schema.number(),
+        ckd_stage: Schema.enumString({ enum: ['G1', 'G2', 'G3a', 'G3b', 'G4', 'G5', 'not_documented'] }),
+        egfr: Schema.number({ nullable: true }),
         albuminuria_category: Schema.enumString({ enum: ['A1', 'A2', 'A3', 'not_documented'] }),
         evidence: Schema.string() } }),
     },
@@ -38,7 +38,7 @@ const bench100 = process.argv.includes('--100');
 const pmc = process.argv.includes('--pmc'); // 50 real open-access PMC case texts, synthetic identifiers; truth has eGFR only
 const dataFile = pmc ? '../data/pmc/pmc50.json' : bench100 ? '../data/synthetic/bench100.json' : '../data/synthetic/cases.json';
 const cases = JSON.parse(readFileSync(new URL(dataFile, import.meta.url))); // same schema: id, text, seeded, truth (fields missing from truth are not scored)
-let sent = 0, stageModel = 0, stage = 0, egfr = 0, alb = 0, errors = 0, leaked = 0;
+let sent = 0, stageModel = 0, stage = 0, egfr = 0, alb = 0, errors = 0, leaked = 0, notDoc = 0;
 const wrong = [];
 // retry transient 429/503 up to 4 times with backoff; the request is the same masked text each time
 async function call(req) {
@@ -58,13 +58,13 @@ for (const c of cases) {
   if (!out.sent) continue;
   sent++;
   const r = out.result;
-  if (pmc) { if (r.egfr === c.truth.egfr) egfr++; else wrong.push(`${c.id} egfr ${r.egfr} vs ${c.truth.egfr}`); continue; }
+  if (pmc) { if (r.egfr === c.truth.egfr) egfr++; else if (r.egfr === null) { notDoc++; wrong.push(`${c.id} egfr not_documented vs ${c.truth.egfr}`); } else wrong.push(`${c.id} egfr ${r.egfr} vs ${c.truth.egfr}`); continue; }
   if (r.stage_by_model === c.truth.ckd_stage) stageModel++; else wrong.push(`${c.id} model stage ${r.stage_by_model} vs ${c.truth.ckd_stage}`);
   if (r.ckd_stage === c.truth.ckd_stage) stage++; else wrong.push(`${c.id} code stage ${r.ckd_stage} vs ${c.truth.ckd_stage}`);
   if (r.egfr === c.truth.egfr) egfr++; else wrong.push(`${c.id} egfr ${r.egfr} vs ${c.truth.egfr}`);
   if (r.albuminuria_category === c.truth.albuminuria_category) alb++; else wrong.push(`${c.id} alb ${r.albuminuria_category} vs ${c.truth.albuminuria_category}`);
 }
-const correct = pmc ? { egfr } : { ckd_stage_by_model: stageModel, ckd_stage_derived_by_code_from_egfr: stage, egfr, albuminuria_category: alb };
+const correct = pmc ? { egfr, egfr_answered_not_documented: notDoc } : { ckd_stage_by_model: stageModel, ckd_stage_derived_by_code_from_egfr: stage, egfr, albuminuria_category: alb };
 const res = { when: new Date().toISOString().slice(0, 10), model, data: dataFile.replace('../', ''), masking: 'seeded-name oracle (isolates extraction accuracy)', cases: cases.length, sent, errors, correct, disagreements: wrong };
 console.log(JSON.stringify(res, null, 2));
 const outArg = process.argv.find((a) => a.startsWith('--out='));
