@@ -23,6 +23,18 @@ export function scanForLeaks(payload, seeded = []) {
   return findings;
 }
 
+// UI helper for the seeded demo notes only: which seeded words are still visible in the masked text,
+// so the page can show them and offer to mask them. Never used on the send path or in errors.
+export function visibleSeededTerms(payload, seeded = []) {
+  const out = new Set();
+  for (const id of seeded) {
+    if (findAll(payload, id.value, id.type, 'guard').length) { out.add(id.value); continue; }
+    if (id.type !== 'name') continue;
+    for (const p of id.value.split(/[\s-]+/)) if (p.length >= 2 && findAll(payload, p, id.type, 'guard').length) out.add(p);
+  }
+  return [...out];
+}
+
 export function assertNoLeak(payload, seeded = []) {
   const findings = scanForLeaks(payload, seeded);
   if (findings.length) throw new LeakError(findings);

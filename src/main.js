@@ -1,6 +1,7 @@
 import cases from '../data/synthetic/cases.json';
 import { prepare } from './pipeline.js';
-import { scanForLeaks } from './guard/leakGuard.js';
+import { scanForLeaks, visibleSeededTerms } from './guard/leakGuard.js';
+import { findAll } from './guard/rules.js';
 import { sendMaskedToCloud, buildRequest } from './cloud/egress.js';
 import { GFR_ROWS, ALB_COLS, TIER_COLOR, kdigoTierAt, kdigoRiskTier, findNephrotoxicMeds } from './kdigo.js';
 import { buildFhirBundle } from './fhir.js';
@@ -41,7 +42,8 @@ function renderChips() {
 }
 
 async function setupNano() {
-  nano = await nanoAvailability();
+  // ?rules-only shows what a browser without Gemini Nano gets, even on a machine that has it.
+  nano = new URLSearchParams(location.search).has('rules-only') ? 'switched off by ?rules-only' : await nanoAvailability();
   nanoReady = nano === 'available';
   const btn = $('btn-nano');
   if (nano === 'downloadable' || nano === 'downloading') {
@@ -94,8 +96,36 @@ function highlight(text, spans) {
   return frag;
 }
 
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const reveal = (node, block = 'start') => node.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block });
+
+// Mark the given terms inside the masked text (non-overlapping, in order).
+function leakSpans(masked, terms) {
+  const spans = terms.flatMap((t) => findAll(masked, t, 'name', 'leak')).sort((a, b) => a.start - b.start || b.end - a.end);
+  const out = [];
+  for (const s of spans) if (!out.length || s.start >= out[out.length - 1].end) out.push(s);
+  return out;
+}
+
 async function runGuard() {
   const text = $('note').value;
+  if (!text.trim()) {
+    $('nano-msg').textContent = 'The note is empty: pick a demo note or paste one first.';
+    return;
+  }
+  const btn = $('btn-guard');
+  btn.disabled = true;
+  $('guard-busy').hidden = false;
+  try {
+    await guardSteps(text);
+  } finally {
+    btn.disabled = false;
+    $('guard-busy').hidden = true;
+  }
+  reveal($('verdict'), 'center');
+}
+
+async function guardSteps(text) {
   let deviceNames = [];
   $('egress-device-src').textContent = 'rules only (on-device model not used)';
   if (nanoReady) {
@@ -117,13 +147,26 @@ async function runGuard() {
   $('preview').hidden = false;
   $('result').hidden = true;
   $('orig').replaceChildren(highlight(text, prepared.spans));
-  $('masked').textContent = prepared.masked;
+  const left = findings.length ? visibleSeededTerms(prepared.masked, seeded) : [];
+  $('masked').replaceChildren(highlight(prepared.masked, leakSpans(prepared.masked, left)));
   const v = $('verdict');
   renderEgress(prepared.masked, seeded, findings);
+  $('fix-box').hidden = true;
   if (findings.length) {
     const kinds = [...new Set(findings.map((f) => f.type))].join(', ');
     v.dataset.k = 'bad';
-    v.textContent = `Blocked: the masked text still contains ${findings.length} identifier(s) (${kinds}). Nothing will be sent. Add the missing term above and run the guard again.`;
+    v.textContent = `Blocked: the masked text still contains ${findings.length} identifier(s) (${kinds}). Nothing was sent.`;
+    if (left.length) {
+      $('fix-msg').textContent = `The guard checks this demo note against its seeded test list. ${nanoReady ? '' : 'Without the on-device model, rules miss names inside sentences. '}Still visible (outlined in red): ${left.join(', ')}.`;
+      $('btn-fix').onclick = () => {
+        const have = termsFromInput();
+        $('extra-terms').value = [...new Set([...have, ...left])].join(', ');
+        runGuard();
+      };
+      $('fix-box').hidden = false;
+    } else {
+      v.textContent += ' Add the missing term in "Extra terms to mask" above and run the guard again.';
+    }
     $('btn-send').disabled = true;
   } else {
     v.dataset.k = 'ok';
@@ -170,6 +213,7 @@ async function send() {
   if (!current.seeded.length && !confirm('This note has no seeded identifier list, so only identifier patterns were checked. Have you read the masked text and found no names left? Send it to the cloud model?')) return;
   const btn = $('btn-send');
   btn.disabled = true;
+  $('send-busy').hidden = false;
   try {
     $('egress-source').textContent = 'waiting for the response...';
     const parsed = await sendMaskedToCloud(current.prepared.masked, current.seeded, backend);
@@ -177,11 +221,14 @@ async function send() {
     const out = rehydrate(parsed, current.prepared.vault);
     const mrn = current.prepared.vault.get('[MRN_1]') ?? '';
     renderResult({ mrn, ...out });
+    reveal($('result'));
   } catch (e) {
     $('verdict').dataset.k = 'bad';
     $('verdict').textContent = e.name === 'LeakError' ? e.message : `Cloud call failed: ${e.message}`;
+  } finally {
+    btn.disabled = false;
+    $('send-busy').hidden = true;
   }
-  btn.disabled = false;
 }
 
 let lastRow = null;
@@ -321,7 +368,10 @@ function init() {
     $('note').value = c.text;
     showAttrib(c);
   };
-  sel.onchange = () => { load(); $('preview').hidden = true; $('result').hidden = true; };
+  const reset = () => { $('preview').hidden = true; $('result').hidden = true; $('fix-box').hidden = true; current = null; };
+  sel.onchange = () => { $('extra-terms').value = ''; load(); reset(); };
+  // Editing the note makes the earlier preview and result stale; a pasted note is no longer the selected PMC text.
+  $('note').addEventListener('input', () => { reset(); $('pmc-attrib').hidden = true; });
   load();
   $('btn-guard').onclick = runGuard;
   $('btn-send').onclick = send;

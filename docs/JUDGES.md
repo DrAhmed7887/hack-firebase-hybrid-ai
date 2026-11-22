@@ -19,11 +19,11 @@ Persona (illustrative, not a real person; to be replaced by a real named abstrac
 | CI | `.github/workflows/ci.yml`: tests, both benches, reproducible data, build |
 | Claims with file and command | `docs/CLAIMS.md` |
 | Failures and limits | `docs/CLAIMS.md` "Not claimed"; every rules-only miss is a name in free prose (100-note run: 89 of 772 identifiers missed by the masker, 71 of 100 notes blocked because of an unmasked name) |
-| Headline result | 0 of 772 seeded identifiers reached the cloud; 71/100 notes held back, 29 sent (`docs/bench-100-rules-only.json`) |
+| Headline result | Rules-only, 100 notes, **mock** cloud: the masker hid 683 of 772 seeded identifiers; 71 notes held back, 29 sent; 0 seeded identifiers in the 29 sent payloads (a guard property: it checks the same seeded list) (`docs/bench-100-rules-only.json`) |
 | Submission receipt | `docs/SUBMISSION_CHECKLIST.md` |
 
 ## Try it in 30 seconds
-Open the app, press **Run local guard**, then **Send masked text**. Press **Run 20 cases** at the bottom to see the live counts. The status chips at the top say what is real in this build (on-device model, cloud model, App Check) and what is mocked.
+Open the app, press **Run local guard**, then **Send masked text**. Pick another demo note: without Gemini Nano, rules miss names inside sentences, so the guard blocks the call and outlines the leftover words in red; press **Mask these and re-check**, then Send. Add `?rules-only` to the URL to see the no-Nano path on a machine that has Nano. Press **Run 20 cases** at the bottom to see the live counts. The status chips at the top say what is real in this build (on-device model, cloud model, App Check) and what is mocked.
 
 ## Open backlog (hours)
 | Item | Hours |

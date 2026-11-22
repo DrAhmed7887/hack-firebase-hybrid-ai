@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { prepare } from '../src/pipeline.js';
 import { rehydrate } from '../src/guard/mask.js';
+import { scanForLeaks, visibleSeededTerms } from '../src/guard/leakGuard.js';
 import { gfrCategory, albuminuriaCategory } from '../src/kdigo.js';
 import { mockGenerate } from '../src/cloud/mockCloud.js';
 import cases from '../data/synthetic/cases.json';
@@ -59,5 +60,27 @@ describe('regressions from review (19 Nov)', () => {
   });
   it('does not treat odd punctuation as a month separator', () => {
     expect(prepare('12 March!!! 2024').masked).toContain('March!!!');
+  });
+});
+
+describe('regressions from live judge test (22 Nov)', () => {
+  it('a labelled name does not swallow the first word of the next line', () => {
+    const t = 'Name: Tarek Haddad\nMedical Record Number: QX-55021';
+    const p = prepare(t);
+    expect(p.masked).toBe('Name: [NAME_1]\nMedical Record Number: [MRN_1]');
+    expect(rehydrate(p.masked, p.vault)).toBe(t);
+  });
+  it('the guard does not read the MRN label itself as an MRN once the value is masked', () => {
+    const p = prepare('Medical Record Number: QX-55021');
+    expect(scanForLeaks(p.masked)).toEqual([]);
+  });
+  it('rules-only demo flow: masking the shown terms unblocks every blocked demo note', () => {
+    for (const c of cases.filter((x) => x.demo)) {
+      const first = prepare(c.text);
+      const terms = visibleSeededTerms(first.masked, c.seeded);
+      expect(terms.length > 0).toBe(scanForLeaks(first.masked, c.seeded).length > 0);
+      const second = prepare(c.text, { manualTerms: terms });
+      expect(scanForLeaks(second.masked, c.seeded)).toEqual([]);
+    }
   });
 });

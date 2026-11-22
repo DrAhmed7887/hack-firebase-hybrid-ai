@@ -4,7 +4,8 @@ const NAME_WORD = "\\p{Lu}[\\p{Ll}'’]+(?:\\p{Lu}\\p{Ll}+)?(?:-\\p{Lu}[\\p{Ll}'
 const TITLE = '(?:(?:Dr|Mr|Mrs|Ms|Prof)\\.?\\s+)?';
 
 export const PATTERNS = {
-  mrn: /\b(?:MRN|MR#|Medical Record(?: Number| No\.?)?)\s*[:#]?\s*([A-Z0-9][A-Z0-9-]{3,})/gi,
+  // The value must contain a digit, so the label's own words ("Medical Record Number: [MRN_1]") are never read as an MRN.
+  mrn: /\b(?:MRN|MR#|Medical Record(?: Number| No\.?)?)\s*[:#]?\s*((?=[A-Z-]*\d)[A-Z0-9][A-Z0-9-]{3,})/gi,
   date: new RegExp(
     [
       '\\b\\d{4}[-/.]\\d{1,2}[-/.]\\d{1,2}\\b',
@@ -18,11 +19,12 @@ export const PATTERNS = {
   email: /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g,
   // Names after a label ("Patient:", "Name:", "Seen by:") or a title ("Dr.", "Mrs."). Names in free prose are not detectable by rules.
   name: new RegExp(
-    `(?:\\b(?:Patient|Pt|Name|Seen by|Signed by|Referring|Nurse educator|nurse educator)\\s*:\\s*${TITLE}|\\b(?:Dr|Mr|Mrs|Ms|Prof)\\.?\\s+|\\b(?:Patient|nurse educator)\\s+)((?!(?:Dr|Mr|Mrs|Ms|Prof)\\b)${NAME_WORD}(?:\\s+${NAME_WORD}){0,2})`,
+    // Name words are joined by spaces or tabs only, so a name never runs onto the next line ("Name: X Y\nMedical Record ...").
+    `(?:\\b(?:Patient|Pt|Name|Seen by|Signed by|Referring|Nurse educator|nurse educator)\\s*:\\s*${TITLE}|\\b(?:Dr|Mr|Mrs|Ms|Prof)\\.?\\s+|\\b(?:Patient|nurse educator)\\s+)((?!(?:Dr|Mr|Mrs|Ms|Prof)\\b)${NAME_WORD}(?:[ \\t]+${NAME_WORD}){0,2})`,
     'gu',
   ),
   // "<Name>, MRN" / "Spoke with First Last (" style: a capitalised pair directly before "(MRN" or ", MRN"
-  nameBeforeMrn: new RegExp(`(${NAME_WORD}\\s+${NAME_WORD})(?=,?\\s*\\((?:[^)]{0,40}\\b)?MRN|,\\s*MRN)`, 'gu'),
+  nameBeforeMrn: new RegExp(`(${NAME_WORD}[ \\t]+${NAME_WORD})(?=,?\\s*\\((?:[^)]{0,40}\\b)?MRN|,\\s*MRN)`, 'gu'),
 };
 
 // words that can follow "Patient" or a label but are not names

@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>Private Clinical Registry Gate</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
   <header>
     <h1>Private Clinical Registry Gate</h1>
     <p class="lead">A registry abstractor pastes a kidney-clinic note. Identifiers are masked on this device first; only the masked text goes to a cloud Gemini model, and the call is aborted if any identifier is still in it. Synthetic notes only.</p>
+    <p class="try"><strong>Try it in 30 seconds:</strong> pick a demo note, press <em>Run local guard</em>, then <em>Send masked text</em>. If the guard blocks a note, that is the safety check working: press <em>Mask these and re-check</em>.</p>
     <ul class="chips" id="chips" aria-label="Runtime status"></ul>
   </header>
 
@@ -26,6 +28,7 @@
       <p class="row">
         <button id="btn-nano" type="button" hidden></button>
         <button id="btn-guard" type="button" class="primary">Run local guard</button>
+        <progress id="guard-busy" class="busy" aria-label="Checking the note on this device" hidden></progress>
       </p>
       <p id="nano-msg" class="muted" role="status"></p>
     </section>
@@ -44,6 +47,10 @@
         </div>
       </div>
       <p id="verdict" role="status" class="verdict"></p>
+      <div id="fix-box" class="fix-box" hidden>
+        <p id="fix-msg"></p>
+        <button id="btn-fix" type="button" class="primary">Mask these and re-check</button>
+      </div>
       <details id="egress-inspector" class="inspector">
         <summary>Hybrid Egress Payload Inspector <span id="egress-badge" class="badge"></span></summary>
         <dl class="kv">
@@ -57,7 +64,8 @@
         <h3>Exact payload sent to Firebase AI Logic</h3>
         <pre id="egress-payload" class="note" aria-label="Exact outgoing payload"></pre>
       </details>
-      <p><button id="btn-send" type="button" class="primary" disabled>Send masked text to the cloud model</button></p>
+      <p class="row"><button id="btn-send" type="button" class="primary" disabled>Send masked text to the cloud model</button>
+        <progress id="send-busy" class="busy" aria-label="Waiting for the cloud model" hidden></progress></p>
     </section>
 
     <section aria-labelledby="h-result" id="result" hidden>

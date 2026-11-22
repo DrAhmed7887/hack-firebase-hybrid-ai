@@ -47,6 +47,11 @@ table { border-collapse: collapse; width: 100%; }
 th, td { border-bottom: 1px solid var(--line); padding: .3rem .5rem; text-align: left; font-size: .9rem; vertical-align: top; }
 footer { color: var(--muted); font-size: .85rem; padding-block: 1rem 2rem; }
 .hl { font-size: 1.05rem; }
+.try { max-width: 52rem; border-left: 4px solid var(--accent); padding-left: .7rem; }
+progress.busy { inline-size: 8rem; align-self: center; }
+mark[data-s="leak"] { background: none; outline: 2px solid var(--bad); color: var(--bad); font-weight: 700; }
+.fix-box { border: 1px solid var(--bad); border-radius: .4rem; padding: .5rem .75rem; margin-block: .5rem; }
+.fix-box p { margin: 0 0 .5rem; }
 
 /* Clinical-tech additions */
 .inspector { border: 1px solid var(--line); border-radius: .4rem; padding: .5rem .75rem; margin-block: .75rem; }
