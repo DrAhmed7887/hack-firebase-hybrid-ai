@@ -22,7 +22,8 @@ const m = getGenerativeModel(getAI(app, { backend: new GoogleAIBackend() }), {
     },
   },
 });
-const cases = JSON.parse(readFileSync(new URL('../data/synthetic/cases.json', import.meta.url)));
+const bench100 = process.argv.includes('--100');
+const cases = JSON.parse(readFileSync(new URL(bench100 ? '../data/synthetic/bench100.json' : '../data/synthetic/cases.json', import.meta.url))); // same schema: id, text, seeded, truth
 let sent = 0, stageModel = 0, stage = 0, egfr = 0, alb = 0, errors = 0, leaked = 0;
 const wrong = [];
 // retry transient 429/503 up to 4 times with backoff; the request is the same masked text each time
@@ -50,4 +51,4 @@ for (const c of cases) {
 }
 const res = { when: new Date().toISOString().slice(0, 10), model, masking: 'seeded-name oracle (isolates extraction accuracy)', cases: cases.length, sent, errors, correct: { ckd_stage_by_model: stageModel, ckd_stage_derived_by_code_from_egfr: stage, egfr, albuminuria_category: alb }, disagreements: wrong };
 console.log(JSON.stringify(res, null, 2));
-if (process.argv.includes('--write')) writeFileSync(new URL('../docs/cloud-eval.json', import.meta.url), JSON.stringify(res, null, 2) + '\n');
+if (process.argv.includes('--write')) writeFileSync(new URL(bench100 ? '../docs/cloud-eval-100.json' : '../docs/cloud-eval.json', import.meta.url), JSON.stringify(res, null, 2) + '\n');

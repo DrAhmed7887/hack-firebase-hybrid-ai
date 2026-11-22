@@ -13,6 +13,8 @@ Entry for **#BuildHybridAI 2026** (Firebase AI Logic hybrid inference, Devpost).
 **Measured once with Gemini Nano** (in-app run, 19 Nov 2026, Chrome on the development Mac, where `LanguageModel.availability()` reported Nano ready): the masker with Nano hid 154 of 154 seeded identifiers. One run, not repeatable in CI, model output varies; Nano also masked some ordinary words as names (e.g. "Family"). 
 **Real cloud model** (`gemini-3.5-flash-lite` through Firebase AI Logic, 20 seeded notes, names masked by an oracle so only extraction is tested, one run, 19 Nov 2026): eGFR 20/20 and albuminuria category 20/20 correct; the model's own CKD stage 17/20, so the app derives the stage from the eGFR with the KDIGO cut-points (20/20). Synthetic templated notes only.
 
+**Real cloud model, 100 notes** (same model through Firebase AI Logic on the Sprint 2 project `fbailogic26vrt-3028`, seeded-name oracle masking, one run, 22 Nov 2026): 100 sent, 0 errors; eGFR 100/100 and albuminuria category 100/100 correct; the model's own CKD stage 86/100 (14 off by one stage), and stage derived by code from eGFR 100/100. Synthetic templated notes only. Evidence: `docs/cloud-eval-100.json`.
+
 Details and non-claims: [docs/CLAIMS.md](docs/CLAIMS.md).
 
 ```bash
