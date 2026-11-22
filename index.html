@@ -21,6 +21,7 @@
         <label>Demo note <select id="case-select"></select></label>
         <label class="grow">Extra terms to mask (comma separated) <input id="extra-terms" type="text" autocomplete="off" placeholder="e.g. a name the guard missed"></label>
       </div>
+      <p id="pmc-attrib" class="pill-row" hidden></p>
       <textarea id="note" rows="11" spellcheck="false" aria-label="Clinical note"></textarea>
       <p class="row">
         <button id="btn-nano" type="button" hidden></button>
@@ -43,6 +44,17 @@
         </div>
       </div>
       <p id="verdict" role="status" class="verdict"></p>
+      <details id="egress-inspector" class="inspector">
+        <summary>Hybrid Egress Payload Inspector <span id="egress-badge" class="badge"></span></summary>
+        <dl class="kv">
+          <dt>Route</dt><dd id="egress-route"></dd>
+          <dt>Bytes on the wire</dt><dd id="egress-bytes"></dd>
+          <dt>SHA-256 (Web Crypto)</dt><dd id="egress-sha"></dd>
+          <dt>Leak scan</dt><dd id="egress-scan"></dd>
+        </dl>
+        <h3>Exact payload sent to Firebase AI Logic</h3>
+        <pre id="egress-payload" class="note" aria-label="Exact outgoing payload"></pre>
+      </details>
       <p><button id="btn-send" type="button" class="primary" disabled>Send masked text to the cloud model</button></p>
     </section>
 
@@ -50,10 +62,16 @@
       <h2 id="h-result">3. Registry fields (rehydrated locally)</h2>
       <p id="backend-note" class="muted"></p>
       <table id="result-table"><tbody></tbody></table>
+      <div id="risk-matrix" aria-label="KDIGO 2024 CKD risk heatmap"></div>
       <p class="row">
         <button id="btn-json" type="button">Download JSON</button>
         <button id="btn-csv" type="button">Download CSV</button>
+        <button id="btn-fhir" type="button">Download FHIR R4 Bundle</button>
       </p>
+      <details id="fhir-details" class="inspector">
+        <summary>Live FHIR R4 preview</summary>
+        <pre id="fhir-preview" class="note" aria-label="FHIR R4 bundle preview"></pre>
+      </details>
     </section>
 
     <section aria-labelledby="h-bench">

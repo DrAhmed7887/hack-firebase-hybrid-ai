@@ -47,3 +47,29 @@ table { border-collapse: collapse; width: 100%; }
 th, td { border-bottom: 1px solid var(--line); padding: .3rem .5rem; text-align: left; font-size: .9rem; vertical-align: top; }
 footer { color: var(--muted); font-size: .85rem; padding-block: 1rem 2rem; }
 .hl { font-size: 1.05rem; }
+
+/* Clinical-tech additions */
+.inspector { border: 1px solid var(--line); border-radius: .4rem; padding: .5rem .75rem; margin-block: .75rem; }
+.inspector summary { cursor: pointer; font-weight: 600; }
+.badge { display: inline-block; margin-left: .5rem; padding: .05rem .6rem; border-radius: 1rem; font-size: .78rem; font-weight: 700; border: 1px solid currentColor; }
+.badge[data-k="ok"] { color: var(--ok); }
+.badge[data-k="bad"] { color: var(--bad); }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: .2rem 1rem; font-size: .88rem; margin: .5rem 0; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; font-family: ui-monospace, monospace; word-break: break-all; }
+.pill-row { display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0; }
+.pill { border: 1px solid var(--accent); color: var(--accent); border-radius: 1rem; padding: .1rem .7rem; font-size: .82rem; text-decoration: none; }
+.pill:hover, .pill:focus-visible { background: var(--accent); color: light-dark(#fff, #0b1220); }
+#risk-matrix { margin-block: 1rem; }
+table.matrix { table-layout: fixed; }
+table.matrix th { font-size: .8rem; color: var(--muted); }
+table.matrix td.cell { background: color-mix(in srgb, var(--tier) 80%, transparent); color: #111; font-weight: 600; font-size: .8rem; text-align: center; border: 2px solid var(--card); }
+table.matrix td.cell[data-active="true"] { outline: 3px solid var(--fg); outline-offset: -3px; box-shadow: 0 0 0 2px var(--accent); position: relative; }
+.you { font-weight: 800; }
+.matrix-info p { margin: .3rem 0; }
+.tier-tag { background: var(--tier); color: #111; padding: .05rem .6rem; border-radius: .3rem; font-weight: 700; }
+.matrix-info p[data-k="bad"] { color: var(--bad); font-weight: 600; }
+.warn-box { border: 1px solid var(--bad); border-left-width: 5px; border-radius: .3rem; padding: .4rem .7rem; color: var(--bad); font-weight: 600; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0d1117; --card: #161b22; --line: #30363d; }
+}

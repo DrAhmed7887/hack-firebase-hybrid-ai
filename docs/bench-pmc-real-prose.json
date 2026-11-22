@@ -1,0 +1,20 @@
+{
+  "mode": "rules-only (no on-device model), mock cloud, real PMC clinical prose with seeded synthetic identifiers",
+  "source": "data/pmc/pmc50.json (real open-access abstracts; identifiers are synthetic)",
+  "seededByType": {
+    "name": 150,
+    "mrn": 50,
+    "date": 100,
+    "phone": 50
+  },
+  "casesWithUnmaskedTypes": {
+    "name": 50
+  },
+  "cases": 50,
+  "seededIdentifiers": 350,
+  "identifiersMasked": 300,
+  "casesSent": 0,
+  "casesBlocked": 50,
+  "cloudCalls": 0,
+  "cloudPayloadsWithSeededIdentifier": 0
+}
