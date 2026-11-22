@@ -15,6 +15,10 @@ Entry for **#BuildHybridAI 2026** (Firebase AI Logic hybrid inference, Devpost).
 
 **Real cloud model, 100 notes** (same model through Firebase AI Logic on the Sprint 2 project `fbailogic26vrt-3028`, seeded-name oracle masking, three runs, 22 Nov 2026): each run 100 sent, 0 errors; eGFR 100/100 and albuminuria category 100/100 correct in every run; the model's own CKD stage 86, 85 and 83 of 100 (every miss one stage off; the same 14 notes missed in all three runs), and stage derived by code from eGFR 100/100 in every run. Synthetic templated notes only. Evidence: `docs/cloud-eval-100-runs.json` (run 1 alone: `docs/cloud-eval-100.json`).
 
+**What Google's own logs saw** (Firebase AI monitoring on, one live request from the deployed app, 22 Nov 2026): the request Firebase AI Logic logged in Cloud Logging held only placeholders (`[NAME_1]`, `[MRN_1]`, `[DATE_1]`...); none of the 143 seeded identifiers of the 20 synthetic cases appeared in the logs. This check reads Google's side, not our guard. One request. Evidence: `docs/ai-monitoring-log-check.json`.
+
+**Real published prose** (50 open-access PMC nephrology texts with synthetic identifiers, one run): eGFR matched the paper's reference value in 20 of 50; see CLAIMS.md for why (several eGFR values per text; study abstracts with only thresholds).
+
 Details and non-claims: [docs/CLAIMS.md](docs/CLAIMS.md).
 
 ```bash
@@ -26,7 +30,7 @@ npm run bench:100          # the 100-case numbers above (npm run bench: the earl
 ## How it works
 1. **Local guard:** rules for MRN, dates, phone, email and names after a title or label; Firebase AI Logic `ONLY_ON_DEVICE` (Gemini Nano) for names in prose. If Nano is unavailable the app says so, runs rules-only, and never falls back to the cloud with raw text.
 2. **Preview and leak guard:** you see the masked text. `src/cloud/egress.js` scans the exact outgoing request and throws before the cloud call if one of the note's seeded identifiers or an identifier pattern remains. For a note you paste yourself there is no seeded list, so only patterns are checked, names in prose are not, and the app asks you to confirm after reading the masked text.
-3. **Cloud call:** `PREFER_IN_CLOUD` on a free Gemini model returns JSON: CKD stage, eGFR, albuminuria category, evidence quote. Code checks the stage against the eGFR.
+3. **Cloud call:** `PREFER_IN_CLOUD` on a free Gemini model returns JSON: CKD stage, eGFR, albuminuria category, evidence quote. Code checks the stage against the eGFR. The Egress Inspector shows the SDK's own `inferenceSource` for each step (`on_device` for name detection, `in_cloud` for extraction), so the hybrid routing is reported by Firebase, not assumed.
 4. **Local rehydration and export:** tokens are restored from an in-memory vault; download JSON or CSV.
 
 ## What is real and what is mocked in this repo

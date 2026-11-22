@@ -21,8 +21,12 @@ const PROMPT =
   'List every personal name (patients, relatives, clinicians, neighbours) that appears in this clinical note, exactly as written. ' +
   'Do not list places, drugs or conditions. Return JSON {"names": [...]}.\n\nNOTE:\n';
 
+// Reported by the Firebase AI Logic SDK ('on_device' expected: the model is created with ONLY_ON_DEVICE).
+let lastDeviceSource = null;
+export const getLastDeviceSource = () => lastDeviceSource;
 export async function detectNames(text) {
   const res = await deviceModel.generateContent(PROMPT + text);
+  lastDeviceSource = res.response.inferenceSource ?? 'not reported';
   let names = [];
   try {
     names = JSON.parse(res.response.text()).names ?? [];

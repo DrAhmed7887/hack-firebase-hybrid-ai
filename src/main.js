@@ -7,8 +7,8 @@ import { buildFhirBundle } from './fhir.js';
 import { rehydrate } from './guard/mask.js';
 import { mockGenerate } from './cloud/mockCloud.js';
 import { runBench } from './bench.js';
-import { status, cloudGenerate, hasCloud, CLOUD_MODEL } from './firebase.js';
-import { nanoAvailability, initNano, detectNames } from './guard/nano.js';
+import { status, cloudGenerate, hasCloud, CLOUD_MODEL, getLastCloudSource } from './firebase.js';
+import { nanoAvailability, initNano, detectNames, getLastDeviceSource } from './guard/nano.js';
 
 const $ = (id) => document.getElementById(id);
 const demo = cases.filter((c) => c.demo);
@@ -97,11 +97,13 @@ function highlight(text, spans) {
 async function runGuard() {
   const text = $('note').value;
   let deviceNames = [];
+  $('egress-device-src').textContent = 'rules only (on-device model not used)';
   if (nanoReady) {
     $('nano-msg').textContent = 'Asking the on-device model for names in prose (raw text never leaves this device)...';
     try {
       deviceNames = await detectNames(text);
       $('nano-msg').textContent = `On-device model found ${deviceNames.length} name(s).`;
+      $('egress-device-src').textContent = sourceLabel(getLastDeviceSource());
     } catch (e) {
       nanoReady = false;
       renderChips();
@@ -142,6 +144,7 @@ async function renderEgress(masked, seeded, findings) {
   badge.dataset.k = blocked ? 'bad' : 'ok';
   $('egress-route').textContent = hasCloud() ? `Firebase AI Logic, ${CLOUD_MODEL}, PREFER_IN_CLOUD` : 'MOCK backend (no Firebase project configured): nothing leaves the browser';
   $('egress-payload').textContent = request;
+  $('egress-source').textContent = 'not sent yet';
   if (blocked) {
     badge.textContent = 'BLOCKED: 0 bytes sent';
     $('egress-bytes').textContent = `0 sent (the ${bytes.length}-byte request was aborted before generate was called)`;
@@ -160,13 +163,17 @@ async function renderEgress(masked, seeded, findings) {
   }
 }
 
+const sourceLabel = (s) => (s === 'in_cloud' ? 'in_cloud: Gemini in the cloud (masked text only)' : s === 'on_device' ? 'on_device: Gemini Nano in this browser' : String(s));
+
 async function send() {
   if (!current) return;
   if (!current.seeded.length && !confirm('This note has no seeded identifier list, so only identifier patterns were checked. Have you read the masked text and found no names left? Send it to the cloud model?')) return;
   const btn = $('btn-send');
   btn.disabled = true;
   try {
+    $('egress-source').textContent = 'waiting for the response...';
     const parsed = await sendMaskedToCloud(current.prepared.masked, current.seeded, backend);
+    $('egress-source').textContent = hasCloud() ? sourceLabel(getLastCloudSource()) : 'MOCK backend (nothing left the browser)';
     const out = rehydrate(parsed, current.prepared.vault);
     const mrn = current.prepared.vault.get('[MRN_1]') ?? '';
     renderResult({ mrn, ...out });

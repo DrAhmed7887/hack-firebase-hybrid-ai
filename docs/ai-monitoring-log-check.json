@@ -1,0 +1,17 @@
+{
+  "checked": "2026-11-22",
+  "source": "Cloud Logging, log firebasevertexai.googleapis.com/activity (Firebase AI monitoring)",
+  "log_entries": 2,
+  "entries_with_placeholder_tokens": 1,
+  "placeholder_tokens_seen": [
+    "[DATE_1]",
+    "[DATE_2]",
+    "[DATE_3]",
+    "[MRN_1]",
+    "[NAME_1]",
+    "[NAME_2]",
+    "[PHONE_1]"
+  ],
+  "seeded_identifiers_checked": 143,
+  "seeded_identifiers_found_in_logs": []
+}

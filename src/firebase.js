@@ -63,8 +63,13 @@ function responseSchema() {
   });
 }
 
+// inferenceSource is reported by the Firebase AI Logic SDK on every response: 'in_cloud' or 'on_device'.
+// PREFER_IN_CLOUD may fall back to the device, so the app shows what actually answered instead of assuming.
+let lastCloudSource = null;
+export const getLastCloudSource = () => lastCloudSource;
 export async function cloudGenerate(request) {
   const res = await cloudModel.generateContent(request);
+  lastCloudSource = res.response.inferenceSource ?? 'not reported';
   return res.response.text();
 }
 export const hasCloud = () => !!cloudModel;
