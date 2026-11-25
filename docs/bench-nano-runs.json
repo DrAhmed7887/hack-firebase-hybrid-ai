@@ -1,4 +1,8 @@
 {
+  "date": "2026-11-25",
+  "url": "https://registry-gate-hybrid26.web.app",
+  "cloud_model": "gemini-3.5-flash-lite",
+  "browser": "desktop Chrome (same active browser instance via Kapture MCP for Run 1 and chrome-devtools-mcp for Runs 2-3)",
   "availability": "available",
   "runs": [
     {

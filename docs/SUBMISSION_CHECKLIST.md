@@ -5,7 +5,7 @@ Deadline: Mon 30 Nov 2026, 2:00 PM PT = 23:00 Valencia. Source: `docs/RULES_DEVP
 
 ## Done in the repo
 - [x] `npm test` (40 tests), `npm run bench`, `npm run bench:100` pass; `docs/bench-100-rules-only.json` committed
-- [x] CI green on main (GitHub Actions, latest pushed main build `e843057`, success; later commits are docs-only and are checked after push)
+- [x] CI green on main (GitHub Actions: `e843057` run `45519270601` and `31411af` run `45524450233` both succeeded; later commits are docs-only)
 - [x] README top shows the diagram, one number and the run command
 - [x] Apache-2.0 `LICENSE` present (GitHub reports `apache-2.0`)
 - [x] No keys, `.env.local` or debug token in the repo (`.env.local` is gitignored; only `.env.example` is tracked) (rules §6 Testing)
@@ -21,4 +21,4 @@ Deadline: Mon 30 Nov 2026, 2:00 PM PT = 23:00 Valencia. Source: `docs/RULES_DEVP
 - [ ] Update the Notion row and `now.md`
 
 ## App Check status
-- Firebase AI Logic App Check is **Basic - Enforced** (reCAPTCHA Enterprise, Replay Off) in the Firebase Console; the 102 requests of the prior 7 days were all verified. On 25 Nov 2026, HTTP 200 was verified on both `exchangeRecaptchaEnterpriseToken` and `generateContent` in a normal and an uncached isolated desktop Chrome context. The client sends the tokens (`src/firebase.js`). Headless Chrome failed the token exchange with HTTP 403 before enforcement, so judges should use desktop Chrome.
+- Firebase AI Logic App Check is **Basic - Enforced** (reCAPTCHA Enterprise, Replay Off) in the Firebase Console. On 25 Nov 2026, HTTP 200 was verified on both `exchangeRecaptchaEnterpriseToken` and `generateContent` in a normal and an uncached isolated desktop Chrome context. The client sends the tokens (`src/firebase.js`). Headless Chrome failed the token exchange with HTTP 403 before enforcement, so judges should use desktop Chrome.
