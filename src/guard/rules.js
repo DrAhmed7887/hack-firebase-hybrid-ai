@@ -67,7 +67,7 @@ export function detectByRules(text) {
   return spans;
 }
 
-// Once a name is found, mask every other occurrence of the full name and of each part (>= 3 letters).
+// Once a name is found, mask every other occurrence of the full name and of each part (>= 2 letters).
 export function propagateNames(text, spans) {
   const extra = [];
   const terms = new Set();

@@ -4,50 +4,94 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
+  <script src="/theme.js"></script>
   <title>Private Clinical Registry Gate</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
-  <header>
-    <h1>Private Clinical Registry Gate</h1>
-    <p class="lead">A registry abstractor pastes a kidney-clinic note. Identifiers are masked on this device first; only the masked text goes to a cloud Gemini model, and the call is aborted if any identifier is still in it. Synthetic notes only.</p>
-    <p class="try"><strong>Try it in 30 seconds:</strong> pick a demo note, press <em>Run local guard</em>, then <em>Send masked text</em>. If the guard blocks a note, that is the safety check working: press <em>Mask these and re-check</em>.</p>
+  <a class="skip-link" href="#main">Skip to the workbench</a>
+  <header class="topbar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" width="34" height="34" aria-hidden="true" focusable="false">
+        <path d="M16 2.5 4.5 7v8.2c0 7.1 4.6 12.2 11.5 14.3 6.9-2.1 11.5-7.2 11.5-14.3V7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <rect x="10.5" y="14" width="11" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M12.5 14v-2.5a3.5 3.5 0 0 1 7 0V14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="16" cy="18" r="1.3" fill="currentColor"/>
+      </svg>
+      <div class="brand-text">
+        <h1>Private Clinical Registry Gate</h1>
+        <p class="event-badge">#BuildHybridAI 2026 · Firebase AI Logic</p>
+      </div>
+    </div>
     <ul class="chips" id="chips" aria-label="Runtime status"></ul>
+    <button id="btn-theme" type="button" class="theme-btn" aria-pressed="false"><span class="theme-icon" aria-hidden="true">◐</span><span>Dark mode</span><span class="switch" aria-hidden="true"></span></button>
   </header>
 
-  <main>
-    <section aria-labelledby="h-input">
+  <div class="intro">
+    <p class="lead">A registry abstractor pastes a kidney-clinic note. Identifiers are masked on this device first; only the masked text goes to a cloud Gemini model, and the call is aborted if any identifier is still in it. Synthetic notes only.</p>
+    <p class="try"><strong>Try it in 30 seconds:</strong> pick a demo note, press <em>Run local guard</em>, then <em>Send masked text</em>. If the guard blocks a note, that is the safety check working: press <em>Mask these and re-check</em>.</p>
+  </div>
+
+  <nav class="stepper-wrap" aria-label="Hybrid pipeline progress">
+    <ol class="stepper" id="stepper">
+      <li data-step="1" data-state="active" aria-current="step"><span class="step-mark" aria-hidden="true">●</span><span class="step-label">1. Local Guard (On-Device)</span><span class="step-state">Active</span></li>
+      <li data-step="2" data-state="pending"><span class="step-mark" aria-hidden="true">○</span><span class="step-label">2. Leak Gate &amp; Cloud Extract</span><span class="step-state">Pending</span></li>
+      <li data-step="3" data-state="pending"><span class="step-mark" aria-hidden="true">○</span><span class="step-label">3. Vault Rehydrate &amp; KDIGO/FHIR</span><span class="step-state">Pending</span></li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <section aria-labelledby="h-input" class="panel">
       <h2 id="h-input">1. Note (stays on this device)</h2>
-      <div class="row">
-        <label>Demo note <select id="case-select"></select></label>
-        <label class="grow">Extra terms to mask (comma separated) <input id="extra-terms" type="text" autocomplete="off" placeholder="e.g. a name the guard missed"></label>
+      <div class="toolbar">
+        <label class="field">Demo note <select id="case-select"></select></label>
+        <div class="field grow">
+          <label for="extra-terms">Extra terms to mask (comma separated)</label>
+          <div class="input-group">
+            <input id="extra-terms" type="text" autocomplete="off" placeholder="e.g. a name the guard missed">
+            <button type="button" class="icon-btn" id="btn-clear-terms" aria-label="Clear extra terms">×</button>
+          </div>
+        </div>
+        <span id="note-count" class="count-badge"></span>
+      </div>
+      <div class="presets" role="group" aria-label="Quick scenarios">
+        <span class="presets-label">Quick scenarios</span>
+        <button type="button" class="preset" data-case="case-00" aria-pressed="false" title="Passes the guard in rules-only mode">Clean pass</button>
+        <button type="button" class="preset" data-case="case-08" aria-pressed="false" title="A name only in prose: the guard blocks the cloud call">Blocked prose name</button>
+        <button type="button" class="preset" data-case="case-04" aria-pressed="false" title="Mentions NSAIDs: shows the nephrotoxin alert once the guard passes">NSAID warning</button>
+        <button type="button" class="preset" data-case="pmc-01" aria-pressed="false" title="Real PubMed Central open-access text">PMC open-access note</button>
       </div>
       <p id="pmc-attrib" class="pill-row" hidden></p>
       <textarea id="note" rows="11" spellcheck="false" aria-label="Clinical note"></textarea>
-      <p class="row">
+      <div class="actions">
         <button id="btn-nano" type="button" hidden></button>
         <button id="btn-guard" type="button" class="primary">Run local guard</button>
         <progress id="guard-busy" class="busy" aria-label="Checking the note on this device" hidden></progress>
-      </p>
+      </div>
       <p id="nano-msg" class="muted" role="status"></p>
     </section>
 
-    <section aria-labelledby="h-preview" id="preview" hidden>
+    <section aria-labelledby="h-preview" id="preview" class="panel reveal" hidden>
       <h2 id="h-preview">2. What will leave this device</h2>
+      <div id="mask-summary" class="mask-summary" role="group" aria-label="Masking summary"></div>
       <div class="cols">
-        <div>
-          <h3>Original, with what was found</h3>
+        <div class="pane" tabindex="0" role="region" aria-labelledby="h-orig">
+          <div class="pane-head"><h3 id="h-orig">Original, with what was found</h3></div>
           <pre id="orig" class="note" aria-label="Original note with highlighted identifiers"></pre>
           <p class="legend"><mark data-s="rule">rule</mark> <mark data-s="device">on-device model</mark> <mark data-s="manual">manual</mark></p>
         </div>
-        <div>
-          <h3>Masked text (the only thing sent)</h3>
+        <div class="pane" tabindex="0" role="region" aria-labelledby="h-masked">
+          <div class="pane-head">
+            <h3 id="h-masked">Masked text (the only thing sent)</h3>
+            <button type="button" id="btn-copy-masked" class="small">Copy masked text</button>
+            <span id="copy-status" class="copy-status" role="status"></span>
+          </div>
           <pre id="masked" class="note" aria-label="Masked text that would be sent"></pre>
         </div>
       </div>
       <p id="verdict" role="status" class="verdict"></p>
-      <div id="fix-box" class="fix-box" hidden>
+      <div id="fix-box" class="fix-box reveal" hidden>
         <p id="fix-msg"></p>
         <button id="btn-fix" type="button" class="primary">Mask these and re-check</button>
       </div>
@@ -64,35 +108,53 @@
         <h3>Exact payload sent to Firebase AI Logic</h3>
         <pre id="egress-payload" class="note" aria-label="Exact outgoing payload"></pre>
       </details>
-      <p class="row"><button id="btn-send" type="button" class="primary" disabled>Send masked text to the cloud model</button>
-        <progress id="send-busy" class="busy" aria-label="Waiting for the cloud model" hidden></progress></p>
+      <div class="actions">
+        <button id="btn-send" type="button" class="primary" disabled>Send masked text to the cloud model</button>
+        <progress id="send-busy" class="busy" aria-label="Waiting for the cloud model" hidden></progress>
+      </div>
     </section>
 
-    <section aria-labelledby="h-result" id="result" hidden>
+    <section aria-labelledby="h-result" id="result" class="panel reveal" hidden>
       <h2 id="h-result">3. Registry fields (rehydrated locally)</h2>
       <p id="backend-note" class="muted"></p>
-      <table id="result-table"><tbody></tbody></table>
+      <div id="kpi-strip" class="kpi-strip" role="group" aria-label="Clinical summary"></div>
+      <div tabindex="0" role="region" aria-label="Extracted registry fields" class="table-wrapper">
+        <table id="result-table" class="result-table"><tbody></tbody></table>
+      </div>
       <div id="risk-matrix" aria-label="KDIGO 2024 CKD risk heatmap"></div>
-      <p class="row">
+      <div class="actions export-bar">
         <button id="btn-json" type="button">Download JSON</button>
         <button id="btn-csv" type="button">Download CSV</button>
         <button id="btn-fhir" type="button">Download FHIR R4 Bundle</button>
-      </p>
+        <button id="btn-copy-fhir" type="button">Copy FHIR JSON</button>
+        <span id="fhir-copy-status" class="copy-status" role="status"></span>
+      </div>
       <details id="fhir-details" class="inspector">
         <summary>Live FHIR R4 preview</summary>
         <pre id="fhir-preview" class="note" aria-label="FHIR R4 bundle preview"></pre>
       </details>
     </section>
 
-    <section aria-labelledby="h-bench">
+    <section aria-labelledby="h-bench" class="panel">
       <h2 id="h-bench">Benchmark: 20 seeded synthetic notes</h2>
       <p class="muted">Runs every note through the same pipeline in the mode shown above and counts what happened. Numbers are computed live, not stored.</p>
-      <p><button id="btn-bench" type="button">Run 20 cases</button></p>
-      <div id="bench-out" role="status"></div>
+      <div class="actions">
+        <button id="btn-bench" type="button">Run 20 cases</button>
+        <progress id="bench-busy" class="busy" aria-label="Running the benchmark" hidden></progress>
+      </div>
+      <p id="bench-msg" class="sr-only" role="status"></p>
+      <div id="bench-out"></div>
     </section>
   </main>
 
   <footer>Synthetic data only. Not a de-identification tool and not validated for clinical use. Apache-2.0.</footer>
+
+  <dialog id="confirm-dialog" closedby="any" aria-labelledby="confirm-title">
+    <div class="dialog-head"><h1 id="confirm-title"></h1><button type="button" class="icon-btn" id="confirm-x" aria-label="Close dialog">×</button></div>
+    <p id="confirm-body"></p>
+    <form method="dialog" class="dialog-actions"><button value="cancel" autofocus>Cancel</button><button value="confirm" class="primary" id="confirm-ok">Continue</button></form>
+  </dialog>
+
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>

@@ -1,6 +1,22 @@
 {
   "hosting": {
     "public": "dist",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          { "key": "X-Content-Type-Options", "value": "nosniff" },
+          { "key": "X-Frame-Options", "value": "DENY" },
+          { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+          { "key": "Permissions-Policy", "value": "camera=(), geolocation=(), microphone=()" },
+          { "key": "Cross-Origin-Opener-Policy", "value": "same-origin-allow-popups" },
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com https://recaptcha.net https://apis.google.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://*.googleapis.com https://www.google.com https://www.gstatic.com https://recaptcha.net; frame-src https://www.google.com https://recaptcha.net; img-src 'self' data: https://www.gstatic.com https://www.google.com; font-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"
+          }
+        ]
+      }
+    ]
   }
 }

@@ -3,7 +3,7 @@
 **Entry:** Private Clinical Registry Gate (Firebase AI Logic Hybrid Inference)  
 **Track:** Web / Chrome Extension & Web App  
 **Deadline:** Monday 30 November 2026, 14:00 PT (23:00 Valencia time)  
-**Status:** Phase 1 (Architecture & Research Completed)
+**Status:** Submitted & Deployed (v2 UI + Hybrid AI Logic)
 
 ---
 
@@ -34,13 +34,19 @@
 
 ---
 
-## 3. Built architecture (as of 19 Nov 2026)
+## 3. Built architecture (as of 25 Nov 2026)
 - **Local guard:** deterministic rules (MRN, dates, phone, email, names after a title or label) plus Firebase AI Logic `ONLY_ON_DEVICE` (Gemini Nano) for names in free prose. Detected names are masked everywhere they occur. If Nano is unavailable the app says so and runs rules-only; it never falls back to the cloud with raw text.
 - **Preview + leak guard:** the abstractor sees what will leave the device. `src/cloud/egress.js` scans the exact outgoing request (against the note's seeded identifiers and against residual patterns) and throws before the cloud call if anything is left.
 - **Cloud call:** `PREFER_IN_CLOUD` on a free Gemini model, masked text only, JSON schema (CKD stage, eGFR, albuminuria category, evidence quote). Code checks the stage against the eGFR (KDIGO cut-points).
-- **Rehydration:** tokens in the returned JSON are replaced from an in-memory vault; export is JSON or CSV.
-- **App Check:** reCAPTCHA Enterprise provider when a Firebase config is present; no debug token in code.
-- **Cut:** FHIR, REDCap, Chrome extension, 100-case runner.
+- **Rehydration:** tokens in the returned JSON are replaced from an in-memory vault; export is JSON, CSV or a FHIR R4 collection Bundle.
+- **KDIGO 2024 heatmap + NSAID alert:** `src/kdigo.js` places the eGFR stage and albuminuria category on the KDIGO 2024 risk matrix (heatmap tiers Low to Very High, with monitoring frequency) and raises a nephrotoxin alert when the note mentions an NSAID (keyword match, negations not interpreted; evidence in `docs/EVIDENCE_LITERATURE.md`).
+- **FHIR R4 export:** `src/fhir.js` builds a collection Bundle (Patient, eGFR and albuminuria Observations with LOINC codes, CKD-stage Condition with a SNOMED CT code) locally from the rehydrated result.
+- **Hybrid Egress Payload Inspector:** shows the exact masked request that leaves the device and the SDK-reported `inferenceSource` for each step (`on_device` for name detection, `in_cloud` for extraction), plus a SHA-256 of the outgoing payload.
+- **Benchmarks:** 100-case synthetic rules-only run (`npm run bench:100`, the headline) and 50 real PMC nephrology texts with synthetic identifiers (`npm run bench:pmc`, rules-only; real-cloud run audited by hand against a clinical key, `docs/pmc50-key-audit.json`, `node scripts/audit-pmc-key.mjs`).
+- **UI:** native `<dialog>` confirmations (no `window.confirm`), light/dark theme toggle.
+- **Hosting:** `firebase.json` sets a Content-Security-Policy limiting `connect-src`, plus security headers.
+- **App Check:** reCAPTCHA Enterprise provider when a Firebase config is present; no debug token in code. The client sends tokens; the console is not set to enforce them unless the owner turns that on.
+- **Cut:** REDCap, Chrome extension.
 
 ## 4. Real versus mocked
 - With no Firebase config (this repo's default) the cloud backend is a labelled MOCK regex stand-in, App Check is off, and Gemini Nano is used only if Chrome offers it. Chrome on the development Mac reported Nano ready on 19 Nov 2026 (despite 8 GB RAM, contrary to the hardware note in CLAUDE.md), so the app ran with the on-device model there; CI never runs it.

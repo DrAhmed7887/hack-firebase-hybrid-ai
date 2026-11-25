@@ -26,19 +26,139 @@ let nano = 'unavailable'; // availability string from the Prompt API
 let nanoReady = false; // true once the device model can be called
 let current = null; // { prepared, seeded, text }
 
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+function icon(glyph) {
+  const s = el('span', 'chip-icon', glyph);
+  s.setAttribute('aria-hidden', 'true');
+  return s;
+}
 function chip(text, kind) {
   const li = document.createElement('li');
-  li.textContent = text;
   li.dataset.k = kind;
+  li.append(icon(kind === 'ok' ? '✓' : '⚠'), el('span', null, text));
   return li;
 }
 function renderChips() {
-  const el = $('chips');
-  el.replaceChildren(
+  const appCheckText = status.appCheck
+    ? 'App Check: on (reCAPTCHA)'
+    : status.configured
+      ? 'App Check: off (no reCAPTCHA site key)'
+      : 'App Check: off (no Firebase config in this build)';
+  $('chips').replaceChildren(
     chip(nanoReady ? 'On-device model: Gemini Nano ready' : `On-device model: not available (${nano}). Rules-only mode`, nanoReady ? 'ok' : 'warn'),
     chip(`Cloud: ${backendLabel}`, hasCloud() ? 'ok' : 'warn'),
-    chip(status.appCheck ? 'App Check: on (reCAPTCHA)' : 'App Check: off (no Firebase config in this build)', status.appCheck ? 'ok' : 'warn'),
+    chip(appCheckText, status.appCheck ? 'ok' : 'warn'),
   );
+}
+
+// ---- Theme: two-state toggle over the color-scheme meta tag (/theme.js applies the saved value before first paint)
+const osDark = matchMedia('(prefers-color-scheme: dark)');
+const schemeMeta = document.querySelector('meta[name="color-scheme"]');
+const renderedDark = () => (schemeMeta.content === 'dark' ? true : schemeMeta.content === 'light' ? false : osDark.matches);
+const syncThemeBtn = () => $('btn-theme').setAttribute('aria-pressed', String(renderedDark()));
+function readStoredScheme() {
+  try {
+    const v = localStorage.getItem('color-scheme');
+    return v === 'light' || v === 'dark' ? v : null;
+  } catch {
+    return null;
+  }
+}
+function toggleTheme() {
+  const target = renderedDark() ? 'light' : 'dark';
+  const osScheme = osDark.matches ? 'dark' : 'light';
+  try {
+    if (target === osScheme) localStorage.removeItem('color-scheme');
+    else localStorage.setItem('color-scheme', target);
+  } catch { /* storage blocked: the choice still applies to this page */ }
+  schemeMeta.content = target === osScheme ? 'light dark' : target;
+  syncThemeBtn();
+}
+function setupTheme() {
+  $('btn-theme').onclick = toggleTheme;
+  // Another tab changed the choice: follow it. A matchMedia change only refreshes the button, never the stored value.
+  window.addEventListener('storage', (e) => {
+    if (e.key !== null && e.key !== 'color-scheme') return;
+    schemeMeta.content = readStoredScheme() ?? 'light dark';
+    syncThemeBtn();
+  });
+  osDark.addEventListener('change', syncThemeBtn);
+  syncThemeBtn();
+}
+
+// ---- Pipeline stepper: states pending | active | done | blocked
+const STEP_TEXT = { pending: 'Pending', active: 'Active', done: 'Done', blocked: 'Blocked' };
+const STEP_GLYPH = { pending: '○', active: '●', done: '✓', blocked: '✕' };
+function setStepper(states) {
+  document.querySelectorAll('#stepper li').forEach((li, i) => {
+    const st = states[i];
+    li.dataset.state = st;
+    li.querySelector('.step-mark').textContent = STEP_GLYPH[st];
+    li.querySelector('.step-state').textContent = STEP_TEXT[st];
+    if (st === 'active') li.setAttribute('aria-current', 'step');
+    else li.removeAttribute('aria-current');
+  });
+}
+
+// ---- Section entry/exit: CSS @starting-style + display transitions where supported, [data-closing] fallback elsewhere
+let displayTransitions;
+function canTransitionDisplay() {
+  if (displayTransitions === undefined) {
+    displayTransitions = typeof CSS !== 'undefined' && CSS.supports('transition-behavior: allow-discrete') && typeof CSSStartingStyleRule !== 'undefined';
+  }
+  return displayTransitions;
+}
+function setShown(node, show) {
+  if (show) {
+    node.removeAttribute('data-closing');
+    node.hidden = false;
+    return;
+  }
+  if (node.hidden) return;
+  if (canTransitionDisplay() || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    node.hidden = true;
+    return;
+  }
+  node.dataset.closing = '';
+  setTimeout(() => {
+    if (node.hasAttribute('data-closing')) {
+      node.hidden = true;
+      node.removeAttribute('data-closing');
+    }
+  }, 200);
+}
+
+// ---- Native <dialog> confirmation (replaces window.confirm)
+function setupDialog() {
+  const d = $('confirm-dialog');
+  $('confirm-x').onclick = () => d.close();
+  if (!('closedBy' in HTMLDialogElement.prototype)) {
+    // No closedby="any" support: a click on the backdrop lands on the dialog element itself, outside its box.
+    d.addEventListener('click', (e) => {
+      const r = d.getBoundingClientRect();
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) d.close();
+    });
+  }
+}
+function askConfirm({ title, body, okLabel = 'Continue' }) {
+  const d = $('confirm-dialog');
+  if (d.open) return Promise.resolve(false);
+  $('confirm-title').textContent = title;
+  $('confirm-body').textContent = body;
+  $('confirm-ok').textContent = okLabel;
+  return new Promise((resolve) => {
+    d.addEventListener('close', () => {
+      const ok = d.returnValue === 'confirm';
+      d.returnValue = '';
+      resolve(ok);
+    }, { once: true });
+    d.showModal();
+  });
 }
 
 async function setupNano() {
@@ -144,18 +264,18 @@ async function guardSteps(text) {
   const seeded = seededFor(text);
   const findings = scanForLeaks(prepared.masked, seeded);
   current = { prepared, seeded, text };
-  $('preview').hidden = false;
-  $('result').hidden = true;
+  setShown($('preview'), true);
+  setShown($('result'), false);
+  renderMaskSummary(prepared);
   $('orig').replaceChildren(highlight(text, prepared.spans));
   const left = findings.length ? visibleSeededTerms(prepared.masked, seeded) : [];
   $('masked').replaceChildren(highlight(prepared.masked, leakSpans(prepared.masked, left)));
-  const v = $('verdict');
   renderEgress(prepared.masked, seeded, findings);
-  $('fix-box').hidden = true;
+  setShown($('fix-box'), false);
   if (findings.length) {
     const kinds = [...new Set(findings.map((f) => f.type))].join(', ');
-    v.dataset.k = 'bad';
-    v.textContent = `Blocked: the masked text still contains ${findings.length} identifier(s) (${kinds}). Nothing was sent.`;
+    let msg = `Blocked: the masked text still contains ${findings.length} identifier(s) (${kinds}). Nothing was sent.`;
+    setStepper(['done', 'blocked', 'pending']);
     if (left.length) {
       $('fix-msg').textContent = `The guard checks this demo note against its seeded test list. ${nanoReady ? '' : 'Without the on-device model, rules miss names inside sentences. '}Still visible (outlined in red): ${left.join(', ')}.`;
       $('btn-fix').onclick = () => {
@@ -163,18 +283,53 @@ async function guardSteps(text) {
         $('extra-terms').value = [...new Set([...have, ...left])].join(', ');
         runGuard();
       };
-      $('fix-box').hidden = false;
+      setShown($('fix-box'), true);
     } else {
-      v.textContent += ' Add the missing term in "Extra terms to mask" above and run the guard again.';
+      msg += ' Add the missing term in "Extra terms to mask" above and run the guard again.';
     }
+    setVerdict('bad', msg);
     $('btn-send').disabled = true;
   } else {
-    v.dataset.k = 'ok';
-    v.textContent = seeded.length
+    setStepper(['done', 'active', 'pending']);
+    setVerdict('ok', seeded.length
       ? `Guard passed: ${prepared.vault.size} identifier(s) masked; none of this note’s seeded identifiers or identifier patterns remain.`
-      : `Pattern check passed: ${prepared.vault.size} identifier(s) masked. This is not a seeded demo note, so names that only appear in prose are NOT checked. Read the masked text yourself before sending.`;
+      : `Pattern check passed: ${prepared.vault.size} identifier(s) masked. This is not a seeded demo note, so names that only appear in prose are NOT checked. Read the masked text yourself before sending.`);
     $('btn-send').disabled = false;
   }
+}
+
+function setVerdict(kind, text) {
+  const v = $('verdict');
+  v.dataset.k = kind;
+  const ic = el('span', 'v-icon', kind === 'ok' ? '✓' : '⚠');
+  ic.setAttribute('aria-hidden', 'true');
+  v.replaceChildren(ic, el('span', null, text));
+}
+
+const MASK_TYPES = ['mrn', 'date', 'phone', 'email', 'name'];
+const MASK_SOURCES = [['rule', 'rule'], ['device', 'on-device'], ['manual', 'manual']];
+function renderMaskSummary(prepared) {
+  const spans = prepared.spans;
+  const group = (label, items, key) => {
+    const g = el('div', 'ms-group');
+    g.append(el('span', 'ms-group-label', label));
+    for (const [value, text] of items) {
+      const n = spans.filter((sp) => sp[key] === value).length;
+      const p = el('span', 'ms-pill');
+      if (key === 'source') p.dataset.s = value;
+      p.dataset.n = String(n);
+      p.append(el('span', null, text), el('b', null, String(n)));
+      g.append(p);
+    }
+    return g;
+  };
+  const total = el('span', 'ms-total', `${spans.length} masked`);
+  total.append(el('small', null, ` (${prepared.vault.size} unique)`));
+  $('mask-summary').replaceChildren(
+    total,
+    group('By type', MASK_TYPES.map((t) => [t, t.toUpperCase()]), 'type'),
+    group('By source', MASK_SOURCES, 'source'),
+  );
 }
 
 let egressSeq = 0;
@@ -210,7 +365,11 @@ const sourceLabel = (s) => (s === 'in_cloud' ? 'in_cloud: Gemini in the cloud (m
 
 async function send() {
   if (!current) return;
-  if (!current.seeded.length && !confirm('This note has no seeded identifier list, so only identifier patterns were checked. Have you read the masked text and found no names left? Send it to the cloud model?')) return;
+  if (!current.seeded.length && !(await askConfirm({
+    title: 'Send without a seeded identifier list?',
+    body: 'This note has no seeded identifier list, so only identifier patterns were checked. Have you read the masked text and found no names left? Send it to the cloud model?',
+    okLabel: 'Send to cloud model',
+  }))) return;
   const btn = $('btn-send');
   btn.disabled = true;
   $('send-busy').hidden = false;
@@ -221,10 +380,12 @@ async function send() {
     const out = rehydrate(parsed, current.prepared.vault);
     const mrn = current.prepared.vault.get('[MRN_1]') ?? '';
     renderResult({ mrn, ...out });
+    setStepper(['done', 'done', 'done']);
     reveal($('result'));
   } catch (e) {
-    $('verdict').dataset.k = 'bad';
-    $('verdict').textContent = e.name === 'LeakError' ? e.message : `Cloud call failed: ${e.message}`;
+    $('egress-source').textContent = 'failed (no response)';
+    setStepper(['done', 'blocked', 'pending']);
+    setVerdict('bad', e.name === 'LeakError' ? e.message : `Cloud call failed: ${e.message}`);
   } finally {
     btn.disabled = false;
     $('send-busy').hidden = true;
@@ -234,27 +395,49 @@ async function send() {
 let lastRow = null;
 function renderResult(row) {
   lastRow = row;
-  $('result').hidden = false;
+  setShown($('result'), true);
   $('backend-note').textContent = `Backend: ${backendLabel}`;
   const tb = $('result-table').tBodies[0];
   tb.replaceChildren();
   const labels = { mrn: 'MRN (from local vault)', ckd_stage: 'CKD stage (KDIGO GFR category, derived by code from eGFR)', egfr: 'eGFR, mL/min/1.73 m²', albuminuria_category: 'Albuminuria category', evidence: 'Evidence quote', stage_check: 'Model stage vs KDIGO cut-point' };
   for (const [k, label] of Object.entries(labels)) {
     const tr = tb.insertRow();
-    tr.insertCell().textContent = label;
-    tr.insertCell().textContent = k === 'egfr' && row.egfr === null ? 'not documented (no single measured value in the note)' : String(row[k] ?? '');
+    const th = el('th', null, label);
+    th.scope = 'row';
+    tr.append(th, el('td', null, k === 'egfr' && row.egfr === null ? 'not documented (no single measured value in the note)' : String(row[k] ?? '')));
   }
+  renderKpis(row);
   renderMatrix(row);
   lastBundle = buildFhirBundle(row, row.mrn);
   $('fhir-preview').textContent = JSON.stringify(lastBundle, null, 2);
 }
 
+function kpi(label, value, sub, k) {
+  const d = el('div', 'kpi');
+  if (k) d.dataset.k = k;
+  d.append(el('span', 'kpi-label', label), el('strong', 'kpi-value', value));
+  if (sub) d.append(el('span', 'kpi-sub', sub));
+  return d;
+}
+function renderKpis(row) {
+  const risk = kdigoRiskTier(row.ckd_stage, row.albuminuria_category);
+  const agree = row.stage_by_model === undefined || row.stage_by_model === row.ckd_stage;
+  const pretty = (v) => (v === 'not_documented' ? 'not documented' : String(v));
+  $('kpi-strip').replaceChildren(
+    kpi('CKD Stage', pretty(row.ckd_stage), 'KDIGO GFR category, by code'),
+    kpi('eGFR', row.egfr === null ? 'not documented' : String(row.egfr), 'mL/min/1.73 m²'),
+    kpi('Albuminuria', pretty(row.albuminuria_category), 'KDIGO A category'),
+    kpi('KDIGO 2024 Risk Tier', risk.tier, 'GFR × albuminuria heatmap', risk.tier === 'Very High' || risk.tier === 'High' ? 'bad' : risk.tier === 'Low' ? 'ok' : ''),
+    kpi('Stage Concordance: Code vs Model', agree ? '✓ Match' : '⚠ Mismatch', `Code ${pretty(row.ckd_stage)} · Model ${pretty(row.stage_by_model ?? 'n/a')}`, agree ? 'ok' : 'bad'),
+  );
+}
+
 let lastBundle = null;
-function el(tag, cls, text) {
-  const e = document.createElement(tag);
-  if (cls) e.className = cls;
-  if (text != null) e.textContent = text;
-  return e;
+function infoCard(label, text, k) {
+  const c = el('div', 'info-card');
+  if (k) c.dataset.k = k;
+  c.append(el('span', 'kpi-label', label), el('span', null, text));
+  return c;
 }
 function renderMatrix(row) {
   const box = $('risk-matrix');
@@ -263,41 +446,59 @@ function renderMatrix(row) {
   const risk = kdigoRiskTier(stage, alb);
   const table = el('table', 'matrix');
   const head = table.createTHead().insertRow();
-  head.append(el('th', null, 'GFR \\ Albuminuria'));
-  for (const a of ALB_COLS) head.append(el('th', null, `${a} (${{ A1: '<30', A2: '30-300', A3: '>300' }[a]} mg/g)`));
+  const corner = el('th', null, 'GFR \\ Albuminuria');
+  corner.scope = 'col';
+  head.append(corner);
+  for (const a of ALB_COLS) {
+    const th = el('th', null, `${a} (${{ A1: '<30', A2: '30-300', A3: '>300' }[a]} mg/g)`);
+    th.scope = 'col';
+    head.append(th);
+  }
   const tb = table.createTBody();
   for (const g of GFR_ROWS) {
     const tr = tb.insertRow();
-    tr.append(el('th', null, `${g} (${{ G1: '≥90', G2: '60-89', G3a: '45-59', G3b: '30-44', G4: '15-29', G5: '<15' }[g]})`));
+    const rh = el('th', null, `${g} (${{ G1: '≥90', G2: '60-89', G3a: '45-59', G3b: '30-44', G4: '15-29', G5: '<15' }[g]})`);
+    rh.scope = 'row';
+    tr.append(rh);
     for (const a of ALB_COLS) {
       const tier = kdigoTierAt(g, a);
       const td = el('td', 'cell', tier);
       td.style.setProperty('--tier', TIER_COLOR[tier]);
-      if (g === stage && a === alb) { td.dataset.active = 'true'; td.title = 'This patient'; td.append(el('span', 'you', ' ◄ patient')); }
+      if (g === stage && a === alb) {
+        td.dataset.active = 'true';
+        td.title = 'This patient';
+        td.append(el('span', 'you', '◄ patient'));
+      }
       tr.append(td);
     }
   }
   const info = el('div', 'matrix-info');
-  const tierLine = el('p', 'tier-line');
-  tierLine.append(el('strong', null, 'KDIGO 2024 risk: '));
+  const tierCard = infoCard('KDIGO 2024 risk tier', '');
   const tag = el('span', 'tier-tag', risk.tier);
   tag.style.setProperty('--tier', risk.color);
-  tierLine.append(tag);
-  info.append(
-    tierLine,
-    el('p', null, `Monitoring: ${risk.monitoring}`),
-    el('p', null, `Referral: ${risk.referral}`),
-    el('p', 'muted', `Stage by code (eGFR cut-point): ${stage}. Stage by model: ${row.stage_by_model ?? 'n/a'}. ${row.stage_check ?? ''}`),
-  );
+  tierCard.lastChild.append(tag);
   const agree = row.stage_by_model === undefined || row.stage_by_model === stage;
-  info.lastChild.dataset.k = agree ? 'ok' : 'bad';
+  info.append(
+    tierCard,
+    infoCard('Monitoring', risk.monitoring),
+    infoCard('Referral', risk.referral),
+    infoCard('Stage', `By code (eGFR cut-point): ${stage}. By model: ${row.stage_by_model ?? 'n/a'}. ${row.stage_check ?? ''}`, agree ? 'ok' : 'bad'),
+  );
   const meds = current ? findNephrotoxicMeds(current.text) : [];
   if (meds.length) {
-    const w = el('p', 'warn-box', `Nephrotoxic medication mentioned in the note: ${meds.join(', ')}. Review context (current use, or advice to avoid) before acting.`);
+    const w = el('p', 'warn-box');
     w.setAttribute('role', 'alert');
+    const ic = el('span', null, '⚠');
+    ic.setAttribute('aria-hidden', 'true');
+    w.append(ic, el('span', null, `Nephrotoxic medication mentioned in the note: ${meds.join(', ')}. Review context (current use, or advice to avoid) before acting.`));
     info.append(w);
   }
-  box.replaceChildren(el('h3', null, 'KDIGO 2024 CKD risk matrix'), table, info);
+  const wrap = el('div', 'table-wrapper');
+  wrap.tabIndex = 0;
+  wrap.setAttribute('role', 'region');
+  wrap.setAttribute('aria-label', 'KDIGO 2024 risk heatmap table');
+  wrap.append(table);
+  box.replaceChildren(el('h3', null, 'KDIGO 2024 CKD risk matrix'), wrap, info);
 }
 
 function download(name, type, content) {
@@ -313,31 +514,83 @@ const csvCell = (v) => {
   return `"${t.replaceAll('"', '""')}"`;
 };
 
+function benchKpi(label, value, sub, k) {
+  return kpi(label, value, sub, k);
+}
 async function benchmark() {
   const out = $('bench-out');
-  if (hasCloud() && !confirm('This sends the 20 synthetic masked notes to the cloud model (free tier quota). Continue?')) return;
+  if (hasCloud() && !(await askConfirm({
+    title: 'Send 20 synthetic notes to the cloud model?',
+    body: 'This sends the 20 synthetic masked notes to the cloud model (free tier quota). Continue?',
+    okLabel: 'Run 20 cases',
+  }))) return;
+  const btn = $('btn-bench');
+  btn.disabled = true;
+  $('bench-busy').hidden = false;
+  $('bench-msg').textContent = 'Benchmark started.';
   out.textContent = nanoReady ? 'Running with the on-device model (about 10 seconds per note)...' : 'Running...';
-  const r = await runBench(cases, backend, nanoReady ? detectNames : undefined, (i, n) => { if (nanoReady) out.textContent = `Running with the on-device model: note ${i + 1} of ${n}...`; });
-  const mode = nanoReady ? 'on-device model + rules' : 'rules-only';
-  const summary = document.createElement('p');
-  summary.className = 'hl';
-  summary.textContent =
-    `Mode: ${mode}. ${r.identifiersMasked} of ${r.seededIdentifiers} seeded identifiers masked. ${r.casesSent} of ${r.cases} notes passed the guard and were sent; ${r.casesBlocked} were blocked. ` +
-    `Cloud payloads containing a seeded identifier: ${r.cloudPayloadsWithSeededIdentifier}. Backend: ${hasCloud() ? 'real cloud model' : 'MOCK (extraction results below are not a model result)'}.`;
-  const table = document.createElement('table');
-  const head = table.createTHead().insertRow();
-  for (const h of ['Case', 'Seeded', 'Masked', 'Left unmasked', 'Guard', 'Stage', 'eGFR', 'Albuminuria']) head.insertCell().textContent = h;
-  const tb = table.createTBody();
-  for (const row of r.rows) {
-    const tr = tb.insertRow();
-    const res = row.result;
-    const cells = [row.id, row.seeded, row.maskedOk, row.unmaskedTypes.join(', ') || '-', row.sent ? 'sent' : 'blocked',
-      res ? `${res.ckd_stage}${res.ckd_stage === row.truth.ckd_stage ? '' : ' (truth ' + row.truth.ckd_stage + ')'}` : '-',
-      res ? `${res.egfr}${res.egfr === row.truth.egfr ? '' : ' (truth ' + row.truth.egfr + ')'}` : '-',
-      res ? `${res.albuminuria_category}${res.albuminuria_category === row.truth.albuminuria_category ? '' : ' (truth ' + row.truth.albuminuria_category + ')'}` : '-'];
-    for (const c of cells) tr.insertCell().textContent = c;
+  try {
+    const r = await runBench(cases, backend, nanoReady ? detectNames : undefined, (i, n) => { if (nanoReady) out.textContent = `Running with the on-device model: note ${i + 1} of ${n}...`; });
+    const mode = nanoReady ? 'on-device model + rules' : 'rules-only';
+    const summary = el('p', 'hl',
+      `Mode: ${mode}. ${r.identifiersMasked} of ${r.seededIdentifiers} seeded identifiers masked. ${r.casesSent} of ${r.cases} notes passed the guard and were sent; ${r.casesBlocked} were blocked. ` +
+      `Cloud payloads containing a seeded identifier: ${r.cloudPayloadsWithSeededIdentifier}. Backend: ${hasCloud() ? 'real cloud model' : 'MOCK (extraction results below are not a model result)'}.`);
+    const kpis = el('div', 'bench-kpis');
+    kpis.append(
+      benchKpi('Masked', `${r.identifiersMasked} / ${r.seededIdentifiers}`, 'seeded identifiers', r.identifiersMasked === r.seededIdentifiers ? 'ok' : 'bad'),
+      benchKpi('Sent', `${r.casesSent} / ${r.cases}`, 'notes passed the guard'),
+      benchKpi('Blocked by Guard', String(r.casesBlocked), 'cloud call aborted'),
+      benchKpi('Leaked Payloads', String(r.cloudPayloadsWithSeededIdentifier), 'with a seeded identifier', r.cloudPayloadsWithSeededIdentifier === 0 ? 'ok' : 'bad'),
+    );
+    const table = el('table', 'bench-table');
+    const head = table.createTHead().insertRow();
+    for (const h of ['Case', 'Seeded', 'Masked', 'Left unmasked', 'Guard', 'Stage', 'eGFR', 'Albuminuria']) {
+      const th = el('th', null, h);
+      th.scope = 'col';
+      head.append(th);
+    }
+    const tb = table.createTBody();
+    for (const row of r.rows) {
+      const tr = tb.insertRow();
+      const res = row.result;
+      const th = el('th', null, row.id);
+      th.scope = 'row';
+      tr.append(th);
+      const cells = [row.seeded, row.maskedOk, row.unmaskedTypes.join(', ') || '-', row.sent ? 'sent' : 'blocked',
+        res ? `${res.ckd_stage}${res.ckd_stage === row.truth.ckd_stage ? '' : ' (truth ' + row.truth.ckd_stage + ')'}` : '-',
+        res ? `${res.egfr}${res.egfr === row.truth.egfr ? '' : ' (truth ' + row.truth.egfr + ')'}` : '-',
+        res ? `${res.albuminuria_category}${res.albuminuria_category === row.truth.albuminuria_category ? '' : ' (truth ' + row.truth.albuminuria_category + ')'}` : '-'];
+      cells.forEach((c, idx) => {
+        const td = tr.insertCell();
+        td.textContent = String(c);
+        if (idx === 3) td.dataset.k = row.sent ? 'ok' : 'bad';
+      });
+    }
+    const wrap = el('div', 'table-wrapper');
+    wrap.tabIndex = 0;
+    wrap.setAttribute('role', 'region');
+    wrap.setAttribute('aria-label', '20-case benchmark results');
+    wrap.append(table);
+    out.replaceChildren(summary, kpis, wrap);
+    $('bench-msg').textContent = `Benchmark finished: ${r.identifiersMasked} of ${r.seededIdentifiers} identifiers masked, ${r.cloudPayloadsWithSeededIdentifier} leaked payloads.`;
+  } finally {
+    btn.disabled = false;
+    $('bench-busy').hidden = true;
   }
-  out.replaceChildren(summary, table);
+}
+
+async function copyText(text, statusId) {
+  const out = $(statusId);
+  try {
+    if (!text) throw new Error('nothing to copy');
+    await navigator.clipboard.writeText(text);
+    out.textContent = 'Copied.';
+    out.dataset.k = 'ok';
+  } catch {
+    out.textContent = 'Copy failed: select the text and copy it manually.';
+    out.dataset.k = 'bad';
+  }
+  setTimeout(() => { out.textContent = ''; }, 3000);
 }
 
 function init() {
@@ -363,16 +616,40 @@ function init() {
     if (pmcid) p.append(pill(`${pmcid} (PMC open access)`, `https://pmc.ncbi.nlm.nih.gov/articles/${pmcid}/`));
     if (doi) p.append(pill(`doi:${doi}`, `https://doi.org/${encodeURI(doi)}`));
   };
+  const presets = [...document.querySelectorAll('.preset')];
+  const syncPresets = () => presets.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.case === sel.value)));
+  const updateCount = () => {
+    const t = $('note').value;
+    const words = t.trim() ? t.trim().split(/\s+/).length : 0;
+    $('note-count').textContent = `${t.length} chars · ${words} words`;
+  };
   const load = () => {
     const c = allNotes.find((d) => d.id === sel.value);
     $('note').value = c.text;
     showAttrib(c);
+    updateCount();
+    syncPresets();
   };
-  const reset = () => { $('preview').hidden = true; $('result').hidden = true; $('fix-box').hidden = true; current = null; };
+  const reset = () => {
+    setShown($('preview'), false);
+    setShown($('result'), false);
+    setShown($('fix-box'), false);
+    setStepper(['active', 'pending', 'pending']);
+    current = null;
+  };
   sel.onchange = () => { $('extra-terms').value = ''; load(); reset(); };
+  for (const b of presets) {
+    if (!allNotes.some((d) => d.id === b.dataset.case)) { b.hidden = true; continue; }
+    b.onclick = () => { sel.value = b.dataset.case; sel.onchange(); $('btn-guard').focus(); };
+  }
+  $('btn-clear-terms').onclick = () => { $('extra-terms').value = ''; $('extra-terms').focus(); };
   // Editing the note makes the earlier preview and result stale; a pasted note is no longer the selected PMC text.
-  $('note').addEventListener('input', () => { reset(); $('pmc-attrib').hidden = true; });
+  $('note').addEventListener('input', () => { reset(); $('pmc-attrib').hidden = true; updateCount(); presets.forEach((b) => b.setAttribute('aria-pressed', 'false')); });
   load();
+  setupTheme();
+  setupDialog();
+  $('btn-copy-masked').onclick = () => copyText(current?.prepared.masked, 'copy-status');
+  $('btn-copy-fhir').onclick = () => copyText(lastBundle && JSON.stringify(lastBundle, null, 2), 'fhir-copy-status');
   $('btn-guard').onclick = runGuard;
   $('btn-send').onclick = send;
   $('btn-bench').onclick = benchmark;

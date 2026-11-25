@@ -5,7 +5,7 @@ import { sendMaskedToCloud, buildRequest } from '../src/cloud/egress.js';
 import { LeakError, scanForLeaks } from '../src/guard/leakGuard.js';
 import { mockGenerate } from '../src/cloud/mockCloud.js';
 
-const allSeededValues = (c) => c.seeded.flatMap((i) => (i.type === 'name' ? [i.value, ...i.value.split(/[\s-]+/).filter((p) => p.length >= 3)] : [i.value]));
+const allSeededValues = (c) => c.seeded.flatMap((i) => (i.type === 'name' ? [i.value, ...i.value.split(/[\s-]+/).filter((p) => p.length >= 2)] : [i.value]));
 const contains = (payload, v) => payload.toLowerCase().includes(v.toLowerCase());
 
 // Test double ONLY: stands in for a perfect on-device model by returning the seeded names. Real Nano is not exercised in CI.

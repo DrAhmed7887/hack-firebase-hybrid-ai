@@ -1,0 +1,612 @@
+{
+  "audited": "2026-11-25",
+  "question": "most recent single patient eGFR value in mL/min/1.73 m2 (null = no single patient eGFR documented)",
+  "data": "data/pmc/pmc50.json",
+  "model_outputs_from": "docs/cloud-eval-pmc-v2.json (gemini-3.5-flash-lite via Firebase AI Logic, 22 Nov 2026, one run, seeded-name oracle masking)",
+  "method": "Manual clinical read of all 50 texts into the AUDIT table in scripts/audit-pmc-key.mjs; the script rebuilds each model output from the recorded disagreement list, checks every audited number occurs in its text, and scores. No cloud call.",
+  "caveats": [
+    "pmc-40 (range 'between 41 and 50') and pmc-46 ('eGFR: >80') are bounded values, audited as no single value; a different reader could call them documented.",
+    "Single reader (an AI agent, with script checks that each audited number occurs in its text); no clinician or second-rater adjudication. Treat the key as audited, not adjudicated.",
+    "Model outputs are one run of one model; no repeat."
+  ],
+  "summary": {
+    "cases": 50,
+    "audited_key": {
+      "single_patient_egfr_documented": 27,
+      "no_single_patient_egfr": 23,
+      "borderline_ids": [
+        "pmc-40",
+        "pmc-46"
+      ]
+    },
+    "automatic_key_vs_audited": {
+      "entries_that_are_not_the_audited_answer": 39,
+      "automatic_key_gave_a_number_where_audit_is_null": 23,
+      "automatic_key_number_differs_from_audited_number": 16,
+      "model_matches_automatic_key": 9
+    },
+    "model_outputs": {
+      "number": 25,
+      "not_documented": 25
+    },
+    "audited_accuracy": {
+      "correct": 46,
+      "of": 50,
+      "percent": 92,
+      "documented_cases": {
+        "correct": 24,
+        "of": 27
+      },
+      "null_cases_answered_not_documented": {
+        "correct": 22,
+        "of": 23
+      }
+    },
+    "errors": {
+      "missed_documented_value": [
+        "pmc-02",
+        "pmc-04",
+        "pmc-37"
+      ],
+      "wrong_number": [],
+      "number_for_cohort_or_threshold": [
+        "pmc-07"
+      ]
+    },
+    "sensitivity": {
+      "if_pmc40_and_pmc46_counted_as_documented": "44 of 50 (the model answered 'not documented' for both)"
+    }
+  },
+  "cases": [
+    {
+      "id": "pmc-01",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 42.48,
+      "egfr_ref_automatic": 28,
+      "key_changed": true,
+      "model_output": 42.48,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 28.00 (May 2023) then 42.48 (Jan 2026); most recent 42.48"
+    },
+    {
+      "id": "pmc-02",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 9,
+      "egfr_ref_automatic": 9,
+      "key_changed": false,
+      "model_output": null,
+      "correct": false,
+      "error": "missed_documented_value",
+      "basis": "single patient value written as approximate: 'estimated glomerular filtration rate ~9'"
+    },
+    {
+      "id": "pmc-03",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 46.3,
+      "egfr_ref_automatic": 46.3,
+      "key_changed": false,
+      "model_output": 46.3,
+      "correct": true,
+      "error": null,
+      "basis": "single patient value: eGFR nadir 46.3 on 24 Dec, last eGFR in the text"
+    },
+    {
+      "id": "pmc-04",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 42.34,
+      "egfr_ref_automatic": 73.2,
+      "key_changed": true,
+      "model_output": null,
+      "correct": false,
+      "error": "missed_documented_value",
+      "basis": "serial patient values: baseline 73.2, then 42.34; later only a fluctuation range (24.65-57.3); most recent single value 42.34"
+    },
+    {
+      "id": "pmc-05",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 19,
+      "egfr_ref_automatic": 19,
+      "key_changed": false,
+      "model_output": 19,
+      "correct": true,
+      "error": null,
+      "basis": "single patient value 19"
+    },
+    {
+      "id": "pmc-06",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 79.7,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "cohort mean eGFR 79.7 +/- 20.7 (cross-sectional study)"
+    },
+    {
+      "id": "pmc-07",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 30,
+      "key_changed": true,
+      "model_output": 52,
+      "correct": false,
+      "error": "number_for_cohort_or_threshold",
+      "basis": "cohort median eGFR 52 (IQR 38-68) at COVID-19 diagnosis"
+    },
+    {
+      "id": "pmc-08",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 62.6,
+      "egfr_ref_automatic": 113.3,
+      "key_changed": true,
+      "model_output": 62.6,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 113.28, 63.58, then 62.6 at last follow-up; most recent 62.6"
+    },
+    {
+      "id": "pmc-09",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 30,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "baseline eGFR 'below 30' only (threshold)"
+    },
+    {
+      "id": "pmc-10",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 80,
+      "egfr_ref_automatic": 65,
+      "key_changed": true,
+      "model_output": 80,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 65 then 80"
+    },
+    {
+      "id": "pmc-11",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 15,
+      "egfr_ref_automatic": 9,
+      "key_changed": true,
+      "model_output": 15,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 9 then 15"
+    },
+    {
+      "id": "pmc-12",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 21,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "cohort result: 'early eGFR dip in 21% of patients'; no patient value"
+    },
+    {
+      "id": "pmc-13",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 35.69,
+      "egfr_ref_automatic": 30,
+      "key_changed": true,
+      "model_output": 35.69,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 26.95 then 35.69"
+    },
+    {
+      "id": "pmc-14",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 26,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "cohort outcome ('eGFR remained stable'); no patient value"
+    },
+    {
+      "id": "pmc-15",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 44.9,
+      "egfr_ref_automatic": 36.4,
+      "key_changed": true,
+      "model_output": 44.9,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 36.4 then 44.9"
+    },
+    {
+      "id": "pmc-16",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 49,
+      "egfr_ref_automatic": 49,
+      "key_changed": false,
+      "model_output": 49,
+      "correct": true,
+      "error": null,
+      "basis": "single patient value 49"
+    },
+    {
+      "id": "pmc-17",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 60,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "donor cohort means (GFR 74.6 to 89.8 on renography); inclusion range 60-89"
+    },
+    {
+      "id": "pmc-18",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 10,
+      "egfr_ref_automatic": 19,
+      "key_changed": true,
+      "model_output": 10,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 19 then 10 at discharge"
+    },
+    {
+      "id": "pmc-19",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 42,
+      "egfr_ref_automatic": 68,
+      "key_changed": true,
+      "model_output": 42,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 68, 34, then 42 at 3 months"
+    },
+    {
+      "id": "pmc-20",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 50,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "inclusion threshold 'baseline eGFR greater than 50'"
+    },
+    {
+      "id": "pmc-21",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 128.1,
+      "egfr_ref_automatic": 58.9,
+      "key_changed": true,
+      "model_output": 128.1,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 58.86 on admission, 128.1 at discharge"
+    },
+    {
+      "id": "pmc-22",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 29.4,
+      "egfr_ref_automatic": 79.2,
+      "key_changed": true,
+      "model_output": 29.4,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 79.2 then 29.4"
+    },
+    {
+      "id": "pmc-23",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 107,
+      "egfr_ref_automatic": 107,
+      "key_changed": false,
+      "model_output": 107,
+      "correct": true,
+      "error": null,
+      "basis": "single patient value 107"
+    },
+    {
+      "id": "pmc-24",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 60,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "donor cohort: 'decline below 60 in 8 donors' (threshold)"
+    },
+    {
+      "id": "pmc-25",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 10,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "eGFRdiff (cystatin C minus creatinine eGFR) cohort strata; no patient eGFR"
+    },
+    {
+      "id": "pmc-26",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 12.1,
+      "egfr_ref_automatic": 12.1,
+      "key_changed": false,
+      "model_output": 12.1,
+      "correct": true,
+      "error": null,
+      "basis": "single patient value 12.1"
+    },
+    {
+      "id": "pmc-27",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 45.4,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "cohort medians (SPK 45.4 to 55.5; LK 38.8 to 46.3)"
+    },
+    {
+      "id": "pmc-28",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 18,
+      "egfr_ref_automatic": 57,
+      "key_changed": true,
+      "model_output": 18,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 57 then 'approximately 18' (written as approximate)"
+    },
+    {
+      "id": "pmc-29",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 38,
+      "egfr_ref_automatic": 28,
+      "key_changed": true,
+      "model_output": 38,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 28 then 38 at 8 months"
+    },
+    {
+      "id": "pmc-30",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 60,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "cohort percentage: '50% had CKD (eGFR < 60)'"
+    },
+    {
+      "id": "pmc-31",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 15,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "inclusion threshold (baseline eGFR >= 15)"
+    },
+    {
+      "id": "pmc-32",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 40,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "trial protocol; eGFR only as an endpoint definition (decline >= 40%)"
+    },
+    {
+      "id": "pmc-33",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 66,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "cohort split point (eGFR <= 66)"
+    },
+    {
+      "id": "pmc-34",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 82,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "cohort baseline mean 82.0 +/- 22.0"
+    },
+    {
+      "id": "pmc-35",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 114,
+      "egfr_ref_automatic": 114,
+      "key_changed": false,
+      "model_output": 114,
+      "correct": true,
+      "error": null,
+      "basis": "single patient value 114"
+    },
+    {
+      "id": "pmc-36",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 10,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "four-patient chart review; no eGFR value stated (eGFR = 10 is only the dialysis projection point)"
+    },
+    {
+      "id": "pmc-37",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 79,
+      "egfr_ref_automatic": 79,
+      "key_changed": false,
+      "model_output": null,
+      "correct": false,
+      "error": "missed_documented_value",
+      "basis": "single patient value written as approximate: 'approximately 79' (CKD-EPI 2021)"
+    },
+    {
+      "id": "pmc-38",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 40,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "cohort percentages (19% had >30% decline); no patient value"
+    },
+    {
+      "id": "pmc-39",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 4,
+      "egfr_ref_automatic": 4,
+      "key_changed": false,
+      "model_output": 4,
+      "correct": true,
+      "error": null,
+      "basis": "single patient value 4"
+    },
+    {
+      "id": "pmc-40",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 41,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "range only: 'remained between 41 and 50' (borderline: a bounded range, not a single value)"
+    },
+    {
+      "id": "pmc-41",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 61,
+      "egfr_ref_automatic": 32.5,
+      "key_changed": true,
+      "model_output": 61,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 32.5 then 61 after recovery"
+    },
+    {
+      "id": "pmc-42",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 48.12,
+      "egfr_ref_automatic": 35,
+      "key_changed": true,
+      "model_output": 48.12,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 20.27 then 48.12 after 36 weeks"
+    },
+    {
+      "id": "pmc-43",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 15,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "cohort means 40.1, 41.3, 40.7; inclusion range 15-60"
+    },
+    {
+      "id": "pmc-44",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 60,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "background statistic: 'discharge eGFR below 60' (threshold)"
+    },
+    {
+      "id": "pmc-45",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 16,
+      "egfr_ref_automatic": 16,
+      "key_changed": false,
+      "model_output": 16,
+      "correct": true,
+      "error": null,
+      "basis": "single patient value 16"
+    },
+    {
+      "id": "pmc-46",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 80,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "lower bound only: 'eGFR: >80' at 20 weeks (borderline: a censored lab value, not a single measured number)"
+    },
+    {
+      "id": "pmc-47",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 9,
+      "egfr_ref_automatic": 9,
+      "key_changed": false,
+      "model_output": 9,
+      "correct": true,
+      "error": null,
+      "basis": "single patient value 9 (creatinine clearance 12 is a different quantity)"
+    },
+    {
+      "id": "pmc-48",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 25,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "percentage: 'eGFR 25% below baseline'; no value"
+    },
+    {
+      "id": "pmc-49",
+      "class": "no_single_patient_egfr",
+      "audited_key": null,
+      "egfr_ref_automatic": 25,
+      "key_changed": true,
+      "model_output": null,
+      "correct": true,
+      "error": null,
+      "basis": "trial protocol inclusion range 25-90"
+    },
+    {
+      "id": "pmc-50",
+      "class": "single_patient_egfr_documented",
+      "audited_key": 67.2,
+      "egfr_ref_automatic": 55,
+      "key_changed": true,
+      "model_output": 67.2,
+      "correct": true,
+      "error": null,
+      "basis": "serial patient values: 55 (2023), 69 (2024), 67.2 (2025); most recent 67.2"
+    }
+  ]
+}
