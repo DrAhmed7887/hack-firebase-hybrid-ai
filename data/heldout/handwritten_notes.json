@@ -1,0 +1,371 @@
+[
+  {
+    "id": "ho-01",
+    "style": "outpatient-progress",
+    "text": "OUTPATIENT RENAL PROGRESS NOTE\nPatient: Clara Morales (MRN: KH-849201, DOB: 1958-04-19)\nEncounter date: 2026-09-12   Attending: Dr. Arthur Bennett\n\nInterval history: Doing well on losartan 50 mg daily. Her husband Marcus brings a weekly home BP log.\nLabs today: serum creatinine 1.6 mg/dL, eGFR 39 mL/min/1.73 m2 (prior 42 on 2026-03-04). Urine ACR 210 mg/g.\nPlan: repeat BMP in 3 months; call (404) 555-0192 for cramps.",
+    "seeded": [
+      { "type": "name", "value": "Clara Morales" },
+      { "type": "mrn", "value": "KH-849201" },
+      { "type": "date", "value": "1958-04-19" },
+      { "type": "date", "value": "2026-09-12" },
+      { "type": "name", "value": "Arthur Bennett" },
+      { "type": "name", "value": "Marcus" },
+      { "type": "date", "value": "2026-03-04" },
+      { "type": "phone", "value": "(404) 555-0192" }
+    ],
+    "truth": { "ckd_stage": "G3b", "egfr": 39, "albuminuria_category": "A2" }
+  },
+  {
+    "id": "ho-02",
+    "style": "inpatient-consult",
+    "text": "NEPHROLOGY INPATIENT CONSULT\nPt: Kenneth Okafor   MR# B44109   DOB 07/11/1962\nConsult requested 08/21/2026 by Dr. Priya Nair.\n\nReason: acute-on-chronic kidney injury after taking ibuprofen for knee pain. Sister Nadia manages his pillbox.\nLab trend: baseline eGFR 52 (02/10/2026); today eGFR 27 mL/min/1.73 m2. Spot UACR 480 mg/g.\nRecommend stopping ibuprofen and checking daily creatinine.",
+    "seeded": [
+      { "type": "name", "value": "Kenneth Okafor" },
+      { "type": "mrn", "value": "B44109" },
+      { "type": "date", "value": "07/11/1962" },
+      { "type": "date", "value": "08/21/2026" },
+      { "type": "name", "value": "Priya Nair" },
+      { "type": "name", "value": "Nadia" },
+      { "type": "date", "value": "02/10/2026" }
+    ],
+    "truth": { "ckd_stage": "G4", "egfr": 27, "albuminuria_category": "A3" }
+  },
+  {
+    "id": "ho-03",
+    "style": "discharge-addendum",
+    "text": "DISCHARGE ADDENDUM — 14 August 2026\nName: Beatrice Lindqvist\nMedical Record Number: 902418\nBorn 3 November 1949. Admitted 2 August 2026 for diuresis.\nFinal labs before leaving: eGFR 47 mL/min/1.73 m2 (admission 36). Urine albumin/creatinine ratio 24 mg/g.\nSummary emailed to b.lindqvist@example.org. Follow up with Dr. Samuel Cho.",
+    "seeded": [
+      { "type": "date", "value": "14 August 2026" },
+      { "type": "name", "value": "Beatrice Lindqvist" },
+      { "type": "mrn", "value": "902418" },
+      { "type": "date", "value": "3 November 1949" },
+      { "type": "date", "value": "2 August 2026" },
+      { "type": "email", "value": "b.lindqvist@example.org" },
+      { "type": "name", "value": "Samuel Cho" }
+    ],
+    "truth": { "ckd_stage": "G3a", "egfr": 47, "albuminuria_category": "A1" }
+  },
+  {
+    "id": "ho-04",
+    "style": "comma-name-referral",
+    "text": "REFERRAL LETTER\nPatient: Alvarez, Mateo   MRN: TX-771204   DOB: 1966-01-29\nSeen by: Dr. Hannah Brooks on Sep 4, 2026.\n\nReferred for persistent microalbuminuria. Previous eGFR 68 on May 12, 2026; repeat eGFR 64 mL/min/1.73 m2. UACR 115 mg/g.\nHis daughter Lucia translates during visits. Reachable at 617-555-0133.",
+    "seeded": [
+      { "type": "name", "value": "Alvarez, Mateo" },
+      { "type": "mrn", "value": "TX-771204" },
+      { "type": "date", "value": "1966-01-29" },
+      { "type": "name", "value": "Hannah Brooks" },
+      { "type": "date", "value": "Sep 4, 2026" },
+      { "type": "date", "value": "May 12, 2026" },
+      { "type": "name", "value": "Lucia" },
+      { "type": "phone", "value": "617-555-0133" }
+    ],
+    "truth": { "ckd_stage": "G2", "egfr": 64, "albuminuria_category": "A2" }
+  },
+  {
+    "id": "ho-05",
+    "style": "telephone-triage",
+    "text": "TELEPHONE TRIAGE NOTE (2026-10-03)\nCalled Nora Gallagher (MRN NW-330912, DOB 1954-09-08) at +1 404-555-0148 regarding potassium 5.4 mmol/L.\nRecent eGFR 31 mL/min/1.73 m2 (was 34 on 2026-06-15). Urine albumin was not checked this month.\nNeighbor Liam picked up the sodium zirconium cyclosilicate prescription. Message copied to Dr. David Patel.",
+    "seeded": [
+      { "type": "date", "value": "2026-10-03" },
+      { "type": "name", "value": "Nora Gallagher" },
+      { "type": "mrn", "value": "NW-330912" },
+      { "type": "date", "value": "1954-09-08" },
+      { "type": "phone", "value": "+1 404-555-0148" },
+      { "type": "date", "value": "2026-06-15" },
+      { "type": "name", "value": "Liam" },
+      { "type": "name", "value": "David Patel" }
+    ],
+    "truth": { "ckd_stage": "G3b", "egfr": 31, "albuminuria_category": "not_documented" }
+  },
+  {
+    "id": "ho-06",
+    "style": "portal-message",
+    "text": "PATIENT PORTAL MESSAGE — 19.07.2026\nFrom: Victor Chen (MRN: VC-118204, DOB 14.02.1971)\nTo: Dr. Rachel Goldstein\n\nHi Dr. Goldstein, my wife Grace helped me upload my outside Quest lab sheet from 10.07.2026.\neGFR is 93 mL/min/1.73 m2 and urine ACR is 14 mg/g. Reply to vchen@example.org when convenient.",
+    "seeded": [
+      { "type": "date", "value": "19.07.2026" },
+      { "type": "name", "value": "Victor Chen" },
+      { "type": "mrn", "value": "VC-118204" },
+      { "type": "date", "value": "14.02.1971" },
+      { "type": "name", "value": "Rachel Goldstein" },
+      { "type": "name", "value": "Grace" },
+      { "type": "date", "value": "10.07.2026" },
+      { "type": "email", "value": "vchen@example.org" }
+    ],
+    "truth": { "ckd_stage": "G1", "egfr": 93, "albuminuria_category": "A1" }
+  },
+  {
+    "id": "ho-07",
+    "style": "clinic-summary",
+    "text": "CHRONIC KIDNEY DISEASE CLINIC\nPatient: Fatima Mansour   MRN: FM-640281   DOB: 1969-12-03\nDate of visit: 2026-08-29   Clinician: Dr. Thomas Wright\n\nBrother Bilal joined by speakerphone. Stable stage 4 diabetic nephropathy: eGFR 18 (down from 21 on 2026-02-19), UACR 1620 mg/g.\nFistula vein mapping ordered. Clinic callback number: (312) 555-0174.",
+    "seeded": [
+      { "type": "name", "value": "Fatima Mansour" },
+      { "type": "mrn", "value": "FM-640281" },
+      { "type": "date", "value": "1969-12-03" },
+      { "type": "date", "value": "2026-08-29" },
+      { "type": "name", "value": "Thomas Wright" },
+      { "type": "name", "value": "Bilal" },
+      { "type": "date", "value": "2026-02-19" },
+      { "type": "phone", "value": "(312) 555-0174" }
+    ],
+    "truth": { "ckd_stage": "G4", "egfr": 18, "albuminuria_category": "A3" }
+  },
+  {
+    "id": "ho-08",
+    "style": "lab-review",
+    "text": "LAB REVIEW ADDENDUM\nName: George Papadopoulos\nMRN: GP-550390   Birth date: 1947-05-22\nReviewed 2026-10-11 by Dr. Angela Rossi.\n\nNo new creatinine drawn this week; prior eGFR was 44 mL/min/1.73 m2 on 2026-07-01. Urine ACR 85 mg/g.\nDaughter Eleni asked whether naproxen is safe for back pain; advised against NSAIDs.",
+    "seeded": [
+      { "type": "name", "value": "George Papadopoulos" },
+      { "type": "mrn", "value": "GP-550390" },
+      { "type": "date", "value": "1947-05-22" },
+      { "type": "date", "value": "2026-10-11" },
+      { "type": "name", "value": "Angela Rossi" },
+      { "type": "date", "value": "2026-07-01" },
+      { "type": "name", "value": "Eleni" }
+    ],
+    "truth": { "ckd_stage": "G3b", "egfr": 44, "albuminuria_category": "A2" }
+  },
+  {
+    "id": "ho-09",
+    "style": "dialysis-eval",
+    "text": "PRE-DIALYSIS ACCESS CLINIC\nPatient: Amina Diallo   MRN: AD-204918   DOB: 1961-08-05\nVisit: 2026-09-24   Seen by: Dr. Benjamin Foster\n\nCousin Moussa accompanied her to vascular surgery earlier this month.\neGFR 12 mL/min/1.73 m2 (was 15 on 2026-04-10). UACR 940 mg/g. Left radiocephalic AVF maturing well.\nContact: a.diallo@example.org.",
+    "seeded": [
+      { "type": "name", "value": "Amina Diallo" },
+      { "type": "mrn", "value": "AD-204918" },
+      { "type": "date", "value": "1961-08-05" },
+      { "type": "date", "value": "2026-09-24" },
+      { "type": "name", "value": "Benjamin Foster" },
+      { "type": "name", "value": "Moussa" },
+      { "type": "date", "value": "2026-04-10" },
+      { "type": "email", "value": "a.diallo@example.org" }
+    ],
+    "truth": { "ckd_stage": "G5", "egfr": 12, "albuminuria_category": "A3" }
+  },
+  {
+    "id": "ho-10",
+    "style": "pcp-handoff",
+    "text": "PRIMARY CARE TO RENAL HANDOFF\nPatient: Walter Novak   MRN: WN-883412   DOB: 1951-03-17\nDate: 2026-08-08   Referring: Dr. Claire Hughes\n\nLongstanding hypertension, on amlodipine 10 mg. Wife Teresa tracks morning readings.\nLabs from 2026-08-02: eGFR 58 mL/min/1.73 m2, UACR 19 mg/g.\nReach patient on 206-555-0119.",
+    "seeded": [
+      { "type": "name", "value": "Walter Novak" },
+      { "type": "mrn", "value": "WN-883412" },
+      { "type": "date", "value": "1951-03-17" },
+      { "type": "date", "value": "2026-08-08" },
+      { "type": "name", "value": "Claire Hughes" },
+      { "type": "name", "value": "Teresa" },
+      { "type": "date", "value": "2026-08-02" },
+      { "type": "phone", "value": "206-555-0119" }
+    ],
+    "truth": { "ckd_stage": "G3a", "egfr": 58, "albuminuria_category": "A1" }
+  },
+  {
+    "id": "ho-11",
+    "style": "transplant-clinic",
+    "text": "POST-TRANSPLANT FOLLOW-UP (2026-09-30)\nPatient: Sonia Verma   Medical Record Number: SV-441029   DOB: 1974-11-26\nSigned by: Dr. Peter Lindholm\n\nAllograft function stable: eGFR 72 mL/min/1.73 m2 (prior 70 on 2026-05-20). Spot UACR 18 mg/g.\nSon Ravi helped coordinate lab draw before clinic. Tacrolimus trough 6.4 ng/mL.",
+    "seeded": [
+      { "type": "date", "value": "2026-09-30" },
+      { "type": "name", "value": "Sonia Verma" },
+      { "type": "mrn", "value": "SV-441029" },
+      { "type": "date", "value": "1974-11-26" },
+      { "type": "name", "value": "Peter Lindholm" },
+      { "type": "date", "value": "2026-05-20" },
+      { "type": "name", "value": "Ravi" }
+    ],
+    "truth": { "ckd_stage": "G2", "egfr": 72, "albuminuria_category": "A1" }
+  },
+  {
+    "id": "ho-12",
+    "style": "apostrophe-name",
+    "text": "OUTPATIENT CONSULTATION\nPatient: Daniel O'Connor   MRN: DO-719304   DOB: 1959-06-14\nVisit date: Oct 18, 2026   Seen by: Dr. Miriam Sato\n\nSister Fiona attended with him. Creatinine 2.4 mg/dL, eGFR 29 mL/min/1.73 m2 (baseline 33 on Jul 9, 2026).\nUrine ACR 520 mg/g. Started dapagliflozin 10 mg daily. Email: d.oconnor@example.org.",
+    "seeded": [
+      { "type": "name", "value": "Daniel O'Connor" },
+      { "type": "mrn", "value": "DO-719304" },
+      { "type": "date", "value": "1959-06-14" },
+      { "type": "date", "value": "Oct 18, 2026" },
+      { "type": "name", "value": "Miriam Sato" },
+      { "type": "name", "value": "Fiona" },
+      { "type": "date", "value": "Jul 9, 2026" },
+      { "type": "email", "value": "d.oconnor@example.org" }
+    ],
+    "truth": { "ckd_stage": "G4", "egfr": 29, "albuminuria_category": "A3" }
+  },
+  {
+    "id": "ho-13",
+    "style": "accented-name",
+    "text": "NEPHROLOGY FOLLOW-UP\nPatient: Sofía Mendoza   MRN: SM-319842   DOB: 1964-02-11\nVisit: 2026-09-15   Seen by: Dr. Karen Nguyen\n\nMother Rosa lives with her. Labs from 2026-09-10 show eGFR 55 mL/min/1.73 m2 and UACR 64 mg/g.\nContinue lisinopril 20 mg; repeat labs in 6 months.",
+    "seeded": [
+      { "type": "name", "value": "Sofía Mendoza" },
+      { "type": "mrn", "value": "SM-319842" },
+      { "type": "date", "value": "1964-02-11" },
+      { "type": "date", "value": "2026-09-15" },
+      { "type": "name", "value": "Karen Nguyen" },
+      { "type": "name", "value": "Rosa" },
+      { "type": "date", "value": "2026-09-10" }
+    ],
+    "truth": { "ckd_stage": "G3a", "egfr": 55, "albuminuria_category": "A2" }
+  },
+  {
+    "id": "ho-14",
+    "style": "med-reconciliation",
+    "text": "PHARMACY MED RECONCILIATION — 2026-10-09\nName: Yuki Takahashi   MRN: YT-502917   DOB: 1967-07-30\nReviewed with Dr. Robert Miller.\n\nHusband Kenji brought OTC bottles: confirmed no celecoxib or ibuprofen use.\neGFR 61 mL/min/1.73 m2 (prior 63 on 2026-04-22). Urine albumin/creatinine ratio 28 mg/g.",
+    "seeded": [
+      { "type": "date", "value": "2026-10-09" },
+      { "type": "name", "value": "Yuki Takahashi" },
+      { "type": "mrn", "value": "YT-502917" },
+      { "type": "date", "value": "1967-07-30" },
+      { "type": "name", "value": "Robert Miller" },
+      { "type": "name", "value": "Kenji" },
+      { "type": "date", "value": "2026-04-22" }
+    ],
+    "truth": { "ckd_stage": "G2", "egfr": 61, "albuminuria_category": "A1" }
+  },
+  {
+    "id": "ho-15",
+    "style": "prose-patient-only",
+    "text": "CLINIC NOTE 2026-10-14\nEsther Mensah (MRN EM-994120, DOB 1956-10-04) came in with her son Kwame for diabetes and CKD review.\nToday eGFR 33 mL/min/1.73 m2 (was 37 on 2026-01-19). UACR 390 mg/g.\nDr. Philip Grant adjusted empagliflozin and ordered lipid panel. Phone: (512) 555-0181.",
+    "seeded": [
+      { "type": "date", "value": "2026-10-14" },
+      { "type": "name", "value": "Esther Mensah" },
+      { "type": "mrn", "value": "EM-994120" },
+      { "type": "date", "value": "1956-10-04" },
+      { "type": "name", "value": "Kwame" },
+      { "type": "date", "value": "2026-01-19" },
+      { "type": "name", "value": "Philip Grant" },
+      { "type": "phone", "value": "(512) 555-0181" }
+    ],
+    "truth": { "ckd_stage": "G3b", "egfr": 33, "albuminuria_category": "A3" }
+  },
+  {
+    "id": "ho-16",
+    "style": "clean-rules-pass",
+    "text": "RENAL FUNCTION SUMMARY\nPatient: Pauline Dubois   MRN: PD-661205   DOB: 1945-12-21\nVisit date: 2026-09-02   Seen by: Dr. Martin Weber\n\nStable elderly CKD without proteinuria. eGFR 51 mL/min/1.73 m2 (prior 53 on 2026-03-11). Urine ACR 9 mg/g.\nLives independently; no NSAID use reported. Call (305) 555-0166 with lab questions.",
+    "seeded": [
+      { "type": "name", "value": "Pauline Dubois" },
+      { "type": "mrn", "value": "PD-661205" },
+      { "type": "date", "value": "1945-12-21" },
+      { "type": "date", "value": "2026-09-02" },
+      { "type": "name", "value": "Martin Weber" },
+      { "type": "date", "value": "2026-03-11" },
+      { "type": "phone", "value": "(305) 555-0166" }
+    ],
+    "truth": { "ckd_stage": "G3a", "egfr": 51, "albuminuria_category": "A1" }
+  },
+  {
+    "id": "ho-17",
+    "style": "clean-rules-pass",
+    "text": "HYPERTENSION & KIDNEY CLINIC\nName: Samuel Boateng\nMedical Record Number: SB-408721\nDate of birth: 1970-03-09   Encounter: 2026-10-01   Attending: Dr. Evelyn Carter\n\nNo new complaints. eGFR 86 mL/min/1.73 m2 (2026-02-05 was 88). UACR 42 mg/g.\nEmailed lab copy to s.boateng@example.org.",
+    "seeded": [
+      { "type": "name", "value": "Samuel Boateng" },
+      { "type": "mrn", "value": "SB-408721" },
+      { "type": "date", "value": "1970-03-09" },
+      { "type": "date", "value": "2026-10-01" },
+      { "type": "name", "value": "Evelyn Carter" },
+      { "type": "date", "value": "2026-02-05" },
+      { "type": "email", "value": "s.boateng@example.org" }
+    ],
+    "truth": { "ckd_stage": "G2", "egfr": 86, "albuminuria_category": "A2" }
+  },
+  {
+    "id": "ho-18",
+    "style": "ed-follow-up",
+    "text": "POST-ED RENAL CHECK — 2026-10-19\nPatient: Carmen Serrano   MRN: CS-129044   DOB: 1953-01-16\nSeen by: Dr. Jonathan Price\n\nSeen in ED on 2026-10-15 for gout flare; brother Diego says she took diclofenac for 3 days.\nCreatinine rose from 1.7 to 2.6 mg/dL; eGFR now 21 mL/min/1.73 m2 (was 33). UACR not documented.\nSwitched to low-dose colchicine and scheduled repeat BMP in 48 hours.",
+    "seeded": [
+      { "type": "date", "value": "2026-10-19" },
+      { "type": "name", "value": "Carmen Serrano" },
+      { "type": "mrn", "value": "CS-129044" },
+      { "type": "date", "value": "1953-01-16" },
+      { "type": "name", "value": "Jonathan Price" },
+      { "type": "date", "value": "2026-10-15" },
+      { "type": "name", "value": "Diego" }
+    ],
+    "truth": { "ckd_stage": "G4", "egfr": 21, "albuminuria_category": "not_documented" }
+  },
+  {
+    "id": "ho-19",
+    "style": "no-egfr-note",
+    "text": "INITIAL NEPHROLOGY INTAKE\nPatient: Harriet Sinclair   MRN: HS-732190   DOB: 1949-09-27\nVisit date: 2026-10-20   Seen by: Dr. Omar Farooq\n\nNephew Simon brought old clinic binders without recent chemistry panels.\nNo eGFR or creatinine documented in today's records; outside lab draw ordered for next week.\nUACR 140 mg/g from July. Callback: (415) 555-0122.",
+    "seeded": [
+      { "type": "name", "value": "Harriet Sinclair" },
+      { "type": "mrn", "value": "HS-732190" },
+      { "type": "date", "value": "1949-09-27" },
+      { "type": "date", "value": "2026-10-20" },
+      { "type": "name", "value": "Omar Farooq" },
+      { "type": "name", "value": "Simon" },
+      { "type": "phone", "value": "(415) 555-0122" }
+    ],
+    "truth": { "ckd_stage": "not_documented", "egfr": null, "albuminuria_category": "A2" }
+  },
+  {
+    "id": "ho-20",
+    "style": "hyphenated-surname",
+    "text": "GLOMERULAR DISEASE CLINIC\nPatient: Tariq Al-Mansoor   MRN: TM-804115   DOB: 1982-05-06\nVisit date: 2026-09-28   Seen by: Dr. Laura Evans\n\nDaughter Layla waited outside. IgA nephropathy in remission on budesonide.\neGFR 94 mL/min/1.73 m2 (prior 91 on 2026-03-19). UACR 310 mg/g.",
+    "seeded": [
+      { "type": "name", "value": "Tariq Al-Mansoor" },
+      { "type": "mrn", "value": "TM-804115" },
+      { "type": "date", "value": "1982-05-06" },
+      { "type": "date", "value": "2026-09-28" },
+      { "type": "name", "value": "Laura Evans" },
+      { "type": "name", "value": "Layla" },
+      { "type": "date", "value": "2026-03-19" }
+    ],
+    "truth": { "ckd_stage": "G1", "egfr": 94, "albuminuria_category": "A3" }
+  },
+  {
+    "id": "ho-21",
+    "style": "clean-rules-pass",
+    "text": "CKD STAGE 5 CONSERVATIVE CARE NOTE\nPatient: Brigitte Hoffmann   MRN: BH-210488   DOB: 1940-04-12\nDate: 2026-10-05   Attending: Dr. Steven Park\n\nHusband Lukas participated in goals-of-care discussion.\nLatest eGFR 9 mL/min/1.73 m2 (11 on 2026-06-28). UACR 720 mg/g. Focus on symptom control and anemia support.",
+    "seeded": [
+      { "type": "name", "value": "Brigitte Hoffmann" },
+      { "type": "mrn", "value": "BH-210488" },
+      { "type": "date", "value": "1940-04-12" },
+      { "type": "date", "value": "2026-10-05" },
+      { "type": "name", "value": "Steven Park" },
+      { "type": "name", "value": "Lukas" },
+      { "type": "date", "value": "2026-06-28" }
+    ],
+    "truth": { "ckd_stage": "G5", "egfr": 9, "albuminuria_category": "A3" }
+  },
+  {
+    "id": "ho-22",
+    "style": "multi-part-surname",
+    "text": "NEPHROLOGY CONSULT NOTE\nPatient: Willem De Vries   MRN: WD-615302   DOB: 1955-11-18\nVisit: 2026-08-17   Seen by: Dr. Anita Kulkarni\n\nDaughter Sanne drove him from Utrecht. Creatinine 1.4 mg/dL, eGFR 54 mL/min/1.73 m2.\nUrine albumin/creatinine ratio 26 mg/g. Contact email: w.devries@example.org.",
+    "seeded": [
+      { "type": "name", "value": "Willem De Vries" },
+      { "type": "mrn", "value": "WD-615302" },
+      { "type": "date", "value": "1955-11-18" },
+      { "type": "date", "value": "2026-08-17" },
+      { "type": "name", "value": "Anita Kulkarni" },
+      { "type": "name", "value": "Sanne" },
+      { "type": "email", "value": "w.devries@example.org" }
+    ],
+    "truth": { "ckd_stage": "G3a", "egfr": 54, "albuminuria_category": "A1" }
+  },
+  {
+    "id": "ho-23",
+    "style": "titled-everywhere",
+    "text": "OUTPATIENT FOLLOW-UP\nPatient: Gloria Echeverria   MRN: GE-519084   DOB: 1963-07-07\nVisit date: 2026-10-12   Seen by: Dr. Andrew Scott\n\nCaregiver Pablo accompanied Mrs. Echeverria to clinic today.\neGFR 41 mL/min/1.73 m2 (prior 44 on 2026-04-06). UACR 195 mg/g.\nContinue finerenone 10 mg daily.",
+    "seeded": [
+      { "type": "name", "value": "Gloria Echeverria" },
+      { "type": "mrn", "value": "GE-519084" },
+      { "type": "date", "value": "1963-07-07" },
+      { "type": "date", "value": "2026-10-12" },
+      { "type": "name", "value": "Andrew Scott" },
+      { "type": "name", "value": "Pablo" },
+      { "type": "date", "value": "2026-04-06" }
+    ],
+    "truth": { "ckd_stage": "G3b", "egfr": 41, "albuminuria_category": "A2" }
+  },
+  {
+    "id": "ho-24",
+    "style": "clean-rules-pass",
+    "text": "RENAL CLINIC ANNUAL REVIEW\nName: Raymond Chang\nMedical Record Number: RC-907611\nDOB: 1976-02-23   Date: 2026-10-22   Clinician: Dr. Rebecca Solis\n\nNo family members present; patient manages medications independently.\neGFR 67 mL/min/1.73 m2 (69 on 2025-10-20). UACR 11 mg/g. Phone (212) 555-0199.",
+    "seeded": [
+      { "type": "name", "value": "Raymond Chang" },
+      { "type": "mrn", "value": "RC-907611" },
+      { "type": "date", "value": "1976-02-23" },
+      { "type": "date", "value": "2026-10-22" },
+      { "type": "name", "value": "Rebecca Solis" },
+      { "type": "date", "value": "2025-10-20" },
+      { "type": "phone", "value": "(212) 555-0199" }
+    ],
+    "truth": { "ckd_stage": "G2", "egfr": 67, "albuminuria_category": "A1" }
+  }
+]

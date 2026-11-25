@@ -1,0 +1,22 @@
+{
+  "mode": "rules-only (no on-device model), mock cloud, independent held-out hand-written notes",
+  "source": "data/heldout/handwritten_notes.json (24 hand-written notes; zero overlap with gen-cases.mjs seeded names)",
+  "seededByType": {
+    "name": 68,
+    "mrn": 24,
+    "date": 70,
+    "phone": 9,
+    "email": 6
+  },
+  "casesWithUnmaskedTypes": {
+    "name": 20
+  },
+  "maskerRecallPercent": 88.1,
+  "cases": 24,
+  "seededIdentifiers": 177,
+  "identifiersMasked": 156,
+  "casesSent": 4,
+  "casesBlocked": 20,
+  "cloudCalls": 4,
+  "cloudPayloadsWithSeededIdentifier": 0
+}

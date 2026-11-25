@@ -11,7 +11,8 @@
     "test": "vitest run",
     "bench": "node scripts/bench.mjs",
     "bench:100": "node scripts/bench.mjs --100",
-    "bench:pmc": "node scripts/bench-pmc.mjs"
+    "bench:pmc": "node scripts/bench-pmc.mjs",
+    "bench:heldout": "node scripts/bench-heldout.mjs"
   },
   "dependencies": {
     "firebase": "^13.4.0"
