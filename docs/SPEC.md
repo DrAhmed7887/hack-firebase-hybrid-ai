@@ -45,7 +45,7 @@
 - **Benchmarks:** 100-case synthetic rules-only run (`npm run bench:100`, the headline) and 50 real PMC nephrology texts with synthetic identifiers (`npm run bench:pmc`, rules-only; real-cloud run audited by hand against a clinical key, `docs/pmc50-key-audit.json`, `node scripts/audit-pmc-key.mjs`).
 - **UI:** native `<dialog>` confirmations (no `window.confirm`), light/dark theme toggle.
 - **Hosting:** `firebase.json` sets a Content-Security-Policy limiting `connect-src`, plus security headers.
-- **App Check:** reCAPTCHA Enterprise provider when a Firebase config is present; no debug token in code. The client sends tokens; the console is not set to enforce them unless the owner turns that on.
+- **App Check:** reCAPTCHA Enterprise provider when a Firebase config is present; no debug token in code. Firebase AI Logic App Check is Basic - Enforced (reCAPTCHA Enterprise) in the Firebase Console and was verified live on 25 Nov 2026.
 - **Cut:** REDCap, Chrome extension.
 
 ## 4. Real versus mocked

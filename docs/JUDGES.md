@@ -19,6 +19,7 @@ Persona: a clinic registry abstractor who must enter CKD stage, eGFR and albumin
 | Committed eval JSON | `docs/bench-rules-only.json` (20 notes), `docs/bench-100-rules-only.json` (100 notes, headline, `npm run bench:100 -- --write`), `docs/bench-pmc-real-prose.json` (50 PMC texts, rules-only, `npm run bench:pmc`), `docs/cloud-eval.json` (real cloud, 20 notes) |
 | Real-cloud runs | `docs/cloud-eval-100-runs.json` (three 100-note runs; run 1 alone `docs/cloud-eval-100.json`), `docs/cloud-eval-100-v2.json` (100 notes with 'not documented' allowed), `docs/cloud-eval-pmc.json` and `docs/cloud-eval-pmc-v2.json` (50 PMC texts, forced number then 'not documented') |
 | PMC key audit | `docs/pmc50-key-audit.json`: all 50 texts re-read for the most recent single patient eGFR; recorded run scores 46 of 50 (92.0%), zero cloud calls (`node scripts/audit-pmc-key.mjs`) |
+| Nano 3x runs (desktop Chrome, real cloud) | `docs/bench-nano-runs.json`: 3 repeat 20-note runs, 154/154 masked, 20/20 sent, 0 blocked, 0 leaked each |
 | Google's side of the egress | `docs/ai-monitoring-log-check.json`: logged request held only placeholders (one request) |
 | Literature | `docs/EVIDENCE_LITERATURE.md`: peer-reviewed sources behind the staging, the problem and the LLM-extraction limits |
 | FHIR R4, KDIGO 2024, Egress Inspector, CSP | `src/fhir.js`, `src/kdigo.js`, `src/firebase.js` plus `index.html` inspector fields, `firebase.json` |
@@ -34,11 +35,13 @@ Open the app, press **Run local guard**, then **Send masked text**. Pick another
 ## Open backlog (hours)
 | Item | Hours |
 |---|---|
-| Save the Nano benchmark as a file and repeat it 3 times to show variation (not done 25 Nov 2026: `LanguageModel.availability()` returned `unavailable` in the fresh-profile headless Chrome used for the live check, so no Nano run was possible there) | 1 |
+| ~~Save the Nano benchmark as a file and repeat it 3 times to show variation~~ done 25 Nov 2026 (`docs/bench-nano-runs.json`) | n/a |
 | ~~Add a Content-Security-Policy on Hosting that limits `connect-src`~~ done (`firebase.json`) | 0.5 |
 | ~~Manual audit of the PMC answer key~~ done (`docs/pmc50-key-audit.json`) | n/a |
 | Held-out, hand-written notes to measure the masker without the seeded answer key | 2 |
 
 
-## Live check, 25 Nov 2026 (headless Chrome, fresh profile, production URL)
-Rules-only mode (Nano `unavailable`): 0 CSP violations, 0 page errors. Blocked note (case-08) outlined in red, **Mask these and re-check** cleared it, the send returned `in_cloud` (HTTP 200 from Firebase AI Logic), the KDIGO 2024 matrix and the FHIR R4 Bundle preview rendered. A custom note without a seeded list opened the native confirmation dialog, and Cancel closed it with nothing sent. The theme toggle switched light and dark. The App Check token exchange returned HTTP 403 in this headless browser (cloud calls still succeeded because enforcement is OFF). Not tested here: a real desktop Chrome with Gemini Nano.
+## Live check, 25 Nov 2026
+**(a) Headless Chrome, fresh profile, production URL.** Rules-only mode (Nano `unavailable`): 0 CSP violations, 0 page errors. Blocked note (case-08) outlined in red, **Mask these and re-check** cleared it, the send returned `in_cloud` (HTTP 200 from Firebase AI Logic), the KDIGO 2024 matrix and the FHIR R4 Bundle preview rendered. A custom note without a seeded list opened the native confirmation dialog, and Cancel closed it with nothing sent. The theme toggle switched light and dark. The App Check token exchange returned HTTP 403 in this headless browser before enforcement was turned on.
+
+**(b) Real desktop Chrome.** `LanguageModel.availability()` was `available`. Three 20-case runs with Nano plus real cloud calls each masked 154 of 154 seeded identifiers (evidence `docs/bench-nano-runs.json`). In the Firebase Console, App Check for Firebase AI Logic was set to Basic - Enforced (reCAPTCHA Enterprise, Replay Off); HTTP 200 was verified on both `exchangeRecaptchaEnterpriseToken` and `generateContent` in both a normal (cached) and an uncached isolated browser context.

@@ -1,0 +1,104 @@
+{
+  "availability": "available",
+  "runs": [
+    {
+      "run": 1,
+      "runner": "kapture",
+      "summary": "Mode: on-device model + rules. 154 of 154 seeded identifiers masked. 20 of 20 notes passed the guard and were sent; 0 were blocked. Cloud payloads containing a seeded identifier: 0. Backend: real cloud model.",
+      "kpis": {
+        "masked": "154 / 154",
+        "sent": "20 / 20",
+        "blocked": 0,
+        "leaked_payloads": 0
+      },
+      "cases": [
+        {"case": "case-00", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "48", "albuminuria": "A3"},
+        {"case": "case-01", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G3b", "egfr": "36", "albuminuria": "A1"},
+        {"case": "case-02", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "76", "albuminuria": "A1"},
+        {"case": "case-03", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G4", "egfr": "28", "albuminuria": "A3"},
+        {"case": "case-04", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "48", "albuminuria": "A2"},
+        {"case": "case-05", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "63", "albuminuria": "A2"},
+        {"case": "case-06", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3b", "egfr": "35", "albuminuria": "A3"},
+        {"case": "case-07", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G4", "egfr": "19", "albuminuria": "A3"},
+        {"case": "case-08", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G5", "egfr": "11", "albuminuria": "A3"},
+        {"case": "case-09", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G3b", "egfr": "32", "albuminuria": "A3"},
+        {"case": "case-10", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "62", "albuminuria": "A2"},
+        {"case": "case-11", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G5", "egfr": "11", "albuminuria": "A2"},
+        {"case": "case-12", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "57", "albuminuria": "not_documented"},
+        {"case": "case-13", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G4", "egfr": "22", "albuminuria": "A3"},
+        {"case": "case-14", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "56", "albuminuria": "A2"},
+        {"case": "case-15", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "54", "albuminuria": "A3"},
+        {"case": "case-16", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "78", "albuminuria": "A2"},
+        {"case": "case-17", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "56", "albuminuria": "A1"},
+        {"case": "case-18", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "66", "albuminuria": "A3"},
+        {"case": "case-19", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "66", "albuminuria": "A2"}
+      ]
+    },
+    {
+      "run": 2,
+      "runner": "chrome-devtools-mcp",
+      "summary": "Mode: on-device model + rules. 154 of 154 seeded identifiers masked. 20 of 20 notes passed the guard and were sent; 0 were blocked. Cloud payloads containing a seeded identifier: 0. Backend: real cloud model.",
+      "kpis": {
+        "masked": "154 / 154",
+        "sent": "20 / 20",
+        "blocked": 0,
+        "leaked_payloads": 0
+      },
+      "cases": [
+        {"case": "case-00", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "48", "albuminuria": "A3"},
+        {"case": "case-01", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G3b", "egfr": "36", "albuminuria": "A1"},
+        {"case": "case-02", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "76", "albuminuria": "A1"},
+        {"case": "case-03", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G4", "egfr": "28", "albuminuria": "A3"},
+        {"case": "case-04", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "48", "albuminuria": "A2"},
+        {"case": "case-05", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "63", "albuminuria": "A2"},
+        {"case": "case-06", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3b", "egfr": "35", "albuminuria": "A3"},
+        {"case": "case-07", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G4", "egfr": "19", "albuminuria": "A3"},
+        {"case": "case-08", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G5", "egfr": "11", "albuminuria": "A3"},
+        {"case": "case-09", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G3b", "egfr": "32", "albuminuria": "A3"},
+        {"case": "case-10", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "62", "albuminuria": "A2"},
+        {"case": "case-11", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G5", "egfr": "11", "albuminuria": "A2"},
+        {"case": "case-12", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "57", "albuminuria": "not_documented"},
+        {"case": "case-13", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G4", "egfr": "22", "albuminuria": "A3"},
+        {"case": "case-14", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "56", "albuminuria": "A2"},
+        {"case": "case-15", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "54", "albuminuria": "A3"},
+        {"case": "case-16", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "78", "albuminuria": "A2"},
+        {"case": "case-17", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "56", "albuminuria": "A1"},
+        {"case": "case-18", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "66", "albuminuria": "A3"},
+        {"case": "case-19", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "66", "albuminuria": "A2"}
+      ]
+    },
+    {
+      "run": 3,
+      "runner": "chrome-devtools-mcp",
+      "summary": "Mode: on-device model + rules. 154 of 154 seeded identifiers masked. 20 of 20 notes passed the guard and were sent; 0 were blocked. Cloud payloads containing a seeded identifier: 0. Backend: real cloud model.",
+      "kpis": {
+        "masked": "154 / 154",
+        "sent": "20 / 20",
+        "blocked": 0,
+        "leaked_payloads": 0
+      },
+      "cases": [
+        {"case": "case-00", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "48", "albuminuria": "A3"},
+        {"case": "case-01", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G3b", "egfr": "36", "albuminuria": "A1"},
+        {"case": "case-02", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "76", "albuminuria": "A1"},
+        {"case": "case-03", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G4", "egfr": "28", "albuminuria": "A3"},
+        {"case": "case-04", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "48", "albuminuria": "A2"},
+        {"case": "case-05", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "63", "albuminuria": "A2"},
+        {"case": "case-06", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3b", "egfr": "35", "albuminuria": "A3"},
+        {"case": "case-07", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G4", "egfr": "19", "albuminuria": "A3"},
+        {"case": "case-08", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G5", "egfr": "11", "albuminuria": "A3"},
+        {"case": "case-09", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G3b", "egfr": "32", "albuminuria": "A3"},
+        {"case": "case-10", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "62", "albuminuria": "A2"},
+        {"case": "case-11", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G5", "egfr": "11", "albuminuria": "A2"},
+        {"case": "case-12", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "57", "albuminuria": "not_documented"},
+        {"case": "case-13", "seeded": 7, "masked": 7, "left_unmasked": "-", "guard": "sent", "stage": "G4", "egfr": "22", "albuminuria": "A3"},
+        {"case": "case-14", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "56", "albuminuria": "A2"},
+        {"case": "case-15", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "54", "albuminuria": "A3"},
+        {"case": "case-16", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "78", "albuminuria": "A2"},
+        {"case": "case-17", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G3a", "egfr": "56", "albuminuria": "A1"},
+        {"case": "case-18", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "66", "albuminuria": "A3"},
+        {"case": "case-19", "seeded": 8, "masked": 8, "left_unmasked": "-", "guard": "sent", "stage": "G2", "egfr": "66", "albuminuria": "A2"}
+      ]
+    }
+  ]
+}
