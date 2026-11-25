@@ -5,9 +5,11 @@
 // Run: node scripts/gen-pmc50.mjs [path/to/pmc_real_cases_50.json]
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 
-const DEFAULT_SRC =
-  '/Users/ahmedzayed/.gemini/antigravity/brain/3abef8bc-d5da-4bbf-b11a-8cf06c7ba393/scratch/v4_research/pmc_real_cases_50.json';
-const src = process.argv[2] || DEFAULT_SRC;
+const src = process.argv[2] || process.env.PMC_CASES_SRC;
+if (!src) {
+  console.error('Usage: node scripts/gen-pmc50.mjs <path/to/pmc_real_cases_50.json>');
+  process.exit(1);
+}
 const real = JSON.parse(readFileSync(src, 'utf8'));
 
 function rng(seed) {
