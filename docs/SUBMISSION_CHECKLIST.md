@@ -19,7 +19,7 @@ Deadline: Mon 30 Nov 2026, 2:00 PM PT = 23:00 Valencia. Source: `docs/RULES_DEVP
 - [x] Devpost confirmation saved in the Drive entry: `submission/gmail_confirmation_1302481_2026-11-22.md` and `submission/devpost_public_1302481_2026-11-25.png`
 - [x] Devpost story item 5 updated on 25 Nov 2026 to "JSON, CSV and FHIR R4 Bundle download" and saved (SUBMITTED, 5/5 steps done)
 - [ ] Optional before Mon 30 Nov 23:00 CET: refresh Devpost story text to lead with PMC50 (`46/50`, 92.0%, 0 invented numbers), reflect App Check Basic-Enforced (instead of "not switched on"), 3x Nano runs (`docs/bench-nano-runs.json`), CSP, and 24-note held-out recall (`88.1%`)
-- [ ] Update the Notion row and `now.md`
+- [x] Update the Notion row and `now.md` (updated 26 Nov 2026)
 
 ## App Check status
 - Firebase AI Logic App Check is **Basic - Enforced** (reCAPTCHA Enterprise, Replay Off) in the Firebase Console. On 25 Nov 2026, HTTP 200 was verified on both `exchangeRecaptchaEnterpriseToken` and `generateContent` in a normal and an uncached isolated desktop Chrome context. The client sends the tokens (`src/firebase.js`). Headless Chrome failed the token exchange with HTTP 403 before enforcement, so judges should use desktop Chrome.
